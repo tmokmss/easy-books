@@ -48,7 +48,11 @@ const islandJson = JSON.stringify({
 
   <div class="reader-shell">
     <PersonRail people={work.people} />
-    <Reader paragraphs={entry.data.paragraphs} people={work.people} />
+    <Reader
+      paragraphs={entry.data.paragraphs}
+      people={work.people}
+      sourceLang={work.meta.sourceLang}
+    />
   </div>
 
   <AnnotationCard />

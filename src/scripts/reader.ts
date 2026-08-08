@@ -125,6 +125,38 @@ export function initReader(): void {
     if (e.key === 'Escape' && !card.hidden) closeCard();
   });
 
+  // ---- 対訳の文単位ハイライト同期 ----
+
+  const togglePair = (seg: HTMLElement, on: boolean) => {
+    const group = seg.closest('.para-group');
+    const idx = seg.dataset.seg;
+    if (!group || idx === undefined) return;
+    for (const el of group.querySelectorAll(`[data-seg="${idx}"]`)) {
+      el.classList.toggle('hl', on);
+    }
+  };
+
+  const bilingualOn = () => document.documentElement.dataset.bilingual === 'on';
+
+  flow.addEventListener('mouseover', (e) => {
+    if (!bilingualOn()) return;
+    const seg = (e.target as HTMLElement).closest<HTMLElement>('.seg, .seg-src');
+    if (seg) togglePair(seg, true);
+  });
+  flow.addEventListener('mouseout', (e) => {
+    if (!bilingualOn()) return;
+    const seg = (e.target as HTMLElement).closest<HTMLElement>('.seg, .seg-src');
+    if (seg) togglePair(seg, false);
+  });
+  // タッチ端末用: 注釈ボタン以外のタップで対応をトグル
+  flow.addEventListener('click', (e) => {
+    if (!bilingualOn()) return;
+    const target = e.target as HTMLElement;
+    if (target.closest('.ann')) return;
+    const seg = target.closest<HTMLElement>('.seg, .seg-src');
+    if (seg) togglePair(seg, !seg.classList.contains('hl'));
+  });
+
   // ---- 人物レール ----
 
   const railButtons = new Map<string, HTMLElement>();

@@ -32,7 +32,14 @@ description: 章の翻訳を Claude Code のセッション内で追加・比較
 4. 機械マージ: `npx tsx tools/merge-translation.ts <chapterId> <ja.jsonのパス> --by <モデル名>`
 5. ふるい: `npx tsx tools/check-alignment.ts <chapterId>` を実行し、指摘を要約して報告
    （誤検知を含む。ここで直せる明白な訳し落としがあれば訳を修正して再マージ）
-6. 所要時間と段落数を報告する（M3 の見積もりに使う）。コミットするかはユーザーに確認
+6. **文単位アラインメント**（対訳表示用の src↔ja 対応）:
+   1. `npx tsx tools/split-src.ts <chapterId>` で原文を機械分割
+   2. サブエージェントに対応付けを作らせる。読ませるのは sentences.json と章JSON。
+      出力は `source/alignments/` に `{"pNNN": [{"s": [文番号...], "ja": "断片"}]}` 形式
+      （**原文テキストを出力させない**。ja 断片の連結は元の ja と完全一致が条件）
+   3. `npx tsx tools/align-segments.ts <chapterId> <alignment.json>` で検証・反映。
+      失敗した段落だけ再実行させる
+7. 所要時間と段落数を報告する（M3 の見積もりに使う）。コミットするかはユーザーに確認
 
 ## 比較モード: /translate compare <chapterId> [--limit N]（既定 3段落）
 

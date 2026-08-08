@@ -56,6 +56,11 @@ npm run tools:translate -- crime-01-01 --limit 10
 # 4. 機械チェック（オフライン）。人間レビューの前のふるい
 npm run tools:check -- crime-01-01
 
+# 5. 文単位の対訳アラインメント（読書画面の「対訳（原文）を表示」用）
+npx tsx tools/split-src.ts crime-01-01        # 原文を機械分割
+#    → 対応付けJSONを LLM に作らせ（/translate スキル参照）、検証つきで反映:
+npx tsx tools/align-segments.ts crime-01-01 source/alignments/crime-01-01.a1.json
+
 # 5. 注釈候補の抽出（台帳への反映は人間が手で行う）
 npm run tools:extract -- crime-01-01
 ```

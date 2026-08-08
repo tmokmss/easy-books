@@ -27,6 +27,11 @@ const chapters = defineCollection({
             em: z.boolean().optional(),
             /** draft を生成したモデル等のラベル（モデル比較の記録用） */
             translatedBy: z.string().optional(),
+            /** 文単位の対訳対応（tools/align-segments.ts が生成）。連結不変条件は下で検証 */
+            segments: z
+              .array(z.object({ src: z.string().min(1), ja: z.string().min(1) }))
+              .min(1)
+              .optional(),
           }),
         )
         .min(1),
@@ -48,6 +53,24 @@ const chapters = defineCollection({
         seen.add(p.id);
         for (const err of validateParagraphMarkup(p.ja, people, glossary)) {
           ctx.addIssue({ code: z.ZodIssueCode.custom, message: `[${p.id}] ${err}` });
+        }
+        // 対訳セグメントの連結不変条件: ずれた対応表を本番に出さない
+        if (p.segments) {
+          const joinedJa = p.segments.map((s) => s.ja).join('');
+          if (joinedJa !== p.ja) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `[${p.id}] segments の ja を連結しても段落の ja と一致しない`,
+            });
+          }
+          const norm = (s: string) => s.replace(/\s+/g, ' ').trim();
+          const joinedSrc = norm(p.segments.map((s) => s.src).join(' '));
+          if (joinedSrc !== norm(p.src)) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `[${p.id}] segments の src を連結しても段落の src と一致しない`,
+            });
+          }
         }
       }
     }),

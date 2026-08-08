@@ -3,11 +3,13 @@ import type { Paragraph, Person } from '../lib/types';
 import { collectPersonIds, renderParagraphHtml, tokenize } from '../lib/markup';
 
 interface Props {
-  paragraphs: Paragraph[];
+  paragraphs: (Paragraph & { segments?: { src: string; ja: string }[] })[];
   people: Record<string, Person>;
+  /** 原文の言語コード（対訳表示の lang 属性に使う） */
+  sourceLang: string;
 }
 
-const { paragraphs, people } = Astro.props;
+const { paragraphs, people, sourceLang } = Astro.props;
 const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
 ---
 
@@ -20,13 +22,31 @@ const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
   <div class="reader-flow" id="reader-flow">
     {
       paragraphs.map((p) => (
-        <p
-          class="para"
-          id={p.id}
-          data-status={p.status}
-          data-persons={collectPersonIds(tokenize(p.ja)).join(' ')}
-          set:html={renderParagraphHtml(p.ja, people)}
-        />
+        <div class="para-group">
+          <p
+            class="para"
+            id={p.id}
+            data-status={p.status}
+            data-persons={collectPersonIds(tokenize(p.ja)).join(' ')}
+          >
+            {p.segments ? (
+              p.segments.map((seg, i) => (
+                <span class="seg" data-seg={i} set:html={renderParagraphHtml(seg.ja, people)} />
+              ))
+            ) : (
+              <Fragment set:html={renderParagraphHtml(p.ja, people)} />
+            )}
+          </p>
+          <p class="para-src" lang={sourceLang}>
+            {p.segments
+              ? p.segments.map((seg, i) => (
+                  <span class="seg-src" data-seg={i}>
+                    {seg.src}{' '}
+                  </span>
+                ))
+              : p.src}
+          </p>
+        </div>
       ))
     }
   </div>
@@ -48,9 +68,40 @@ const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
     margin: 0 0 2rem;
   }
 
-  .para {
+  .para-group {
     margin: 0 0 calc(var(--reader-lh) * 0.6em);
+  }
+
+  .para {
+    margin: 0;
     text-indent: 1em;
+  }
+
+  /* 対訳（原文）。設定 data-bilingual=on のときだけ表示 */
+  .para-src {
+    display: none;
+  }
+  :root[data-bilingual='on'] .para-src {
+    display: block;
+    /* キリル文字・欧文が全角風にならないよう欧文セリフを先頭に */
+    font-family: Georgia, 'Times New Roman', var(--font-serif);
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: var(--ink-muted);
+    margin: 0.4em 0 0;
+    padding-inline-start: 1em;
+    border-inline-start: 2px solid var(--hairline);
+    white-space: pre-line;
+  }
+
+  /* 文単位の対応ハイライト（reader.ts が .hl を付け外し） */
+  .seg.hl,
+  .seg-src.hl {
+    background: color-mix(in srgb, var(--ink) 11%, transparent);
+    border-radius: 3px;
+  }
+  :root[data-bilingual='on'] .seg {
+    cursor: default;
   }
 
   /* 縦書き（横スクロール） */
@@ -62,7 +113,7 @@ const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
     overflow-y: hidden;
     padding-block: 1rem;
   }
-  :root[data-vertical='on'] .para {
+  :root[data-vertical='on'] .para-group {
     margin: 0 0 0 calc(var(--reader-lh) * 0.6em);
   }
 </style>

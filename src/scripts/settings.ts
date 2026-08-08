@@ -6,6 +6,7 @@ export interface Settings {
   lh: number; // 行間 1..3
   gloss: boolean; // 愛称に本名を添える（既定オン、p のみ対象）
   rmark: boolean; // 代名詞にも印をつける（既定オフ）
+  bilingual: boolean; // 対訳（原文）を表示（既定オフ）
   vertical: boolean; // 縦書き
   theme: 'day' | 'night';
 }
@@ -17,6 +18,7 @@ const DEFAULTS: Settings = {
   lh: 2,
   gloss: true,
   rmark: false,
+  bilingual: false,
   vertical: false,
   theme: 'day',
 };
@@ -50,6 +52,8 @@ function applySettings(s: Settings): void {
   else delete d.dataset.gloss;
   if (s.rmark) d.dataset.rmark = 'on';
   else delete d.dataset.rmark;
+  if (s.bilingual) d.dataset.bilingual = 'on';
+  else delete d.dataset.bilingual;
   if (s.vertical) d.dataset.vertical = 'on';
   else delete d.dataset.vertical;
 }
@@ -74,6 +78,7 @@ export function initSettings(): void {
   for (const c of checks) {
     if (c.name === 'gloss') c.checked = settings.gloss;
     if (c.name === 'rmark') c.checked = settings.rmark;
+    if (c.name === 'bilingual') c.checked = settings.bilingual;
     if (c.name === 'vertical') c.checked = settings.vertical;
     if (c.name === 'theme') c.checked = settings.theme === 'night';
   }
@@ -93,6 +98,9 @@ export function initSettings(): void {
         break;
       case 'rmark':
         settings.rmark = input.checked;
+        break;
+      case 'bilingual':
+        settings.bilingual = input.checked;
         break;
       case 'vertical':
         settings.vertical = input.checked;

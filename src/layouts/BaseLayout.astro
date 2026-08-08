@@ -29,6 +29,7 @@ const { title, description } = Astro.props;
           if (s.lh) d.dataset.lh = String(s.lh);
           if (s.gloss === false) d.dataset.gloss = 'off';
           if (s.rmark) d.dataset.rmark = 'on';
+          if (s.bilingual) d.dataset.bilingual = 'on';
           if (s.vertical) d.dataset.vertical = 'on';
         } catch (e) {
           /* 設定が壊れていても読書は続けられるようにする */
