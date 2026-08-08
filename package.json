@@ -1,0 +1,25 @@
+{
+  "name": "easy-classic-books",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "tools:fb2": "tsx tools/fb2-to-paragraphs.ts",
+    "tools:translate": "tsx tools/translate.ts",
+    "tools:check": "tsx tools/check-alignment.ts",
+    "tools:extract": "tsx tools/extract-annotations.ts"
+  },
+  "dependencies": {
+    "astro": "^7.2.0"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.116.0",
+    "fast-xml-parser": "^5.10.1",
+    "tsx": "^4.23.11",
+    "typescript": "^7.0.2",
+    "zod": "^4.4.3"
+  }
+}

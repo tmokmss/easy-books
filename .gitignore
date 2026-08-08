@@ -1,0 +1,18 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# environment
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# ローカル動作確認用（playwright-cli のセッションデータ）
+.playwright-cli/
+
+# source/ は gitignore しない（再現性のため原文・中間生成物をコミットする）

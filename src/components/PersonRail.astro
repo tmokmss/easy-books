@@ -1,0 +1,136 @@
+---
+import type { Person } from '../lib/types';
+
+interface Props {
+  people: Record<string, Person>;
+}
+
+const { people } = Astro.props;
+---
+
+<!-- PCでは左に常駐、モバイルでは上部に横スクロールの帯。
+     いま画面に出ている人物だけを点灯させる（reader.ts が .active を付与） -->
+<aside class="person-rail" aria-label="登場人物">
+  <h2 class="rail-title">登場人物</h2>
+  <ul class="rail-list">
+    {
+      Object.entries(people).map(([id, person]) => (
+        <li>
+          <button
+            type="button"
+            class="rail-person"
+            data-person-id={id}
+            aria-haspopup="dialog"
+            title={person.role}
+          >
+            <span class="rail-dot" aria-hidden="true" />
+            <span class="rail-name">{person.short}</span>
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+</aside>
+
+<style>
+  .person-rail {
+    font-family: var(--font-sans);
+  }
+
+  .rail-title {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+    margin: 0 0 0.6rem;
+  }
+
+  .rail-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .rail-person {
+    appearance: none;
+    background: none;
+    border: none;
+    font: inherit;
+    color: var(--ink-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    width: 100%;
+    text-align: left;
+    transition: color 0.25s, background-color 0.25s;
+  }
+
+  .rail-person:hover {
+    background: color-mix(in srgb, var(--person) 10%, transparent);
+  }
+
+  .rail-dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1.5px solid currentColor;
+    transition: background-color 0.25s;
+  }
+
+  /* いま画面に出ている人物 */
+  .rail-person.active {
+    color: var(--person);
+    font-weight: 600;
+  }
+  .rail-person.active .rail-dot {
+    background: var(--person);
+    border-color: var(--person);
+  }
+
+  /* モバイル: 上部に横スクロールの帯 */
+  @media (max-width: 959px) {
+    .person-rail {
+      position: sticky;
+      top: var(--toolbar-h);
+      z-index: 20;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--hairline);
+      padding: 0.4rem 1rem;
+      margin: 0 -1rem 1.5rem;
+    }
+    .rail-title {
+      display: none;
+    }
+    .rail-list {
+      flex-direction: row;
+      overflow-x: auto;
+      scrollbar-width: none;
+      gap: 0.3rem;
+    }
+    .rail-list::-webkit-scrollbar {
+      display: none;
+    }
+    .rail-person {
+      white-space: nowrap;
+      padding: 0.3rem 0.55rem;
+    }
+  }
+
+  /* PC: 左に常駐 */
+  @media (min-width: 960px) {
+    .person-rail {
+      position: sticky;
+      top: calc(var(--toolbar-h) + 2rem);
+      align-self: start;
+    }
+  }
+</style>

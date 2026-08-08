@@ -1,0 +1,61 @@
+---
+import '../styles/tokens.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.svg`} />
+    <script is:inline>
+      // FOUC回避: 描画前に localStorage の設定を html の data 属性へ復元する。
+      // キー定義は src/scripts/settings.ts と対応。
+      (function () {
+        try {
+          var s = JSON.parse(localStorage.getItem('ecb:settings') || '{}');
+          var d = document.documentElement;
+          if (s.theme === 'night') d.dataset.theme = 'night';
+          if (s.fs) d.dataset.fs = String(s.fs);
+          if (s.lh) d.dataset.lh = String(s.lh);
+          if (s.gloss === false) d.dataset.gloss = 'off';
+          if (s.rmark) d.dataset.rmark = 'on';
+          if (s.vertical) d.dataset.vertical = 'on';
+        } catch (e) {
+          /* 設定が壊れていても読書は続けられるようにする */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+    <footer class="site-footer">
+      <slot name="footer" />
+      <p>
+        本サイトの訳文は、パブリックドメインの原文からAI（大規模言語モデル）を用いて新たに訳出したものです。
+        既存の日本語訳は使用していません。
+      </p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-footer {
+    max-width: var(--measure);
+    margin: 4rem auto 2rem;
+    padding: 1.5rem 1rem 0;
+    border-top: 1px solid var(--hairline);
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+  }
+</style>

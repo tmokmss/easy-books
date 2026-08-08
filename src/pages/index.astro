@@ -1,0 +1,178 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getWorkData, listWorkIds } from '../lib/works';
+
+const chapters = await getCollection('chapters');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const shelves = listWorkIds()
+  .map((workId) => {
+    const work = getWorkData(workId);
+    const workChapters = chapters
+      .filter((c) => c.data.workId === workId)
+      .sort((a, b) => a.data.order - b.data.order);
+    return { work, chapters: workChapters };
+  })
+  .filter((s) => s.chapters.length > 0);
+
+// 続きから読むリンク用に 章ID → 表示名 の対応を渡す
+const chapterTitles: Record<string, string> = {};
+for (const s of shelves) {
+  for (const c of s.chapters) {
+    chapterTitles[c.id] = `${s.work.meta.title} ${c.data.chapterLabel}`;
+  }
+}
+const titlesJson = JSON.stringify(chapterTitles).replaceAll('<', '\\u003c');
+---
+
+<BaseLayout
+  title="読解支援リーダー — パブリックドメインの古典を、注釈つきで"
+  description="パブリックドメインの古典文学を、人物・語注の読解支援レイヤーつきの新訳で読む"
+>
+  <main class="shelf">
+    <header class="shelf-head">
+      <h1>読解支援リーダー</h1>
+      <p class="shelf-lead">
+        パブリックドメインの古典を、読解支援レイヤーつきの新訳で。
+        人物の呼び分け・当時の風物には注釈がつきます。本文そのものは平易化しません。
+      </p>
+    </header>
+
+    <a id="continue-link" class="continue-link" href="#" hidden>
+      続きから読む: <span id="continue-title"></span> →
+    </a>
+
+    {
+      shelves.map(({ work, chapters }) => (
+        <section class="work">
+          <h2 class="work-title">{work.meta.title}</h2>
+          <p class="work-author">
+            {work.meta.author}
+            {work.meta.authorOriginal && <span class="work-original">（{work.meta.authorOriginal}）</span>}
+          </p>
+          <ol class="chapter-list">
+            {chapters.map((c) => (
+              <li>
+                <a href={`${base}/read/${c.id}/`}>
+                  {c.data.chapterLabel}
+                  {c.data.paragraphs.some((p) => p.status !== 'reviewed') && (
+                    <span class="chapter-draft">草稿</span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </main>
+
+  <script type="application/json" id="chapter-titles" set:html={titlesJson} />
+  <script>
+    // 前回の読書位置があれば「続きから読む」を出す
+    const link = document.getElementById('continue-link') as HTMLAnchorElement | null;
+    const titleEl = document.getElementById('continue-title');
+    const titlesEl = document.getElementById('chapter-titles');
+    try {
+      const last = JSON.parse(localStorage.getItem('ecb:last') ?? 'null');
+      const titles = JSON.parse(titlesEl?.textContent ?? '{}');
+      if (link && titleEl && last && titles[last.chapter]) {
+        titleEl.textContent = titles[last.chapter];
+        link.href = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/read/${last.chapter}/`;
+        link.hidden = false;
+      }
+    } catch {
+      /* noop */
+    }
+  </script>
+</BaseLayout>
+
+<style>
+  .shelf {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 3.5rem 1rem 0;
+  }
+
+  .shelf-head h1 {
+    font-family: var(--font-serif);
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.8rem;
+  }
+
+  .shelf-lead {
+    font-size: 0.88rem;
+    color: var(--ink-muted);
+    line-height: 2;
+    margin: 0 0 2.5rem;
+  }
+
+  .continue-link[hidden] {
+    display: none;
+  }
+
+  .continue-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border: 1px solid var(--person);
+    color: var(--person);
+    border-radius: 8px;
+    padding: 0.5rem 0.9rem;
+    margin-bottom: 2.5rem;
+  }
+  .continue-link:hover {
+    background: color-mix(in srgb, var(--person) 10%, transparent);
+  }
+
+  .work {
+    margin-bottom: 3rem;
+  }
+
+  .work-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    margin: 0 0 0.2rem;
+  }
+
+  .work-author {
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    margin: 0 0 1rem;
+  }
+
+  .work-original {
+    font-size: 0.78rem;
+  }
+
+  .chapter-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .chapter-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 0.2rem;
+    border-bottom: 1px solid var(--hairline);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+  .chapter-list a:hover {
+    background: color-mix(in srgb, var(--person) 7%, transparent);
+  }
+
+  .chapter-draft {
+    font-size: 0.68rem;
+    color: var(--note);
+    border: 1px solid var(--note);
+    border-radius: 4px;
+    padding: 0 0.35em;
+  }
+</style>

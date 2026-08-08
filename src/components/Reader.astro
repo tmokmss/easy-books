@@ -1,0 +1,68 @@
+---
+import type { Paragraph, Person } from '../lib/types';
+import { collectPersonIds, renderParagraphHtml, tokenize } from '../lib/markup';
+
+interface Props {
+  paragraphs: Paragraph[];
+  people: Record<string, Person>;
+}
+
+const { paragraphs, people } = Astro.props;
+const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
+---
+
+<main class="reader-main">
+  {
+    hasDraft && (
+      <p class="draft-notice">この章の訳文には、原文との照合がまだ済んでいない草稿段階の段落が含まれます。</p>
+    )
+  }
+  <div class="reader-flow" id="reader-flow">
+    {
+      paragraphs.map((p) => (
+        <p
+          class="para"
+          id={p.id}
+          data-status={p.status}
+          data-persons={collectPersonIds(tokenize(p.ja)).join(' ')}
+          set:html={renderParagraphHtml(p.ja, people)}
+        />
+      ))
+    }
+  </div>
+</main>
+
+<style>
+  .reader-main {
+    min-width: 0;
+    max-width: var(--measure);
+  }
+
+  .draft-notice {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0 2rem;
+  }
+
+  .para {
+    margin: 0 0 calc(var(--reader-lh) * 0.6em);
+    text-indent: 1em;
+  }
+
+  /* 縦書き（横スクロール） */
+  :root[data-vertical='on'] .reader-flow {
+    writing-mode: vertical-rl;
+    block-size: min(70dvh, 40em);
+    max-inline-size: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-block: 1rem;
+  }
+  :root[data-vertical='on'] .para {
+    margin: 0 0 0 calc(var(--reader-lh) * 0.6em);
+  }
+</style>

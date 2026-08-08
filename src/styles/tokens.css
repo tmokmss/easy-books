@@ -1,0 +1,152 @@
+/* ============================================================
+   デザイントークン
+   色は役割に紐づける: 緑=人物、黄=語注。これを崩さないこと。
+   読者が色で種類を判別できることが、下線の形より効く。
+   ============================================================ */
+:root {
+  --paper: #e7e4d8; /* 緑みのある古紙。クリーム寄りにしない */
+  --ink: #1b1a17;
+  --person: #2e4a43; /* ペテルブルグの深緑 = 人物 */
+  --note: #9a7415; /* 『罪と罰』の黄 = 語注 */
+
+  --ink-muted: color-mix(in srgb, var(--ink) 62%, var(--paper));
+  --hairline: color-mix(in srgb, var(--ink) 18%, var(--paper));
+  --surface: color-mix(in srgb, var(--ink) 4%, var(--paper));
+  --card: #f2efe5;
+
+  /* 欧文・キリル文字は先頭の欧文フォントで、和文は後続の和文フォントで描画する
+     （和文フォント先頭だとキリル文字が全角風グリフになる） */
+  --font-serif: 'Hiragino Mincho ProN', 'Yu Mincho', YuMincho, 'Noto Serif JP', serif;
+  --font-sans: system-ui, -apple-system, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo,
+    'Noto Sans JP', sans-serif;
+
+  /* 読書設定（html の data 属性で切り替え） */
+  --reader-fs: 17px;
+  --reader-lh: 1.9;
+  --measure: 34em; /* 本文の最大幅 */
+  --toolbar-h: 3rem;
+}
+
+:root[data-theme='night'] {
+  --paper: #191b1a;
+  --ink: #d6d3c6;
+  --person: #8db5a8;
+  --note: #c9a44a;
+  --card: #222524;
+}
+
+/* 文字サイズ4段階・行間3段階 */
+:root[data-fs='1'] { --reader-fs: 15px; }
+:root[data-fs='2'] { --reader-fs: 17px; }
+:root[data-fs='3'] { --reader-fs: 19px; }
+:root[data-fs='4'] { --reader-fs: 21px; }
+:root[data-lh='1'] { --reader-lh: 1.65; }
+:root[data-lh='2'] { --reader-lh: 1.9; }
+:root[data-lh='3'] { --reader-lh: 2.15; }
+
+/* ============================================================
+   ベース
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+/* フォーカスリングを消さない */
+:focus-visible {
+  outline: 2px solid var(--person);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   本文と注釈
+   注釈ボタンは Reader が set:html で生成するためグローバルに置く。
+   実線=人物 / 点線=語注。色だけに依存せず、形の区別も担わせる。
+   ============================================================ */
+.reader-flow {
+  font-family: var(--font-serif);
+  font-size: var(--reader-fs);
+  line-height: var(--reader-lh);
+}
+
+.ann {
+  /* <button> だが本文の一部として振る舞う */
+  appearance: none;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+.ann-p {
+  text-decoration: underline solid var(--person);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+/* r は既定では無印。タップのみ効く。
+   設定（data-rmark=on）のときだけ薄い印を出す */
+.ann-r {
+  text-decoration: none;
+}
+:root[data-rmark='on'] .ann-r {
+  text-decoration: underline solid color-mix(in srgb, var(--person) 40%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.ann-n {
+  text-decoration: underline dotted var(--note);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.22em;
+}
+
+/* 愛称・父称形につく本名グロス（p のみ）。既定オン */
+.gloss {
+  font-family: var(--font-sans);
+  font-size: 0.72em;
+  color: var(--ink-muted);
+  margin-inline-start: 0.1em;
+}
+:root[data-gloss='off'] .gloss {
+  display: none;
+}
+
+@media (hover: hover) {
+  .ann:hover {
+    background: color-mix(in srgb, var(--person) 12%, transparent);
+  }
+  .ann-n:hover {
+    background: color-mix(in srgb, var(--note) 14%, transparent);
+  }
+}

@@ -1,0 +1,157 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PersonRail from '../../components/PersonRail.astro';
+import Reader from '../../components/Reader.astro';
+import AnnotationCard from '../../components/AnnotationCard.astro';
+import SettingsPanel from '../../components/SettingsPanel.astro';
+import { getWorkData } from '../../lib/works';
+
+export async function getStaticPaths() {
+  const chapters = await getCollection('chapters');
+  return chapters.map((entry) => ({ params: { chapter: entry.id }, props: { entry } }));
+}
+
+interface Props {
+  entry: CollectionEntry<'chapters'>;
+}
+
+const { entry } = Astro.props;
+const work = getWorkData(entry.data.workId);
+const home = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+
+// 人物・語注データをクライアントへ渡す（</script> 対策で < をエスケープ）
+const islandJson = JSON.stringify({
+  chapterId: entry.id,
+  people: work.people,
+  glossary: work.glossary,
+}).replaceAll('<', '\\u003c');
+---
+
+<BaseLayout title={`${work.meta.title} ${entry.data.chapterLabel} — 読解支援リーダー`}>
+  <header class="toolbar">
+    <a class="toolbar-back" href={home}>← 書棚</a>
+    <p class="toolbar-title">
+      {work.meta.title}
+      <span class="toolbar-chapter">{entry.data.chapterLabel}</span>
+    </p>
+    <button
+      type="button"
+      id="settings-button"
+      class="toolbar-settings"
+      aria-haspopup="dialog"
+      aria-expanded="false"
+    >
+      表示設定
+    </button>
+  </header>
+
+  <div class="reader-shell">
+    <PersonRail people={work.people} />
+    <Reader paragraphs={entry.data.paragraphs} people={work.people} />
+  </div>
+
+  <AnnotationCard />
+  <SettingsPanel />
+
+  <script type="application/json" id="ecb-data" set:html={islandJson} />
+  <script>
+    import { initSettings } from '../../scripts/settings';
+    import { initReader } from '../../scripts/reader';
+    initSettings();
+    initReader();
+  </script>
+
+  <Fragment slot="footer">
+    <p>
+      底本: {work.meta.sourceRef}
+      {
+        entry.data.sourceUrl && (
+          <>
+            ／ 原文テキスト: <a href={entry.data.sourceUrl}>ロシア語版ウィキソース</a>
+          </>
+        )
+      }
+    </p>
+  </Fragment>
+</BaseLayout>
+
+<style>
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: var(--toolbar-h);
+    padding: 0 1rem;
+    background: color-mix(in srgb, var(--paper) 94%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--hairline);
+    font-family: var(--font-sans);
+  }
+
+  .toolbar-back {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--ink-muted);
+    flex: none;
+  }
+  .toolbar-back:hover {
+    color: var(--ink);
+  }
+
+  .toolbar-title {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .toolbar-chapter {
+    font-weight: 400;
+    color: var(--ink-muted);
+    margin-left: 0.5em;
+  }
+
+  .toolbar-settings {
+    appearance: none;
+    background: none;
+    font: inherit;
+    font-size: 0.8rem;
+    color: var(--ink);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    flex: none;
+  }
+  .toolbar-settings:hover {
+    background: color-mix(in srgb, var(--ink) 6%, transparent);
+  }
+
+  .reader-shell {
+    padding: 2rem 1rem 3rem;
+    max-width: var(--measure);
+    margin: 0 auto;
+  }
+
+  @media (min-width: 960px) {
+    .reader-shell {
+      display: grid;
+      grid-template-columns: 13rem minmax(0, 1fr);
+      gap: 2.5rem;
+      max-width: calc(var(--measure) + 15.5rem);
+    }
+  }
+
+  /* 読書位置復元・段落リンク時に固定ツールバーへ隠れないように */
+  :global(.para) {
+    scroll-margin-top: calc(var(--toolbar-h) + 3.2rem);
+  }
+</style>
