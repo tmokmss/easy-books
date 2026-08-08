@@ -23,8 +23,8 @@ description: 章の翻訳を Claude Code のセッション内で追加・比較
 
 ## 通常モード: /translate <chapterId> [model] [--limit N]
 
-1. `source/paragraphs/<chapterId>.src.json` の存在を確認。無ければ原文取得から
-   （README「パイプライン」参照。原文は curl でファイルに直接落とす）
+1. `source/paragraphs/<chapterId>.src.json` の存在を確認。無ければ、作品自体が未登録なら
+   `/add-work <書名>` を先に実行、登録済みなら原文取得から（README「パイプライン」参照）
 2. `src/content/chapters/<chapterId>.json` と突き合わせ、未翻訳の段落IDを列挙する
 3. 翻訳を実行（10段落程度ずつのバッチ。バッチをまたぐときは直前3段落の訳を文脈として引き継ぐ）
    - **モデル指定あり** → 下のテンプレでサブエージェントを起動（`model` を指定）
