@@ -25,6 +25,8 @@ const chapters = defineCollection({
             ja: z.string().min(1),
             status: z.enum(['draft', 'checked', 'reviewed']),
             em: z.boolean().optional(),
+            /** draft を生成したモデル等のラベル（モデル比較の記録用） */
+            translatedBy: z.string().optional(),
           }),
         )
         .min(1),

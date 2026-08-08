@@ -46,7 +46,11 @@ source/                     # 原文と中間生成物（再現性のためコ�
 npx tsx tools/wikisource-to-paragraphs.ts source/wikisource/crime-01-01.api.json crime crime-01-01 "第一部 第一章" 1
 #    FB2 形式の原文には tools/fb2-to-paragraphs.ts を使う（出力形式は同一）
 
-# 3. 翻訳（要 ANTHROPIC_API_KEY または `ant auth login`）
+# 3. 翻訳 — 2経路ある
+#    a) Claude Code 内で翻訳（推奨・APIキー不要）: /translate crime-01-01 [sonnet|opus]
+#       モデル比較は /translate compare crime-01-01（.claude/skills/translate/ 参照）
+#       結果の機械マージ: npx tsx tools/merge-translation.ts crime-01-01 <ja.json> --by <model>
+#    b) APIで無人バッチ実行（要 ANTHROPIC_API_KEY または `ant auth login`）:
 npm run tools:translate -- crime-01-01 --limit 10
 
 # 4. 機械チェック（オフライン）。人間レビューの前のふるい
