@@ -97,6 +97,19 @@ const zoomJson = JSON.stringify({
 
   {barChapters.length > 1 && <ZoomBar chapters={barChapters} />}
 
+  <noscript>
+    <style is:inline>
+      /* JSが無い環境では折りたたみを諦めて本文をすべて見せる */
+      .zoom-sec .sec-body {
+        display: block !important;
+      }
+      .sec-sum-open,
+      .sec-all-btn {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+
   <div class="reader-shell">
     <PersonRail people={work.people} />
     <div class="reader-col">
@@ -153,8 +166,9 @@ const zoomJson = JSON.stringify({
     import { initStretchtext } from '../../scripts/stretchtext';
     import { initProgress } from '../../scripts/progress';
     initSettings();
-    initReader();
+    // 読書位置の復元（initReader）より先に、その位置を含む節をひらいておく
     initStretchtext();
+    initReader();
     initProgress();
   </script>
 

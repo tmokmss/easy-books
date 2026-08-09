@@ -52,6 +52,11 @@ const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine
       </p>
     )
   }
+  {
+    groups.some((g) => g.section?.summary) && (
+      <button type="button" class="sec-all-btn">すべての節をひらく</button>
+    )
+  }
   <div class="reader-flow" id="reader-flow">
     {
       groups.map(({ section, paragraphs: groupParas }) => {
@@ -100,19 +105,26 @@ const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine
           </div>
         ));
         if (!section) return inner;
+        // ズームイン既定: 要約を持つ節はまず要約カードだけを見せ、押して初めて本文が展開される。
+        // 要約が無い節は最初からひらいておく（要約が空でも壊れない）。
+        const folded = Boolean(section.summary);
         return (
-          <section class="zoom-sec" id={`sec-${section.id}`}>
+          <section
+            class:list={['zoom-sec', { folded }]}
+            id={`sec-${section.id}`}
+            data-sec={section.id}
+          >
             <h3 class="sec-heading">
               <button
                 type="button"
                 class="sec-fold"
-                aria-expanded="true"
+                aria-expanded={folded ? 'false' : 'true'}
                 aria-controls={`secbody-${section.id}`}
               >
                 <span class="sec-caret" aria-hidden="true" />
                 <span class="sec-label">{section.label}</span>
                 <span class="sec-fold-hint" aria-hidden="true">
-                  たたむ
+                  {folded ? 'ひらく' : 'たたむ'}
                 </span>
               </button>
               {section.summary && (
@@ -120,17 +132,30 @@ const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine
                   type="button"
                   class="sec-sum-btn"
                   aria-expanded="false"
-                  aria-controls={`secsum-${section.id}`}
+                  aria-controls={`secinfo-${section.id}`}
+                  hidden={folded}
                 >
                   要約
                 </button>
               )}
             </h3>
             {section.summary && (
-              <div class="sec-sum" id={`secsum-${section.id}`} hidden>
+              <button
+                type="button"
+                class="sec-sum sec-sum-open"
+                aria-expanded="false"
+                aria-controls={`secbody-${section.id}`}
+                hidden={!folded}
+              >
+                {unverified(section.summary) && <span class="sum-badge">未確認</span>}
+                <span class="sec-sum-text">{section.summary.text}</span>
+                <span class="sec-open-hint">▸ 本文をよむ</span>
+              </button>
+            )}
+            {section.summary && (
+              <div class="sec-sum sec-sum-info" id={`secinfo-${section.id}`} hidden>
                 {unverified(section.summary) && <span class="sum-badge">未確認</span>}
                 <p class="sec-sum-text">{section.summary.text}</p>
-                <p class="sum-note">たたまれた本文のかわりの要約です。見出しを押すと本文に戻ります。</p>
               </div>
             )}
             <div class="sec-body" id={`secbody-${section.id}`}>
@@ -206,6 +231,26 @@ const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine
 
   .zoom-sec {
     margin: 0 0 1.5rem;
+  }
+  /* ズームアウト状態: 本文は要約カードを押して初めて現れる */
+  .zoom-sec.folded .sec-body {
+    display: none;
+  }
+
+  .sec-all-btn {
+    appearance: none;
+    background: none;
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: var(--ink);
+    cursor: pointer;
+    margin: 0 0 1.6rem;
+  }
+  .sec-all-btn:hover {
+    background: color-mix(in srgb, var(--ink) 6%, transparent);
   }
 
   .sec-heading {
@@ -312,6 +357,34 @@ const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine
     margin: 0;
   }
 
+  /* ズームインの入口。要約カード全体が「本文をよむ」ボタン */
+  .sec-sum-open {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    line-height: 1.95;
+    cursor: pointer;
+    border: none;
+    border-inline-start: 3px solid var(--note);
+  }
+  .sec-sum-open[hidden] {
+    display: none;
+  }
+  .sec-sum-open:hover {
+    background: color-mix(in srgb, var(--note) 10%, var(--surface));
+    border-inline-start-color: var(--person);
+  }
+  .sec-open-hint {
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--person);
+  }
+
   .para-sum {
     font-size: 0.8rem;
     line-height: 1.85;
@@ -330,16 +403,6 @@ const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine
     padding: 0 0.35em;
     margin-inline-end: 0.6em;
     white-space: nowrap;
-  }
-
-  .sum-note {
-    display: none;
-    font-size: 0.72rem;
-    color: var(--ink-muted);
-    margin: 0.35rem 0 0;
-  }
-  .zoom-sec.folded .sum-note {
-    display: block;
   }
 
   /* 縦書き（横スクロール）
