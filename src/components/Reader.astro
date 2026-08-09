@@ -1,5 +1,6 @@
 ---
 import type { Paragraph, Person } from '../lib/types';
+import type { ChapterOutline, SectionOutline, Summary } from '../lib/outline';
 import { collectPersonIds, renderParagraphHtml, tokenize } from '../lib/markup';
 
 interface Props {
@@ -7,10 +8,35 @@ interface Props {
   people: Record<string, Person>;
   /** 原文の言語コード（対訳表示の lang 属性に使う） */
   sourceLang: string;
+  /** 階層ズーム・リーダーの要約レイヤー。無くても読書は成立する */
+  outline?: ChapterOutline;
 }
 
-const { paragraphs, people, sourceLang } = Astro.props;
+const { paragraphs, people, sourceLang, outline } = Astro.props;
 const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
+
+// 節ごとに段落をグループ化する。節が無ければ1グループのフラット表示。
+// 節は範囲参照なので、ここで初めて段落と結びつく（章データは節を知らない）。
+type Para = Props['paragraphs'][number];
+interface Group {
+  section?: SectionOutline;
+  paragraphs: Para[];
+}
+const index = new Map(paragraphs.map((p, i) => [p.id, i]));
+const groups: Group[] =
+  outline && outline.sections.length > 0
+    ? outline.sections.map((section) => ({
+        section,
+        paragraphs: paragraphs.slice(
+          index.get(section.range[0])!,
+          index.get(section.range[1])! + 1,
+        ),
+      }))
+    : [{ paragraphs }];
+
+const paraSummaries = outline?.paragraphSummaries ?? {};
+const hasProposed = (outline?.sections ?? []).some((s) => s.boundaryStatus === 'proposed');
+const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine-checked';
 ---
 
 <main class="reader-main">
@@ -19,35 +45,100 @@ const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
       <p class="draft-notice">この章の訳文には、原文との照合がまだ済んでいない草稿段階の段落が含まれます。</p>
     )
   }
+  {
+    hasProposed && (
+      <p class="draft-notice">
+        節の区切り・見出し・要約は機械生成の提案段階です（未承認）。本文そのものは変更していません。
+      </p>
+    )
+  }
   <div class="reader-flow" id="reader-flow">
     {
-      paragraphs.map((p) => (
-        <div class="para-group">
-          <p
-            class="para"
-            id={p.id}
-            data-status={p.status}
-            data-persons={collectPersonIds(tokenize(p.ja)).join(' ')}
-          >
-            {p.segments ? (
-              p.segments.map((seg, i) => (
-                <span class="seg" data-seg={i} set:html={renderParagraphHtml(seg.ja, people)} />
-              ))
-            ) : (
-              <Fragment set:html={renderParagraphHtml(p.ja, people)} />
-            )}
-          </p>
-          <p class="para-src" lang={sourceLang}>
-            {p.segments
-              ? p.segments.map((seg, i) => (
-                  <span class="seg-src" data-seg={i}>
-                    {seg.src}{' '}
-                  </span>
+      groups.map(({ section, paragraphs: groupParas }) => {
+        const inner = groupParas.map((p) => (
+          <div class="para-group">
+            <p
+              class="para"
+              id={p.id}
+              data-status={p.status}
+              data-persons={collectPersonIds(tokenize(p.ja)).join(' ')}
+            >
+              {p.segments ? (
+                p.segments.map((seg, i) => (
+                  <span class="seg" data-seg={i} set:html={renderParagraphHtml(seg.ja, people)} />
                 ))
-              : p.src}
-          </p>
-        </div>
-      ))
+              ) : (
+                <Fragment set:html={renderParagraphHtml(p.ja, people)} />
+              )}
+              {paraSummaries[p.id] && (
+                <button
+                  type="button"
+                  class="para-sum-btn"
+                  aria-expanded="false"
+                  aria-controls={`psum-${p.id}`}
+                  title="この段落の要約（長押しでも開く）"
+                >
+                  要約
+                </button>
+              )}
+            </p>
+            <p class="para-src" lang={sourceLang}>
+              {p.segments
+                ? p.segments.map((seg, i) => (
+                    <span class="seg-src" data-seg={i}>
+                      {seg.src}{' '}
+                    </span>
+                  ))
+                : p.src}
+            </p>
+            {paraSummaries[p.id] && (
+              <div class="para-sum" id={`psum-${p.id}`} hidden>
+                {unverified(paraSummaries[p.id]) && <span class="sum-badge">未確認</span>}
+                {paraSummaries[p.id].text}
+              </div>
+            )}
+          </div>
+        ));
+        if (!section) return inner;
+        return (
+          <section class="zoom-sec" id={`sec-${section.id}`}>
+            <h3 class="sec-heading">
+              <button
+                type="button"
+                class="sec-fold"
+                aria-expanded="true"
+                aria-controls={`secbody-${section.id}`}
+              >
+                <span class="sec-caret" aria-hidden="true" />
+                <span class="sec-label">{section.label}</span>
+                <span class="sec-fold-hint" aria-hidden="true">
+                  たたむ
+                </span>
+              </button>
+              {section.summary && (
+                <button
+                  type="button"
+                  class="sec-sum-btn"
+                  aria-expanded="false"
+                  aria-controls={`secsum-${section.id}`}
+                >
+                  要約
+                </button>
+              )}
+            </h3>
+            {section.summary && (
+              <div class="sec-sum" id={`secsum-${section.id}`} hidden>
+                {unverified(section.summary) && <span class="sum-badge">未確認</span>}
+                <p class="sec-sum-text">{section.summary.text}</p>
+                <p class="sum-note">たたまれた本文のかわりの要約です。見出しを押すと本文に戻ります。</p>
+              </div>
+            )}
+            <div class="sec-body" id={`secbody-${section.id}`}>
+              {inner}
+            </div>
+          </section>
+        );
+      })
     }
   </div>
 </main>
@@ -65,7 +156,10 @@ const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
     border: 1px solid var(--hairline);
     border-radius: 8px;
     padding: 0.5rem 0.8rem;
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
+  }
+  .draft-notice:last-of-type {
+    margin-bottom: 2rem;
   }
 
   .para-group {
@@ -102,6 +196,150 @@ const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
   }
   :root[data-bilingual='on'] .seg {
     cursor: default;
+  }
+
+  /* ============================================================
+     stretchtext（階層ズーム）
+     要約は本文の代替ではないことを形で示す:
+     サンセリフ＋背景＋語注色の縁取りで、本文（セリフ体）と明確に見分ける。
+     ============================================================ */
+
+  .zoom-sec {
+    margin: 0 0 1.5rem;
+  }
+
+  .sec-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    margin: 2rem 0 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ink-muted);
+  }
+
+  .sec-fold {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0.15rem 0.2rem;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45em;
+    min-width: 0;
+  }
+  .sec-fold:hover .sec-label {
+    color: var(--ink);
+  }
+  .sec-caret::before {
+    content: '▾';
+  }
+  .zoom-sec.folded .sec-caret::before {
+    content: '▸';
+  }
+  .sec-fold-hint {
+    font-weight: 400;
+    font-size: 0.72rem;
+    color: color-mix(in srgb, var(--ink-muted) 70%, transparent);
+  }
+  .zoom-sec.folded .sec-fold-hint {
+    color: var(--person);
+  }
+
+  .sec-sum-btn,
+  .para :global(.para-sum-btn) {
+    appearance: none;
+    background: none;
+    font-family: var(--font-sans);
+    color: var(--ink-muted);
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    cursor: pointer;
+    flex: none;
+  }
+  .sec-sum-btn {
+    font-size: 0.68rem;
+    padding: 0.05rem 0.55em;
+  }
+  .sec-sum-btn:hover,
+  .para :global(.para-sum-btn):hover {
+    background: color-mix(in srgb, var(--note) 14%, transparent);
+    color: var(--ink);
+  }
+  .sec-sum-btn[aria-expanded='true'],
+  .para :global(.para-sum-btn)[aria-expanded='true'] {
+    background: color-mix(in srgb, var(--note) 18%, transparent);
+    border-color: var(--note);
+    color: var(--ink);
+  }
+
+  /* 段落末尾の要約ボタンは本文サイズ基準で小さく・控えめに */
+  .para :global(.para-sum-btn) {
+    font-size: 0.62em;
+    padding: 0 0.55em;
+    margin-inline-start: 0.5em;
+    opacity: 0.55;
+    text-indent: 0;
+  }
+  .para :global(.para-sum-btn):hover,
+  .para :global(.para-sum-btn):focus-visible,
+  .para :global(.para-sum-btn)[aria-expanded='true'] {
+    opacity: 1;
+  }
+
+  .sec-sum,
+  .para-sum {
+    font-family: var(--font-sans);
+    background: var(--surface);
+    border-inline-start: 3px solid var(--note);
+    border-radius: 6px;
+    color: var(--ink);
+  }
+
+  .sec-sum {
+    font-size: 0.85rem;
+    line-height: 1.95;
+    max-width: calc(var(--measure) * 0.9);
+    padding: 0.75rem 1rem;
+    margin: 0.4rem 0 1.2rem;
+  }
+  .sec-sum-text {
+    display: inline;
+    margin: 0;
+  }
+
+  .para-sum {
+    font-size: 0.8rem;
+    line-height: 1.85;
+    max-width: calc(var(--measure) * 0.85);
+    padding: 0.5rem 0.8rem;
+    margin: 0.4rem 0 0 1em;
+    border-inline-start-width: 2px;
+  }
+
+  .sum-badge {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    color: var(--note);
+    border: 1px solid var(--note);
+    border-radius: 4px;
+    padding: 0 0.35em;
+    margin-inline-end: 0.6em;
+    white-space: nowrap;
+  }
+
+  .sum-note {
+    display: none;
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    margin: 0.35rem 0 0;
+  }
+  .zoom-sec.folded .sum-note {
+    display: block;
   }
 
   /* 縦書き（横スクロール）

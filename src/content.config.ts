@@ -2,6 +2,14 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { validateParagraphMarkup } from './lib/markup';
 import { getWorkData, listWorkIds } from './lib/works';
+import { getChapterIndex, listWorkChapters } from './lib/chapter-index';
+import {
+  SUMMARY_STATUSES,
+  validateChapterOutline,
+  validateWorkOverview,
+  type ChapterOutline,
+  type WorkOverview,
+} from './lib/outline';
 
 // 記法違反・存在しないID参照はここでビルドを落とす。
 // {{p:raskolnikov|…}} のようなタイプミスが本番で無言のまま素通りするのを防ぐ。
@@ -76,4 +84,68 @@ const chapters = defineCollection({
     }),
 });
 
-export const collections = { chapters };
+// ---- 階層ズーム・リーダーの要約レイヤー（docs/ZOOM.md）----
+// 段落IDへの参照が1つでも切れていたらビルドを落とす。実行時エラーにすると本番で無言のまま壊れる。
+
+const summarySchema = z.object({
+  text: z.string().min(1),
+  status: z.enum(SUMMARY_STATUSES),
+  coversUpTo: z.string().nullable().optional(),
+});
+
+const outlines = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/outlines' }),
+  schema: z
+    .object({
+      workId: z.string(),
+      chapterId: z.string(),
+      summary: summarySchema.optional(),
+      sections: z.array(
+        z.object({
+          id: z.string(),
+          label: z.string(),
+          range: z.tuple([z.string(), z.string()]),
+          boundaryStatus: z.enum(['proposed', 'approved']),
+          summary: summarySchema.optional(),
+        }),
+      ),
+      paragraphSummaries: z.record(z.string(), summarySchema),
+    })
+    .superRefine((outline, ctx) => {
+      for (const msg of validateChapterOutline(
+        outline as ChapterOutline,
+        getChapterIndex(outline.chapterId),
+      )) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, message: `[${outline.chapterId}] ${msg}` });
+      }
+    }),
+});
+
+const overviews = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/overviews' }),
+  schema: z
+    .object({
+      workId: z.string(),
+      genre: z.enum(['fiction', 'nonfiction']),
+      summary: summarySchema.optional(),
+      parts: z.array(
+        z.object({
+          id: z.string(),
+          label: z.string(),
+          chapters: z.array(z.string()),
+          summary: summarySchema.optional(),
+        }),
+      ),
+    })
+    .superRefine((overview, ctx) => {
+      const chapters = listWorkChapters(overview.workId).map((c) => ({
+        chapterId: c.chapterId,
+        lastParagraphId: c.paragraphs[c.paragraphs.length - 1]?.id ?? '',
+      }));
+      for (const msg of validateWorkOverview(overview as WorkOverview, chapters)) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, message: `[${overview.workId}] ${msg}` });
+      }
+    }),
+});
+
+export const collections = { chapters, outlines, overviews };

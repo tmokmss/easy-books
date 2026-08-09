@@ -5,7 +5,9 @@ import PersonRail from '../../components/PersonRail.astro';
 import Reader from '../../components/Reader.astro';
 import AnnotationCard from '../../components/AnnotationCard.astro';
 import SettingsPanel from '../../components/SettingsPanel.astro';
+import ZoomBar from '../../components/ZoomBar.astro';
 import { getWorkData } from '../../lib/works';
+import type { ChapterOutline, Summary, WorkOverview } from '../../lib/outline';
 
 export async function getStaticPaths() {
   const chapters = await getCollection('chapters');
@@ -18,13 +20,59 @@ interface Props {
 
 const { entry } = Astro.props;
 const work = getWorkData(entry.data.workId);
-const home = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const home = base + '/';
+
+// 要約レイヤー（階層ズーム）。まだ無い章では従来どおりの読書画面になる
+const [allChapters, outlineEntries, overviewEntries] = await Promise.all([
+  getCollection('chapters'),
+  getCollection('outlines'),
+  getCollection('overviews'),
+]);
+const workChapters = allChapters
+  .filter((c) => c.data.workId === entry.data.workId)
+  .sort((a, b) => a.data.order - b.data.order);
+const outlineOf = new Map(
+  outlineEntries.map((o) => [o.data.chapterId, o.data as ChapterOutline]),
+);
+const outline = outlineOf.get(entry.id);
+const overview = overviewEntries.find((o) => o.data.workId === entry.data.workId)?.data as
+  | WorkOverview
+  | undefined;
+
+// 現在位置バー: 作品全体の章を段落数に比例した幅で並べる。部の切れ目は隙間で見せる
+const partStarts = new Set((overview?.parts ?? []).map((p) => p.chapters[0]));
+const barChapters = workChapters.map((c) => ({
+  id: c.id,
+  label: c.data.chapterLabel,
+  count: c.data.paragraphs.length,
+  href: `${base}/read/${c.id}/`,
+  isCurrent: c.id === entry.id,
+  isPartStart: partStarts.has(c.id),
+}));
+
+// ここまでのあらすじ: 現在の章より前の章要約だけを出す。
+// 各章要約は coversUpTo までの情報しか含まない設計なので、ここに先の展開は混ざらない
+const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine-checked';
+const recap = workChapters
+  .filter((c) => c.data.order < entry.data.order)
+  .flatMap((c) => {
+    const summary = outlineOf.get(c.id)?.summary;
+    return summary ? [{ label: c.data.chapterLabel, summary }] : [];
+  });
 
 // 人物・語注データをクライアントへ渡す（</script> 対策で < をエスケープ）
 const islandJson = JSON.stringify({
   chapterId: entry.id,
   people: work.people,
   glossary: work.glossary,
+}).replaceAll('<', '\\u003c');
+
+// 既読管理・位置バー用
+const zoomJson = JSON.stringify({
+  workId: entry.data.workId,
+  chapterId: entry.id,
+  chapters: barChapters.map((c) => ({ id: c.id, count: c.count })),
 }).replaceAll('<', '\\u003c');
 ---
 
@@ -35,6 +83,7 @@ const islandJson = JSON.stringify({
       {work.meta.title}
       <span class="toolbar-chapter">{entry.data.chapterLabel}</span>
     </p>
+    <a class="toolbar-link" href={`${base}/works/${entry.data.workId}/`}>全体図</a>
     <button
       type="button"
       id="settings-button"
@@ -46,24 +95,67 @@ const islandJson = JSON.stringify({
     </button>
   </header>
 
+  {barChapters.length > 1 && <ZoomBar chapters={barChapters} />}
+
   <div class="reader-shell">
     <PersonRail people={work.people} />
-    <Reader
-      paragraphs={entry.data.paragraphs}
-      people={work.people}
-      sourceLang={work.meta.sourceLang}
-    />
+    <div class="reader-col">
+      {
+        recap.length > 0 && (
+          <div class="recap">
+            <button
+              type="button"
+              class="disclosure-btn"
+              aria-expanded="false"
+              aria-controls="recap-body"
+            >
+              ここまでのあらすじ
+              <span class="disclosure-sub">{recap.length}章分</span>
+            </button>
+            <div id="recap-body" class="recap-body" hidden>
+              {recap.some((r) => unverified(r.summary)) && (
+                <p class="recap-caution">
+                  <span class="sum-badge">未確認</span>
+                  機械生成の要約で、内容の確認はまだ済んでいません。
+                </p>
+              )}
+              {recap.map((r) => (
+                <article class="recap-item">
+                  <h3>{r.label}</h3>
+                  <p>{r.summary.text}</p>
+                </article>
+              ))}
+              <p class="recap-note">
+                要約は本文の代替ではありません。
+                <a href={`${base}/works/${entry.data.workId}/`}>全体図で構造ごと眺める</a>
+              </p>
+            </div>
+          </div>
+        )
+      }
+      <Reader
+        paragraphs={entry.data.paragraphs}
+        people={work.people}
+        sourceLang={work.meta.sourceLang}
+        outline={outline}
+      />
+    </div>
   </div>
 
   <AnnotationCard />
   <SettingsPanel />
 
   <script type="application/json" id="ecb-data" set:html={islandJson} />
+  <script type="application/json" id="zoom-data" set:html={zoomJson} />
   <script>
     import { initSettings } from '../../scripts/settings';
     import { initReader } from '../../scripts/reader';
+    import { initStretchtext } from '../../scripts/stretchtext';
+    import { initProgress } from '../../scripts/progress';
     initSettings();
     initReader();
+    initStretchtext();
+    initProgress();
   </script>
 
   <Fragment slot="footer">
@@ -123,6 +215,19 @@ const islandJson = JSON.stringify({
     margin-left: 0.5em;
   }
 
+  .toolbar-link {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 0.3rem 0.7rem;
+    flex: none;
+  }
+  .toolbar-link:hover {
+    background: color-mix(in srgb, var(--ink) 6%, transparent);
+  }
+
   .toolbar-settings {
     appearance: none;
     background: none;
@@ -145,6 +250,10 @@ const islandJson = JSON.stringify({
     margin: 0 auto;
   }
 
+  .reader-col {
+    min-width: 0;
+  }
+
   @media (min-width: 960px) {
     .reader-shell {
       display: grid;
@@ -154,8 +263,93 @@ const islandJson = JSON.stringify({
     }
   }
 
-  /* 読書位置復元・段落リンク時に固定ツールバーへ隠れないように */
-  :global(.para) {
-    scroll-margin-top: calc(var(--toolbar-h) + 3.2rem);
+  /* ---- ここまでのあらすじ ---- */
+
+  .recap {
+    font-family: var(--font-sans);
+    margin: 0 0 2rem;
+  }
+
+  .disclosure-btn {
+    appearance: none;
+    background: none;
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 0.45rem 0.8rem;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5em;
+  }
+  .disclosure-btn::before {
+    content: '▸';
+    color: var(--ink-muted);
+  }
+  .disclosure-btn[aria-expanded='true']::before {
+    content: '▾';
+  }
+  .disclosure-btn:hover {
+    background: color-mix(in srgb, var(--ink) 6%, transparent);
+  }
+  .disclosure-sub {
+    font-weight: 400;
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+  }
+
+  .recap-body {
+    margin-top: 0.6rem;
+    background: var(--surface);
+    border-inline-start: 3px solid var(--note);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    max-height: 22rem;
+    overflow-y: auto;
+  }
+
+  .recap-caution {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    margin: 0 0 0.8rem;
+  }
+
+  .recap-item h3 {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    margin: 0 0 0.2rem;
+  }
+  .recap-item p {
+    font-size: 0.82rem;
+    line-height: 1.9;
+    margin: 0 0 1rem;
+  }
+
+  .recap-note {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+  .recap-note a {
+    color: var(--person);
+  }
+
+  .sum-badge {
+    font-size: 0.68rem;
+    color: var(--note);
+    border: 1px solid var(--note);
+    border-radius: 4px;
+    padding: 0 0.35em;
+    margin-inline-end: 0.4em;
+    white-space: nowrap;
+  }
+
+  /* 読書位置復元・段落リンク時に固定ツールバー＋位置バーへ隠れないように */
+  :global(.para),
+  :global(.zoom-sec) {
+    scroll-margin-top: calc(var(--toolbar-h) + 4.2rem);
   }
 </style>

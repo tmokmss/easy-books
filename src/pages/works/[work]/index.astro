@@ -1,0 +1,446 @@
+---
+// 構造ビュー（ズームアウト側）: 作品全体を1画面で見る。
+// 部 → 章 → 節と降りていけて、そこから本文の該当位置へ飛べる。
+// 要約は本文の代替ではない: すべての要約に「本文を読む」導線を併置し、
+// 未確認（draft / machine-checked）の要約にはバッジを出す。
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getWorkData, listWorkIds } from '../../../lib/works';
+import type { ChapterOutline, Summary, WorkOverview } from '../../../lib/outline';
+
+export async function getStaticPaths() {
+  return listWorkIds().map((work) => ({ params: { work } }));
+}
+
+const workId = Astro.params.work!;
+const work = getWorkData(workId);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const home = base + '/';
+
+const [allChapters, outlineEntries, overviewEntries] = await Promise.all([
+  getCollection('chapters'),
+  getCollection('outlines'),
+  getCollection('overviews'),
+]);
+const workChapters = allChapters
+  .filter((c) => c.data.workId === workId)
+  .sort((a, b) => a.data.order - b.data.order);
+if (workChapters.length === 0) {
+  throw new Error(`構造ビュー: 章が1つもない作品 "${workId}"`);
+}
+const chapterOf = new Map(workChapters.map((c) => [c.id, c]));
+const outlineOf = new Map(outlineEntries.map((o) => [o.data.chapterId, o.data as ChapterOutline]));
+const overview = overviewEntries.find((o) => o.data.workId === workId)?.data as
+  | WorkOverview
+  | undefined;
+
+// 部を持たない作品では「部」の階層はUIから消える（深さ固定で組まない）
+const parts =
+  overview && overview.parts.length > 0
+    ? overview.parts.map((p) => ({
+        id: p.id,
+        label: p.label as string | null,
+        summary: p.summary,
+        chapters: p.chapters.map((id) => {
+          const c = chapterOf.get(id);
+          if (!c) throw new Error(`構造ビュー: overview が存在しない章を指している "${id}"`);
+          return c;
+        }),
+      }))
+    : [{ id: 'all', label: null, summary: undefined as Summary | undefined, chapters: workChapters }];
+
+const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine-checked';
+const anyProposed = [...outlineOf.values()].some((o) =>
+  o.sections.some((s) => s.boundaryStatus === 'proposed'),
+);
+const isFiction = (overview?.genre ?? 'fiction') === 'fiction';
+
+const structureJson = JSON.stringify({
+  workId,
+  chapters: workChapters.map((c) => ({ id: c.id, count: c.data.paragraphs.length })),
+}).replaceAll('<', '\\u003c');
+---
+
+<BaseLayout
+  title={`${work.meta.title} 全体図 — 読解支援リーダー`}
+  description={`${work.meta.title}の構造（部・章・節）と要約を一覧し、本文の任意の位置から読み始める`}
+>
+  <main class="structure">
+    <header class="structure-head">
+      <a class="back" href={home}>← 書棚</a>
+      <h1>{work.meta.title} <span class="head-sub">全体図</span></h1>
+      <p class="head-author">{work.meta.author}</p>
+      <p class="head-lead">
+        地図のように拡大・縮小しながら読むための画面です。部 → 章 → 節と降りて、どこからでも本文に入れます。
+        読み進めた範囲は各章のメーターに表示されます。
+      </p>
+      {
+        anyProposed && (
+          <p class="head-caution">
+            節の区切りと要約は機械生成の提案段階です（<span class="sum-badge">未確認</span>
+            のものは内容の確認がまだ済んでいません）。
+          </p>
+        )
+      }
+    </header>
+
+    {
+      overview?.summary && (
+        <section class="work-summary">
+          {
+            isFiction ? (
+              <>
+                <button
+                  type="button"
+                  class="disclosure-btn"
+                  aria-expanded="false"
+                  aria-controls="work-summary-body"
+                >
+                  作品全体の要約を表示
+                  <span class="disclosure-sub">結末までの内容に触れます</span>
+                </button>
+                <div id="work-summary-body" class="summary-block" hidden>
+                  {unverified(overview.summary) && <span class="sum-badge">未確認</span>}
+                  {overview.summary.text}
+                </div>
+              </>
+            ) : (
+              <div class="summary-block">
+                {unverified(overview.summary) && <span class="sum-badge">未確認</span>}
+                {overview.summary.text}
+              </div>
+            )
+          }
+        </section>
+      )
+    }
+
+    {
+      parts.map((part) => (
+        <section class="part">
+          {part.label && (
+            <div class="part-head">
+              <h2>{part.label}</h2>
+              <span class="meter" data-chapters={part.chapters.map((c) => c.id).join(' ')}>
+                <span class="meter-track">
+                  <span class="meter-fill" />
+                </span>
+                <span class="meter-label" />
+              </span>
+            </div>
+          )}
+          {part.summary && (
+            <div class="summary-block part-summary">
+              {unverified(part.summary) && <span class="sum-badge">未確認</span>}
+              {part.summary.text}
+            </div>
+          )}
+          <ol class="chapters">
+            {part.chapters.map((c) => {
+              const outline = outlineOf.get(c.id);
+              const sections = outline?.sections ?? [];
+              return (
+                <li class="chapter">
+                  <div class="chapter-row">
+                    <a class="chapter-link" href={`${base}/read/${c.id}/`}>
+                      {c.data.chapterLabel}
+                    </a>
+                    <span class="meter" data-ch={c.id}>
+                      <span class="meter-track">
+                        <span class="meter-fill" />
+                      </span>
+                      <span class="meter-label" />
+                    </span>
+                  </div>
+                  {outline?.summary && (
+                    <p class="chapter-summary">
+                      {unverified(outline.summary) && <span class="sum-badge">未確認</span>}
+                      {outline.summary.text}
+                    </p>
+                  )}
+                  {sections.length > 0 && (
+                    <>
+                      <button
+                        type="button"
+                        class="disclosure-btn sections-btn"
+                        aria-expanded="false"
+                        aria-controls={`secs-${c.id}`}
+                      >
+                        節を見る
+                        <span class="disclosure-sub">{sections.length}節</span>
+                      </button>
+                      <ol class="sections" id={`secs-${c.id}`} hidden>
+                        {sections.map((s) => (
+                          <li class="section">
+                            <div class="section-head">
+                              <span class="section-label">{s.label}</span>
+                              <a class="section-read" href={`${base}/read/${c.id}/#${s.range[0]}`}>
+                                本文を読む →
+                              </a>
+                            </div>
+                            {s.summary && (
+                              <p class="section-summary">
+                                {unverified(s.summary) && <span class="sum-badge">未確認</span>}
+                                {s.summary.text}
+                              </p>
+                            )}
+                          </li>
+                        ))}
+                      </ol>
+                    </>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      ))
+    }
+  </main>
+
+  <script type="application/json" id="structure-data" set:html={structureJson} />
+  <script>
+    import { initStretchtext } from '../../../scripts/stretchtext';
+    import { initStructure } from '../../../scripts/structure';
+    initStretchtext();
+    initStructure();
+  </script>
+
+  <Fragment slot="footer">
+    <p>底本: {work.meta.sourceRef}</p>
+  </Fragment>
+</BaseLayout>
+
+<style>
+  .structure {
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 0;
+    font-family: var(--font-sans);
+  }
+
+  .back {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--ink-muted);
+  }
+  .back:hover {
+    color: var(--ink);
+  }
+
+  .structure-head h1 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0.8rem 0 0.2rem;
+  }
+  .head-sub {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--ink-muted);
+    margin-left: 0.4em;
+  }
+  .head-author {
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    margin: 0 0 1rem;
+  }
+  .head-lead {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    line-height: 1.9;
+    margin: 0 0 0.6rem;
+  }
+  .head-caution {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    line-height: 1.9;
+    margin: 0 0 1rem;
+  }
+
+  .disclosure-btn {
+    appearance: none;
+    background: none;
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    font: inherit;
+    font-size: 0.8rem;
+    color: var(--ink);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5em;
+  }
+  .disclosure-btn::before {
+    content: '▸';
+    color: var(--ink-muted);
+  }
+  .disclosure-btn[aria-expanded='true']::before {
+    content: '▾';
+  }
+  .disclosure-btn:hover {
+    background: color-mix(in srgb, var(--ink) 6%, transparent);
+  }
+  .disclosure-sub {
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+  }
+
+  /* 要約ブロックは本文と明確に違う見た目（サンセリフ＋背景＋語注色の縁） */
+  .summary-block {
+    background: var(--surface);
+    border-inline-start: 3px solid var(--note);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+    line-height: 1.95;
+    margin: 0.6rem 0 0;
+  }
+
+  .work-summary {
+    margin: 1.5rem 0 2.5rem;
+  }
+
+  .part {
+    margin: 0 0 2.8rem;
+  }
+
+  .part-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 0.4rem;
+  }
+  .part-head h2 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    margin: 0;
+    flex: 1;
+  }
+
+  .part-summary {
+    margin: 0.8rem 0 0.4rem;
+  }
+
+  .meter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    flex: none;
+  }
+  .meter-track {
+    display: inline-block;
+    width: 5.5em;
+    height: 6px;
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--ink) 10%, transparent);
+    overflow: hidden;
+  }
+  .meter-fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: color-mix(in srgb, var(--person) 65%, transparent);
+  }
+  .meter-label {
+    font-size: 0.7rem;
+    color: var(--ink-muted);
+    min-width: 2.4em;
+  }
+
+  .chapters {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0;
+  }
+
+  .chapter {
+    padding: 0.7rem 0.2rem 0.9rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .chapter-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .chapter-link {
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    flex: 1;
+    min-width: 0;
+  }
+  .chapter-link:hover {
+    color: var(--person);
+  }
+
+  .chapter-summary {
+    font-size: 0.82rem;
+    line-height: 1.9;
+    color: var(--ink);
+    margin: 0.4rem 0 0.5rem;
+  }
+
+  .sections-btn {
+    border: none;
+    padding: 0.2rem 0.3rem;
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+
+  .sections {
+    list-style: none;
+    margin: 0.4rem 0 0;
+    padding: 0 0 0 1rem;
+    border-inline-start: 2px solid var(--hairline);
+  }
+
+  .section {
+    margin: 0 0 0.9rem;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+  }
+
+  .section-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .section-read {
+    font-size: 0.75rem;
+    color: var(--person);
+    text-decoration: none;
+    flex: none;
+  }
+  .section-read:hover {
+    text-decoration: underline;
+  }
+
+  .section-summary {
+    font-size: 0.8rem;
+    line-height: 1.85;
+    color: var(--ink-muted);
+    margin: 0.2rem 0 0;
+  }
+
+  .sum-badge {
+    font-size: 0.68rem;
+    color: var(--note);
+    border: 1px solid var(--note);
+    border-radius: 4px;
+    padding: 0 0.35em;
+    margin-inline-end: 0.4em;
+    white-space: nowrap;
+  }
+</style>
