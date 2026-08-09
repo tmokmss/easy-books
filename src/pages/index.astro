@@ -51,6 +51,9 @@ const titlesJson = JSON.stringify(chapterTitles).replaceAll('<', '\\u003c');
             {work.meta.author}
             {work.meta.authorOriginal && <span class="work-original">（{work.meta.authorOriginal}）</span>}
           </p>
+          <a class="work-outline-link" href={`${base}/works/${work.id}/`}>
+            全体図 — 部・章・節の要約から読む位置を選ぶ →
+          </a>
           <ol class="chapter-list">
             {chapters.map((c) => (
               <li>
@@ -146,6 +149,20 @@ const titlesJson = JSON.stringify(chapterTitles).replaceAll('<', '\\u003c');
 
   .work-original {
     font-size: 0.78rem;
+  }
+
+  .work-outline-link {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--person);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    margin: 0 0 1rem;
+  }
+  .work-outline-link:hover {
+    background: color-mix(in srgb, var(--person) 8%, transparent);
   }
 
   .chapter-list {

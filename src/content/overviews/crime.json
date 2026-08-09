@@ -1,0 +1,86 @@
+{
+  "workId": "crime",
+  "genre": "fiction",
+  "parts": [
+    {
+      "id": "part-1",
+      "label": "第一部",
+      "chapters": [
+        "crime-01-01",
+        "crime-01-02",
+        "crime-01-03",
+        "crime-01-04",
+        "crime-01-05",
+        "crime-01-06",
+        "crime-01-07"
+      ]
+    },
+    {
+      "id": "part-2",
+      "label": "第二部",
+      "chapters": [
+        "crime-02-01",
+        "crime-02-02",
+        "crime-02-03",
+        "crime-02-04",
+        "crime-02-05",
+        "crime-02-06",
+        "crime-02-07"
+      ]
+    },
+    {
+      "id": "part-3",
+      "label": "第三部",
+      "chapters": [
+        "crime-03-01",
+        "crime-03-02",
+        "crime-03-03",
+        "crime-03-04",
+        "crime-03-05",
+        "crime-03-06"
+      ]
+    },
+    {
+      "id": "part-4",
+      "label": "第四部",
+      "chapters": [
+        "crime-04-01",
+        "crime-04-02",
+        "crime-04-03",
+        "crime-04-04",
+        "crime-04-05",
+        "crime-04-06"
+      ]
+    },
+    {
+      "id": "part-5",
+      "label": "第五部",
+      "chapters": [
+        "crime-05-01",
+        "crime-05-02",
+        "crime-05-03",
+        "crime-05-04",
+        "crime-05-05"
+      ]
+    },
+    {
+      "id": "part-6",
+      "label": "第六部",
+      "chapters": [
+        "crime-06-01",
+        "crime-06-02",
+        "crime-06-03",
+        "crime-06-04",
+        "crime-06-05",
+        "crime-06-06",
+        "crime-06-07",
+        "crime-06-08"
+      ]
+    },
+    {
+      "id": "epilogue",
+      "label": "エピローグ",
+      "chapters": ["crime-07-01", "crime-07-02"]
+    }
+  ]
+}
