@@ -104,14 +104,17 @@ const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
     cursor: default;
   }
 
-  /* 縦書き（横スクロール） */
+  /* 縦書き（横スクロール）
+     論理プロパティは .reader-flow 自身の vertical-rl 基準で解決されるため、
+     ここは物理プロパティで書く（block-size だと行長でなく幅の指定になり、
+     本文が画面外へはみ出して注釈がタップできなくなる） */
   :root[data-vertical='on'] .reader-flow {
     writing-mode: vertical-rl;
-    block-size: min(70dvh, 40em);
-    max-inline-size: none;
+    height: min(70dvh, 40em);
+    max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-block: 1rem;
+    padding: 1rem 0;
   }
   :root[data-vertical='on'] .para-group {
     margin: 0 0 0 calc(var(--reader-lh) * 0.6em);
