@@ -3,7 +3,7 @@
   "chapterId": "crime-01-04",
   "summary": {
     "text": "母の手紙を反芻し、ルージンの吝嗇と母の窮状を見抜いたラスコーリニコフは、ドゥーニャの結婚の決意をスヴィドリガイロフ家での忍耐やソーニャの運命になぞらえ、自分のための犠牲だと拒む。だが阻止する具体策もなく、古い煩悶が頂点に達し、いま何かを決めねばと自らを追い立てる。マルメラードフの言葉やある考えが不穏に迫るなか、K並木通りで酔いつぶれた若い娘に出会う。娘を狙う伊達男を挑発して巡査を巻きこみ、事情を訴えて娘を助けようとするが、娘は拒み、伊達男と巡査に連れられて去っていく。ところが土壇場でラスコーリニコフは翻意し、放っておけと巡査に叫んで一人残る。娘の末路を思い描いてドゥーニャの身を案じたのち、ラズミーヒンを訪ねるつもりだったと思い出し、孤独な自分と友の絆を振り返る。",
-    "status": "draft",
+    "status": "machine-checked",
     "coversUpTo": "p046"
   },
   "sections": [
@@ -17,7 +17,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "母からの手紙を反芻するラスコーリニコフは、実務家を自称するルージンの言い訳や吝嗇さを見抜き、母の年金頼みの窮状を憂える。妹ドゥーニャの結婚の決意を、かつて耐えたスヴィドリガイロフ家での顛末やソーニャの運命になぞらえ、これは自分のための犠牲だと見抜いて、断じて受け入れないと誓う。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p005"
       }
     },
@@ -31,7 +31,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "われに返ったラスコーリニコフは、阻止すると誓ったところでいま何ができるのかと自問し、答えのない古い煩悶が手紙によって頂点に達したと悟る。何かを決めねばならぬと自らを追い立て、さもなくば人生を捨てよと逆上して叫ぶ。昨日のマルメラードフの言葉がふと蘇り、以前からのある考えが夢でなく脅威の姿で迫って愕然とする。ベンチを探してK並木通りを急ぐうち、途中である出来事に気を取られる。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p012"
       }
     },
@@ -45,7 +45,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "ラスコーリニコフはベンチを探す途中、着崩れた身なりで酔いつぶれた若い娘に気づく。少し離れた場所で娘の様子をうかがう身なりのよい男にも気づき、魂胆を見抜いてからかい半分に言葉を浴びせ挑発する。男が鞭を振り上げ揉み合いになりかけたところへ巡査が割って入り、往来での喧嘩をとがめる。ラスコーリニコフは元学生と名乗り、見せたいものがあると巡査をベンチへ引っぱっていく。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p022"
       }
     },
@@ -59,7 +59,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "ラスコーリニコフは、娘は誰かにだまされ着せ替えられたのだと巡査に訴え、伊達男が隙をうかがっていると告げる。巡査は同情して娘に住まいを尋ねるが拒まれ、辻馬車代の二十コペイカを渡された巡査は世の乱れを嘆き、娘を困窮した良家の子女かと推し量る。伊達男は距離を置きつつ居座り続けるが、娘が突然立ち去ると、伊達男と巡査がそれぞれあとを追う。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p036"
       }
     },
@@ -73,7 +73,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "何かに刺されたようにラスコーリニコフの内側が一変し、放っておけ、あの男に楽しませてやれと巡査の背に叫ぶ。巡査は面食らうが、ラスコーリニコフは笑い出すだけで取り合わない。あきれた巡査はラスコーリニコフを狂人かそれ以上の何かと見なし、伊達男と娘のあとを追っていった。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p041"
       }
     },
@@ -87,7 +87,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "一人になったラスコーリニコフは、娘に構い金を出したことを悔いる。ベンチで、娘がやがて病と酒に沈み若くして果てるさまを思い描き、そうした運命を『パーセント』で片付ける世の理屈に苛立ちながら、同じ運命がドゥーニャにも及ぶのではと恐れる。ふと行き先を思い出せずにいたが、ワシーリエフスキー島のラズミーヒンを訪ねるつもりだったと気づく。大学時代、人を避けていた自分の気質を振り返りつつ、陽気なラズミーヒンとだけは親しくなれたことを思う。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p046"
       }
     }
@@ -95,115 +95,115 @@
   "paragraphSummaries": {
     "p001": {
       "text": "母の手紙に苦しみつつ、ドゥーニャとルージンの結婚を許さぬと心に決める。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p002": {
       "text": "ルージンの言い訳を皮肉り、ドゥーニャの結婚の決意を見抜いたと独り言つ。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p003": {
       "text": "母が『新しい世代』に触れた真意を勘繰り、ルージンへの怒りを募らせる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p004": {
       "text": "ルージンの実務家ぶりに透ける吝嗇さと、母の乏しい年金頼みを見抜き憤る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p005": {
       "text": "ドゥーニャの忍耐をスヴィドリガイロフ家の一件やソーニャの運命に重ね、犠牲を拒むと誓う。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p007": {
       "text": "阻止すると誓ったが、いま何ができるのか、具体策のなさに自問する。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p008": {
       "text": "手紙は古い煩悶を頂点に導き、いま何かを決めねばと彼を追い立てる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p009": {
       "text": "さもなくば人生を捨て、生きる権利を絞め殺せと彼は逆上して叫ぶ。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p010": {
       "text": "昨日のマルメラードフの、行き場のなさを問う言葉がふと蘇る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p011": {
       "text": "昨日からの、ある考えが夢でなく脅威の形で迫り、彼は愕然とする。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p012": {
       "text": "K並木通りでベンチを探し急ぐが、途中である出来事に気を取られる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p013": {
       "text": "帽子も日傘もなく着崩れた若い娘に気づき、酔いつぶれていると悟る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p014": {
       "text": "娘の前で途方に暮れる一方、様子をうかがう身なりのよい男に気づき怒る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p019": {
       "text": "男が鞭を振り上げ揉み合いになるが、巡査が二人の間に割って入る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p020": {
       "text": "巡査が往来での喧嘩をとがめ、ラスコーリニコフの身元を問いただす。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p021": {
       "text": "ラスコーリニコフは元学生と名乗り、見せたいものがあると巡査を促す。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p023": {
       "text": "娘は誰かにだまされ酔わされたと説き、伊達男の魂胆を巡査に訴える。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p025": {
       "text": "巡査は娘を憐れみ住まいを尋ねるが、娘はぼんやり手を振り拒む。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p029": {
       "text": "巡査は娘を気の毒がりつつ、金を出したラスコーリニコフのぼろを訝る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p032": {
       "text": "巡査は世の乱れを嘆き、娘は困窮した良家の子女かもしれないと推す。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p034": {
       "text": "ラスコーリニコフは伊達男を娘に近づけまいと気をもみ焦る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p035": {
       "text": "男は距離を置くが居座り、巡査は住所さえわかればと思案する。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p036": {
       "text": "娘は突然立ち上がり歩き去り、伊達男と巡査がそれぞれあとを追う。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p042": {
       "text": "一人になった彼は、娘に構ったことと出した金を後悔し毒づく。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p043": {
       "text": "娘の転落する末路を思い描き、同じ運命がドゥーニャにも及ぶと恐れる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p044": {
       "text": "行き先を思い出せずにいたが、ラズミーヒンを訪ねる用件だったと気づく。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p045": {
       "text": "大学時代、誰とも交わらず人を避けた自分の孤高な気質を振り返る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p046": {
       "text": "陽気で芯の強いラズミーヒンとだけは親しくなれたと来し方を思う。",
-      "status": "draft"
+      "status": "machine-checked"
     }
   }
 }

@@ -3,7 +3,7 @@
   "chapterId": "crime-04-06",
   "summary": {
     "text": "ポルフィーリーの執務室にニコライが連れてこられ、二人の老女殺しを一人でやったと自白するが、言葉には用意された不自然さがあり疑いは晴れない。向き直ったポルフィーリーは、互いの手の震えや示されずじまいの「不意打ち」を皮肉りつつ、扉口や階段でラスコーリニコフと言葉を交わし、職務を滑稽だとからかわれても機嫌よく応じる。帰宅した彼は、自白がもたらす危険の重さと、まだ事実には至っていない自分の立場を思い返し、「今日だ」と決意する。そこへ昨日の男が訪ねてきて詫び、ポルフィーリーに事情を告げ、間仕切りの陰から一部始終を聞いていた張本人だと明かす。彼は男を許し、危険が確かな事実には至らなかったと悟りつつ、弱腰を恥じる薄笑いで階段を下りる。",
-    "status": "draft",
+    "status": "machine-checked",
     "coversUpTo": "p106"
   },
   "sections": [
@@ -17,7 +17,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "扉の外の物音が急に大きくなり、ポルフィーリーの制止も虚しく、護送係に伴われたニコライが執務室へ押し入ってくる。ひどく青ざめ、決意を目に宿しながらも唇を震わせる異様な若者の姿に、居合わせた者たちは気を呑まれる。扉口には野次馬もひしめいた。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p012"
       }
     },
@@ -31,7 +31,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "腹立ちまぎれに一同を追い払おうとするポルフィーリーの前で、ニコライがふいに膝をつき、「人殺しは私です」と告げる。十秒の沈黙のあと我に返ったポルフィーリーに問われ、ニコライは斧でアリョーナ・イヴァーノヴナとリザヴェータ・イヴァーノヴナを殺したと供述し、また黙り込む。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p022"
       }
     },
@@ -45,7 +45,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "目撃者たちを追い払ったポルフィーリーは、ニコライを問い詰める。凶器は用意した斧、単独犯でミーチカは無関係だと言うが、階段から逃げた理由の説明はいかにも用意されたふうで、ポルフィーリーは「自分の言葉ではない」と憎々しげにつぶやき、ラスコーリニコフの存在にふと気づく。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p035"
       }
     },
@@ -59,7 +59,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "ニコライに気を取られていたポルフィーリーは、ふとラスコーリニコフの存在を思い出して狼狽し、詫びながら扉へ促す。互いの手の震えを指摘し合ったのち、約束されていた「不意打ち」は結局見せてもらえぬまま、二人は皮肉交じりに別れの言葉を交わす。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p047"
       }
     },
@@ -73,7 +73,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "事務室を通り抜けたラスコーリニコフを、ポルフィーリーが階段で息を切らして追いかけ、手続き上また会うことになると告げる。気を取り直した二人は互いの非礼を詫び合い、「最後まで知り尽くす」と軽口を叩き合うが、行き先が命名日の祝いではなく葬式だと知り、ポルフィーリーは言葉を改める。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p058"
       }
     },
@@ -87,7 +87,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "階段を下りかけたラスコーリニコフは振り返り、自白させておいて今度は疑ってかかるポルフィーリーの職務を滑稽だと皮肉る。ポルフィーリーは意に介さず、その機知をゴーゴリになぞらえて称賛し、二人は「また愉快にお会いしましょう」と言葉を交わして別れる。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p067"
       }
     },
@@ -101,7 +101,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "ラスコーリニコフは家に帰り着き、ニコライの自白がもたらす危険の重さを思い返す。ポルフィーリーが手の内を見せた「一手」の恐ろしさに震えつつも、まだ事実には至っていないと自分に言い聞かせ、昨日の男の行方や不意打ちの正体を考えあぐねる。震えがおさまると、今日一日だけは安全だという予感に喜びを覚え、追善の食事でソーニャに会おうと「今日だ」と繰り返しながら扉へ向かう。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p074"
       }
     },
@@ -115,7 +115,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "扉が音もなくひとりでに開き、昨日の男が現れて敷居で立ち止まる。しょんぼりした様子で部屋へ入ると、死人のようになったラスコーリニコフの前で深々と頭を下げ、「悪意を抱いたことをお許しください」と静かに詫びる。二人は無言で見つめ合う。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p083"
       }
     },
@@ -129,7 +129,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "男は、酒に酔った扱いをされ悔しさに眠れず、住所を頼りに訪ねてきたと弁明する。あの日門の下にいた小市民だと知ったラスコーリニコフは、一昨日の光景を鮮明に思い出し、この程度の些細な事情で危うく自滅しかけたのだと悟る。男の証言にもポルフィーリーの手にも、確かな事実は何もないと考えあぐねる。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p090"
       }
     },
@@ -143,7 +143,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "驚いたラスコーリニコフに問われ、男は今日ポルフィーリーに事情を話したのは自分だと認める。門番が動かないため自ら訪ね、間仕切りの陰に座らされて一部始終を聞いていたと明かし、自白前後にポルフィーリーが部屋を跳ねまわり胸を叩いて悔しがった様子や、隠されて問い詰められた経緯を語る。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p100"
       }
     },
@@ -157,7 +157,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "ニコライの取り調べは男が出たあとに始まったと確認されると、男は再び深く詫び、ラスコーリニコフは「神がお許しになるでしょう」と応じる。男が去ると、彼は「どちらにも転ぶ」と繰り返しながら元気を取り戻して部屋を出る。階段を下りながら、彼は自分の弱腰を恥じつつも悪意の薄笑いを浮かべ、まだ一勝負できると思う。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p106"
       }
     }
@@ -165,111 +165,111 @@
   "paragraphSummaries": {
     "p009": {
       "text": "短い揉み合いのあと、青ざめた男が執務室に押し入ってくる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p010": {
       "text": "男の目には決意が光るが、顔は死人のように蒼白で唇が震えている。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p011": {
       "text": "庶民風の若く痩せたニコライを護送係が追うが、彼は手を振りほどく。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p013": {
       "text": "ポルフィーリーが叱りつける中、ニコライがふいに膝をつく。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p022": {
       "text": "ニコライは斧でアリョーナとリザヴェータを殺したと告げ、また黙り込む。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p023": {
       "text": "ポルフィーリーは傍観者を追い払うと、ラスコーリニコフとニコライを見比べ、再びニコライに詰め寄る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p037": {
       "text": "ポルフィーリーはラスコーリニコフに駆け寄り、詫びながら退室を促す。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p048": {
       "text": "事務室で門番たちの視線を受けつつ抜けると、階段でポルフィーリーが息を切らし追ってくる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p049": {
       "text": "ポルフィーリーは、手続き上いくつか訊くことがあり、また会うことになると告げる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p053": {
       "text": "ラスコーリニコフは気を取り直し、先ほど熱くなったことをポルフィーリーに詫びる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p054": {
       "text": "ポルフィーリーは嬉しげに、自分の毒のある性分を認めつつ、何度も会うだろうと応じる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p059": {
       "text": "階段を下りかけたラスコーリニコフが振り返り、ポルフィーリーの職務を滑稽だとからかう。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p061": {
       "text": "ラスコーリニコフは、自白させておいて今度は疑うポルフィーリーのやり方を皮肉る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p064": {
       "text": "ポルフィーリーはラスコーリニコフの機知を称え、ゴーゴリを引き合いに出す。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p068": {
       "text": "ラスコーリニコフは家で長椅子に伏せ、ニコライの自白がもたらす危険を思い、自由なうちに動かねばと考える。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p069": {
       "text": "ラスコーリニコフは先の場面を思い返して震え、事実には至っていないと自分に言い聞かせる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p070": {
       "text": "ポルフィーリーの「不意打ち」の正体を考え、昨日の男の行方に思い至る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p072": {
       "text": "今日一日は安全だという予感に喜びを覚え、追善の食事でソーニャに会おうと思い立つ。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p075": {
       "text": "扉を開けようとした瞬間、ひとりでに開き、昨日の男が現れる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p076": {
       "text": "男は敷居で立ち止まり、昨日と違ってしょんぼりした顔で深いため息をつく。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p084": {
       "text": "男は、酒に酔った扱いをされたことに腹を立て、眠れず住所を頼りに昨日ここへ来たと語る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p088": {
       "text": "男は、あの日も門の下にいた毛皮職人の小市民で、腹が立ったのだと繰り返す。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p089": {
       "text": "ラスコーリニコフは一昨日の門下の光景を鮮明に思い出し、当時のやり取りを想起する。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p090": {
       "text": "この程度の些細な事情で危うく自滅するところだったと悟り、これ以上の事実は出ないと考える。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p100": {
       "text": "小市民は、ポルフィーリーに何度も訪ねて事情を話し、間仕切りの陰に隠されるまでの経緯を語る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p105": {
       "text": "ラスコーリニコフが赦しの言葉を返すと、男は一礼して去り、彼も元気を取り戻して部屋を出る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p106": {
       "text": "彼は自分の弱腰を恥じつつ、悪意の薄笑いを浮かべて階段を下りる。",
-      "status": "draft"
+      "status": "machine-checked"
     }
   }
 }

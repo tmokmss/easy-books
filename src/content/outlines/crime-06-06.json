@@ -3,7 +3,7 @@
   "chapterId": "crime-06-06",
   "summary": {
     "text": "スヴィドリガイロフは酒場を渡り歩いた後、ソーニャのもとを訪ね、アメリカ行きをほのめかしながら大金を贈り、ラスコーリニコフの行く末とラズミーヒンへの言付けを告げて去った。同じ夜、許嫁の家にも立ち寄り、結婚前の贈り物として証券を渡した。その後、場末の安宿に部屋を取り、水や過去の記憶、入水自殺した少女の夢、悪夢に変じる幼子の幻に苛まれて眠れぬ夜を過ごした。日が高くなると拳銃と手帳を確かめて宿を出、濃霧の中を歩いて火の見櫓のもとへ至り、見張りのアキレスに行く先を告げると、こめかみに銃を当てて引き金を引いた。",
-    "status": "draft",
+    "status": "machine-checked",
     "coversUpTo": "p053"
   },
   "sections": [
@@ -17,7 +17,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "スヴィドリガイロフは深夜まで居酒屋や遊園で過ごした後、嵐の中を帰宅し、ソーニャのもとを訪ねた。アメリカへ発つとほのめかし、妹弟の始末はついたと告げ、三千ルーブルの公債を贈った。固辞するソーニャに、ラスコーリニコフには銃弾かシベリア行きの道しかなく、金は彼を追う彼女に必要になると説き、訪問を誰にも明かさずラズミーヒンに預けておくよう頼んで去った。ソーニャは驚きと不安の中に残された。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p014"
       }
     },
@@ -31,7 +31,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "同じ夜十一時四十分、スヴィドリガイロフはずぶ濡れのまま許嫁の両親の家を訪れた。しばらくペテルブルグを離れると告げ、結婚前の贈り物として一万五千ルーブルの証券を渡した。家族は困惑しながらも喜んで受け取り、彼を裕福で気ままな人物と納得させて誰にも話さぬよう申し合わせ、許嫁は少し悲しみながら早くに休んだ。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p015"
       }
     },
@@ -45,7 +45,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "スヴィドリガイロフは真夜中、風の中を大通りへ歩き、小ネヴァ川を眺めた末、アドリアノーポリという安宿に部屋を取った。茶と仔牛肉を頼み、狭く汚れた客室を眺め、壁の隙間から隣室で酔った男が友人を大声で責め立てる様子をのぞき見た。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p026"
       }
     },
@@ -59,7 +59,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "熱に浮かされて横になった彼は、水や橋の記憶、マルファ・ペトローヴナの幻を待つ思い、ラスコーリニコフやドゥーニャをめぐる考えに苛まれた。鼠の幻に飛び起きた後、半睡のなかで花に満ちた邸宅と、辱めを受けて入水自殺した十四歳の少女の棺の夢を見た。われに返って窓を開けると、闇の中で大砲の音が二度響き、洪水の警報だと悟った彼は、ペトロフスキーへ行こうと身支度を整えた。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p033"
       }
     },
@@ -73,7 +73,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "戸棚の陰で震え泣く五歳の少女を見つけた彼は、酔った母に叩かれ逃げてきたと知り、自室の寝台に寝かせた。だが少女の頬に異様な紅潮が浮かび、淫蕩な表情を見せた瞬間、恐怖に叫んで目を覚ました。日はすでに高く、寝過ごしたと悟った彼は、拳銃を確かめ、手帳に数行書きつけて部屋を出た。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p037"
       }
     },
@@ -87,7 +87,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "濃霧の中を歩いたスヴィドリガイロフは、火の見櫓のある建物に、アキレスという見張りの男を見つけた。アメリカへ行くと告げて拳銃を取り出すと、アキレスは「ここは場所でない」と繰り返し咎めたが、彼はこめかみに銃を押し当て、引き金を引いた。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p053"
       }
     }
@@ -95,95 +95,95 @@
   "paragraphSummaries": {
     "p001": {
       "text": "スヴィドリガイロフは夜十時まで居酒屋を渡り歩き、歌声を聞いていた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p003": {
       "text": "書記らと酒場や遊園で過ごした後、嵐の中を帰宅し金を持ってソーニャの元へ向かった。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p004": {
       "text": "ソーニャはカペルナウーモフの子らに茶を与えており、驚きつつ黙って彼を迎えた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p006": {
       "text": "スヴィドリガイロフはアメリカ行きを匂わせ、妹弟の始末をつけたと告げ、三千ルーブルの公債を贈った。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p007": {
       "text": "ソーニャは深い恩を感じていると答えかけ、せきこんで礼を言おうとした。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p009": {
       "text": "ソーニャは自分にはもう金は要らないと固辞し、恩知らずと思わないでと頼んだ。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p010": {
       "text": "彼はラスコーリニコフの二つの道を語り、金はソーニャが彼を追うために要ると説き、ラズミーヒンに預けるよう勧めた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p013": {
       "text": "スヴィドリガイロフは笑いながら別れを告げ、ソーニャに長生きするよう言い、ラズミーヒンへの伝言を頼んだ。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p015": {
       "text": "彼は夜更け、許嫁の家を訪れ、旅立つとの口実で一万五千ルーブルの証券を贈り物として渡した。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p016": {
       "text": "スヴィドリガイロフは真夜中、風の中を歩き、アドリアノーポリという安宿に部屋を取った。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p025": {
       "text": "彼は宿の上等さに驚き、誰がここに泊まるのか興味を覚えた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p026": {
       "text": "彼は狭く汚れた客室を眺め、隙間から隣室で一人の男が友人を大声で責める様子を覗き見た。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p027": {
       "text": "彼は熱っぽく横になり、水や橋の記憶に苛まれ、マルファ・ペトローヴナの幻を待つように考えた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p028": {
       "text": "ドゥーニャをラズミーヒンに託すよう勧めた記憶がよみがえり、ラスコーリニコフを評した。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p029": {
       "text": "彼は眠れず、拳銃を下ろし怯えるドゥーニャの姿を思い出し、動揺を振り払おうとした。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p030": {
       "text": "毛布の下を這う鼠の幻を捕らえようとしたが、身震いして目を覚ますとまた同じ寝台にいた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p031": {
       "text": "彼は花に満ちた邸宅の夢を見、そこに横たわる、辱めを受けて入水自殺した十四歳の少女の棺を見た。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p032": {
       "text": "彼はわれに返って窓を開け、闇に沈む庭をしばらく見つめていると、大砲の音が二度響いた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p033": {
       "text": "洪水の警報だと悟り、時計が三時を打つのを聞くと、ペトロフスキーへ行こうと身支度を整えた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p034": {
       "text": "彼は戸棚の陰で震え泣く五歳の少女を見つけ、酔った母に叩かれ逃げてきたと知り、自室で寝かせた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p035": {
       "text": "少女の頬に異様な紅潮が浮かび、目覚めた少女は淫蕩な表情で腕を伸ばし、彼は恐怖に叫んで目覚めた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p037": {
       "text": "彼は悪夢だったと悟って起き上がり、拳銃を確かめ手帳に何か書きつけると、部屋を出た。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p038": {
       "text": "濃霧の中を歩き、火の見櫓のある建物を見つけると、そこで警備するアキレスという男と向かい合った。",
-      "status": "draft"
+      "status": "machine-checked"
     }
   }
 }

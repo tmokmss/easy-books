@@ -31,6 +31,8 @@ export function initStretchtext(): void {
       body.hidden = folding;
       setExpanded(btn, !folding);
       sec?.classList.toggle('folded', folding);
+      const hint = btn.querySelector<HTMLElement>('.sec-fold-hint');
+      if (hint) hint.textContent = folding ? 'ひらく' : 'たたむ';
       if (sum) {
         if (folding) {
           sum.hidden = false;

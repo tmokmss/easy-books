@@ -78,6 +78,7 @@
 npx tsx tools/export-ja.ts <chapterId>|--all   # 章の ja 本文をマークアップ抜きで書き出す（エージェント入力）
 # ↓ 生成は Claude Code セッション内のエージェントが行う（source/outlines/INSTRUCTIONS.md 参照）
 npx tsx tools/merge-outline.ts <chapterId> source/outlines/<chapterId>.json  # 検証つきマージ
+npx tsx tools/merge-overview.ts <workId>       # 部・作品要約（source/outlines/part-*.txt 等）のマージ
 npx tsx tools/check-summaries.ts <workId> [chapterId ...] [--promote]        # 機械ふるい→昇格
 ```
 

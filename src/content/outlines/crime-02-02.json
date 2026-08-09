@@ -3,7 +3,7 @@
   "chapterId": "crime-02-02",
   "summary": {
     "text": "家捜しの恐怖を抱きながら部屋へ戻ったラスコーリニコフは、盗んだ品物をポケットに詰め、掘割へ投げこもうとするが人目を恐れて果たせず、窓のない中庭の石の下に品物と財布を隠す。歓喜に笑うが、なぜ財布の中身さえ確かめなかったのかという問いに苦しみ、自分はひどく病んでいるのだと結論し、周囲への果てしない嫌悪にとらえられる。気づけばラズミーヒンの部屋を訪れ、ぼろ服を見咎められ、助けを求めに来たはずが誰の力もいらないと繰り返す。ラズミーヒンが持ちかけた翻訳の仕事の原稿と金を一度受け取りながらすぐ返しに戻り、無言で立ち去る。橋の上では馬車の御者に鞭打たれ、乞食と見なされて銀貨を恵まれるが、その銀貨をネヴァ河へ投げ捨てて家へ帰り、疲れ果てて眠りこむ。夕方、恐ろしい叫び声で目をさまし、下宿のおかみが殴られている声を聞くが、ナスターシヤは誰も来ていない、それは血の幻だと告げ、彼は水を飲んで再び意識を失う。",
-    "status": "draft",
+    "status": "machine-checked",
     "coversUpTo": "p066"
   },
   "sections": [
@@ -17,7 +17,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "家捜しを恐れながら部屋へ戻ると何も荒らされておらず、壁紙の下の盗品八点を取り出してポケットに詰め、扉を開けたまま出る。掘割へ投げこむつもりが人目が多く実行できず、人けのない場所に埋める案も浮かぶ。やがて窓のない壁に囲まれた中庭を見つけて入り、門のそばの大きな石をひっくり返して下のくぼみに品物と財布を投げ入れ、石を戻して土をかき寄せる。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p012"
       }
     },
@@ -31,7 +31,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "痕跡を隠した歓喜に彼は笑いだすが、以前あの娘に出会ったK並木道に入ると笑いは消える。新しい問いが浮かぶ——意識してやったはずなのに、なぜ財布の中身さえ見ていないのか。夜のうちに水へ投げると決めたときから迷いはなかったと思い返し、とうとう「おれはひどく病んでいるからだ」と結論する。行き会う者すべてに対する、果てしのない嫌悪が彼をとらえていく。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p019"
       }
     },
@@ -45,7 +45,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "マーラヤ・ネヴァ河岸で自分がラズミーヒンの家の前にいると気づき、五階の部屋へ上がる。四か月ぶりに会うラズミーヒンは、ぼろ服姿の友人に驚き、座らせて脈を取ろうとするが、ラスコーリニコフは手を振りほどく。家庭教師の口を探しに来たと言いながらすぐに「いらない」と言い直し、立ちあがって人と顔を合わせることの苦痛を悟る。「さよなら」と帰ろうとするが引き止められ、君がいちばん頭がよく親切だから来たのだと言いつつ、結局は誰の助けもいらないと繰り返す。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p033"
       }
     },
@@ -59,7 +59,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "ラズミーヒンは、本屋ヘルヴィーモフから請け負った「女は人間か」というドイツ語論文の翻訳の仕事を持ちかけ、原稿とペン、紙、三ルーブルを差し出す。ラスコーリニコフは黙って受け取り出ていくが、途中で引き返し、原稿と金を机に置いてまた無言で去る。呆れたラズミーヒンが振戦譫妄かと問い詰めても答えず、階段を下りながら「翻訳はいらない」とつぶやき、住まいを尋ねられても返事をしないまま立ち去る。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p041"
       }
     },
@@ -73,7 +73,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "ニコラエフスキー橋で馬車の走る場所を歩いていたため御者に怒鳴られ、鞭で打たれて我に返る。まわりは笑い声をあげ、当たり屋呼ばわりする者もいる。欄干のそばに立っていると、乞食と見た商家の女と娘から二十コペイカ銀貨を恵まれる。橋の上から、大学時代に幾度も眺めた大聖堂とネヴァ河の眺望を見つめ、かつてと同じ場所に立つ自分を奇異に感じながら、握っていた銀貨を水へ投げ捨てる。夕方、六時間ほど歩きまわった末に部屋へ帰り着き、服も脱がずソファに倒れこんで眠りこむ。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p049"
       }
     },
@@ -87,7 +87,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "恐ろしい叫び声で目をさますと、下宿のおかみが泣きわめき、署長補イリヤ・ペトローヴィチが階段で殴りつけている声が聞こえる。家じゅうが騒然となるが、十分ほどで静まる。恐怖に横たわっていると、ナスターシヤがろうそくとスープを持って入り、きのうから何も食べていないだろうと言う。おかみがなぜ殴られたのか尋ねると、ナスターシヤは黙ったまま長く彼を見つめ、その視線に彼は不安になり、なぜ黙っているのかと問う。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p058"
       }
     },
@@ -101,7 +101,7 @@
       "boundaryStatus": "proposed",
       "summary": {
         "text": "ナスターシヤは「それは血だよ」と静かに答え、誰もおかみを殴ってなどいない、誰も来てはいないと言う。血の逃げ場がなくなると幻が見えるものだと告げ、食べるかと尋ねるが彼は答えない。飲み物をくれと頼むと、彼女は水を汲んで戻ってくるが、彼は一口すすったところで意識を失う。",
-        "status": "draft",
+        "status": "machine-checked",
         "coversUpTo": "p066"
       }
     }
@@ -109,127 +109,127 @@
   "paragraphSummaries": {
     "p002": {
       "text": "部屋に戻ると何も手をつけられておらず安堵する。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p003": {
       "text": "壁紙の下から盗んだ品物八点を取り出し、ポケットに詰める。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p004": {
       "text": "品物と財布をポケットに分けて入れ、扉を開けたまま部屋を出る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p005": {
       "text": "追手を恐れ、痕跡を消すため足早に歩くが行き先が定まらない。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p006": {
       "text": "全部を掘割へ投げこみ痕跡を消すと、前夜から決めていた。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p007": {
       "text": "エカテリニンスキー運河をさまようが、人目が多く投げこめない。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p008": {
       "text": "人が少ないネヴァ河のほうへ行こうと思いつく。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p009": {
       "text": "ネヴァ河ではなく人けのない場所に埋めるほうがよいと考え直す。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p010": {
       "text": "広場へ出る手前で窓のない壁に囲まれた中庭を見つけ、入る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p011": {
       "text": "門と樋の間に大きな石を見つけ、人目がないことを確かめる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p012": {
       "text": "石をひっくり返し、下のくぼみに品物と財布を投げ入れて戻す。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p013": {
       "text": "痕跡を隠した歓喜に笑うが、K並木道に入ると笑いは消える。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p014": {
       "text": "考えがすべて一つの中心点をめぐっていると彼は感じる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p015": {
       "text": "新しい生活など知るものかと、怒りとともに自分を責める。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p017": {
       "text": "なぜ意識してやったはずなのに財布の中身も見ていないのかと自問する。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p018": {
       "text": "水へ投げると決めたのは前からのことで、迷いはなかったと認める。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p019": {
       "text": "自分は病んでいるのだと結論し、周囲すべてへ嫌悪を覚える。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p020": {
       "text": "マーラヤ・ネヴァ河岸で、自分がラズミーヒンの家の前にいると気づく。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p022": {
       "text": "ラズミーヒンの部屋を訪ね、四か月ぶりに再会する。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p024": {
       "text": "ラズミーヒンはラスコーリニコフの服のひどさに驚き、座らせる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p028": {
       "text": "ラスコーリニコフは立ちあがり、人と会うのが苦痛だと悟る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p033": {
       "text": "助けを求めて来たが、何もいらないと言い放って帰ろうとする。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p034": {
       "text": "ラズミーヒンは翻訳の仕事を持ちかけ、原稿と前金を渡そうとする。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p035": {
       "text": "ラスコーリニコフは原稿と金を受け取るが、すぐ引き返して返す。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p042": {
       "text": "ニコラエフスキー橋で御者に怒鳴られ、鞭で打たれて我に返る。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p047": {
       "text": "乞食と間違われ、商家の女から二十コペイカ銀貨を恵まれる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p048": {
       "text": "橋の上でネヴァ河の眺めを見つめ、硬貨を水へ投げ捨てる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p049": {
       "text": "部屋へ帰り着き、服も脱がずソファに倒れて眠りこむ。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p050": {
       "text": "恐ろしい叫び声で目をさまし、下宿のおかみが殴られる声を聞く。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p051": {
       "text": "恐怖に横たわっていると、ナスターシヤがろうそくと食事を運んでくる。",
-      "status": "draft"
+      "status": "machine-checked"
     },
     "p066": {
       "text": "ナスターシヤが水を持ってくるが、彼は飲むと意識を失う。",
-      "status": "draft"
+      "status": "machine-checked"
     }
   }
 }
