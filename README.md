@@ -54,7 +54,8 @@ npx tsx tools/wikisource-to-paragraphs.ts source/wikisource/crime-01-01.api.json
 npm run tools:translate -- crime-01-01 --limit 10
 
 # 4. 機械チェック（オフライン）。人間レビューの前のふるい
-npm run tools:check -- crime-01-01
+npm run tools:check -- crime-01-01            # 章単位: 数詞・否定・文数
+npx tsx tools/check-consistency.ts crime      # 作品単位: 固有名詞・一人称の表記ゆれ
 
 # 5. 文単位の対訳アラインメント（読書画面の「対訳（原文）を表示」用）
 npx tsx tools/split-src.ts crime-01-01        # 原文を機械分割
