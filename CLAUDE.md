@@ -23,6 +23,8 @@ npm run build          # ビルド＝検証。zod がマークアップ参照・
 npx tsx tools/check-alignment.ts <chapterId>   # 数詞・否定・文数の機械ふるい（誤検知あり）
 npx tsx tools/merge-aligned-translation.ts <chapterId> <aligned.json> --by <model>  # 翻訳+対応の検証つきマージ
 npx tsx tools/split-src.ts <chapterId>         # 原文の文分割 → source/paragraphs/*.sentences.json
+npx tsx tools/merge-outline.ts <chapterId> source/outlines/<chapterId>.json  # 階層ズームの要約マージ（検証つき）
+npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ・整合ふるい → machine-checked 昇格
 ```
 
 ## データモデルの要点
@@ -32,6 +34,7 @@ npx tsx tools/split-src.ts <chapterId>         # 原文の文分割 → source/p
 - インラインマークアップは3種のみ: `{{p:id|表示}}`（人物・固有名）/ `{{r:id|表示}}`(代名詞参照・語注なし) / `{{n:id|表示}}`（語注）。未知 ID や不正形式はビルドが落ちる。翻訳段階では付けない（レビュー工程の仕事）
 - 作品別データ: `src/data/works.json`（カタログ）＋ `src/data/works/<workId>/{people,glossary,style-guide}.json`。人物の音写は people.json の表記に完全一致させる。訳語は style-guide.json の terms に従う（例: рубль→ルーブル、распивочная→安酒場）
 - 原文・中間生成物は `source/` にコミット（wikisource API 応答、段落スケルトン、文リスト、アラインメント）
+- 階層ズーム・リーダー（構造ビュー `/works/<workId>/`・stretchtext・既読管理）: `src/content/outlines/<chapterId>.json`（節区切り＋節/章/段落要約）と `src/content/overviews/<workId>.json`（作品・部要約）。章データを段落IDで参照するだけの別レイヤーで、章 JSON には触れない。要約 status は draft→machine-checked→human-reviewed→verified、fiction はネタバレ封じ込め（coversUpTo）あり。生成手順は `source/outlines/INSTRUCTIONS.md`、仕様は `docs/ZOOM.md`
 
 ## ワークフロー
 

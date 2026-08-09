@@ -14,12 +14,14 @@ v1 の対象はドストエフスキー『罪と罰』第一部 第一章。デ�
 ```
 src/
 ├── content/chapters/       # 本文（原文+訳文+マークアップ）。Content Collections で検証
+├── content/outlines/       # 階層ズーム: 章ごとの節区切り＋要約（docs/ZOOM.md）
+├── content/overviews/      # 階層ズーム: 作品・部の要約
 ├── data/
 │   ├── works.json          # 作品カタログ
 │   └── works/<workId>/     # 作品ごとの台帳（people / glossary / style-guide）
-├── components/             # Reader, PersonRail, AnnotationCard, SettingsPanel
-├── scripts/                # クライアント側 TS（reader.ts, settings.ts）
-└── pages/                  # index, read/[chapter]
+├── components/             # Reader, PersonRail, AnnotationCard, SettingsPanel, ZoomBar
+├── scripts/                # クライアント側 TS（reader.ts, settings.ts, stretchtext.ts, progress.ts ほか）
+└── pages/                  # index, read/[chapter], works/[work]（構造ビュー）
 tools/                      # ビルドと切り離したオフライン処理（下記）
 source/                     # 原文と中間生成物（再現性のためコミットする）
 ```
@@ -63,6 +65,12 @@ npx tsx tools/align-segments.ts crime-01-01 source/alignments/crime-01-01.a1.jso
 
 # 5. 注釈候補の抽出（台帳への反映は人間が手で行う）
 npm run tools:extract -- crime-01-01
+
+# 6. 階層ズーム・リーダー（構造ビュー・stretchtext 用の節区切りと要約。詳細は docs/ZOOM.md）
+npx tsx tools/export-ja.ts --all                    # エージェント入力（ja 本文）を書き出す
+#    → 生成は Claude Code 内のエージェント（source/outlines/INSTRUCTIONS.md 参照）
+npm run tools:outline -- crime-01-01 source/outlines/crime-01-01.json   # 検証つきマージ
+npm run tools:check-summaries -- crime --promote    # ネタバレ・整合の機械ふるい → machine-checked
 ```
 
 翻訳は `claude-opus-5` を使用。安全分類器の誤検知に備えてサーバーサイドフォールバック
