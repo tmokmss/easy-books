@@ -111,3 +111,9 @@ Agent ツールで `model` を指定し、以下を埋めて `prompt` に渡す�
 - `sonnet`（Claude Sonnet 5）… 速い・安い。品質が十分なら41章の主力候補
 - `fable`（Fable 5）… 最高性能帯。比較のベンチマーク用
 - 比較結果と採用判断は `docs/` かコミットメッセージに記録し、`translatedBy` で追跡する
+
+## 後工程: 階層ズームの要約レイヤー
+
+章（または作品全体）の翻訳が済んだら `/outline <chapterId>`（一括は `/outline <workId> --all`）で
+節区切り＋要約を生成する（仕様は docs/ZOOM.md、手順書は source/outlines/INSTRUCTIONS.md）。
+要約は訳文から作るため、訳文を大きく直したら該当章の要約も作り直すこと。
