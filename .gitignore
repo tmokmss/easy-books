@@ -15,4 +15,7 @@ node_modules/
 # ローカル動作確認用（playwright-cli のセッションデータ）
 .playwright-cli/
 
+# Claude Code のワークツリー
+.claude/worktrees/
+
 # source/ は gitignore しない（再現性のため原文・中間生成物をコミットする）
