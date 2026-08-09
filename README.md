@@ -69,7 +69,7 @@ npm run tools:extract -- crime-01-01
 
 # 6. 階層ズーム・リーダー（構造ビュー・stretchtext 用の節区切りと要約。詳細は docs/ZOOM.md）
 npx tsx tools/export-ja.ts --all                    # エージェント入力（ja 本文）を書き出す
-#    → 生成は Claude Code 内のエージェント（source/outlines/INSTRUCTIONS.md 参照）
+#    → 生成は /outline スキル（Claude Code 内のエージェント。source/outlines/INSTRUCTIONS.md 参照）
 npm run tools:outline -- crime-01-01 source/outlines/crime-01-01.json   # 検証つきマージ
 npx tsx tools/merge-overview.ts crime               # 部・作品要約の検証つきマージ
 npm run tools:check-summaries -- crime --promote    # ネタバレ・整合の機械ふるい → machine-checked
