@@ -10,6 +10,7 @@
     "tools:fb2": "tsx tools/fb2-to-paragraphs.ts",
     "tools:translate": "tsx tools/translate.ts",
     "tools:check": "tsx tools/check-alignment.ts",
+    "tools:consistency": "tsx tools/check-consistency.ts",
     "tools:outline": "tsx tools/merge-outline.ts",
     "tools:check-summaries": "tsx tools/check-summaries.ts",
     "tools:extract": "tsx tools/extract-annotations.ts"

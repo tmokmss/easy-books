@@ -21,6 +21,7 @@
 npm run dev            # 開発サーバ
 npm run build          # ビルド＝検証。zod がマークアップ参照・segments 不変条件まで検査する
 npx tsx tools/check-alignment.ts <chapterId>   # 数詞・否定・文数の機械ふるい（誤検知あり）
+npx tsx tools/check-consistency.ts <workId>    # 作品全体の固有名詞・一人称ゆれの機械ふるい
 npx tsx tools/merge-aligned-translation.ts <chapterId> <aligned.json> --by <model>  # 翻訳+対応の検証つきマージ
 npx tsx tools/split-src.ts <chapterId>         # 原文の文分割 → source/paragraphs/*.sentences.json
 npx tsx tools/merge-outline.ts <chapterId> source/outlines/<chapterId>.json  # 階層ズームの要約マージ（検証つき）
@@ -40,6 +41,7 @@ npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ�
 
 - 新しい作品の追加: `/add-work <書名>`（PD 確認→原文取得→カタログ・台帳→スケルトンまで）
 - 章の翻訳: `/translate <chapterId> [sonnet|opus|fable]`。実績のある方式は「1章=1エージェント、翻訳と文アラインメントを一体で出力」: `{"pNNN": [{"s": [文番号], "ja": "断片"}]}` を `source/alignments/` に書き、エージェント自身が merge-aligned-translation.ts を exit 0 まで通す（41章連続で検証一発通過の実績）
+- **一括翻訳の表記統一**: 最初の1章で style-guide.json の `people.*.firstPerson`（一人称・口調）と `names`（脇役・地名の音写台帳）を確定→残りをファンアウト→エージェントの「新規」報告を台帳に還流→部ごとに check-consistency で検査。この順序を崩すと章単位で表記が割れる（罪と罰では事後修正500箇所になった）
 - 大量並行時は Codex CLI レーンも併用可: `codex exec -m gpt-5.6-sol -c model_reasoning_effort="high" -s workspace-write --ephemeral - < <promptfile>`（雛形は罪と罰の運用記録 issue 参照）
 - デプロイ: main に push すると GitHub Actions（withastro/action, **node-version: 22 必須** — Astro 7 は Node >=22.12）
 
