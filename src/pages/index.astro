@@ -57,12 +57,7 @@ const titlesJson = JSON.stringify(chapterTitles).replaceAll('<', '\\u003c');
           <ol class="chapter-list">
             {chapters.map((c) => (
               <li>
-                <a href={`${base}/read/${c.id}/`}>
-                  {c.data.chapterLabel}
-                  {c.data.paragraphs.some((p) => p.status !== 'reviewed') && (
-                    <span class="chapter-draft">草稿</span>
-                  )}
-                </a>
+                <a href={`${base}/read/${c.id}/`}>{c.data.chapterLabel}</a>
               </li>
             ))}
           </ol>
@@ -183,13 +178,5 @@ const titlesJson = JSON.stringify(chapterTitles).replaceAll('<', '\\u003c');
   }
   .chapter-list a:hover {
     background: color-mix(in srgb, var(--person) 7%, transparent);
-  }
-
-  .chapter-draft {
-    font-size: 0.68rem;
-    color: var(--note);
-    border: 1px solid var(--note);
-    border-radius: 4px;
-    padding: 0 0.35em;
   }
 </style>

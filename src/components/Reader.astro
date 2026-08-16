@@ -13,7 +13,6 @@ interface Props {
 }
 
 const { paragraphs, people, sourceLang, outline } = Astro.props;
-const hasDraft = paragraphs.some((p) => p.status !== 'reviewed');
 
 // 節ごとに段落をグループ化する。節が無ければ1グループのフラット表示。
 // 節は範囲参照なので、ここで初めて段落と結びつく（章データは節を知らない）。
@@ -40,11 +39,7 @@ const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine
 ---
 
 <main class="reader-main">
-  {
-    hasDraft && (
-      <p class="draft-notice">この章の訳文には、原文との照合がまだ済んでいない草稿段階の段落が含まれます。</p>
-    )
-  }
+  {/* 訳文の status（draft/checked/reviewed）は画面には出さない。データとしては保持し、レビュー工程だけが見る */}
   {
     hasProposed && (
       <p class="draft-notice">
