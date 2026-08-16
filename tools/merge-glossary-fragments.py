@@ -50,7 +50,7 @@ def main():
     with open(glossary_path, 'w') as f:
         json.dump(glossary, f, ensure_ascii=False, indent=2)
         f.write('\n')
-    print(f'追加 {len(added)} 件: {", ".join(added) if added else "なし"}')
+    print(f'{glossary_path}: 追加 {len(added)} 件: {", ".join(added) if added else "なし"}')
 
 if __name__ == '__main__':
     main()

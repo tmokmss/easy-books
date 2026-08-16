@@ -44,6 +44,12 @@ python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<wor
 - 新しい作品の追加: `/add-work <書名>`（PD 確認→原文取得→カタログ・台帳→スケルトンまで）
 - 章の翻訳: `/translate <chapterId> [sonnet|opus|fable]`。実績のある方式は「1章=1エージェント、翻訳と文アラインメントを一体で出力」: `{"pNNN": [{"s": [文番号], "ja": "断片"}]}` を `source/alignments/` に書き、エージェント自身が merge-aligned-translation.ts を exit 0 まで通す（41章連続で検証一発通過の実績）
 - **一括翻訳の表記統一**: 最初の1章で style-guide.json の `people.*.firstPerson`（一人称・口調）と `names`（脇役・地名の音写台帳）を確定→残りをファンアウト→エージェントの「新規」報告を台帳に還流→部ごとに check-consistency で検査。この順序を崩すと章単位で表記が割れる（罪と罰では事後修正500箇所になった）
+- **台帳に還流しても割れるもの**（われらの実測。波ごとに機械で洗うこと）:
+  ①二人称（`ты`→おまえ／きみ／君）②同義語の訳し分け（`эллинг`→船台／格納庫／ドック）
+  ③章をまたぐ自己引用（記録二十一が記録二十を引用する箇所）④ナンバー記号の前後の空白
+  検査は「章ごとの訳文を横断して同義候補の出現章を数える」だけで足りる。
+  台帳の訳語が実際に使われているかの照合（原文に語がある段落で訳語が出ているか）も有効だが、
+  語幹照合なので複合語は全語の語幹がそろった段落だけを対象にしないと誤検知だらけになる
 - 章の要約（階層ズーム）: `/outline <chapterId> [model]`、作品一括は `/outline <workId> --all`（節区切り→段落/節/章/部/作品要約のボトムアップ生成→check-summaries→machine-checked 昇格まで。1章=1エージェント方式）
 - 大量並行時は Codex CLI レーンも併用可: `codex exec -m gpt-5.6-sol -c model_reasoning_effort="high" -s workspace-write --ephemeral - < <promptfile>`（雛形は罪と罰の運用記録 issue 参照）
 - デプロイ: main に push すると GitHub Actions（withastro/action, **node-version: 24** — Astro 7 は Node >=22.12 が必要）
@@ -60,6 +66,14 @@ python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<wor
   すべて `verified: false`。**次工程は glossary の出典確認と `verified: true` 化**
   （`sources` に「要確認」と書いた項目＝駅長のデムート旅館・〈悲しむすべての人の喜び〉・騎兵大尉の官等・
   苦情帳、判決のキエフの騒乱・父の従軍年代 から潰す）と、draft→checked の人間レビュー
+- ザミャーチン『われら』(`we`, ru) を追加・全訳（2026-08-16）: PD確認（没1937 → 日本は1988年から、露は既に満了、
+  戦時加算はソ連に適用なし）→ 全40記録・1,544段落・日本語151,309字の草稿＋文対訳（4,231セグメント）が完了、全段落 `draft`。
+  translatedBy の内訳は claude-opus-5 が910段落・gpt-5.6-sol が634段落（Codex レーン併用）。
+  台帳は terms 245語・names 25語・rules 21項目まで育てた。
+  階層ズームの要約レイヤーも全40章ぶん完了（節198・段落要約632・章要約40、すべて machine-checked、FAIL 0）。
+  部を持たない作品なので `overviews/we.json` は置いていない（構造ビューは章のフラット表示）。
+  読解支援レイヤーも全40章ぶん完了（人物205・参照139・語注387の計731、glossary 128項目、全 `verified: false`）。
+  次工程は人間レビュー: 訳文の draft→checked 昇格と、glossary の裏取り＋ `verified: true` 化
 - 作品の長さの見積もり: 露語1語 ≒ 日本語3.29字（罪と罰の実測 176,000語→580,000字）、文庫1ページ ≒ 500字。
   文庫20ページ ≒ 日本語1万字 ≒ 露語3,000語。新作品の候補を選ぶときの物差しに使う
 
@@ -74,6 +88,12 @@ python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<wor
   de 等の校正版のページ番号 `[59]`（`class="PageNumber"` の span）、朗読音声プレイヤー（`<audio>`）。
   wikisource-to-paragraphs.ts で除去済みだが、新しい版元では出力段落の先頭・末尾を必ず目視すること
 - 詩句・題辞の出典行が `<td>` に置かれていて `<p>` 走査から漏れることがある（駅長のヴャーゼムスキー）。段落数が原文と合うか確認する
+- 章の見出しブロック（題辞・概要）が `<center>` に置かれる版がある（われらの Конспект 行）。
+  `--lead-heading <正規表現>` で冒頭の `<center>` 群を1段落にまとめ、章見出しそのもの（chapterLabel と重複）を落とす。
+  本文途中の `<center>`（場面区切り）は通常の段落として拾われる
+- `<math>` は MathML＋フォールバック画像に展開される。素朴にタグを剥がすと TeX 注釈（`{\displaystyle …}`）が
+  本文に残る。wikisource-to-paragraphs.ts が `alttext` から平文に畳む（`\sqrt{-1}` → `√−1`）。
+  畳めない式は TeX のまま残して警告を出すので、警告が出たら手で直すこと
 - `{{p:}}` のインライン・グロス〔〕が出るのは「表示文字が people.json の `short` とも `name` とも違うとき」だけ。
   父称形を `name` に入れている人物（駅長のドゥーニャ＝`name` が「アヴドーチヤ・サムソノヴナ」）は、
   本文でその形が出てもグロスが出ない。結びつけはタップの人物カード（作中の呼ばれ方の一覧）に任せる

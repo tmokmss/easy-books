@@ -101,10 +101,13 @@ for (const [pid, frags] of Object.entries(patch)) {
 
   let ok = true;
   for (let i = 0; i < frags.length; i++) {
-    if (strip(frags[i]) !== current[i]) {
+    // 現行側もマークアップを剥がしてから比べる。そうしないと、すでに注釈の付いた
+    // 段落に注釈を足す（＝レビューで注釈を見直す）ことが原理的にできなくなる。
+    // 保証したいのは「読者に見える本文が変わらないこと」なので、素のテキスト同士で足りる
+    if (strip(frags[i]) !== strip(current[i])) {
       ok = false;
       errors.push(
-        `${pid}[${i}]: マークアップ除去後のテキストが現行と一致しない\n  現行: ${current[i].slice(0, 50)}\n  除去後: ${strip(frags[i]).slice(0, 50)}`,
+        `${pid}[${i}]: マークアップ除去後のテキストが現行と一致しない\n  現行: ${strip(current[i]).slice(0, 50)}\n  入力: ${strip(frags[i]).slice(0, 50)}`,
       );
     }
     checkMarkup(`${pid}[${i}]`, frags[i]);
