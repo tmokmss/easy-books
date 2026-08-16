@@ -34,6 +34,21 @@ export function listWorkIds(): string[] {
   return Object.keys(catalog);
 }
 
+const LANG_LABELS: Record<string, string> = {
+  ru: 'ロシア語',
+  de: 'ドイツ語',
+  en: '英語',
+  fr: 'フランス語',
+  it: 'イタリア語',
+  es: 'スペイン語',
+  ja: '日本語',
+};
+
+/** 原語の表示名。未登録の言語コードはそのまま大文字で出す */
+export function langLabel(code: string): string {
+  return LANG_LABELS[code] ?? code.toUpperCase();
+}
+
 export function getWorkData(workId: string): WorkData {
   const meta = catalog[workId];
   if (!meta) {
