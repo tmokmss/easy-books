@@ -22,6 +22,17 @@ if (!apiJsonPath || !workId || !chapterId || !chapterLabel || !orderStr) {
 const api = JSON.parse(readFileSync(apiJsonPath, 'utf-8'));
 const html: string = api.parse.text;
 
+// 取得元ホストは作品カタログの sourceLang から決める（ru 決め打ちにしない）
+const catalog = JSON.parse(readFileSync(join('src', 'data', 'works.json'), 'utf-8')) as Record<
+  string,
+  { sourceLang: string }
+>;
+const wikiLang = catalog[workId]?.sourceLang;
+if (!wikiLang) {
+  console.error(`works.json に workId "${workId}" が未登録（先にカタログへ追加すること）`);
+  process.exit(1);
+}
+
 const NAMED_ENTITIES: Record<string, string> = {
   '&nbsp;': ' ',
   '&amp;': '&',
@@ -50,15 +61,24 @@ interface SkeletonParagraph {
   em?: boolean;
 }
 
+// ライセンス表示・ナビゲーションは本文コンテナの外側にある（ru の PD テンプレート等）。
+// コンテナがある版だけ、その内側に絞る。
+const bodyStart = html.indexOf('<div class="text">');
+const body = bodyStart >= 0 ? html.slice(bodyStart) : html;
+
 const paragraphs: SkeletonParagraph[] = [];
 let n = 0;
-for (const m of html.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)) {
+for (const m of body.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)) {
   let inner = m[1];
+  // 朗読音声プレイヤー（de の Gesprochener Text 等）は本文ではない
+  if (/<audio\b/.test(inner)) continue;
   // 強調は落とさずメタ情報として残す。注釈を当てる位置の目印になる
   const em = /<(i|em)\b/.test(inner);
   inner = inner
     .replace(/<sup[\s\S]*?<\/sup>/g, '') // 脚注マーカー
     .replace(/<span[^>]*class="[^"]*mw-editsection[^"]*"[\s\S]*?<\/span>/g, '')
+    // 校正版（Proofread Page）の原本ページ番号マーカー [59] を本文に混ぜない
+    .replace(/<span[^>]*class="[^"]*(?:PageNumber|pagenum)[^"]*"[\s\S]*?<\/span>/gi, '')
     .replace(/<br\s*\/?>/g, '\n')
     .replace(/<[^>]+>/g, '');
   const text = decodeEntities(inner).replace(/ /g, ' ').replace(/[ \t]+/g, ' ').trim();
@@ -80,7 +100,7 @@ const out = {
   workId,
   chapterLabel,
   order: Number(orderStr),
-  sourceUrl: `https://ru.wikisource.org/?curid=${api.parse.pageid ?? ''}`,
+  sourceUrl: `https://${wikiLang}.wikisource.org/?curid=${api.parse.pageid ?? ''}`,
   sourceRevId: api.parse.revid,
   paragraphs,
 };
