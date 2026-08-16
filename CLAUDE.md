@@ -44,7 +44,8 @@ npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ�
 - **一括翻訳の表記統一**: 最初の1章で style-guide.json の `people.*.firstPerson`（一人称・口調）と `names`（脇役・地名の音写台帳）を確定→残りをファンアウト→エージェントの「新規」報告を台帳に還流→部ごとに check-consistency で検査。この順序を崩すと章単位で表記が割れる（罪と罰では事後修正500箇所になった）
 - 章の要約（階層ズーム）: `/outline <chapterId> [model]`、作品一括は `/outline <workId> --all`（節区切り→段落/節/章/部/作品要約のボトムアップ生成→check-summaries→machine-checked 昇格まで。1章=1エージェント方式）
 - 大量並行時は Codex CLI レーンも併用可: `codex exec -m gpt-5.6-sol -c model_reasoning_effort="high" -s workspace-write --ephemeral - < <promptfile>`（雛形は罪と罰の運用記録 issue 参照）
-- デプロイ: main に push すると GitHub Actions（withastro/action, **node-version: 22 必須** — Astro 7 は Node >=22.12）
+- デプロイ: main に push すると GitHub Actions（withastro/action, **node-version: 24** — Astro 7 は Node >=22.12 が必要）
+- CI: 全ブランチの push で `.github/workflows/ci.yml` が `npm ci` → `npm run build`（＝スキーマ検証）を回す
 
 ## 現在の状態と次の作業（2026-08-09 時点）
 
