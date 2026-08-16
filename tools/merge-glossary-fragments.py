@@ -7,6 +7,9 @@
 
 使い方: python3 tools/merge-glossary-fragments.py <workId> [fragment.json ...]
         （フラグメント無指定なら source/annotations/<workId>-*.glossary.json をすべて取り込む）
+
+作品をまたいで取り込まないよう、必ず workId で対象を絞る。章IDは <workId>-… の形なので
+フラグメント名の接頭辞がそのまま作品の切り分けになる。
 """
 import json, sys, glob, os
 

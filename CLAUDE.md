@@ -26,6 +26,8 @@ npx tsx tools/merge-aligned-translation.ts <chapterId> <aligned.json> --by <mode
 npx tsx tools/split-src.ts <chapterId>         # 原文の文分割 → source/paragraphs/*.sentences.json
 npx tsx tools/merge-outline.ts <chapterId> source/outlines/<chapterId>.json  # 階層ズームの要約マージ（検証つき）
 npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ・整合ふるい → machine-checked 昇格
+npx tsx tools/apply-annotation.ts <chapterId> source/annotations/<chapterId>.markup.json --glossary <fragment.json>  # 注釈の検証つき適用
+python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<workId>-*.glossary.json → works の glossary.json
 ```
 
 ## データモデルの要点
@@ -50,7 +52,8 @@ npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ�
   語幹照合なので複合語は全語の語幹がそろった段落だけを対象にしないと誤検知だらけになる
 - 章の要約（階層ズーム）: `/outline <chapterId> [model]`、作品一括は `/outline <workId> --all`（節区切り→段落/節/章/部/作品要約のボトムアップ生成→check-summaries→machine-checked 昇格まで。1章=1エージェント方式）
 - 大量並行時は Codex CLI レーンも併用可: `codex exec -m gpt-5.6-sol -c model_reasoning_effort="high" -s workspace-write --ephemeral - < <promptfile>`（雛形は罪と罰の運用記録 issue 参照）
-- デプロイ: main に push すると GitHub Actions（withastro/action, **node-version: 22 必須** — Astro 7 は Node >=22.12）
+- デプロイ: main に push すると GitHub Actions（withastro/action, **node-version: 24** — Astro 7 は Node >=22.12 が必要）
+- CI: 全ブランチの push で `.github/workflows/ci.yml` が `npm ci` → `npm run build`（＝スキーマ検証）を回す
 
 ## 現在の状態と次の作業（2026-08-09 時点）
 
@@ -58,9 +61,11 @@ npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ�
 - 作業統計・学び・レビュー引き継ぎは **issue #1**（tmokmss/easy-books）に記録済み
 - 次工程は人間レビュー: draft→checked→reviewed 昇格、レビューノート3件の解消（ラズミーヒンの一人称ゆれ 02-02 vs 02-03以降 / ルージンの手紙の引用一致 03-02 vs 03-03 / レベジャートニコフの父称ゆれ）、注釈拡充と glossary の `verified: true` 化
 - 短編2本を追加（2026-08-16）: プーシキン『駅長』(`stationmaster`, ru, 37段落) と
-  カフカ『判決』(`urteil`, de, 65段落)。訳文＋文対訳＋アウトライン（machine-checked）まで完了、全段落 `draft`。
-  注釈（`{{p:}}`/`{{n:}}`）は未着手で glossary は空。**このサイトの中心価値は読解支援レイヤーなので、
-  短編の次工程は注釈付けと glossary の作成**（駅長なら十四等官・駅馬使用証・放蕩息子の版画、判決ならキエフの騒乱）
+  カフカ『判決』(`urteil`, de, 65段落)。訳文＋文対訳＋アウトライン（machine-checked）＋注釈レイヤーまで完了、全段落 `draft`。
+  注釈は 駅長 42個（語注35・人物6・参照1）/ 判決 28個（語注23・人物4・参照1）、glossary は 35件 / 23件で
+  すべて `verified: false`。**次工程は glossary の出典確認と `verified: true` 化**
+  （`sources` に「要確認」と書いた項目＝駅長のデムート旅館・〈悲しむすべての人の喜び〉・騎兵大尉の官等・
+  苦情帳、判決のキエフの騒乱・父の従軍年代 から潰す）と、draft→checked の人間レビュー
 - ザミャーチン『われら』(`we`, ru) を追加・全訳（2026-08-16）: PD確認（没1937 → 日本は1988年から、露は既に満了、
   戦時加算はソ連に適用なし）→ 全40記録・1,544段落・日本語151,309字の草稿＋文対訳（4,231セグメント）が完了、全段落 `draft`。
   translatedBy の内訳は claude-opus-5 が910段落・gpt-5.6-sol が634段落（Codex レーン併用）。
@@ -89,3 +94,8 @@ npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ�
 - `<math>` は MathML＋フォールバック画像に展開される。素朴にタグを剥がすと TeX 注釈（`{\displaystyle …}`）が
   本文に残る。wikisource-to-paragraphs.ts が `alttext` から平文に畳む（`\sqrt{-1}` → `√−1`）。
   畳めない式は TeX のまま残して警告を出すので、警告が出たら手で直すこと
+- `{{p:}}` のインライン・グロス〔〕が出るのは「表示文字が people.json の `short` とも `name` とも違うとき」だけ。
+  父称形を `name` に入れている人物（駅長のドゥーニャ＝`name` が「アヴドーチヤ・サムソノヴナ」）は、
+  本文でその形が出てもグロスが出ない。結びつけはタップの人物カード（作中の呼ばれ方の一覧）に任せる
+- `merge-glossary-fragments.py` は必ず `<workId>` で対象を絞る。全フラグメントを無条件に拾うと、
+  別の作品の語注が混ざり込む（章IDが `<workId>-…` なのでファイル名の接頭辞が作品の切り分けになる）
