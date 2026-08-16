@@ -1,10 +1,17 @@
 ---
+// 書棚: 何の本が置いてあるかを一覧するリスト。
+// 1作品1行で、背表紙・著者・原題・1行紹介・分量・既読率までを見せる。
+// 章立てはここに出さない（章まで降りるのは作品の全体図 /works/<workId>/ の仕事）。
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getWorkData, listWorkIds } from '../lib/works';
+import { getWorkData, langLabel, listWorkIds } from '../lib/works';
+import { stripMarkup } from '../lib/outline';
 
 const chapters = await getCollection('chapters');
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+/** 文庫1ページ ≒ 日本語500字（CLAUDE.md の見積もり） */
+const CHARS_PER_PAGE = 500;
 
 const shelves = listWorkIds()
   .map((workId) => {
@@ -12,18 +19,30 @@ const shelves = listWorkIds()
     const workChapters = chapters
       .filter((c) => c.data.workId === workId)
       .sort((a, b) => a.data.order - b.data.order);
-    return { work, chapters: workChapters };
+    const chars = workChapters.reduce(
+      (n, c) => n + c.data.paragraphs.reduce((m, p) => m + stripMarkup(p.ja).length, 0),
+      0,
+    );
+    return {
+      work,
+      chapters: workChapters,
+      pages: Math.max(1, Math.round(chars / CHARS_PER_PAGE)),
+      paragraphs: workChapters.reduce((n, c) => n + c.data.paragraphs.length, 0),
+    };
   })
   .filter((s) => s.chapters.length > 0);
 
-// 続きから読むリンク用に 章ID → 表示名 の対応を渡す
-const chapterTitles: Record<string, string> = {};
-for (const s of shelves) {
-  for (const c of s.chapters) {
-    chapterTitles[c.id] = `${s.work.meta.title} ${c.data.chapterLabel}`;
-  }
-}
-const titlesJson = JSON.stringify(chapterTitles).replaceAll('<', '\\u003c');
+// 既読メーターと「続きから読む」は shelf.ts がこのデータで塗る
+const shelfJson = JSON.stringify({
+  works: shelves.map(({ work, chapters }) => ({
+    id: work.id,
+    chapters: chapters.map((c) => ({
+      id: c.id,
+      label: c.data.chapterLabel,
+      count: c.data.paragraphs.length,
+    })),
+  })),
+}).replaceAll('<', '\\u003c');
 ---
 
 <BaseLayout
@@ -39,56 +58,71 @@ const titlesJson = JSON.stringify(chapterTitles).replaceAll('<', '\\u003c');
       </p>
     </header>
 
-    <a id="continue-link" class="continue-link" href="#" hidden>
-      続きから読む: <span id="continue-title"></span> →
-    </a>
+    <ul class="books">
+      {
+        shelves.map(({ work, chapters, pages, paragraphs }, i) => (
+          <li class="book" style={`--spine: var(--spine-${i % 5});`}>
+            <span class="spine" aria-hidden="true">
+              <span class="spine-title">{work.meta.title}</span>
+            </span>
 
-    {
-      shelves.map(({ work, chapters }) => (
-        <section class="work">
-          <h2 class="work-title">{work.meta.title}</h2>
-          <p class="work-author">
-            {work.meta.author}
-            {work.meta.authorOriginal && <span class="work-original">（{work.meta.authorOriginal}）</span>}
-          </p>
-          <a class="work-outline-link" href={`${base}/works/${work.id}/`}>
-            全体図 — 部・章・節の要約から読む位置を選ぶ →
-          </a>
-          <ol class="chapter-list">
-            {chapters.map((c) => (
-              <li>
-                <a href={`${base}/read/${c.id}/`}>{c.data.chapterLabel}</a>
-              </li>
-            ))}
-          </ol>
-        </section>
-      ))
-    }
+            <div class="book-body">
+              <h2 class="book-title">
+                <a href={`${base}/works/${work.id}/`}>{work.meta.title}</a>
+              </h2>
+              <p class="book-author">
+                {work.meta.author}
+                {work.meta.sourceTitle && <span class="book-original">『{work.meta.sourceTitle}』</span>}
+              </p>
+
+              {work.meta.blurb && <p class="book-blurb">{work.meta.blurb}</p>}
+
+              <p class="book-facts">
+                <span class="fact">{langLabel(work.meta.sourceLang)}</span>
+                <span class="fact">{chapters.length > 1 ? `全${chapters.length}章` : '短編'}</span>
+                <span class="fact">文庫換算 約{pages.toLocaleString('ja-JP')}ページ</span>
+                <span class="fact">{paragraphs.toLocaleString('ja-JP')}段落</span>
+              </p>
+
+              <div class="book-foot">
+                <a class="read-btn" data-work={work.id} href={`${base}/read/${chapters[0].id}/`}>
+                  <span class="read-btn-main">最初から読む</span>
+                  <span class="read-btn-sub" />
+                </a>
+                <a class="outline-btn" href={`${base}/works/${work.id}/`}>
+                  全体図
+                </a>
+                <span class="meter" data-work={work.id} hidden>
+                  <span class="meter-track">
+                    <span class="meter-fill" />
+                  </span>
+                  <span class="meter-label" />
+                </span>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
   </main>
 
-  <script type="application/json" id="chapter-titles" set:html={titlesJson} />
+  <script type="application/json" id="shelf-data" set:html={shelfJson} />
   <script>
-    // 前回の読書位置があれば「続きから読む」を出す
-    const link = document.getElementById('continue-link') as HTMLAnchorElement | null;
-    const titleEl = document.getElementById('continue-title');
-    const titlesEl = document.getElementById('chapter-titles');
-    try {
-      const last = JSON.parse(localStorage.getItem('ecb:last') ?? 'null');
-      const titles = JSON.parse(titlesEl?.textContent ?? '{}');
-      if (link && titleEl && last && titles[last.chapter]) {
-        titleEl.textContent = titles[last.chapter];
-        link.href = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/read/${last.chapter}/`;
-        link.hidden = false;
-      }
-    } catch {
-      /* noop */
-    }
+    import { initShelf } from '../scripts/shelf';
+    initShelf();
   </script>
 </BaseLayout>
 
 <style>
+  /* 背表紙の色。並び順で割り当てるので、作品を足せば次の色が付く */
   .shelf {
-    max-width: var(--measure);
+    --spine-0: #2e4a43;
+    --spine-1: #6b3b34;
+    --spine-2: #33455e;
+    --spine-3: #6b5a1e;
+    --spine-4: #4a3a5a;
+
+    max-width: 42em;
     margin: 0 auto;
     padding: 3.5rem 1rem 0;
   }
@@ -108,75 +142,181 @@ const titlesJson = JSON.stringify(chapterTitles).replaceAll('<', '\\u003c');
     margin: 0 0 2.5rem;
   }
 
-  .continue-link[hidden] {
-    display: none;
+  .books {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  .continue-link {
-    display: inline-block;
+  .book {
+    display: flex;
+    gap: 1.1rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .book:last-child {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  /* 背表紙。画像を持たないので、色と縦組みのタイトルで本の見分けをつける。
+     高さを揃えて行の下端に置くと、棚に立っているように見える */
+  .spine {
+    flex: none;
+    width: 2.9rem;
+    height: 7.6rem;
+    align-self: flex-end;
+    background: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--spine) 78%, #000) 0 3px,
+      var(--spine) 3px 88%,
+      color-mix(in srgb, var(--spine) 80%, #000) 88% 100%
+    );
+    border-radius: 2px 4px 4px 2px;
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--ink) 28%, transparent);
+    padding: 0.7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .spine-title {
+    writing-mode: vertical-rl;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
+    color: #efece1;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .book-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .book-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+  }
+  .book-title a {
+    text-decoration: none;
+  }
+  .book-title a:hover {
+    color: var(--person);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .book-author {
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    margin: 0 0 0.5rem;
+  }
+
+  .book-original {
+    margin-inline-start: 0.5em;
+  }
+
+  .book-blurb {
     font-size: 0.85rem;
+    line-height: 1.85;
+    margin: 0 0 0.6rem;
+  }
+
+  .book-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.5rem;
+    margin: 0 0 0.8rem;
+  }
+
+  .fact {
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    padding: 0.1rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  .book-foot {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.8rem;
+  }
+
+  .read-btn {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45em;
+    font-size: 0.82rem;
     text-decoration: none;
     border: 1px solid var(--person);
     color: var(--person);
     border-radius: 8px;
-    padding: 0.5rem 0.9rem;
-    margin-bottom: 2.5rem;
+    padding: 0.4rem 0.85rem;
   }
-  .continue-link:hover {
+  .read-btn:hover {
     background: color-mix(in srgb, var(--person) 10%, transparent);
   }
-
-  .work {
-    margin-bottom: 3rem;
-  }
-
-  .work-title {
-    font-family: var(--font-serif);
-    font-size: 1.25rem;
-    margin: 0 0 0.2rem;
-  }
-
-  .work-author {
-    font-size: 0.82rem;
+  .read-btn-sub:not(:empty) {
+    font-size: 0.72rem;
     color: var(--ink-muted);
-    margin: 0 0 1rem;
   }
 
-  .work-original {
-    font-size: 0.78rem;
-  }
-
-  .work-outline-link {
-    display: inline-block;
+  .outline-btn {
     font-size: 0.8rem;
-    color: var(--person);
+    color: var(--ink-muted);
     text-decoration: none;
-    border: 1px solid var(--hairline);
-    border-radius: 8px;
-    padding: 0.4rem 0.8rem;
-    margin: 0 0 1rem;
-  }
-  .work-outline-link:hover {
-    background: color-mix(in srgb, var(--person) 8%, transparent);
-  }
-
-  .chapter-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid var(--hairline);
-  }
-
-  .chapter-list a {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.7rem 0.2rem;
     border-bottom: 1px solid var(--hairline);
-    text-decoration: none;
-    font-size: 0.92rem;
   }
-  .chapter-list a:hover {
-    background: color-mix(in srgb, var(--person) 7%, transparent);
+  .outline-btn:hover {
+    color: var(--ink);
+  }
+
+  .meter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    margin-inline-start: auto;
+  }
+  .meter[hidden] {
+    display: none;
+  }
+  .meter-track {
+    display: inline-block;
+    width: 5.5em;
+    height: 6px;
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--ink) 10%, transparent);
+    overflow: hidden;
+  }
+  .meter-fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: color-mix(in srgb, var(--person) 65%, transparent);
+  }
+  .meter-label {
+    font-size: 0.7rem;
+    color: var(--ink-muted);
+    min-width: 2.4em;
+  }
+
+  @media (max-width: 30em) {
+    .book {
+      gap: 0.85rem;
+    }
+    .spine {
+      width: 2.4rem;
+      height: 6.6rem;
+    }
+    .spine-title {
+      font-size: 0.85rem;
+    }
   }
 </style>

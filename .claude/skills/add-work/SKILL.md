@@ -21,6 +21,7 @@ description: 本の名前を指定して新しい作品をサイトに追加す�
 - workId は短い英小文字スラッグ（例: crime, metamorphosis, pride）
 - `src/data/works.json` にエントリ追加:
   `title` / `author` / `authorOriginal` / `sourceLang`（ISO 639-1）/ `sourceTitle` / `sourceRef`（底本の書誌）
+  / `blurb`（書棚に出す1行紹介。何の本かが分かる導入だけを書き、展開・結末には触れない）
 
 ### 3. 原文の取得
 

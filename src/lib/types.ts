@@ -12,6 +12,11 @@ export interface WorkMeta {
   sourceTitle?: string;
   /** 底本の書誌情報。フッターに表示する */
   sourceRef: string;
+  /**
+   * 書棚（トップ）に出す1行紹介。何の本かが分かる程度の導入だけを書き、
+   * 展開・結末には触れない（要約レイヤーのネタバレ封じ込めと同じ方針）。
+   */
+  blurb?: string;
 }
 
 /** 人物台帳（people.json）の1エントリ。aliases は手で管理する */
