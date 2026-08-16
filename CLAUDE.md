@@ -67,7 +67,8 @@ npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ�
   台帳は terms 245語・names 25語・rules 21項目まで育てた。
   階層ズームの要約レイヤーも全40章ぶん完了（節198・段落要約632・章要約40、すべて machine-checked、FAIL 0）。
   部を持たない作品なので `overviews/we.json` は置いていない（構造ビューは章のフラット表示）。
-  次工程は人間レビュー（draft→checked）と注釈・glossary
+  読解支援レイヤーも全40章ぶん完了（人物205・参照139・語注387の計731、glossary 128項目、全 `verified: false`）。
+  次工程は人間レビュー: 訳文の draft→checked 昇格と、glossary の裏取り＋ `verified: true` 化
 - 作品の長さの見積もり: 露語1語 ≒ 日本語3.29字（罪と罰の実測 176,000語→580,000字）、文庫1ページ ≒ 500字。
   文庫20ページ ≒ 日本語1万字 ≒ 露語3,000語。新作品の候補を選ぶときの物差しに使う
 
