@@ -26,6 +26,8 @@ npx tsx tools/merge-aligned-translation.ts <chapterId> <aligned.json> --by <mode
 npx tsx tools/split-src.ts <chapterId>         # 原文の文分割 → source/paragraphs/*.sentences.json
 npx tsx tools/merge-outline.ts <chapterId> source/outlines/<chapterId>.json  # 階層ズームの要約マージ（検証つき）
 npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ・整合ふるい → machine-checked 昇格
+npx tsx tools/apply-annotation.ts <chapterId> source/annotations/<chapterId>.markup.json --glossary <fragment.json>  # 注釈の検証つき適用
+python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<workId>-*.glossary.json → works の glossary.json
 ```
 
 ## データモデルの要点
@@ -53,9 +55,11 @@ npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ�
 - 作業統計・学び・レビュー引き継ぎは **issue #1**（tmokmss/easy-books）に記録済み
 - 次工程は人間レビュー: draft→checked→reviewed 昇格、レビューノート3件の解消（ラズミーヒンの一人称ゆれ 02-02 vs 02-03以降 / ルージンの手紙の引用一致 03-02 vs 03-03 / レベジャートニコフの父称ゆれ）、注釈拡充と glossary の `verified: true` 化
 - 短編2本を追加（2026-08-16）: プーシキン『駅長』(`stationmaster`, ru, 37段落) と
-  カフカ『判決』(`urteil`, de, 65段落)。訳文＋文対訳＋アウトライン（machine-checked）まで完了、全段落 `draft`。
-  注釈（`{{p:}}`/`{{n:}}`）は未着手で glossary は空。**このサイトの中心価値は読解支援レイヤーなので、
-  短編の次工程は注釈付けと glossary の作成**（駅長なら十四等官・駅馬使用証・放蕩息子の版画、判決ならキエフの騒乱）
+  カフカ『判決』(`urteil`, de, 65段落)。訳文＋文対訳＋アウトライン（machine-checked）＋注釈レイヤーまで完了、全段落 `draft`。
+  注釈は 駅長 42個（語注35・人物6・参照1）/ 判決 28個（語注23・人物4・参照1）、glossary は 35件 / 23件で
+  すべて `verified: false`。**次工程は glossary の出典確認と `verified: true` 化**
+  （`sources` に「要確認」と書いた項目＝駅長のデムート旅館・〈悲しむすべての人の喜び〉・騎兵大尉の官等・
+  苦情帳、判決のキエフの騒乱・父の従軍年代 から潰す）と、draft→checked の人間レビュー
 - 作品の長さの見積もり: 露語1語 ≒ 日本語3.29字（罪と罰の実測 176,000語→580,000字）、文庫1ページ ≒ 500字。
   文庫20ページ ≒ 日本語1万字 ≒ 露語3,000語。新作品の候補を選ぶときの物差しに使う
 
@@ -70,3 +74,8 @@ npx tsx tools/check-summaries.ts <workId> [--promote]  # 要約のネタバレ�
   de 等の校正版のページ番号 `[59]`（`class="PageNumber"` の span）、朗読音声プレイヤー（`<audio>`）。
   wikisource-to-paragraphs.ts で除去済みだが、新しい版元では出力段落の先頭・末尾を必ず目視すること
 - 詩句・題辞の出典行が `<td>` に置かれていて `<p>` 走査から漏れることがある（駅長のヴャーゼムスキー）。段落数が原文と合うか確認する
+- `{{p:}}` のインライン・グロス〔〕が出るのは「表示文字が people.json の `short` とも `name` とも違うとき」だけ。
+  父称形を `name` に入れている人物（駅長のドゥーニャ＝`name` が「アヴドーチヤ・サムソノヴナ」）は、
+  本文でその形が出てもグロスが出ない。結びつけはタップの人物カード（作中の呼ばれ方の一覧）に任せる
+- `merge-glossary-fragments.py` は必ず `<workId>` で対象を絞る。全フラグメントを無条件に拾うと、
+  別の作品の語注が混ざり込む（章IDが `<workId>-…` なのでファイル名の接頭辞が作品の切り分けになる）
