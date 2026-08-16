@@ -6,5 +6,21 @@
     "sourceLang": "ru",
     "sourceTitle": "Преступление и наказание",
     "sourceRef": "Ф. М. Достоевский, Полное собрание сочинений в 30 томах, т. 6 (Наука, 1973)"
+  },
+  "stationmaster": {
+    "title": "駅長",
+    "author": "プーシキン",
+    "authorOriginal": "А. С. Пушкин",
+    "sourceLang": "ru",
+    "sourceTitle": "Станционный смотритель",
+    "sourceRef": "А. С. Пушкин «Станционный смотритель»（『故イワン・ペトローヴィチ・ベールキン物語』1831年 所収）。底本: ru.wikisource.org「Повести покойного Ивана Петровича Белкина (Пушкин)/Станционный смотритель」rev 5634936"
+  },
+  "urteil": {
+    "title": "判決",
+    "author": "カフカ",
+    "authorOriginal": "Franz Kafka",
+    "sourceLang": "de",
+    "sourceTitle": "Das Urteil",
+    "sourceRef": "Franz Kafka «Das Urteil»（初出: Arkadia. Ein Jahrbuch für Dichtkunst, hrsg. Max Brod, Kurt Wolff Verlag, Leipzig 1913, S. 53–65）。底本: de.wikisource.org「Das Urteil」rev 2572967（初出誌の校正版）"
   }
 }

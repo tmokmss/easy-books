@@ -25,28 +25,71 @@ const chapter = JSON.parse(
 const people = JSON.parse(
   readFileSync(join('src', 'data', 'works', chapter.workId, 'people.json'), 'utf-8'),
 );
+const catalog = JSON.parse(readFileSync(join('src', 'data', 'works.json'), 'utf-8')) as Record<
+  string,
+  { sourceLang: string }
+>;
 
-// ---- 数詞の抽出 ----
+// ---- 原語ごとの辞書 ----
+// 新しい sourceLang を扱うときはここに1エントリ足す（数詞・否定語・語境界の文字クラス）。
 
-const RU_NUMBERS: Record<string, number> = {
-  'один': 1, 'одна': 1, 'два': 2, 'две': 2, 'три': 3, 'четыре': 4, 'пять': 5,
-  'шесть': 6, 'семь': 7, 'восемь': 8, 'девять': 9, 'десять': 10,
-  'одиннадцать': 11, 'двенадцать': 12, 'двадцать': 20, 'тридцать': 30,
-  'сорок': 40, 'пятьдесят': 50, 'сто': 100, 'тысяча': 1000,
-  'первый': 1, 'второй': 2, 'третий': 3, 'пятиэтажный': 5, 'пятиэтажного': 5,
+interface SrcLangSpec {
+  /** 語境界判定に使う、その言語の「語を構成する文字」クラス */
+  letters: string;
+  numbers: Record<string, number>;
+  negations: string[];
+}
+
+const SRC_LANGS: Record<string, SrcLangSpec> = {
+  ru: {
+    letters: 'а-яёА-ЯЁ',
+    numbers: {
+      'один': 1, 'одна': 1, 'два': 2, 'две': 2, 'три': 3, 'четыре': 4, 'пять': 5,
+      'шесть': 6, 'семь': 7, 'восемь': 8, 'девять': 9, 'десять': 10,
+      'одиннадцать': 11, 'двенадцать': 12, 'двадцать': 20, 'тридцать': 30,
+      'сорок': 40, 'пятьдесят': 50, 'сто': 100, 'тысяча': 1000,
+      'первый': 1, 'второй': 2, 'третий': 3, 'пятиэтажный': 5, 'пятиэтажного': 5,
+    },
+    // нельзя / невозможно 等の一語で否定を担う語も入れる（訳文の「〜ない」が
+    // 否定の混入と誤検知されるため）
+    negations: ['не', 'ни', 'нет', 'никто', 'ничего', 'никакой', 'нельзя', 'невозможно',
+      'никогда', 'нигде', 'никак', 'ничто'],
+  },
+  de: {
+    letters: 'a-zA-ZäöüßÄÖÜ',
+    // ein/eine/einen… は不定冠詞と同形なので数詞に入れない（誤検知が本文の全段落に出る）
+    numbers: {
+      'eins': 1, 'zwei': 2, 'drei': 3, 'vier': 4, 'fünf': 5, 'sechs': 6, 'sieben': 7,
+      'acht': 8, 'neun': 9, 'zehn': 10, 'elf': 11, 'zwölf': 12, 'zwanzig': 20,
+      'dreißig': 30, 'vierzig': 40, 'fünfzig': 50, 'hundert': 100, 'tausend': 1000,
+      'erste': 1, 'zweite': 2, 'dritte': 3, 'beide': 2, 'beiden': 2,
+    },
+    negations: ['nicht', 'nichts', 'kein', 'keine', 'keinen', 'keinem', 'keiner', 'keines',
+      'nie', 'niemals', 'niemand', 'nirgends'],
+  },
 };
+
+const sourceLang = catalog[chapter.workId]?.sourceLang;
+const langSpec = SRC_LANGS[sourceLang];
+if (!langSpec) {
+  console.error(
+    `sourceLang "${sourceLang}" の数詞・否定辞書が未定義。tools/check-alignment.ts の SRC_LANGS に追加すること`,
+  );
+  process.exit(1);
+}
 
 const JA_DIGITS: Record<string, number> = {
   '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9,
   '十': 10, '百': 100, '千': 1000,
 };
 
-function ruNumbers(text: string): number[] {
+function srcNumbers(text: string): number[] {
   const nums: number[] = [];
   for (const m of text.matchAll(/\d+/g)) nums.push(Number(m[0]));
   const lower = text.toLowerCase();
-  for (const [word, value] of Object.entries(RU_NUMBERS)) {
-    for (const m of lower.matchAll(new RegExp(`(?<![а-яё])${word}(?![а-яё])`, 'g'))) {
+  const { letters } = langSpec;
+  for (const [word, value] of Object.entries(langSpec.numbers)) {
+    for (const m of lower.matchAll(new RegExp(`(?<![${letters}])${word}(?![${letters}])`, 'g'))) {
       void m;
       nums.push(value);
     }
@@ -81,17 +124,18 @@ function jaNumbers(text: string): number[] {
 
 // ---- 否定・文数 ----
 
-function ruNegations(text: string): number {
-  return [...text.toLowerCase().matchAll(/(?<![а-яё])(не|ни|нет|никто|ничего|никакой)(?![а-яё])/g)]
-    .length;
+function srcNegations(text: string): number {
+  const { letters, negations } = langSpec;
+  const re = new RegExp(`(?<![${letters}])(?:${negations.join('|')})(?![${letters}])`, 'g');
+  return [...text.toLowerCase().matchAll(re)].length;
 }
 
 function jaNegations(text: string): number {
   return [...text.matchAll(/ない|なかった|なく|ぬ(?![きぐ])|ず(?:に|、)|まい|せず|しない/g)].length;
 }
 
-function ruSentences(text: string): number {
-  return text.split(/[.!?…]+[\s»)]*/).filter((s) => s.trim().length > 0).length;
+function srcSentences(text: string): number {
+  return text.split(/[.!?…]+[\s»")“”』]*/).filter((s) => s.trim().length > 0).length;
 }
 
 function jaSentences(text: string): number {
@@ -147,19 +191,19 @@ console.log(`# check-alignment: ${chapterId}\n`);
 for (const p of chapter.paragraphs) {
   const problems: string[] = [];
 
-  const rn = ruNumbers(p.src);
+  const rn = srcNumbers(p.src);
   const jn = jaNumbers(p.ja);
   const missing = rn.filter((n) => !jn.includes(n));
   if (missing.length > 0) {
     problems.push(`数詞の不一致の可能性: 原文にある ${missing.join(', ')} が訳文で見つからない`);
   }
 
-  const rNeg = ruNegations(p.src);
+  const rNeg = srcNegations(p.src);
   const jNeg = jaNegations(p.ja);
   if (rNeg > 0 && jNeg === 0) problems.push(`否定の消失の可能性: 原文の否定 ${rNeg} 箇所に対し訳文 0`);
   if (rNeg === 0 && jNeg >= 2) problems.push(`否定の混入の可能性: 原文に否定がないが訳文に ${jNeg} 箇所`);
 
-  const rs = ruSentences(p.src);
+  const rs = srcSentences(p.src);
   const js = jaSentences(p.ja);
   if (Math.abs(rs - js) > Math.max(2, rs * 0.5)) {
     problems.push(`文数の乖離: 原文 ${rs} 文 / 訳文 ${js} 文（訳し落とし・過剰分割の兆候）`);

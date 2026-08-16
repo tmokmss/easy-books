@@ -1,0 +1,1426 @@
+{
+  "workId": "urteil",
+  "chapterLabel": "判決",
+  "order": 1,
+  "sourceUrl": "https://de.wikisource.org/?curid=1548",
+  "sourceRevId": 2572967,
+  "paragraphs": [
+    {
+      "id": "p001",
+      "src": "Es war an einem Sonntagvormittag im schönsten Frühjahr. Georg Bendemann, ein junger Kaufmann, saß in seinem Privatzimmer im ersten Stock eines der niedrigen, leichtgebauten Häuser, die entlang des Flusses in einer langen Reihe, fast nur in der Höhe und Färbung unterschieden, sich hinzogen. Er hatte gerade einen Brief an einen sich im Ausland befindenden Jugendfreund beendet, verschloß ihn in spielerischer Langsamkeit und sah dann, den Ellbogen auf den Schreibtisch gestützt, aus dem Fenster auf den Fluß, die Brücke und die Anhöhen am anderen Ufer mit ihrem schwachen Grün.",
+      "ja": "うるわしい春の、ある日曜日の午前のことだった。若い商人ゲオルク・ベンデマンは、川沿いに長い列をなして続く、高さと色合いのほかにはほとんど違いのない低い簡素な家々の一つ、その二階の自室に座っていた。彼はちょうど、外国にいる幼なじみへの手紙を書き終えたところで、遊ぶような遅さでそれを封じ、それから机に肘をついて、窓から川と、橋と、向こう岸の淡い緑をまとった丘を眺めた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Es war an einem Sonntagvormittag im schönsten Frühjahr.",
+          "ja": "うるわしい春の、ある日曜日の午前のことだった。"
+        },
+        {
+          "src": "Georg Bendemann, ein junger Kaufmann, saß in seinem Privatzimmer im ersten Stock eines der niedrigen, leichtgebauten Häuser, die entlang des Flusses in einer langen Reihe, fast nur in der Höhe und Färbung unterschieden, sich hinzogen.",
+          "ja": "若い商人ゲオルク・ベンデマンは、川沿いに長い列をなして続く、高さと色合いのほかにはほとんど違いのない低い簡素な家々の一つ、その二階の自室に座っていた。"
+        },
+        {
+          "src": "Er hatte gerade einen Brief an einen sich im Ausland befindenden Jugendfreund beendet, verschloß ihn in spielerischer Langsamkeit und sah dann, den Ellbogen auf den Schreibtisch gestützt, aus dem Fenster auf den Fluß, die Brücke und die Anhöhen am anderen Ufer mit ihrem schwachen Grün.",
+          "ja": "彼はちょうど、外国にいる幼なじみへの手紙を書き終えたところで、遊ぶような遅さでそれを封じ、それから机に肘をついて、窓から川と、橋と、向こう岸の淡い緑をまとった丘を眺めた。"
+        }
+      ]
+    },
+    {
+      "id": "p002",
+      "src": "Er dachte darüber nach, wie dieser Freund, mit seinem Fortkommen zu Hause unzufrieden, vor Jahren schon nach Rußland sich förmlich geflüchtet hatte. Nun betrieb er ein Geschäft in Petersburg, das anfangs sich sehr gut angelassen hatte, seit langem aber schon zu stocken schien, wie der Freund bei seinen immer seltener werdenden Besuchen klagte. So arbeitete er sich in der Fremde nutzlos ab, der fremdartige Vollbart verdeckte nur schlecht das seit den Kinderjahren wohlbekannte Gesicht, dessen gelbe Hautfarbe auf eine sich entwickelnde Krankheit hinzudeuten schien. Wie er erzählte, hatte er keine rechte Verbindung mit der dortigen Kolonie seiner Landsleute, aber auch fast keinen gesellschaftlichen Verkehr mit einheimischen Familien und richtete sich so für ein endgültiges Junggesellentum ein.",
+      "ja": "彼は考えていた。この友人は故郷での身の立て方に不満で、もう何年も前に、いわば逃げ出すようにしてロシアへ渡ったのだった。いまはペテルブルグで商売をしている。初めのうちはたいそう調子がよかったが、もうずいぶん前から行き詰まっているらしいと、友人は次第にまれになっていく帰郷のたびにこぼしていた。こうして彼は異国で無益に身をすり減らしており、見慣れぬ顎鬚も、子どもの頃からよく知っているその顔をうまく隠しきれてはいなかった。顔の黄ばんだ肌の色は、病が進みつつあることを示しているように見えた。彼の話では、向こうの同郷人の居留地とはこれといったつながりもなく、かといって現地の家庭との社交もほとんどなく、こうして決定的な独身生活に身を落ち着けつつあるのだった。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Er dachte darüber nach, wie dieser Freund, mit seinem Fortkommen zu Hause unzufrieden, vor Jahren schon nach Rußland sich förmlich geflüchtet hatte.",
+          "ja": "彼は考えていた。この友人は故郷での身の立て方に不満で、もう何年も前に、いわば逃げ出すようにしてロシアへ渡ったのだった。"
+        },
+        {
+          "src": "Nun betrieb er ein Geschäft in Petersburg, das anfangs sich sehr gut angelassen hatte, seit langem aber schon zu stocken schien, wie der Freund bei seinen immer seltener werdenden Besuchen klagte.",
+          "ja": "いまはペテルブルグで商売をしている。初めのうちはたいそう調子がよかったが、もうずいぶん前から行き詰まっているらしいと、友人は次第にまれになっていく帰郷のたびにこぼしていた。"
+        },
+        {
+          "src": "So arbeitete er sich in der Fremde nutzlos ab, der fremdartige Vollbart verdeckte nur schlecht das seit den Kinderjahren wohlbekannte Gesicht, dessen gelbe Hautfarbe auf eine sich entwickelnde Krankheit hinzudeuten schien.",
+          "ja": "こうして彼は異国で無益に身をすり減らしており、見慣れぬ顎鬚も、子どもの頃からよく知っているその顔をうまく隠しきれてはいなかった。顔の黄ばんだ肌の色は、病が進みつつあることを示しているように見えた。"
+        },
+        {
+          "src": "Wie er erzählte, hatte er keine rechte Verbindung mit der dortigen Kolonie seiner Landsleute, aber auch fast keinen gesellschaftlichen Verkehr mit einheimischen Familien und richtete sich so für ein endgültiges Junggesellentum ein.",
+          "ja": "彼の話では、向こうの同郷人の居留地とはこれといったつながりもなく、かといって現地の家庭との社交もほとんどなく、こうして決定的な独身生活に身を落ち着けつつあるのだった。"
+        }
+      ]
+    },
+    {
+      "id": "p003",
+      "src": "Was sollte man einem solchen Manne schreiben, der sich offenbar verrannt hatte, den man bedauern, dem man aber nicht helfen konnte. Sollte man ihm vielleicht raten, wieder nach Hause zu kommen, seine Existenz hierher zu verlegen, alle die alten freundschaftlichen Beziehungen wieder aufzunehmen — wofür ja kein Hindernis bestand — und im übrigen auf die Hilfe der Freunde zu vertrauen? Das bedeutete aber nichts anderes, als\n daß man ihm gleichzeitig, je schonender, desto kränkender, sagte, daß seine bisherigen Versuche mißlungen seien, daß er endlich von ihnen ablassen solle, daß er zurückkehren und sich als ein für immer Zurückgekehrter von allen mit großen Augen anstaunen lassen müsse, daß nur seine Freunde etwas verstünden und daß er ein altes Kind sei, das den erfolgreichen, zu Hause gebliebenen Freunden einfach zu folgen habe. Und war es dann noch sicher, daß alle die Plage, die man ihm antun müßte, einen Zweck hätte? Vielleicht gelang es nicht einmal, ihn überhaupt nach Hause zu bringen — er sagte ja selbst, daß er die Verhältnisse in der Heimat nicht mehr verstünde — und so bliebe er dann trotz allem in seiner Fremde, verbittert durch die Ratschläge und den Freunden noch ein Stück mehr entfremdet. Folgte er aber wirklich dem Rat und würde hier — natürlich nicht mit Absicht, aber durch die Tatsachen — niedergedrückt, fände sich nicht in seinen Freunden und nicht ohne sie zurecht, litte an Beschämung, hätte jetzt wirklich keine Heimat und keine Freunde mehr, war es da nicht viel besser für ihn, er blieb in der Fremde, so wie er war? Konnte man denn bei solchen Umständen daran denken, daß er es hier tatsächlich vorwärts bringen würde?",
+      "ja": "明らかに道を踏み違えてしまった、気の毒には思うが助けようのないこういう男に、いったい何を書けばよいのか。もしかしたら、また故郷へ帰ってこい、暮らしの基盤をこちらへ移せ、昔の友情の関係をすべて結び直せ——それを妨げるものは何もないのだから——そのうえで友人たちの助けを頼れ、と勧めるべきなのだろうか？だがそれは、手加減すればするほど相手を傷つけるやり方で、同時にこう言うのと変わらなかった。これまでの試みは失敗だった、いいかげんにそれから手を引け、帰ってこい、そして永久に帰ってきた者として、みなに目を丸くして眺められるがいい、何かをわかっているのは友人たちだけで、おまえは年を取った子どもにすぎず、故郷に残った成功者の友人たちにただ従っていればいいのだ、と。そのうえ、彼に加えねばならないそのいっさいの苦しみに、はたして意味があると言い切れるだろうか？そもそも彼を故郷へ連れ戻すことすら、うまくいかないかもしれない——彼自身、故郷の事情はもうわからないと言っているのだ——そうなれば彼は結局すべてにもかかわらず異国にとどまり、忠告に苦い思いを抱いて、友人たちからさらに一段と遠ざかることになる。だが、もし本当に忠告に従って、こちらで——もちろん誰かが意図してではなく、事の成り行きによって——打ちのめされ、友人たちの中でも彼らなしでも身の置きどころがなく、恥辱に苦しみ、いまや本当に故郷も友人ももう持たないことになるのだとしたら、いっそ彼はいまのまま異国にとどまるほうが、はるかによいのではないか？こうした事情のもとで、彼がこちらで実際に道を切り開けるなどと、考えられるだろうか。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Was sollte man einem solchen Manne schreiben, der sich offenbar verrannt hatte, den man bedauern, dem man aber nicht helfen konnte.",
+          "ja": "明らかに道を踏み違えてしまった、気の毒には思うが助けようのないこういう男に、いったい何を書けばよいのか。"
+        },
+        {
+          "src": "Sollte man ihm vielleicht raten, wieder nach Hause zu kommen, seine Existenz hierher zu verlegen, alle die alten freundschaftlichen Beziehungen wieder aufzunehmen — wofür ja kein Hindernis bestand — und im übrigen auf die Hilfe der Freunde zu vertrauen?",
+          "ja": "もしかしたら、また故郷へ帰ってこい、暮らしの基盤をこちらへ移せ、昔の友情の関係をすべて結び直せ——それを妨げるものは何もないのだから——そのうえで友人たちの助けを頼れ、と勧めるべきなのだろうか？"
+        },
+        {
+          "src": "Das bedeutete aber nichts anderes, als\n daß man ihm gleichzeitig, je schonender, desto kränkender, sagte, daß seine bisherigen Versuche mißlungen seien, daß er endlich von ihnen ablassen solle, daß er zurückkehren und sich als ein für immer Zurückgekehrter von allen mit großen Augen anstaunen lassen müsse, daß nur seine Freunde etwas verstünden und daß er ein altes Kind sei, das den erfolgreichen, zu Hause gebliebenen Freunden einfach zu folgen habe.",
+          "ja": "だがそれは、手加減すればするほど相手を傷つけるやり方で、同時にこう言うのと変わらなかった。これまでの試みは失敗だった、いいかげんにそれから手を引け、帰ってこい、そして永久に帰ってきた者として、みなに目を丸くして眺められるがいい、何かをわかっているのは友人たちだけで、おまえは年を取った子どもにすぎず、故郷に残った成功者の友人たちにただ従っていればいいのだ、と。"
+        },
+        {
+          "src": "Und war es dann noch sicher, daß alle die Plage, die man ihm antun müßte, einen Zweck hätte?",
+          "ja": "そのうえ、彼に加えねばならないそのいっさいの苦しみに、はたして意味があると言い切れるだろうか？"
+        },
+        {
+          "src": "Vielleicht gelang es nicht einmal, ihn überhaupt nach Hause zu bringen — er sagte ja selbst, daß er die Verhältnisse in der Heimat nicht mehr verstünde — und so bliebe er dann trotz allem in seiner Fremde, verbittert durch die Ratschläge und den Freunden noch ein Stück mehr entfremdet.",
+          "ja": "そもそも彼を故郷へ連れ戻すことすら、うまくいかないかもしれない——彼自身、故郷の事情はもうわからないと言っているのだ——そうなれば彼は結局すべてにもかかわらず異国にとどまり、忠告に苦い思いを抱いて、友人たちからさらに一段と遠ざかることになる。"
+        },
+        {
+          "src": "Folgte er aber wirklich dem Rat und würde hier — natürlich nicht mit Absicht, aber durch die Tatsachen — niedergedrückt, fände sich nicht in seinen Freunden und nicht ohne sie zurecht, litte an Beschämung, hätte jetzt wirklich keine Heimat und keine Freunde mehr, war es da nicht viel besser für ihn, er blieb in der Fremde, so wie er war?",
+          "ja": "だが、もし本当に忠告に従って、こちらで——もちろん誰かが意図してではなく、事の成り行きによって——打ちのめされ、友人たちの中でも彼らなしでも身の置きどころがなく、恥辱に苦しみ、いまや本当に故郷も友人ももう持たないことになるのだとしたら、いっそ彼はいまのまま異国にとどまるほうが、はるかによいのではないか？"
+        },
+        {
+          "src": "Konnte man denn bei solchen Umständen daran denken, daß er es hier tatsächlich vorwärts bringen würde?",
+          "ja": "こうした事情のもとで、彼がこちらで実際に道を切り開けるなどと、考えられるだろうか。"
+        }
+      ]
+    },
+    {
+      "id": "p004",
+      "src": "Aus diesen Gründen konnte man ihm, wenn man noch überhaupt die briefliche Verbindung aufrecht erhalten wollte, keine eigentlichen Mitteilungen machen, wie man sie ohne Scheu auch den entferntesten Bekannten machen würde. Der Freund war nun schon über drei Jahre nicht in der Heimat gewesen und erklärte dies sehr notdürftig mit der Unsicherheit der politischen Verhältnisse in Rußland, die demnach also auch die kürzeste Abwesenheit eines kleinen Geschäftsmannes nicht zuließen, während hunderttausende Russen ruhig in der Welt herumfuhren. Im Laufe dieser drei Jahre hatte sich aber gerade für Georg vieles verändert. Von dem Todesfall von Georgs Mutter, der vor etwa zwei Jahren erfolgt war und seit welchem Georg mit seinem alten Vater in gemeinsamer Wirtschaft lebte, hatte der Freund\n wohl noch erfahren und sein Beileid in einem Brief mit einer Trockenheit ausgedrückt, die ihren Grund nur darin haben konnte, daß die Trauer über ein solches Ereignis in der Fremde ganz unvorstellbar wird. Nun hatte aber Georg seit jener Zeit, so wie alles andere, auch sein Geschäft mit größerer Entschlossenheit angepackt. Vielleicht hatte ihn der Vater bei Lebzeiten der Mutter dadurch, daß er im Geschäft nur seine Ansicht gelten lassen wollte, an einer wirklichen eigenen Tätigkeit gehindert, vielleicht war der Vater seit dem Tode der Mutter, trotzdem er noch immer im Geschäfte arbeitete, zurückhaltender geworden, vielleicht spielten — was sogar sehr wahrscheinlich war — glückliche Zufälle eine weit wichtigere Rolle, jedenfalls aber hatte sich das Geschäft in diesen zwei Jahren ganz unerwartet entwickelt, das Personal hatte man verdoppeln müssen, der Umsatz hatte sich verfünffacht, ein weiterer Fortschritt stand zweifellos bevor.",
+      "ja": "こうした理由から、そもそも手紙のつながりを保っておきたいのであれば、どんなに疎遠な知人にでも遠慮なく伝えるような、本当の意味での知らせを彼に書くことはできなかった。友人はもう三年以上も故郷に帰っておらず、そのことをロシアの政情の不安定さでかろうじて説明していた。それによれば、小さな商人はほんの短い留守すら許されないというのだが、その一方で何十万というロシア人が平然と世界中を旅して回っているのだった。だがこの三年のあいだに、ほかならぬゲオルクにとっては多くのことが変わっていた。二年ほど前に起きたゲオルクの母の死——それ以来ゲオルクは老いた父と所帯を共にしていた——については、友人もおそらく知らされていて、悔やみを手紙で述べてきた。その素っ気なさは、こうした出来事への悲しみが異国ではまったく思い描けなくなる、というただそれだけの理由によるものだったろう。ところがゲオルクは、その時以来、ほかのすべてと同じように、自分の商売にもいっそう思い切って取り組むようになっていた。母の存命中は、商売で自分の考えだけを通そうとする父が、ゲオルクが本当に自分自身の仕事をすることを妨げていたのかもしれない。母の死後、父はなお商売には出ていたものの、以前より控えめになったのかもしれない。あるいは——これが大いにありそうなことだったが——幸運な偶然のほうがはるかに大きな役割を果たしたのかもしれない。ともかくこの二年で商売はまったく思いがけないほど伸び、店の者は倍に増やさねばならず、売り上げは五倍になり、さらなる前進が疑いなく目前に迫っていた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Aus diesen Gründen konnte man ihm, wenn man noch überhaupt die briefliche Verbindung aufrecht erhalten wollte, keine eigentlichen Mitteilungen machen, wie man sie ohne Scheu auch den entferntesten Bekannten machen würde.",
+          "ja": "こうした理由から、そもそも手紙のつながりを保っておきたいのであれば、どんなに疎遠な知人にでも遠慮なく伝えるような、本当の意味での知らせを彼に書くことはできなかった。"
+        },
+        {
+          "src": "Der Freund war nun schon über drei Jahre nicht in der Heimat gewesen und erklärte dies sehr notdürftig mit der Unsicherheit der politischen Verhältnisse in Rußland, die demnach also auch die kürzeste Abwesenheit eines kleinen Geschäftsmannes nicht zuließen, während hunderttausende Russen ruhig in der Welt herumfuhren.",
+          "ja": "友人はもう三年以上も故郷に帰っておらず、そのことをロシアの政情の不安定さでかろうじて説明していた。それによれば、小さな商人はほんの短い留守すら許されないというのだが、その一方で何十万というロシア人が平然と世界中を旅して回っているのだった。"
+        },
+        {
+          "src": "Im Laufe dieser drei Jahre hatte sich aber gerade für Georg vieles verändert.",
+          "ja": "だがこの三年のあいだに、ほかならぬゲオルクにとっては多くのことが変わっていた。"
+        },
+        {
+          "src": "Von dem Todesfall von Georgs Mutter, der vor etwa zwei Jahren erfolgt war und seit welchem Georg mit seinem alten Vater in gemeinsamer Wirtschaft lebte, hatte der Freund\n wohl noch erfahren und sein Beileid in einem Brief mit einer Trockenheit ausgedrückt, die ihren Grund nur darin haben konnte, daß die Trauer über ein solches Ereignis in der Fremde ganz unvorstellbar wird.",
+          "ja": "二年ほど前に起きたゲオルクの母の死——それ以来ゲオルクは老いた父と所帯を共にしていた——については、友人もおそらく知らされていて、悔やみを手紙で述べてきた。その素っ気なさは、こうした出来事への悲しみが異国ではまったく思い描けなくなる、というただそれだけの理由によるものだったろう。"
+        },
+        {
+          "src": "Nun hatte aber Georg seit jener Zeit, so wie alles andere, auch sein Geschäft mit größerer Entschlossenheit angepackt.",
+          "ja": "ところがゲオルクは、その時以来、ほかのすべてと同じように、自分の商売にもいっそう思い切って取り組むようになっていた。"
+        },
+        {
+          "src": "Vielleicht hatte ihn der Vater bei Lebzeiten der Mutter dadurch, daß er im Geschäft nur seine Ansicht gelten lassen wollte, an einer wirklichen eigenen Tätigkeit gehindert, vielleicht war der Vater seit dem Tode der Mutter, trotzdem er noch immer im Geschäfte arbeitete, zurückhaltender geworden, vielleicht spielten — was sogar sehr wahrscheinlich war — glückliche Zufälle eine weit wichtigere Rolle, jedenfalls aber hatte sich das Geschäft in diesen zwei Jahren ganz unerwartet entwickelt, das Personal hatte man verdoppeln müssen, der Umsatz hatte sich verfünffacht, ein weiterer Fortschritt stand zweifellos bevor.",
+          "ja": "母の存命中は、商売で自分の考えだけを通そうとする父が、ゲオルクが本当に自分自身の仕事をすることを妨げていたのかもしれない。母の死後、父はなお商売には出ていたものの、以前より控えめになったのかもしれない。あるいは——これが大いにありそうなことだったが——幸運な偶然のほうがはるかに大きな役割を果たしたのかもしれない。ともかくこの二年で商売はまったく思いがけないほど伸び、店の者は倍に増やさねばならず、売り上げは五倍になり、さらなる前進が疑いなく目前に迫っていた。"
+        }
+      ]
+    },
+    {
+      "id": "p005",
+      "src": "Der Freund aber hatte keine Ahnung von dieser Veränderung. Früher, zum letztenmal vielleicht in jenem Beileidsbrief, hatte er Georg zur Auswanderung nach Rußland überreden wollen und sich über die Aussichten verbreitet, die gerade für Georgs Geschäftszweig in Petersburg bestanden. Die Ziffern waren verschwindend gegenüber dem Umfang, den Georgs Geschäft jetzt angenommen hatte. Georg aber hatte keine Lust gehabt, dem Freund von seinen geschäftlichen Erfolgen zu schreiben, und hätte er es jetzt nachträglich getan, es hätte wirklich einen merkwürdigen Anschein gehabt.",
+      "ja": "だが友人はこの変化を何も知らなかった。以前、おそらくあの悔やみの手紙が最後だったが、彼はゲオルクにロシアへ移ってこいと説きつけようとして、ほかならぬゲオルクの業種にペテルブルグで開けている見込みについて、長々と書いてきたことがあった。その数字は、いまゲオルクの商売が達した規模に比べれば、消えてなくなるほどのものだった。だがゲオルクは、自分の商売上の成功を友人に書き送る気にはなれなかったし、いまさら後から書いたところで、それは本当に妙な体裁になっただろう。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Der Freund aber hatte keine Ahnung von dieser Veränderung.",
+          "ja": "だが友人はこの変化を何も知らなかった。"
+        },
+        {
+          "src": "Früher, zum letztenmal vielleicht in jenem Beileidsbrief, hatte er Georg zur Auswanderung nach Rußland überreden wollen und sich über die Aussichten verbreitet, die gerade für Georgs Geschäftszweig in Petersburg bestanden.",
+          "ja": "以前、おそらくあの悔やみの手紙が最後だったが、彼はゲオルクにロシアへ移ってこいと説きつけようとして、ほかならぬゲオルクの業種にペテルブルグで開けている見込みについて、長々と書いてきたことがあった。"
+        },
+        {
+          "src": "Die Ziffern waren verschwindend gegenüber dem Umfang, den Georgs Geschäft jetzt angenommen hatte.",
+          "ja": "その数字は、いまゲオルクの商売が達した規模に比べれば、消えてなくなるほどのものだった。"
+        },
+        {
+          "src": "Georg aber hatte keine Lust gehabt, dem Freund von seinen geschäftlichen Erfolgen zu schreiben, und hätte er es jetzt nachträglich getan, es hätte wirklich einen merkwürdigen Anschein gehabt.",
+          "ja": "だがゲオルクは、自分の商売上の成功を友人に書き送る気にはなれなかったし、いまさら後から書いたところで、それは本当に妙な体裁になっただろう。"
+        }
+      ]
+    },
+    {
+      "id": "p006",
+      "src": "So beschränkte sich Georg darauf, dem Freund immer nur über bedeutungslose Vorfälle zu schreiben, wie sie sich, wenn man an einem ruhigen Sonntag nachdenkt, in der Erinnerung ungeordnet aufhäufen. Er wollte nichts anderes, als die Vorstellung ungestört lassen, die sich der Freund von der Heimatstadt in der langen Zwischenzeit wohl gemacht und mit welcher er sich abgefunden hatte. So geschah es Georg, daß er dem Freund die Verlobung eines gleichgültigen Menschen mit einem\n ebenso gleichgültigen Mädchen dreimal in ziemlich weit auseinanderliegenden Briefen anzeigte, bis sich dann allerdings der Freund, ganz gegen Georgs Absicht, für diese Merkwürdigkeit zu interessieren begann.",
+      "ja": "そこでゲオルクは、静かな日曜日に物思いにふけるとき記憶の中に順序もなく積み重なってくるような、取るに足らない出来事ばかりを友人に書き送ることにしていた。彼が望んだのはただ一つ、この長い隔たりのあいだに友人が故郷の町について作り上げ、それで折り合いをつけてきたその像を、乱さずにおくことだった。そんなわけでゲオルクは、どうでもいい男とこれまたどうでもいい娘の婚約を、かなり間を置いた三通の手紙で三度も友人に知らせるはめになり、しまいには友人のほうが、ゲオルクの意図にまったく反して、この奇妙な出来事に興味を持ち始めたのだった。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "So beschränkte sich Georg darauf, dem Freund immer nur über bedeutungslose Vorfälle zu schreiben, wie sie sich, wenn man an einem ruhigen Sonntag nachdenkt, in der Erinnerung ungeordnet aufhäufen.",
+          "ja": "そこでゲオルクは、静かな日曜日に物思いにふけるとき記憶の中に順序もなく積み重なってくるような、取るに足らない出来事ばかりを友人に書き送ることにしていた。"
+        },
+        {
+          "src": "Er wollte nichts anderes, als die Vorstellung ungestört lassen, die sich der Freund von der Heimatstadt in der langen Zwischenzeit wohl gemacht und mit welcher er sich abgefunden hatte.",
+          "ja": "彼が望んだのはただ一つ、この長い隔たりのあいだに友人が故郷の町について作り上げ、それで折り合いをつけてきたその像を、乱さずにおくことだった。"
+        },
+        {
+          "src": "So geschah es Georg, daß er dem Freund die Verlobung eines gleichgültigen Menschen mit einem\n ebenso gleichgültigen Mädchen dreimal in ziemlich weit auseinanderliegenden Briefen anzeigte, bis sich dann allerdings der Freund, ganz gegen Georgs Absicht, für diese Merkwürdigkeit zu interessieren begann.",
+          "ja": "そんなわけでゲオルクは、どうでもいい男とこれまたどうでもいい娘の婚約を、かなり間を置いた三通の手紙で三度も友人に知らせるはめになり、しまいには友人のほうが、ゲオルクの意図にまったく反して、この奇妙な出来事に興味を持ち始めたのだった。"
+        }
+      ]
+    },
+    {
+      "id": "p007",
+      "src": "Georg schrieb ihm aber solche Dinge viel lieber, als daß er zugestanden hätte, daß er selbst vor einem Monat mit einem Fräulein Frieda Brandenfeld, einem Mädchen aus wohlhabender Familie, sich verlobt hatte. Oft sprach er mit seiner Braut über diesen Freund und das besondere Korrespondenzverhältnis, in welchem er zu ihm stand. „Da wird er gar nicht zu unserer Hochzeit kommen,“ sagte sie, „und ich habe doch das Recht, alle deine Freunde kennen zu lernen.“ „Ich will ihn nicht stören,“ antwortete Georg, „verstehe mich recht, er würde wahrscheinlich kommen, wenigstens glaube ich es, aber er würde sich gezwungen und geschädigt fühlen, vielleicht mich beneiden und sicher unzufrieden und unfähig, diese Unzufriedenheit jemals zu beseitigen, allein wieder zurückfahren. Allein — weißt du, was das ist?“ „Ja, kann er denn von unserer Heirat nicht auch auf andere Weise erfahren?“ „Das kann ich allerdings nicht verhindern, aber es ist bei seiner Lebensweise unwahrscheinlich.“ „Wenn du solche Freunde hast, Georg, hättest du dich überhaupt nicht verloben sollen.“ „Ja, das ist unser beider Schuld; aber ich wollte es auch jetzt nicht anders haben.“ Und wenn sie dann, rasch atmend unter seinen Küssen, noch vorbrachte: „Eigentlich kränkt es mich doch“, hielt er es wirklich für unverfänglich, dem Freund alles zu schreiben. „So bin ich und so hat er mich hinzunehmen“, sagte er sich, „Ich kann nicht aus mir einen Menschen herausschneiden, der vielleicht für die Freundschaft mit ihm geeigneter wäre, als ich es bin.“",
+      "ja": "だがゲオルクは、自分自身が一か月前に、裕福な家の娘であるフリーダ・ブランデンフェルト嬢と婚約したことを打ち明けるよりは、そういうことを書くほうがずっと好きだった。彼はしばしば婚約者に、この友人のこと、そして自分と友人とのあいだにあるこの特別な文通の関係について話した。「じゃあその方は私たちの結婚式にも来ないのね」と彼女は言った、「私には、あなたのお友だち全員と知り合いになる権利があるはずでしょう」「彼をかき乱したくないんだ」とゲオルクは答えた、「誤解しないでほしい、彼はたぶん来るだろう、少なくとも僕はそう思う、でも彼は無理を強いられ、損なわれたように感じ、もしかしたら僕をうらやみ、きっと満たされない思いを抱えたまま、その満たされなさをいつまでも取り除けないまま、一人でまた帰っていくことになる。一人で——それがどういうことか、君にわかるかい？」「ええ、でもその方は、私たちの結婚をほかの筋から知ることだってできるんじゃないの？」「それはたしかに僕にも防げない、でも彼の暮らしぶりからすればありそうにない」「そんなお友だちがいるのなら、ゲオルク、あなたはそもそも婚約なんかするべきじゃなかったのよ」「そう、それは僕たち二人の罪だ。でも僕はいまでも、ほかのようにはしたくない」　そして彼女が、彼の口づけの下で息を弾ませながら、なおも「でもやっぱり傷つくわ」と言い立てると、彼には、友人に何もかも書いてしまうのも本当に差し支えのないことに思えるのだった。「僕はこういう人間で、彼は僕をこのまま受け取るしかないんだ」と彼は自分に言い聞かせた、「僕は自分の中から、僕よりも彼との友情に向いた人間を切り出してくることなんてできやしない」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg schrieb ihm aber solche Dinge viel lieber, als daß er zugestanden hätte, daß er selbst vor einem Monat mit einem Fräulein Frieda Brandenfeld, einem Mädchen aus wohlhabender Familie, sich verlobt hatte.",
+          "ja": "だがゲオルクは、自分自身が一か月前に、裕福な家の娘であるフリーダ・ブランデンフェルト嬢と婚約したことを打ち明けるよりは、そういうことを書くほうがずっと好きだった。"
+        },
+        {
+          "src": "Oft sprach er mit seiner Braut über diesen Freund und das besondere Korrespondenzverhältnis, in welchem er zu ihm stand. „Da wird er gar nicht zu unserer Hochzeit kommen,“ sagte sie, „und ich habe doch das Recht, alle deine Freunde kennen zu lernen.“ „Ich will ihn nicht stören,“ antwortete Georg, „verstehe mich recht, er würde wahrscheinlich kommen, wenigstens glaube ich es, aber er würde sich gezwungen und geschädigt fühlen, vielleicht mich beneiden und sicher unzufrieden und unfähig, diese Unzufriedenheit jemals zu beseitigen, allein wieder zurückfahren.",
+          "ja": "彼はしばしば婚約者に、この友人のこと、そして自分と友人とのあいだにあるこの特別な文通の関係について話した。「じゃあその方は私たちの結婚式にも来ないのね」と彼女は言った、「私には、あなたのお友だち全員と知り合いになる権利があるはずでしょう」「彼をかき乱したくないんだ」とゲオルクは答えた、「誤解しないでほしい、彼はたぶん来るだろう、少なくとも僕はそう思う、でも彼は無理を強いられ、損なわれたように感じ、もしかしたら僕をうらやみ、きっと満たされない思いを抱えたまま、その満たされなさをいつまでも取り除けないまま、一人でまた帰っていくことになる。"
+        },
+        {
+          "src": "Allein — weißt du, was das ist?“ „Ja, kann er denn von unserer Heirat nicht auch auf andere Weise erfahren?“ „Das kann ich allerdings nicht verhindern, aber es ist bei seiner Lebensweise unwahrscheinlich.“ „Wenn du solche Freunde hast, Georg, hättest du dich überhaupt nicht verloben sollen.“ „Ja, das ist unser beider Schuld; aber ich wollte es auch jetzt nicht anders haben.“ Und wenn sie dann, rasch atmend unter seinen Küssen, noch vorbrachte: „Eigentlich kränkt es mich doch“, hielt er es wirklich für unverfänglich, dem Freund alles zu schreiben. „So bin ich und so hat er mich hinzunehmen“, sagte er sich, „Ich kann nicht aus mir einen Menschen herausschneiden, der vielleicht für die Freundschaft mit ihm geeigneter wäre, als ich es bin.“",
+          "ja": "一人で——それがどういうことか、君にわかるかい？」「ええ、でもその方は、私たちの結婚をほかの筋から知ることだってできるんじゃないの？」「それはたしかに僕にも防げない、でも彼の暮らしぶりからすればありそうにない」「そんなお友だちがいるのなら、ゲオルク、あなたはそもそも婚約なんかするべきじゃなかったのよ」「そう、それは僕たち二人の罪だ。でも僕はいまでも、ほかのようにはしたくない」　そして彼女が、彼の口づけの下で息を弾ませながら、なおも「でもやっぱり傷つくわ」と言い立てると、彼には、友人に何もかも書いてしまうのも本当に差し支えのないことに思えるのだった。「僕はこういう人間で、彼は僕をこのまま受け取るしかないんだ」と彼は自分に言い聞かせた、「僕は自分の中から、僕よりも彼との友情に向いた人間を切り出してくることなんてできやしない」"
+        }
+      ]
+    },
+    {
+      "id": "p008",
+      "src": "Und tatsächlich berichtete er seinem Freunde in dem langen Brief, den er an diesem Sonntagvormittag schrieb, die erfolgte Verlobung mit folgenden Worten: „Die beste Neuigkeit habe ich mir bis zum Schluß aufgespart. Ich habe mich mit einem Fräulein Frieda Brandenfeld verlobt, einem Mädchen aus einer wohlhabenden\n Familie, die sich hier erst lange nach Deiner Abreise angesiedelt hat, die Du also kaum kennen dürftest. Es wird sich noch Gelegenheit finden, Dir Näheres über meine Braut mitzuteilen, heute genüge Dir, daß ich recht glücklich bin und daß sich in unserem gegenseitigen Verhältnis nur insoferne etwas geändert hat, als Du jetzt in mir statt eines ganz gewöhnlichen Freundes einen glücklichen Freund haben wirst. Außerdem bekommst Du in meiner Braut, die Dich herzlich grüßen läßt, und die Dir nächstens selbst schreiben wird, eine aufrichtige Freundin, was für einen Junggesellen nicht ganz ohne Bedeutung ist. Ich weiß, es hält Dich vielerlei von einem Besuche bei uns zurück, wäre aber nicht gerade meine Hochzeit die richtige Gelegenheit, einmal alle Hindernisse über den Haufen zu werfen? Aber wie dies auch sein mag, handle ohne alle Rücksicht und nur nach Deiner Wohlmeinung.“",
+      "ja": "そして実際、彼はこの日曜日の午前に書いたその長い手紙の中で、婚約が成ったことを友人に次のような言葉で伝えたのだった。「いちばんいい知らせは最後まで取っておいた。僕はフリーダ・ブランデンフェルトという娘と婚約した。裕福な家の出だが、その一家が当地に移ってきたのは君が発ってからずっと後のことだから、君はまず知らないだろう。婚約者について詳しく伝える機会はまだあるだろう。今日のところは、僕がまったく幸福であること、そして僕たちの関係で変わったのは、君がこれからは僕という、ごくありふれた友人の代わりに幸福な友人を持つことになる、という点だけだと知ってもらえれば十分だ。そのうえ君は、心からよろしくと言っており、近いうちに自分でも手紙を書くという僕の婚約者に、誠実な女友だちを一人得ることになる。これは独身者にとってまったく意味のないことではあるまい。君をこちらへの訪問から遠ざけているものがいろいろあるのは知っている。だが、ほかならぬ僕の結婚式こそ、いっさいの障害をまとめて投げ捨てるのにちょうどよい機会ではないだろうか？だがそれはそれとして、何の遠慮もなく、ただ君の思うとおりにしてくれ」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Und tatsächlich berichtete er seinem Freunde in dem langen Brief, den er an diesem Sonntagvormittag schrieb, die erfolgte Verlobung mit folgenden Worten: „Die beste Neuigkeit habe ich mir bis zum Schluß aufgespart.",
+          "ja": "そして実際、彼はこの日曜日の午前に書いたその長い手紙の中で、婚約が成ったことを友人に次のような言葉で伝えたのだった。「いちばんいい知らせは最後まで取っておいた。"
+        },
+        {
+          "src": "Ich habe mich mit einem Fräulein Frieda Brandenfeld verlobt, einem Mädchen aus einer wohlhabenden\n Familie, die sich hier erst lange nach Deiner Abreise angesiedelt hat, die Du also kaum kennen dürftest.",
+          "ja": "僕はフリーダ・ブランデンフェルトという娘と婚約した。裕福な家の出だが、その一家が当地に移ってきたのは君が発ってからずっと後のことだから、君はまず知らないだろう。"
+        },
+        {
+          "src": "Es wird sich noch Gelegenheit finden, Dir Näheres über meine Braut mitzuteilen, heute genüge Dir, daß ich recht glücklich bin und daß sich in unserem gegenseitigen Verhältnis nur insoferne etwas geändert hat, als Du jetzt in mir statt eines ganz gewöhnlichen Freundes einen glücklichen Freund haben wirst.",
+          "ja": "婚約者について詳しく伝える機会はまだあるだろう。今日のところは、僕がまったく幸福であること、そして僕たちの関係で変わったのは、君がこれからは僕という、ごくありふれた友人の代わりに幸福な友人を持つことになる、という点だけだと知ってもらえれば十分だ。"
+        },
+        {
+          "src": "Außerdem bekommst Du in meiner Braut, die Dich herzlich grüßen läßt, und die Dir nächstens selbst schreiben wird, eine aufrichtige Freundin, was für einen Junggesellen nicht ganz ohne Bedeutung ist.",
+          "ja": "そのうえ君は、心からよろしくと言っており、近いうちに自分でも手紙を書くという僕の婚約者に、誠実な女友だちを一人得ることになる。これは独身者にとってまったく意味のないことではあるまい。"
+        },
+        {
+          "src": "Ich weiß, es hält Dich vielerlei von einem Besuche bei uns zurück, wäre aber nicht gerade meine Hochzeit die richtige Gelegenheit, einmal alle Hindernisse über den Haufen zu werfen?",
+          "ja": "君をこちらへの訪問から遠ざけているものがいろいろあるのは知っている。だが、ほかならぬ僕の結婚式こそ、いっさいの障害をまとめて投げ捨てるのにちょうどよい機会ではないだろうか？"
+        },
+        {
+          "src": "Aber wie dies auch sein mag, handle ohne alle Rücksicht und nur nach Deiner Wohlmeinung.“",
+          "ja": "だがそれはそれとして、何の遠慮もなく、ただ君の思うとおりにしてくれ」"
+        }
+      ]
+    },
+    {
+      "id": "p009",
+      "src": "Mit diesem Brief in der Hand war Georg lange, das Gesicht dem Fenster zugekehrt, an seinem Schreibtisch gesessen. Einem Bekannten, der ihn im Vorübergehen von der Gasse aus gegrüßt hatte, hatte er kaum mit einem abwesenden Lächeln geantwortet.",
+      "ja": "この手紙を手にしたまま、ゲオルクは長いこと、顔を窓に向けて机に向かって座っていた。通りがかりに路地から挨拶をよこした知人にも、彼は上の空の微笑でようやく応えるだけだった。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Mit diesem Brief in der Hand war Georg lange, das Gesicht dem Fenster zugekehrt, an seinem Schreibtisch gesessen.",
+          "ja": "この手紙を手にしたまま、ゲオルクは長いこと、顔を窓に向けて机に向かって座っていた。"
+        },
+        {
+          "src": "Einem Bekannten, der ihn im Vorübergehen von der Gasse aus gegrüßt hatte, hatte er kaum mit einem abwesenden Lächeln geantwortet.",
+          "ja": "通りがかりに路地から挨拶をよこした知人にも、彼は上の空の微笑でようやく応えるだけだった。"
+        }
+      ]
+    },
+    {
+      "id": "p010",
+      "src": "Endlich steckte er den Brief in die Tasche und ging aus seinem Zimmer quer durch einen kleinen Gang in das Zimmer seines Vaters, in dem er schon seit Monaten nicht gewesen war. Es bestand auch sonst keine Nötigung dazu, denn er verkehrte mit seinem Vater ständig im Geschäft, das Mittagessen nahmen sie gleichzeitig in einem Speisehaus ein, abends versorgte sich zwar jeder nach Belieben, doch saßen sie dann meistens, wenn nicht Georg, wie es am häufigsten geschah, mit Freunden beisammen war oder jetzt seine Braut besuchte, noch ein Weilchen, jeder mit seiner Zeitung, im gemeinsamen Wohnzimmer.",
+      "ja": "ようやく彼は手紙をポケットに入れ、自分の部屋を出て、小さな廊下を斜めに横切り、もう何か月も入っていない父の部屋へ行った。そうする必要もふだんはなかったのだ。父とは商売でいつも顔を合わせていたし、昼食は同じ時刻に同じ食堂で取り、夜はそれぞれ好きなようにしていたとはいえ、ゲオルクが——これがいちばん多かったのだが——友人たちと一緒だったり、いまなら婚約者を訪ねたりしていないかぎり、二人はたいてい、それぞれ自分の新聞を持って、共同の居間にもうしばらく座っていたからだ。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Endlich steckte er den Brief in die Tasche und ging aus seinem Zimmer quer durch einen kleinen Gang in das Zimmer seines Vaters, in dem er schon seit Monaten nicht gewesen war.",
+          "ja": "ようやく彼は手紙をポケットに入れ、自分の部屋を出て、小さな廊下を斜めに横切り、もう何か月も入っていない父の部屋へ行った。"
+        },
+        {
+          "src": "Es bestand auch sonst keine Nötigung dazu, denn er verkehrte mit seinem Vater ständig im Geschäft, das Mittagessen nahmen sie gleichzeitig in einem Speisehaus ein, abends versorgte sich zwar jeder nach Belieben, doch saßen sie dann meistens, wenn nicht Georg, wie es am häufigsten geschah, mit Freunden beisammen war oder jetzt seine Braut besuchte, noch ein Weilchen, jeder mit seiner Zeitung, im gemeinsamen Wohnzimmer.",
+          "ja": "そうする必要もふだんはなかったのだ。父とは商売でいつも顔を合わせていたし、昼食は同じ時刻に同じ食堂で取り、夜はそれぞれ好きなようにしていたとはいえ、ゲオルクが——これがいちばん多かったのだが——友人たちと一緒だったり、いまなら婚約者を訪ねたりしていないかぎり、二人はたいてい、それぞれ自分の新聞を持って、共同の居間にもうしばらく座っていたからだ。"
+        }
+      ]
+    },
+    {
+      "id": "p011",
+      "src": "Georg staunte darüber, wie dunkel das Zimmer des Vaters selbst an diesem sonnigen Vormittag war. Einen solchen Schatten warf also die hohe Mauer, die sich jenseits des schmalen Hofes erhob. Der Vater saß beim Fenster in einer Ecke, die mit verschiedenen Andenken an die selige Mutter ausgeschmückt war,\n und las die Zeitung, die er seitlich vor die Augen hielt, wodurch er irgendeine Augenschwäche auszugleichen suchte. Auf dem Tisch standen die Reste des Frühstücks, von dem nicht viel verzehrt zu sein schien.",
+      "ja": "ゲオルクは、この日の当たる午前でさえ父の部屋がこれほど暗いことに驚いた。狭い中庭の向こうにそびえる高い塀が、これほどの影を落としていたのだ。父は窓辺の、亡き母の思い出の品々で飾られた片隅に座り、新聞を読んでいた。目の弱りを補おうとしてか、新聞を顔の横のほうへ斜めに構えていた。テーブルの上には朝食の残りがあり、たいして食べた様子はなかった。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg staunte darüber, wie dunkel das Zimmer des Vaters selbst an diesem sonnigen Vormittag war.",
+          "ja": "ゲオルクは、この日の当たる午前でさえ父の部屋がこれほど暗いことに驚いた。"
+        },
+        {
+          "src": "Einen solchen Schatten warf also die hohe Mauer, die sich jenseits des schmalen Hofes erhob.",
+          "ja": "狭い中庭の向こうにそびえる高い塀が、これほどの影を落としていたのだ。"
+        },
+        {
+          "src": "Der Vater saß beim Fenster in einer Ecke, die mit verschiedenen Andenken an die selige Mutter ausgeschmückt war,\n und las die Zeitung, die er seitlich vor die Augen hielt, wodurch er irgendeine Augenschwäche auszugleichen suchte.",
+          "ja": "父は窓辺の、亡き母の思い出の品々で飾られた片隅に座り、新聞を読んでいた。目の弱りを補おうとしてか、新聞を顔の横のほうへ斜めに構えていた。"
+        },
+        {
+          "src": "Auf dem Tisch standen die Reste des Frühstücks, von dem nicht viel verzehrt zu sein schien.",
+          "ja": "テーブルの上には朝食の残りがあり、たいして食べた様子はなかった。"
+        }
+      ]
+    },
+    {
+      "id": "p012",
+      "src": "„Ah, Georg!“ sagte der Vater und ging ihm gleich entgegen. Sein schwerer Schlafrock öffnete sich im Gehen, die Enden umflatterten ihn — „mein Vater ist noch immer ein Riese“, sagte sich Georg.",
+      "ja": "「おお、ゲオルク！」と父は言い、すぐに彼を迎えに歩み出た。歩くはずみに重い部屋着の前が開き、裾がひらひらと父のまわりに舞った——「僕の父はいまでも巨人だ」とゲオルクは自分に言った。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Ah, Georg!“ sagte der Vater und ging ihm gleich entgegen.",
+          "ja": "「おお、ゲオルク！」と父は言い、すぐに彼を迎えに歩み出た。"
+        },
+        {
+          "src": "Sein schwerer Schlafrock öffnete sich im Gehen, die Enden umflatterten ihn — „mein Vater ist noch immer ein Riese“, sagte sich Georg.",
+          "ja": "歩くはずみに重い部屋着の前が開き、裾がひらひらと父のまわりに舞った——「僕の父はいまでも巨人だ」とゲオルクは自分に言った。"
+        }
+      ]
+    },
+    {
+      "id": "p013",
+      "src": "„Hier ist es ja unerträglich dunkel“, sagte er dann.",
+      "ja": "「ここは我慢できないほど暗いね」と彼はそれから言った。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Hier ist es ja unerträglich dunkel“, sagte er dann.",
+          "ja": "「ここは我慢できないほど暗いね」と彼はそれから言った。"
+        }
+      ]
+    },
+    {
+      "id": "p014",
+      "src": "„Ja, dunkel ist es schon“, antwortete der Vater.",
+      "ja": "「ああ、暗いことは暗い」と父は答えた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Ja, dunkel ist es schon“, antwortete der Vater.",
+          "ja": "「ああ、暗いことは暗い」と父は答えた。"
+        }
+      ]
+    },
+    {
+      "id": "p015",
+      "src": "„Das Fenster hast du auch geschlossen?“",
+      "ja": "「窓まで閉めているのか？」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Das Fenster hast du auch geschlossen?“",
+          "ja": "「窓まで閉めているのか？」"
+        }
+      ]
+    },
+    {
+      "id": "p016",
+      "src": "„Ich habe es lieber so.“",
+      "ja": "「このほうがいいんだ」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Ich habe es lieber so.“",
+          "ja": "「このほうがいいんだ」"
+        }
+      ]
+    },
+    {
+      "id": "p017",
+      "src": "„Es ist ja ganz warm draußen“, sagte Georg, wie im Nachhang zu dem Früheren, und setzte sich.",
+      "ja": "「外はすっかり暖かいのに」とゲオルクは、さっきの言葉の続きのように言って、腰を下ろした。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Es ist ja ganz warm draußen“, sagte Georg, wie im Nachhang zu dem Früheren, und setzte sich.",
+          "ja": "「外はすっかり暖かいのに」とゲオルクは、さっきの言葉の続きのように言って、腰を下ろした。"
+        }
+      ]
+    },
+    {
+      "id": "p018",
+      "src": "Der Vater räumte das Frühstücksgeschirr ab und stellte es auf einen Kasten.",
+      "ja": "父は朝食の食器を片づけ、それを整理箪笥の上に載せた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Der Vater räumte das Frühstücksgeschirr ab und stellte es auf einen Kasten.",
+          "ja": "父は朝食の食器を片づけ、それを整理箪笥の上に載せた。"
+        }
+      ]
+    },
+    {
+      "id": "p019",
+      "src": "„Ich wollte dir eigentlich nur sagen,“ fuhr Georg fort, der den Bewegungen des alten Mannes ganz verloren folgte, „daß ich nun doch nach Petersburg meine Verlobung angezeigt habe.“ Er zog den Brief ein wenig aus der Tasche und ließ ihn wieder zurückfallen.",
+      "ja": "「本当はただ、これだけ言いたかったんだ」と、老人の動きを我を忘れて目で追いながらゲオルクは続けた、「やっぱりペテルブルグへ婚約を知らせたって」　彼は手紙をポケットから少し引き出して、また落とし込んだ。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Ich wollte dir eigentlich nur sagen,“ fuhr Georg fort, der den Bewegungen des alten Mannes ganz verloren folgte, „daß ich nun doch nach Petersburg meine Verlobung angezeigt habe.“ Er zog den Brief ein wenig aus der Tasche und ließ ihn wieder zurückfallen.",
+          "ja": "「本当はただ、これだけ言いたかったんだ」と、老人の動きを我を忘れて目で追いながらゲオルクは続けた、「やっぱりペテルブルグへ婚約を知らせたって」　彼は手紙をポケットから少し引き出して、また落とし込んだ。"
+        }
+      ]
+    },
+    {
+      "id": "p020",
+      "src": "„Wieso nach Petersburg?“ fragte der Vater.",
+      "ja": "「ペテルブルグへだと？」と父は尋ねた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Wieso nach Petersburg?“ fragte der Vater.",
+          "ja": "「ペテルブルグへだと？」と父は尋ねた。"
+        }
+      ]
+    },
+    {
+      "id": "p021",
+      "src": "„Meinem Freunde doch“, sagte Georg und suchte des Vaters Augen. — „Im Geschäft ist er doch ganz anders,“ dachte er, „wie er hier breit sitzt und die Arme über der Brust kreuzt.“",
+      "ja": "「僕の友人にさ」とゲオルクは言い、父の目を探した。——「商売のときとはまるで違う」と彼は思った、「ここではこんなに幅を利かせて座って、腕を胸の前で組んでいる」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Meinem Freunde doch“, sagte Georg und suchte des Vaters Augen.",
+          "ja": "「僕の友人にさ」とゲオルクは言い、父の目を探した。"
+        },
+        {
+          "src": "— „Im Geschäft ist er doch ganz anders,“ dachte er, „wie er hier breit sitzt und die Arme über der Brust kreuzt.“",
+          "ja": "——「商売のときとはまるで違う」と彼は思った、「ここではこんなに幅を利かせて座って、腕を胸の前で組んでいる」"
+        }
+      ]
+    },
+    {
+      "id": "p022",
+      "src": "„Ja. Deinem Freunde“, sagte der Vater mit Betonung.",
+      "ja": "「ああ。おまえの友人にな」と父は力を込めて言った。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Ja.",
+          "ja": "「ああ。"
+        },
+        {
+          "src": "Deinem Freunde“, sagte der Vater mit Betonung.",
+          "ja": "おまえの友人にな」と父は力を込めて言った。"
+        }
+      ]
+    },
+    {
+      "id": "p023",
+      "src": "„Du weißt doch, Vater, daß ich ihm meine Verlobung zuerst verschweigen wollte. Aus Rücksichtnahme, aus keinem anderen Grunde sonst. Du weißt selbst, er ist ein schwieriger Mensch. Ich sagte mir, von anderer Seite kann er von meiner Verlobung wohl erfahren, wenn das auch bei seiner einsamen Lebensweise kaum wahrscheinlich ist — das kann ich nicht hindern —, aber von mir selbst soll er es nun einmal nicht erfahren.“",
+      "ja": "「知っているだろう、お父さん、僕は初め、彼には婚約を隠しておくつもりだった。気づかいからだ、ほかに理由はない。彼が難しい人間だということは、お父さんも知っているとおりだ。僕はこう考えたんだ。彼はほかの筋から僕の婚約を知ることもあるだろう、あの孤独な暮らしぶりからすればまずありそうにないが——それは僕には防げない——、けれども僕自身からだけは、絶対に知らせまいと」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Du weißt doch, Vater, daß ich ihm meine Verlobung zuerst verschweigen wollte.",
+          "ja": "「知っているだろう、お父さん、僕は初め、彼には婚約を隠しておくつもりだった。"
+        },
+        {
+          "src": "Aus Rücksichtnahme, aus keinem anderen Grunde sonst.",
+          "ja": "気づかいからだ、ほかに理由はない。"
+        },
+        {
+          "src": "Du weißt selbst, er ist ein schwieriger Mensch.",
+          "ja": "彼が難しい人間だということは、お父さんも知っているとおりだ。"
+        },
+        {
+          "src": "Ich sagte mir, von anderer Seite kann er von meiner Verlobung wohl erfahren, wenn das auch bei seiner einsamen Lebensweise kaum wahrscheinlich ist — das kann ich nicht hindern —, aber von mir selbst soll er es nun einmal nicht erfahren.“",
+          "ja": "僕はこう考えたんだ。彼はほかの筋から僕の婚約を知ることもあるだろう、あの孤独な暮らしぶりからすればまずありそうにないが——それは僕には防げない——、けれども僕自身からだけは、絶対に知らせまいと」"
+        }
+      ]
+    },
+    {
+      "id": "p024",
+      "src": "„Und jetzt hast du es dir wieder anders überlegt?“ fragte der Vater, legte die große Zeitung auf den Fensterbord und auf die Zeitung die Brille, die er mit der Hand bedeckte.",
+      "ja": "「それでいまは、また考えを変えたのか？」と父は尋ね、大きな新聞を窓框に置き、その新聞の上に眼鏡を置いて、手でその眼鏡を覆った。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Und jetzt hast du es dir wieder anders überlegt?“ fragte der Vater, legte die große Zeitung auf den Fensterbord und auf die Zeitung die Brille, die er mit der Hand bedeckte.",
+          "ja": "「それでいまは、また考えを変えたのか？」と父は尋ね、大きな新聞を窓框に置き、その新聞の上に眼鏡を置いて、手でその眼鏡を覆った。"
+        }
+      ]
+    },
+    {
+      "id": "p025",
+      "src": "„Ja, jetzt habe ich es mir wieder überlegt. Wenn er mein guter Freund ist, sagte ich mir, dann ist meine glückliche Verlobung auch für ihn ein Glück. Und deshalb habe ich nicht mehr gezögert, es ihm anzuzeigen. Ehe ich jedoch den Brief einwarf, wollte ich es dir sagen.“",
+      "ja": "「そう、いまは考え直した。彼が僕のよい友人であるなら、僕の幸福な婚約は彼にとっても幸福なはずだ、と僕は自分に言ったんだ。だからもうためらわずに、彼に知らせることにした。でも手紙を出す前に、お父さんに言っておこうと思って」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Ja, jetzt habe ich es mir wieder überlegt.",
+          "ja": "「そう、いまは考え直した。"
+        },
+        {
+          "src": "Wenn er mein guter Freund ist, sagte ich mir, dann ist meine glückliche Verlobung auch für ihn ein Glück.",
+          "ja": "彼が僕のよい友人であるなら、僕の幸福な婚約は彼にとっても幸福なはずだ、と僕は自分に言ったんだ。"
+        },
+        {
+          "src": "Und deshalb habe ich nicht mehr gezögert, es ihm anzuzeigen.",
+          "ja": "だからもうためらわずに、彼に知らせることにした。"
+        },
+        {
+          "src": "Ehe ich jedoch den Brief einwarf, wollte ich es dir sagen.“",
+          "ja": "でも手紙を出す前に、お父さんに言っておこうと思って」"
+        }
+      ]
+    },
+    {
+      "id": "p026",
+      "src": "„Georg,“ sagte der Vater und zog den zahnlosen Mund in die Breite, „hör’ einmal! Du bist wegen dieser Sache zu mir gekommen, um dich mit mir zu beraten. Das ehrt dich ohne Zweifel. Aber es ist nichts, es ist ärger als nichts, wenn du mir jetzt nicht die volle Wahrheit sagst. Ich will nicht Dinge aufrühren, die nicht hierher gehören. Seit dem Tode unserer teueren Mutter sind gewisse unschöne Dinge vorgegangen. Vielleicht kommt auch für sie die Zeit und vielleicht kommt sie früher, als wir denken. Im Geschäft entgeht mir manches, es wird mir vielleicht nicht verborgen — ich will jetzt gar nicht die Annahme machen, daß es mir verborgen wird —, ich bin nicht mehr kräftig genug, mein Gedächtnis läßt nach, ich habe nicht mehr den Blick für alle die vielen Sachen. Das ist erstens der Ablauf der Natur, und zweitens hat mich der Tod unseres Mütterchens viel mehr niedergeschlagen als dich. — Aber weil wir gerade bei dieser Sache halten, bei diesem Brief, so bitte ich dich, Georg, täusche mich nicht. Es ist eine Kleinigkeit, es ist nicht des Atems wert, also täusche mich nicht. Hast du wirklich diesen Freund in Petersburg?“",
+      "ja": "「ゲオルク」と父は言い、歯のない口を横に引き伸ばした、「まあ聞け！おまえはこの件で私に相談しようとやって来た。それは疑いなく立派なことだ。だが、いまおまえが私に本当のことをすっかり言わないのなら、そんなものは何にもならん、何にもならんどころか、たちが悪い。ここに関わりのないことを蒸し返す気はない。大事な母さんが死んでから、いくつか感心しないことが起きている。そのことにも時が来るだろう、それも私たちが思うより早く来るかもしれん。商売では見落とすことが多くなった、隠されてはいないのかもしれん——いま私は、隠されているのだと決めてかかるつもりはまったくない——、私はもう力が足りず、記憶は衰え、あれこれ多くのことに目が届かなくなった。それは第一に自然の成り行きだ。そして第二に、母さんの死は、おまえよりも私をずっと深く打ちのめしたのだ。——だが、ちょうどこの件を、この手紙のことを話しているのだから、頼むぞ、ゲオルク、私を欺くな。些細なことだ、息をするほどの値打ちもない。だから私を欺くな。おまえには本当に、ペテルブルグにその友人がいるのか？」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Georg,“ sagte der Vater und zog den zahnlosen Mund in die Breite, „hör’ einmal!",
+          "ja": "「ゲオルク」と父は言い、歯のない口を横に引き伸ばした、「まあ聞け！"
+        },
+        {
+          "src": "Du bist wegen dieser Sache zu mir gekommen, um dich mit mir zu beraten.",
+          "ja": "おまえはこの件で私に相談しようとやって来た。"
+        },
+        {
+          "src": "Das ehrt dich ohne Zweifel.",
+          "ja": "それは疑いなく立派なことだ。"
+        },
+        {
+          "src": "Aber es ist nichts, es ist ärger als nichts, wenn du mir jetzt nicht die volle Wahrheit sagst.",
+          "ja": "だが、いまおまえが私に本当のことをすっかり言わないのなら、そんなものは何にもならん、何にもならんどころか、たちが悪い。"
+        },
+        {
+          "src": "Ich will nicht Dinge aufrühren, die nicht hierher gehören.",
+          "ja": "ここに関わりのないことを蒸し返す気はない。"
+        },
+        {
+          "src": "Seit dem Tode unserer teueren Mutter sind gewisse unschöne Dinge vorgegangen.",
+          "ja": "大事な母さんが死んでから、いくつか感心しないことが起きている。"
+        },
+        {
+          "src": "Vielleicht kommt auch für sie die Zeit und vielleicht kommt sie früher, als wir denken.",
+          "ja": "そのことにも時が来るだろう、それも私たちが思うより早く来るかもしれん。"
+        },
+        {
+          "src": "Im Geschäft entgeht mir manches, es wird mir vielleicht nicht verborgen — ich will jetzt gar nicht die Annahme machen, daß es mir verborgen wird —, ich bin nicht mehr kräftig genug, mein Gedächtnis läßt nach, ich habe nicht mehr den Blick für alle die vielen Sachen.",
+          "ja": "商売では見落とすことが多くなった、隠されてはいないのかもしれん——いま私は、隠されているのだと決めてかかるつもりはまったくない——、私はもう力が足りず、記憶は衰え、あれこれ多くのことに目が届かなくなった。"
+        },
+        {
+          "src": "Das ist erstens der Ablauf der Natur, und zweitens hat mich der Tod unseres Mütterchens viel mehr niedergeschlagen als dich.",
+          "ja": "それは第一に自然の成り行きだ。そして第二に、母さんの死は、おまえよりも私をずっと深く打ちのめしたのだ。"
+        },
+        {
+          "src": "— Aber weil wir gerade bei dieser Sache halten, bei diesem Brief, so bitte ich dich, Georg, täusche mich nicht.",
+          "ja": "——だが、ちょうどこの件を、この手紙のことを話しているのだから、頼むぞ、ゲオルク、私を欺くな。"
+        },
+        {
+          "src": "Es ist eine Kleinigkeit, es ist nicht des Atems wert, also täusche mich nicht.",
+          "ja": "些細なことだ、息をするほどの値打ちもない。だから私を欺くな。"
+        },
+        {
+          "src": "Hast du wirklich diesen Freund in Petersburg?“",
+          "ja": "おまえには本当に、ペテルブルグにその友人がいるのか？」"
+        }
+      ]
+    },
+    {
+      "id": "p027",
+      "src": "Georg stand verlegen auf. „Lassen wir meine Freunde sein. Tausend Freunde ersetzen mir nicht meinen Vater. Weißt du, was ich glaube? Du schonst dich nicht genug. Aber das Alter verlangt seine Rechte. Du bist mir im Geschäft unentbehrlich, das weißt du ja sehr genau, aber wenn das Geschäft deine Gesundheit bedrohen sollte, sperre ich es noch morgen für immer. Das geht nicht. Wir müssen da eine andere Lebensweise für dich\n einführen. Aber von Grund aus. Du sitzt hier im Dunkel und im Wohnzimmer hättest du schönes Licht. Du nippst vom Frühstück, statt dich ordentlich zu stärken. Du sitzt bei geschlossenem Fenster und die Luft würde dir so gut tun. Nein, mein Vater! Ich werde den Arzt holen und seinen Vorschriften werden wir folgen. Die Zimmer werden wir wechseln, du wirst ins Vorderzimmer ziehen, ich hierher. Es wird keine Veränderung für dich sein, alles wird mit übertragen werden. Aber das alles hat Zeit, jetzt lege dich noch ein wenig ins Bett, du brauchst unbedingt Ruhe. Komm, ich werde dir beim Ausziehn helfen, du wirst sehn, ich kann es. Oder willst du gleich ins Vorderzimmer gehn, dann legst du dich vorläufig in mein Bett. Das wäre übrigens sehr vernünftig.“",
+      "ja": "ゲオルクは当惑して立ち上がった。「僕の友人のことはもういいよ。友人が千人いたって、僕には父の代わりにはならない。僕がどう思っているか、わかる？お父さんは自分を大事にしなさすぎる。でも年は年で当然の権利を要求するんだ。お父さんは商売で僕にはなくてはならない人だ、それはお父さん自身がよくよく知っているとおりだ。でももし商売がお父さんの健康を脅かすというなら、僕は明日にでも店をたたんでしまう。これではいけない。お父さんのために、別の暮らし方を始めなければ。それも根本からだ。ここでは暗がりに座っているけれど、居間なら明るい光があるのに。しっかり体を養う代わりに、朝食をちょっと口にしただけだ。窓を閉め切って座っているけれど、外の空気はお父さんにこんなにいいはずなのに。だめだよ、お父さん！僕は医者を呼んでくる。そしてその指示に僕たちは従うんだ。部屋を取り替えよう。お父さんが表の部屋へ移って、僕がこっちへ来る。お父さんにとって変化にはならない、何もかもそのまま一緒に移すんだから。でもそれはみんな後でいい、いまはもう少し床に入っていて、お父さんにはどうしても安静が必要だ。さあ、脱ぐのを手伝うよ、見ていて、僕にもできるから。それとも、いますぐ表の部屋へ行くかい。それならさしあたり僕のベッドに寝ればいい。そのほうがよほど賢明だしね」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg stand verlegen auf. „Lassen wir meine Freunde sein.",
+          "ja": "ゲオルクは当惑して立ち上がった。「僕の友人のことはもういいよ。"
+        },
+        {
+          "src": "Tausend Freunde ersetzen mir nicht meinen Vater.",
+          "ja": "友人が千人いたって、僕には父の代わりにはならない。"
+        },
+        {
+          "src": "Weißt du, was ich glaube?",
+          "ja": "僕がどう思っているか、わかる？"
+        },
+        {
+          "src": "Du schonst dich nicht genug.",
+          "ja": "お父さんは自分を大事にしなさすぎる。"
+        },
+        {
+          "src": "Aber das Alter verlangt seine Rechte.",
+          "ja": "でも年は年で当然の権利を要求するんだ。"
+        },
+        {
+          "src": "Du bist mir im Geschäft unentbehrlich, das weißt du ja sehr genau, aber wenn das Geschäft deine Gesundheit bedrohen sollte, sperre ich es noch morgen für immer.",
+          "ja": "お父さんは商売で僕にはなくてはならない人だ、それはお父さん自身がよくよく知っているとおりだ。でももし商売がお父さんの健康を脅かすというなら、僕は明日にでも店をたたんでしまう。"
+        },
+        {
+          "src": "Das geht nicht.",
+          "ja": "これではいけない。"
+        },
+        {
+          "src": "Wir müssen da eine andere Lebensweise für dich\n einführen.",
+          "ja": "お父さんのために、別の暮らし方を始めなければ。"
+        },
+        {
+          "src": "Aber von Grund aus.",
+          "ja": "それも根本からだ。"
+        },
+        {
+          "src": "Du sitzt hier im Dunkel und im Wohnzimmer hättest du schönes Licht.",
+          "ja": "ここでは暗がりに座っているけれど、居間なら明るい光があるのに。"
+        },
+        {
+          "src": "Du nippst vom Frühstück, statt dich ordentlich zu stärken.",
+          "ja": "しっかり体を養う代わりに、朝食をちょっと口にしただけだ。"
+        },
+        {
+          "src": "Du sitzt bei geschlossenem Fenster und die Luft würde dir so gut tun.",
+          "ja": "窓を閉め切って座っているけれど、外の空気はお父さんにこんなにいいはずなのに。"
+        },
+        {
+          "src": "Nein, mein Vater!",
+          "ja": "だめだよ、お父さん！"
+        },
+        {
+          "src": "Ich werde den Arzt holen und seinen Vorschriften werden wir folgen.",
+          "ja": "僕は医者を呼んでくる。そしてその指示に僕たちは従うんだ。"
+        },
+        {
+          "src": "Die Zimmer werden wir wechseln, du wirst ins Vorderzimmer ziehen, ich hierher.",
+          "ja": "部屋を取り替えよう。お父さんが表の部屋へ移って、僕がこっちへ来る。"
+        },
+        {
+          "src": "Es wird keine Veränderung für dich sein, alles wird mit übertragen werden.",
+          "ja": "お父さんにとって変化にはならない、何もかもそのまま一緒に移すんだから。"
+        },
+        {
+          "src": "Aber das alles hat Zeit, jetzt lege dich noch ein wenig ins Bett, du brauchst unbedingt Ruhe.",
+          "ja": "でもそれはみんな後でいい、いまはもう少し床に入っていて、お父さんにはどうしても安静が必要だ。"
+        },
+        {
+          "src": "Komm, ich werde dir beim Ausziehn helfen, du wirst sehn, ich kann es.",
+          "ja": "さあ、脱ぐのを手伝うよ、見ていて、僕にもできるから。"
+        },
+        {
+          "src": "Oder willst du gleich ins Vorderzimmer gehn, dann legst du dich vorläufig in mein Bett.",
+          "ja": "それとも、いますぐ表の部屋へ行くかい。それならさしあたり僕のベッドに寝ればいい。"
+        },
+        {
+          "src": "Das wäre übrigens sehr vernünftig.“",
+          "ja": "そのほうがよほど賢明だしね」"
+        }
+      ]
+    },
+    {
+      "id": "p028",
+      "src": "Georg stand knapp neben seinem Vater, der den Kopf mit dem struppigen weißen Haar auf die Brust hatte sinken lassen.",
+      "ja": "ゲオルクは父のすぐ脇に立っていた。父はもじゃもじゃの白髪の頭を胸の上に落としていた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg stand knapp neben seinem Vater, der den Kopf mit dem struppigen weißen Haar auf die Brust hatte sinken lassen.",
+          "ja": "ゲオルクは父のすぐ脇に立っていた。父はもじゃもじゃの白髪の頭を胸の上に落としていた。"
+        }
+      ]
+    },
+    {
+      "id": "p029",
+      "src": "„Georg“, sagte der Vater leise, ohne Bewegung.",
+      "ja": "「ゲオルク」と父は身じろぎもせず、低い声で言った。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Georg“, sagte der Vater leise, ohne Bewegung.",
+          "ja": "「ゲオルク」と父は身じろぎもせず、低い声で言った。"
+        }
+      ]
+    },
+    {
+      "id": "p030",
+      "src": "Georg kniete sofort neben dem Vater nieder, er sah die Pupillen in dem müden Gesicht des Vaters übergroß in den Winkeln der Augen auf sich gerichtet.",
+      "ja": "ゲオルクはすぐさま父のかたわらにひざまずいた。父の疲れた顔の中で、瞳が目尻に寄って途方もなく大きく自分に向けられているのが見えた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg kniete sofort neben dem Vater nieder, er sah die Pupillen in dem müden Gesicht des Vaters übergroß in den Winkeln der Augen auf sich gerichtet.",
+          "ja": "ゲオルクはすぐさま父のかたわらにひざまずいた。父の疲れた顔の中で、瞳が目尻に寄って途方もなく大きく自分に向けられているのが見えた。"
+        }
+      ]
+    },
+    {
+      "id": "p031",
+      "src": "„Du hast keinen Freund in Petersburg. Du bist immer ein Spaßmacher gewesen und hast dich auch mir gegenüber nicht zurückgehalten. Wie solltest du denn gerade dort einen Freund haben! Das kann ich gar nicht glauben.“",
+      "ja": "「おまえにはペテルブルグに友人などいない。おまえは昔からふざけ屋で、この私に対してさえ遠慮しなかった。よりによってあんな所に、どうして友人などいるものか！私にはとうてい信じられん」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Du hast keinen Freund in Petersburg.",
+          "ja": "「おまえにはペテルブルグに友人などいない。"
+        },
+        {
+          "src": "Du bist immer ein Spaßmacher gewesen und hast dich auch mir gegenüber nicht zurückgehalten.",
+          "ja": "おまえは昔からふざけ屋で、この私に対してさえ遠慮しなかった。"
+        },
+        {
+          "src": "Wie solltest du denn gerade dort einen Freund haben!",
+          "ja": "よりによってあんな所に、どうして友人などいるものか！"
+        },
+        {
+          "src": "Das kann ich gar nicht glauben.“",
+          "ja": "私にはとうてい信じられん」"
+        }
+      ]
+    },
+    {
+      "id": "p032",
+      "src": "„Denk doch noch einmal nach, Vater,“ sagte Georg, hob den Vater vom Sessel und zog ihm, wie er nun doch recht schwach dastand, den Schlafrock aus, „jetzt wird es bald drei Jahre her sein, da war ja mein Freund bei uns zu Besuch. Ich erinnere mich noch, daß du ihn nicht besonders gern hattest. Wenigstens zweimal habe ich ihn vor dir verleugnet, trotzdem er gerade bei mir im Zimmer saß. Ich konnte ja deine Abneigung gegen ihn ganz gut verstehn, mein Freund hat seine Eigentümlichkeiten. Aber dann hast du dich doch auch wieder ganz gut mit ihm unterhalten. Ich war damals noch so stolz darauf, daß du ihm zuhörtest, nicktest und fragtest. Wenn du nachdenkst, mußt du\n dich erinnern. Er erzählte damals unglaubliche Geschichten von der russischen Revolution. Wie er z. B. auf einer Geschäftsreise in Kiew bei einem Tumult einen Geistlichen auf einem Balkon gesehen hatte, der sich ein breites Blutkreuz in die flache Hand schnitt, diese Hand erhob und die Menge anrief. Du hast ja selbst diese Geschichte hie und da wiedererzählt.“",
+      "ja": "「もう一度よく考えてみてよ、お父さん」とゲオルクは言い、父を椅子から抱え起こし、いかにも弱々しく立っている父から部屋着を脱がせながら続けた、「もうそろそろ三年になる、あのとき僕の友人がうちへ訪ねてきた。お父さんが彼をあまり好きでなかったのを、僕はまだ覚えている。少なくとも二度は、彼がちょうど僕の部屋にいるのに、お父さんの前では来ていないことにした。彼を嫌う気持ちは僕にもよくわかったんだ、僕の友人には彼なりの癖があるから。でもそのあと、お父さんは彼とすっかり打ち解けて話していたじゃないか。あのとき僕は、お父さんが彼の話に耳を傾け、うなずき、質問するのが、それは誇らしかった。考えてみれば、思い出すはずだよ。彼はあのとき、ロシアの革命の信じがたい話をしていた。たとえば、商用でキエフへ行ったとき、騒乱のさなかにバルコニーの上の聖職者を見たという話だ。その男は手のひらに血で大きな十字を切り、その手を高く掲げて群衆に呼びかけたという。お父さん自身、この話をあちこちで人に語り直していたじゃないか」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Denk doch noch einmal nach, Vater,“ sagte Georg, hob den Vater vom Sessel und zog ihm, wie er nun doch recht schwach dastand, den Schlafrock aus, „jetzt wird es bald drei Jahre her sein, da war ja mein Freund bei uns zu Besuch.",
+          "ja": "「もう一度よく考えてみてよ、お父さん」とゲオルクは言い、父を椅子から抱え起こし、いかにも弱々しく立っている父から部屋着を脱がせながら続けた、「もうそろそろ三年になる、あのとき僕の友人がうちへ訪ねてきた。"
+        },
+        {
+          "src": "Ich erinnere mich noch, daß du ihn nicht besonders gern hattest.",
+          "ja": "お父さんが彼をあまり好きでなかったのを、僕はまだ覚えている。"
+        },
+        {
+          "src": "Wenigstens zweimal habe ich ihn vor dir verleugnet, trotzdem er gerade bei mir im Zimmer saß.",
+          "ja": "少なくとも二度は、彼がちょうど僕の部屋にいるのに、お父さんの前では来ていないことにした。"
+        },
+        {
+          "src": "Ich konnte ja deine Abneigung gegen ihn ganz gut verstehn, mein Freund hat seine Eigentümlichkeiten.",
+          "ja": "彼を嫌う気持ちは僕にもよくわかったんだ、僕の友人には彼なりの癖があるから。"
+        },
+        {
+          "src": "Aber dann hast du dich doch auch wieder ganz gut mit ihm unterhalten.",
+          "ja": "でもそのあと、お父さんは彼とすっかり打ち解けて話していたじゃないか。"
+        },
+        {
+          "src": "Ich war damals noch so stolz darauf, daß du ihm zuhörtest, nicktest und fragtest.",
+          "ja": "あのとき僕は、お父さんが彼の話に耳を傾け、うなずき、質問するのが、それは誇らしかった。"
+        },
+        {
+          "src": "Wenn du nachdenkst, mußt du\n dich erinnern.",
+          "ja": "考えてみれば、思い出すはずだよ。"
+        },
+        {
+          "src": "Er erzählte damals unglaubliche Geschichten von der russischen Revolution.",
+          "ja": "彼はあのとき、ロシアの革命の信じがたい話をしていた。"
+        },
+        {
+          "src": "Wie er z. B. auf einer Geschäftsreise in Kiew bei einem Tumult einen Geistlichen auf einem Balkon gesehen hatte, der sich ein breites Blutkreuz in die flache Hand schnitt, diese Hand erhob und die Menge anrief.",
+          "ja": "たとえば、商用でキエフへ行ったとき、騒乱のさなかにバルコニーの上の聖職者を見たという話だ。その男は手のひらに血で大きな十字を切り、その手を高く掲げて群衆に呼びかけたという。"
+        },
+        {
+          "src": "Du hast ja selbst diese Geschichte hie und da wiedererzählt.“",
+          "ja": "お父さん自身、この話をあちこちで人に語り直していたじゃないか」"
+        }
+      ]
+    },
+    {
+      "id": "p033",
+      "src": "Währenddessen war es Georg gelungen, den Vater wieder niederzusetzen und ihm die Trikothose, die er über den Leinenunterhosen trug, sowie die Socken vorsichtig auszuziehn. Beim Anblick der nicht besonders reinen Wäsche machte er sich Vorwürfe, den Vater vernachlässigt zu haben. Es wäre sicherlich auch seine Pflicht gewesen, über den Wäschewechsel seines Vaters zu wachen. Er hatte mit seiner Braut darüber, wie sie die Zukunft des Vaters einrichten wollten, noch nicht ausdrücklich gesprochen, denn sie hatten stillschweigend vorausgesetzt, daß der Vater allein in der alten Wohnung bleiben würde. Doch jetzt entschloß er sich kurz mit aller Bestimmtheit, den Vater in seinen künftigen Haushalt mitzunehmen. Es schien ja fast, wenn man genauer zusah, daß die Pflege, die dort dem Vater bereitet werden sollte, zu spät kommen könnte.",
+      "ja": "そうしているあいだにゲオルクは、父をもう一度座らせ、麻の下ばきの上にはいていたメリヤスのズボンと靴下を、注意深く脱がせることができた。あまり清潔とは言えない肌着を目にして、彼は父をないがしろにしてきた自分を責めた。父の肌着の取り替えに気を配ることも、たしかに自分の務めであったはずだ。父の今後をどうするかについて、彼はまだ婚約者とはっきり話し合ってはいなかった。二人は暗黙のうちに、父は一人でいまの住まいに残るものと決めてかかっていたからだ。だがいま彼は、きっぱりと即座に、父を将来の自分の所帯に引き取ろうと決心した。もっとも、よくよく見てみれば、そこで父に用意されるはずの世話は、手遅れになりかねないようにさえ思われるのだった。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Währenddessen war es Georg gelungen, den Vater wieder niederzusetzen und ihm die Trikothose, die er über den Leinenunterhosen trug, sowie die Socken vorsichtig auszuziehn.",
+          "ja": "そうしているあいだにゲオルクは、父をもう一度座らせ、麻の下ばきの上にはいていたメリヤスのズボンと靴下を、注意深く脱がせることができた。"
+        },
+        {
+          "src": "Beim Anblick der nicht besonders reinen Wäsche machte er sich Vorwürfe, den Vater vernachlässigt zu haben.",
+          "ja": "あまり清潔とは言えない肌着を目にして、彼は父をないがしろにしてきた自分を責めた。"
+        },
+        {
+          "src": "Es wäre sicherlich auch seine Pflicht gewesen, über den Wäschewechsel seines Vaters zu wachen.",
+          "ja": "父の肌着の取り替えに気を配ることも、たしかに自分の務めであったはずだ。"
+        },
+        {
+          "src": "Er hatte mit seiner Braut darüber, wie sie die Zukunft des Vaters einrichten wollten, noch nicht ausdrücklich gesprochen, denn sie hatten stillschweigend vorausgesetzt, daß der Vater allein in der alten Wohnung bleiben würde.",
+          "ja": "父の今後をどうするかについて、彼はまだ婚約者とはっきり話し合ってはいなかった。二人は暗黙のうちに、父は一人でいまの住まいに残るものと決めてかかっていたからだ。"
+        },
+        {
+          "src": "Doch jetzt entschloß er sich kurz mit aller Bestimmtheit, den Vater in seinen künftigen Haushalt mitzunehmen.",
+          "ja": "だがいま彼は、きっぱりと即座に、父を将来の自分の所帯に引き取ろうと決心した。"
+        },
+        {
+          "src": "Es schien ja fast, wenn man genauer zusah, daß die Pflege, die dort dem Vater bereitet werden sollte, zu spät kommen könnte.",
+          "ja": "もっとも、よくよく見てみれば、そこで父に用意されるはずの世話は、手遅れになりかねないようにさえ思われるのだった。"
+        }
+      ]
+    },
+    {
+      "id": "p034",
+      "src": "Auf seinen Armen trug er den Vater ins Bett. Ein schreckliches Gefühl hatte er, als er während der paar Schritte zum Bett hin merkte, daß an seiner Brust der Vater mit seiner Uhrkette spiele. Er konnte ihn nicht gleich ins Bett legen, so fest hielt er sich an dieser Uhrkette.",
+      "ja": "彼は父を腕に抱えて寝床へ運んだ。寝床までのほんの数歩のあいだに、父が自分の胸のところで時計の鎖をもてあそんでいるのに気づいて、彼は恐ろしい感じに襲われた。父がその時計の鎖をあまりに固く握っているので、彼はすぐには父を寝床に寝かせることができなかった。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Auf seinen Armen trug er den Vater ins Bett.",
+          "ja": "彼は父を腕に抱えて寝床へ運んだ。"
+        },
+        {
+          "src": "Ein schreckliches Gefühl hatte er, als er während der paar Schritte zum Bett hin merkte, daß an seiner Brust der Vater mit seiner Uhrkette spiele.",
+          "ja": "寝床までのほんの数歩のあいだに、父が自分の胸のところで時計の鎖をもてあそんでいるのに気づいて、彼は恐ろしい感じに襲われた。"
+        },
+        {
+          "src": "Er konnte ihn nicht gleich ins Bett legen, so fest hielt er sich an dieser Uhrkette.",
+          "ja": "父がその時計の鎖をあまりに固く握っているので、彼はすぐには父を寝床に寝かせることができなかった。"
+        }
+      ]
+    },
+    {
+      "id": "p035",
+      "src": "Kaum war er aber im Bett, schien alles gut. Er deckte sich selbst zu und zog dann die Bettdecke noch besonders weit über die Schulter. Er sah nicht unfreundlich zu Georg hinauf.",
+      "ja": "だが寝床に入るや、何もかもうまくいったように見えた。父は自分で掛け布をかけ、それからその布をことさら肩の上まで深く引き上げた。父は無愛想でもなくゲオルクを見上げた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Kaum war er aber im Bett, schien alles gut.",
+          "ja": "だが寝床に入るや、何もかもうまくいったように見えた。"
+        },
+        {
+          "src": "Er deckte sich selbst zu und zog dann die Bettdecke noch besonders weit über die Schulter.",
+          "ja": "父は自分で掛け布をかけ、それからその布をことさら肩の上まで深く引き上げた。"
+        },
+        {
+          "src": "Er sah nicht unfreundlich zu Georg hinauf.",
+          "ja": "父は無愛想でもなくゲオルクを見上げた。"
+        }
+      ]
+    },
+    {
+      "id": "p036",
+      "src": "„Nicht wahr, du erinnerst dich schon an ihn?“ fragte Georg und nickte ihm aufmunternd zu.",
+      "ja": "「ね、もう彼のことを思い出したろう？」とゲオルクは尋ね、励ますようにうなずいてみせた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Nicht wahr, du erinnerst dich schon an ihn?“ fragte Georg und nickte ihm aufmunternd zu.",
+          "ja": "「ね、もう彼のことを思い出したろう？」とゲオルクは尋ね、励ますようにうなずいてみせた。"
+        }
+      ]
+    },
+    {
+      "id": "p037",
+      "src": "„Bin ich jetzt gut zugedeckt?“ fragte der Vater, als könne er nicht nachschauen, ob die Füße genug bedeckt seien.",
+      "ja": "「私はいま、ちゃんとくるまっているか？」と父は、足がちゃんと覆われているかどうか自分では見られないとでもいうように尋ねた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Bin ich jetzt gut zugedeckt?“ fragte der Vater, als könne er nicht nachschauen, ob die Füße genug bedeckt seien.",
+          "ja": "「私はいま、ちゃんとくるまっているか？」と父は、足がちゃんと覆われているかどうか自分では見られないとでもいうように尋ねた。"
+        }
+      ]
+    },
+    {
+      "id": "p038",
+      "src": "„Es gefällt dir also schon im Bett“, sagte Georg und legte das Deckzeug besser um ihn.",
+      "ja": "「じゃあ、もう寝床が気に入ったんだね」とゲオルクは言い、掛け布をもっとよく整えてやった。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Es gefällt dir also schon im Bett“, sagte Georg und legte das Deckzeug besser um ihn.",
+          "ja": "「じゃあ、もう寝床が気に入ったんだね」とゲオルクは言い、掛け布をもっとよく整えてやった。"
+        }
+      ]
+    },
+    {
+      "id": "p039",
+      "src": "„Bin ich gut zugedeckt?“ fragte der Vater noch einmal und schien auf die Antwort besonders aufzupassen.",
+      "ja": "「私はちゃんとくるまっているか？」と父はもう一度尋ね、その答えをことのほか注意して待っているように見えた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Bin ich gut zugedeckt?“ fragte der Vater noch einmal und schien auf die Antwort besonders aufzupassen.",
+          "ja": "「私はちゃんとくるまっているか？」と父はもう一度尋ね、その答えをことのほか注意して待っているように見えた。"
+        }
+      ]
+    },
+    {
+      "id": "p040",
+      "src": "„Sei nur ruhig, du bist gut zugedeckt.“",
+      "ja": "「安心していいよ、ちゃんとくるまっている」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Sei nur ruhig, du bist gut zugedeckt.“",
+          "ja": "「安心していいよ、ちゃんとくるまっている」"
+        }
+      ]
+    },
+    {
+      "id": "p041",
+      "src": "„Nein!“ rief der Vater, daß die Antwort an die Frage stieß, warf die Decke zurück mit einer Kraft, daß sie einen Augenblick im Fluge sich ganz entfaltete, und stand aufrecht im Bett. Nur eine Hand hielt er leicht an den Plafond. „Du wolltest mich zudecken, das weiß ich, mein Früchtchen, aber zugedeckt bin ich noch nicht. Und ist es auch die letzte Kraft, genug für dich, zuviel für dich. Wohl kenne ich deinen Freund. Er wäre ein Sohn nach meinem Herzen. Darum hast du ihn auch betrogen die ganzen Jahre lang. Warum sonst? Glaubst du, ich habe nicht um ihn geweint? Darum doch sperrst du dich in dein Bureau, niemand soll stören, der Chef ist beschäftigt — nur damit du deine falschen Briefchen nach Rußland schreiben kannst. Aber den Vater muß glücklicherweise niemand lehren, den Sohn zu durchschauen. Wie du jetzt geglaubt hast, du hättest ihn untergekriegt, so untergekriegt, daß du dich mit deinem Hintern auf ihn setzen kannst und er rührt sich nicht, da hat sich mein Herr Sohn zum Heiraten entschlossen!“",
+      "ja": "「違う！」と父は、答えが問いにぶつかるほどの勢いで叫び、掛け布を、一瞬宙でいっぱいに広がるほどの力で撥ねのけて、寝床の上にすっくと立った。片手を軽く天井についているだけだった。「おまえは私をくるんでしまいたかったんだ、それはわかっている、この青二才め。だが私はまだくるまれてはいない。たとえこれが最後の力であっても、おまえには十分だ、おまえには多すぎるくらいだ。おまえの友人なら、私はよく知っている。あれこそ私の心にかなう息子だっただろう。だからこそ、おまえは何年ものあいだ彼を欺いてきたのだ。ほかに何のためだ？私が彼のために泣かなかったとでも思うのか？だからこそおまえは事務室に閉じこもるのだ、誰も邪魔をするな、社長は忙しい——ロシアへ嘘っぱちの手紙を書けるようにするためだけにな。だが幸いなことに、息子を見抜くのに父親は誰にも教わる必要がない。おまえはいま、彼を打ち負かした、尻の下に敷いて座ってもびくとも動かないほど打ち負かしたと思い込んで、それでうちの息子殿は結婚する気になったというわけだ！」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Nein!“ rief der Vater, daß die Antwort an die Frage stieß, warf die Decke zurück mit einer Kraft, daß sie einen Augenblick im Fluge sich ganz entfaltete, und stand aufrecht im Bett.",
+          "ja": "「違う！」と父は、答えが問いにぶつかるほどの勢いで叫び、掛け布を、一瞬宙でいっぱいに広がるほどの力で撥ねのけて、寝床の上にすっくと立った。"
+        },
+        {
+          "src": "Nur eine Hand hielt er leicht an den Plafond. „Du wolltest mich zudecken, das weiß ich, mein Früchtchen, aber zugedeckt bin ich noch nicht.",
+          "ja": "片手を軽く天井についているだけだった。「おまえは私をくるんでしまいたかったんだ、それはわかっている、この青二才め。だが私はまだくるまれてはいない。"
+        },
+        {
+          "src": "Und ist es auch die letzte Kraft, genug für dich, zuviel für dich.",
+          "ja": "たとえこれが最後の力であっても、おまえには十分だ、おまえには多すぎるくらいだ。"
+        },
+        {
+          "src": "Wohl kenne ich deinen Freund.",
+          "ja": "おまえの友人なら、私はよく知っている。"
+        },
+        {
+          "src": "Er wäre ein Sohn nach meinem Herzen.",
+          "ja": "あれこそ私の心にかなう息子だっただろう。"
+        },
+        {
+          "src": "Darum hast du ihn auch betrogen die ganzen Jahre lang.",
+          "ja": "だからこそ、おまえは何年ものあいだ彼を欺いてきたのだ。"
+        },
+        {
+          "src": "Warum sonst?",
+          "ja": "ほかに何のためだ？"
+        },
+        {
+          "src": "Glaubst du, ich habe nicht um ihn geweint?",
+          "ja": "私が彼のために泣かなかったとでも思うのか？"
+        },
+        {
+          "src": "Darum doch sperrst du dich in dein Bureau, niemand soll stören, der Chef ist beschäftigt — nur damit du deine falschen Briefchen nach Rußland schreiben kannst.",
+          "ja": "だからこそおまえは事務室に閉じこもるのだ、誰も邪魔をするな、社長は忙しい——ロシアへ嘘っぱちの手紙を書けるようにするためだけにな。"
+        },
+        {
+          "src": "Aber den Vater muß glücklicherweise niemand lehren, den Sohn zu durchschauen.",
+          "ja": "だが幸いなことに、息子を見抜くのに父親は誰にも教わる必要がない。"
+        },
+        {
+          "src": "Wie du jetzt geglaubt hast, du hättest ihn untergekriegt, so untergekriegt, daß du dich mit deinem Hintern auf ihn setzen kannst und er rührt sich nicht, da hat sich mein Herr Sohn zum Heiraten entschlossen!“",
+          "ja": "おまえはいま、彼を打ち負かした、尻の下に敷いて座ってもびくとも動かないほど打ち負かしたと思い込んで、それでうちの息子殿は結婚する気になったというわけだ！」"
+        }
+      ]
+    },
+    {
+      "id": "p042",
+      "src": "Georg sah zum Schreckbild seines Vaters auf. Der Petersburger Freund, den der Vater plötzlich so gut kannte, ergriff ihn, wie noch nie. Verloren im weiten Rußland sah er ihn. An der Türe des leeren, ausgeraubten Geschäftes sah er ihn. Zwischen den Trümmern der Regale, den zerfetzten Waren, den fallenden Gasarmen stand er gerade noch. Warum hatte er so weit wegfahren müssen!",
+      "ja": "ゲオルクは父の恐ろしい姿を見上げた。父が突然これほどよく知っていると言い出したペテルブルグの友人が、かつてないほど彼の心をとらえた。広大なロシアの中で行方も知れぬその姿が見えた。空っぽの、荒らし尽くされた店の戸口に立つその姿が見えた。棚の残骸、ずたずたにされた商品、落ちかかるガス燈の腕木のあいだに、彼はかろうじてまだ立っていた。なぜあんなに遠くへ行かねばならなかったのか！",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg sah zum Schreckbild seines Vaters auf.",
+          "ja": "ゲオルクは父の恐ろしい姿を見上げた。"
+        },
+        {
+          "src": "Der Petersburger Freund, den der Vater plötzlich so gut kannte, ergriff ihn, wie noch nie.",
+          "ja": "父が突然これほどよく知っていると言い出したペテルブルグの友人が、かつてないほど彼の心をとらえた。"
+        },
+        {
+          "src": "Verloren im weiten Rußland sah er ihn.",
+          "ja": "広大なロシアの中で行方も知れぬその姿が見えた。"
+        },
+        {
+          "src": "An der Türe des leeren, ausgeraubten Geschäftes sah er ihn.",
+          "ja": "空っぽの、荒らし尽くされた店の戸口に立つその姿が見えた。"
+        },
+        {
+          "src": "Zwischen den Trümmern der Regale, den zerfetzten Waren, den fallenden Gasarmen stand er gerade noch.",
+          "ja": "棚の残骸、ずたずたにされた商品、落ちかかるガス燈の腕木のあいだに、彼はかろうじてまだ立っていた。"
+        },
+        {
+          "src": "Warum hatte er so weit wegfahren müssen!",
+          "ja": "なぜあんなに遠くへ行かねばならなかったのか！"
+        }
+      ]
+    },
+    {
+      "id": "p043",
+      "src": "„Aber schau mich an!“ rief der Vater, und Georg lief, fast zerstreut, zum Bett, um alles zu fassen, stockte aber in der Mitte des Weges.",
+      "ja": "「だが私を見ろ！」と父が叫んだ。ゲオルクはほとんど上の空で、すべてを受け止めようと寝床へ駆け寄ったが、その道の半ばで立ちすくんだ。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Aber schau mich an!“ rief der Vater, und Georg lief, fast zerstreut, zum Bett, um alles zu fassen, stockte aber in der Mitte des Weges.",
+          "ja": "「だが私を見ろ！」と父が叫んだ。ゲオルクはほとんど上の空で、すべてを受け止めようと寝床へ駆け寄ったが、その道の半ばで立ちすくんだ。"
+        }
+      ]
+    },
+    {
+      "id": "p044",
+      "src": "„Weil sie die Röcke gehoben hat,“ fing der Vater zu flöten an, „weil sie die Röcke so gehoben hat, die widerliche Gans,“ und er hob, um das darzustellen, sein Hemd so hoch, daß man auf seinem Oberschenkel die Narbe aus seinen Kriegsjahren sah,\n „weil sie die Röcke so und so und so gehoben hat, hast du dich an sie herangemacht, und damit du an ihr ohne Störung dich befriedigen kannst, hast du unserer Mutter Andenken geschändet, den Freund verraten und deinen Vater ins Bett gesteckt, damit er sich nicht rühren kann. Aber kann er sich rühren oder nicht?“",
+      "ja": "「あの女がスカートをまくり上げたからだ」と父は笛のような声を出し始めた、「あの女がスカートをこんなふうにまくり上げたからだ、あのいけ好かない阿呆女が」——そう言って父は、それをやってみせるために自分のシャツを高くまくり上げたので、太腿に戦争の年の傷痕が見えた——「あの女がスカートをこう、こう、こんなふうにまくり上げたから、おまえは女に近づいたのだ。そして邪魔されずに女で満足を得られるように、おまえは私たちの母さんの思い出を汚し、友人を裏切り、身動きできないように父親を寝床へ押し込めたのだ。だが父親は身動きできるか、できないか？」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Weil sie die Röcke gehoben hat,“ fing der Vater zu flöten an, „weil sie die Röcke so gehoben hat, die widerliche Gans,“ und er hob, um das darzustellen, sein Hemd so hoch, daß man auf seinem Oberschenkel die Narbe aus seinen Kriegsjahren sah,\n „weil sie die Röcke so und so und so gehoben hat, hast du dich an sie herangemacht, und damit du an ihr ohne Störung dich befriedigen kannst, hast du unserer Mutter Andenken geschändet, den Freund verraten und deinen Vater ins Bett gesteckt, damit er sich nicht rühren kann.",
+          "ja": "「あの女がスカートをまくり上げたからだ」と父は笛のような声を出し始めた、「あの女がスカートをこんなふうにまくり上げたからだ、あのいけ好かない阿呆女が」——そう言って父は、それをやってみせるために自分のシャツを高くまくり上げたので、太腿に戦争の年の傷痕が見えた——「あの女がスカートをこう、こう、こんなふうにまくり上げたから、おまえは女に近づいたのだ。そして邪魔されずに女で満足を得られるように、おまえは私たちの母さんの思い出を汚し、友人を裏切り、身動きできないように父親を寝床へ押し込めたのだ。"
+        },
+        {
+          "src": "Aber kann er sich rühren oder nicht?“",
+          "ja": "だが父親は身動きできるか、できないか？」"
+        }
+      ]
+    },
+    {
+      "id": "p045",
+      "src": "Und er stand vollkommen frei und warf die Beine. Er strahlte vor Einsicht.",
+      "ja": "そして父はまったく支えなしに立ち、足を投げ出してみせた。見抜いたという思いに彼は輝いていた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Und er stand vollkommen frei und warf die Beine.",
+          "ja": "そして父はまったく支えなしに立ち、足を投げ出してみせた。"
+        },
+        {
+          "src": "Er strahlte vor Einsicht.",
+          "ja": "見抜いたという思いに彼は輝いていた。"
+        }
+      ]
+    },
+    {
+      "id": "p046",
+      "src": "Georg stand in einem Winkel, möglichst weit vom Vater. Vor einer langen Weile hatte er sich fest entschlossen, alles vollkommen genau zu beobachten, damit er nicht irgendwie auf Umwegen, von hinten her, von oben herab überrascht werden könne. Jetzt erinnerte er sich wieder an den längst vergessenen Entschluß und vergaß ihn, wie man einen kurzen Faden durch ein Nadelöhr zieht.",
+      "ja": "ゲオルクは部屋の隅に、できるだけ父から遠く離れて立っていた。ずっと以前に彼は、どこかから回り道をして、背後から、頭上から不意を打たれることのないよう、すべてを完全に正確に観察しようと固く決心したことがあった。いま彼はその長く忘れていた決心をまた思い出し、そして、短い糸を針の穴に通すように、それを忘れた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg stand in einem Winkel, möglichst weit vom Vater.",
+          "ja": "ゲオルクは部屋の隅に、できるだけ父から遠く離れて立っていた。"
+        },
+        {
+          "src": "Vor einer langen Weile hatte er sich fest entschlossen, alles vollkommen genau zu beobachten, damit er nicht irgendwie auf Umwegen, von hinten her, von oben herab überrascht werden könne.",
+          "ja": "ずっと以前に彼は、どこかから回り道をして、背後から、頭上から不意を打たれることのないよう、すべてを完全に正確に観察しようと固く決心したことがあった。"
+        },
+        {
+          "src": "Jetzt erinnerte er sich wieder an den längst vergessenen Entschluß und vergaß ihn, wie man einen kurzen Faden durch ein Nadelöhr zieht.",
+          "ja": "いま彼はその長く忘れていた決心をまた思い出し、そして、短い糸を針の穴に通すように、それを忘れた。"
+        }
+      ]
+    },
+    {
+      "id": "p047",
+      "src": "„Aber der Freund ist nun doch nicht verraten!“ rief der Vater, und sein hin- und herbewegter Zeigefinger bekräftigte es. „Ich war sein Vertreter hier am Ort.“",
+      "ja": "「だが友人はやはり裏切られてなどいない！」と父は叫び、前後に振られるその人差し指がそれを裏づけた。「私がここで彼の代理人だったのだ」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Aber der Freund ist nun doch nicht verraten!“ rief der Vater, und sein hin- und herbewegter Zeigefinger bekräftigte es. „Ich war sein Vertreter hier am Ort.“",
+          "ja": "「だが友人はやはり裏切られてなどいない！」と父は叫び、前後に振られるその人差し指がそれを裏づけた。「私がここで彼の代理人だったのだ」"
+        }
+      ]
+    },
+    {
+      "id": "p048",
+      "src": "„Komödiant!“ konnte sich Georg zu rufen nicht enthalten, erkannte sofort den Schaden und biß, nur zu spät, — die Augen erstarrt — in seine Zunge, daß er vor Schmerz einknickte.",
+      "ja": "「役者め！」とゲオルクは叫ばずにいられなかった。すぐに自分の失敗を悟り、あまりにも遅れて——目を凍りつかせたまま——自分の舌を噛み、痛みに膝を折った。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Komödiant!“ konnte sich Georg zu rufen nicht enthalten, erkannte sofort den Schaden und biß, nur zu spät, — die Augen erstarrt — in seine Zunge, daß er vor Schmerz einknickte.",
+          "ja": "「役者め！」とゲオルクは叫ばずにいられなかった。すぐに自分の失敗を悟り、あまりにも遅れて——目を凍りつかせたまま——自分の舌を噛み、痛みに膝を折った。"
+        }
+      ]
+    },
+    {
+      "id": "p049",
+      "src": "„Ja, freilich habe ich Komödie gespielt! Komödie! Gutes Wort! Welcher andere Trost blieb dem alten verwitweten Vater? Sag’ — und für den Augenblick der Antwort sei du noch mein lebender Sohn —, was blieb mir übrig, in meinem Hinterzimmer, verfolgt vom ungetreuen Personal, alt bis in die Knochen? Und mein Sohn ging im Jubel durch die Welt, schloß Geschäfte ab, die ich vorbereitet hatte, überpurzelte sich vor Vergnügen und ging vor seinem Vater mit dem verschlossenen Gesicht eines Ehrenmannes davon! Glaubst du, ich hätte dich nicht geliebt, ich, von dem du ausgingst?“",
+      "ja": "「そうとも、たしかに私は芝居を打ってきた！芝居だ！よい言葉だ！年老いてやもめになった父親に、ほかにどんな慰めが残っていた？言ってみろ——答えるそのあいだだけは、おまえはまだ私の生きた息子でいるがいい——、この奥の部屋で、不実な店の者どもに追い回され、骨の髄まで老いさらばえて、私に何が残っていた？それでいて私の息子は歓声をあげて世の中を渡り歩き、私が下ごしらえしておいた商談をまとめ、嬉しさに転げ回り、父親の前は堅物の紳士の閉ざした顔をして通り過ぎていった！私がおまえを愛さなかったとでも思うのか、おまえがそこから出てきたこの私が？」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Ja, freilich habe ich Komödie gespielt!",
+          "ja": "「そうとも、たしかに私は芝居を打ってきた！"
+        },
+        {
+          "src": "Komödie!",
+          "ja": "芝居だ！"
+        },
+        {
+          "src": "Gutes Wort!",
+          "ja": "よい言葉だ！"
+        },
+        {
+          "src": "Welcher andere Trost blieb dem alten verwitweten Vater?",
+          "ja": "年老いてやもめになった父親に、ほかにどんな慰めが残っていた？"
+        },
+        {
+          "src": "Sag’ — und für den Augenblick der Antwort sei du noch mein lebender Sohn —, was blieb mir übrig, in meinem Hinterzimmer, verfolgt vom ungetreuen Personal, alt bis in die Knochen?",
+          "ja": "言ってみろ——答えるそのあいだだけは、おまえはまだ私の生きた息子でいるがいい——、この奥の部屋で、不実な店の者どもに追い回され、骨の髄まで老いさらばえて、私に何が残っていた？"
+        },
+        {
+          "src": "Und mein Sohn ging im Jubel durch die Welt, schloß Geschäfte ab, die ich vorbereitet hatte, überpurzelte sich vor Vergnügen und ging vor seinem Vater mit dem verschlossenen Gesicht eines Ehrenmannes davon!",
+          "ja": "それでいて私の息子は歓声をあげて世の中を渡り歩き、私が下ごしらえしておいた商談をまとめ、嬉しさに転げ回り、父親の前は堅物の紳士の閉ざした顔をして通り過ぎていった！"
+        },
+        {
+          "src": "Glaubst du, ich hätte dich nicht geliebt, ich, von dem du ausgingst?“",
+          "ja": "私がおまえを愛さなかったとでも思うのか、おまえがそこから出てきたこの私が？」"
+        }
+      ]
+    },
+    {
+      "id": "p050",
+      "src": "„Jetzt wird er sich vorbeugen,“ dachte Georg, „wenn er fiele und zerschmetterte!“ Dieses Wort durchzischte seinen Kopf.",
+      "ja": "「いま身を乗り出すぞ」とゲオルクは思った、「落ちて砕けてしまえばいい！」　この言葉が彼の頭の中を音を立てて走り抜けた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Jetzt wird er sich vorbeugen,“ dachte Georg, „wenn er fiele und zerschmetterte!“ Dieses Wort durchzischte seinen Kopf.",
+          "ja": "「いま身を乗り出すぞ」とゲオルクは思った、「落ちて砕けてしまえばいい！」　この言葉が彼の頭の中を音を立てて走り抜けた。"
+        }
+      ]
+    },
+    {
+      "id": "p051",
+      "src": "Der Vater beugte sich vor, fiel aber nicht. Da Georg sich nicht näherte, wie er erwartet hatte, erhob er sich wieder.",
+      "ja": "父は身を乗り出したが、落ちはしなかった。ゲオルクが思ったようには近づいてこないので、父はまた身を起こした。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Der Vater beugte sich vor, fiel aber nicht.",
+          "ja": "父は身を乗り出したが、落ちはしなかった。"
+        },
+        {
+          "src": "Da Georg sich nicht näherte, wie er erwartet hatte, erhob er sich wieder.",
+          "ja": "ゲオルクが思ったようには近づいてこないので、父はまた身を起こした。"
+        }
+      ]
+    },
+    {
+      "id": "p052",
+      "src": "„Bleib’, wo du bist, ich brauche dich nicht! Du denkst, du hast noch die Kraft, hierher zu kommen und hältst dich bloß zurück, weil du so willst. Daß du dich nicht irrst! Ich bin noch immer der viel Stärkere. Allein hätte ich vielleicht zurückweichen müssen, aber so hat mir die Mutter ihre Kraft abgegeben, mit deinem Freund habe ich mich herrlich verbunden, deine Kundschaft habe ich hier in der Tasche!“",
+      "ja": "「そこにいろ、おまえなど要らん！おまえは、まだこちらへ来る力はあるが、ただ自分がそうしたいから控えているのだと思っている。思い違いをするな！私はいまでもずっと強いほうなのだ。一人だったら、私も退かねばならなかったかもしれん。だがそうはならず、母さんが私に自分の力を譲ってくれた、おまえの友人とは見事に手を結んだ、おまえの得意先はここ、私のポケットの中だ！」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Bleib’, wo du bist, ich brauche dich nicht!",
+          "ja": "「そこにいろ、おまえなど要らん！"
+        },
+        {
+          "src": "Du denkst, du hast noch die Kraft, hierher zu kommen und hältst dich bloß zurück, weil du so willst.",
+          "ja": "おまえは、まだこちらへ来る力はあるが、ただ自分がそうしたいから控えているのだと思っている。"
+        },
+        {
+          "src": "Daß du dich nicht irrst!",
+          "ja": "思い違いをするな！"
+        },
+        {
+          "src": "Ich bin noch immer der viel Stärkere.",
+          "ja": "私はいまでもずっと強いほうなのだ。"
+        },
+        {
+          "src": "Allein hätte ich vielleicht zurückweichen müssen, aber so hat mir die Mutter ihre Kraft abgegeben, mit deinem Freund habe ich mich herrlich verbunden, deine Kundschaft habe ich hier in der Tasche!“",
+          "ja": "一人だったら、私も退かねばならなかったかもしれん。だがそうはならず、母さんが私に自分の力を譲ってくれた、おまえの友人とは見事に手を結んだ、おまえの得意先はここ、私のポケットの中だ！」"
+        }
+      ]
+    },
+    {
+      "id": "p053",
+      "src": "„Sogar im Hemd hat er Taschen!“ sagte sich Georg und glaubte, er könne ihn mit dieser Bemerkung in der ganzen Welt unmöglich machen. Nur einen Augenblick dachte er das, denn immerfort vergaß er alles.",
+      "ja": "「シャツにまでポケットがついている！」とゲオルクは自分に言い、この一言で父を世間じゅうで通用しない存在にできると思った。そう思ったのはほんの一瞬だった。彼はたえず何もかもを忘れてしまうのだから。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Sogar im Hemd hat er Taschen!“ sagte sich Georg und glaubte, er könne ihn mit dieser Bemerkung in der ganzen Welt unmöglich machen.",
+          "ja": "「シャツにまでポケットがついている！」とゲオルクは自分に言い、この一言で父を世間じゅうで通用しない存在にできると思った。"
+        },
+        {
+          "src": "Nur einen Augenblick dachte er das, denn immerfort vergaß er alles.",
+          "ja": "そう思ったのはほんの一瞬だった。彼はたえず何もかもを忘れてしまうのだから。"
+        }
+      ]
+    },
+    {
+      "id": "p054",
+      "src": "„Häng’ dich nur in deine Braut ein und komm’ mir entgegen! Ich fege sie dir von der Seite weg, du weißt nicht wie!“",
+      "ja": "「婚約者にでもぶら下がって、私の前に出てくるがいい！おまえの脇からあの女を掃き捨ててやる、どうやってかはおまえにはわかるまい！」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Häng’ dich nur in deine Braut ein und komm’ mir entgegen!",
+          "ja": "「婚約者にでもぶら下がって、私の前に出てくるがいい！"
+        },
+        {
+          "src": "Ich fege sie dir von der Seite weg, du weißt nicht wie!“",
+          "ja": "おまえの脇からあの女を掃き捨ててやる、どうやってかはおまえにはわかるまい！」"
+        }
+      ]
+    },
+    {
+      "id": "p055",
+      "src": "Georg machte Grimassen, als glaube er das nicht. Der Vater nickte bloß, die Wahrheit dessen, was er sagte, beteuernd, in Georgs Ecke hin.",
+      "ja": "ゲオルクは、そんなことは信じないという顔をしてみせた。父はただうなずいて、自分の言うことの正しさを請け合いながら、ゲオルクのいる隅のほうへ首を振ってみせた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg machte Grimassen, als glaube er das nicht.",
+          "ja": "ゲオルクは、そんなことは信じないという顔をしてみせた。"
+        },
+        {
+          "src": "Der Vater nickte bloß, die Wahrheit dessen, was er sagte, beteuernd, in Georgs Ecke hin.",
+          "ja": "父はただうなずいて、自分の言うことの正しさを請け合いながら、ゲオルクのいる隅のほうへ首を振ってみせた。"
+        }
+      ]
+    },
+    {
+      "id": "p056",
+      "src": "„Wie hast du mich doch heute unterhalten, als du kamst und fragtest, ob du deinem Freund von der Verlobung schreiben sollst. Er weiß doch alles, dummer Junge, er weiß doch alles! Ich schrieb ihm doch, weil du vergessen hast, mir das Schreibzeug wegzunehmen. Darum kommt er schon seit Jahren nicht, er weiß ja alles hundertmal besser als du selbst, deine Briefe zerknüllt er ungelesen in der linken Hand, während er in der Rechten meine Briefe zum Lesen sich vorhält!“",
+      "ja": "「今日はまったく愉快な見ものだったぞ、おまえがやって来て、友人に婚約を書き送っていいものかと訊いたときにはな。あれは何もかも知っているのだ、この間抜けめ、何もかも知っているのだ！私が書いてやったからだ。おまえが私から筆記道具を取り上げるのを忘れていたからな。あれがもう何年も帰ってこないのはそのためだ、あれは何もかもおまえ自身より百倍もよく知っている、おまえの手紙は読みもせずに左手で丸めて握りつぶし、右手には私の手紙を読むために掲げているのだ！」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Wie hast du mich doch heute unterhalten, als du kamst und fragtest, ob du deinem Freund von der Verlobung schreiben sollst.",
+          "ja": "「今日はまったく愉快な見ものだったぞ、おまえがやって来て、友人に婚約を書き送っていいものかと訊いたときにはな。"
+        },
+        {
+          "src": "Er weiß doch alles, dummer Junge, er weiß doch alles!",
+          "ja": "あれは何もかも知っているのだ、この間抜けめ、何もかも知っているのだ！"
+        },
+        {
+          "src": "Ich schrieb ihm doch, weil du vergessen hast, mir das Schreibzeug wegzunehmen.",
+          "ja": "私が書いてやったからだ。おまえが私から筆記道具を取り上げるのを忘れていたからな。"
+        },
+        {
+          "src": "Darum kommt er schon seit Jahren nicht, er weiß ja alles hundertmal besser als du selbst, deine Briefe zerknüllt er ungelesen in der linken Hand, während er in der Rechten meine Briefe zum Lesen sich vorhält!“",
+          "ja": "あれがもう何年も帰ってこないのはそのためだ、あれは何もかもおまえ自身より百倍もよく知っている、おまえの手紙は読みもせずに左手で丸めて握りつぶし、右手には私の手紙を読むために掲げているのだ！」"
+        }
+      ]
+    },
+    {
+      "id": "p057",
+      "src": "Seinen Arm schwang er vor Begeisterung über dem Kopf. „Er weiß alles tausendmal besser!“ rief er.",
+      "ja": "彼は感激のあまり腕を頭の上で振り回した。「あれは何もかも千倍もよく知っている！」と彼は叫んだ。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Seinen Arm schwang er vor Begeisterung über dem Kopf. „Er weiß alles tausendmal besser!“ rief er.",
+          "ja": "彼は感激のあまり腕を頭の上で振り回した。「あれは何もかも千倍もよく知っている！」と彼は叫んだ。"
+        }
+      ]
+    },
+    {
+      "id": "p058",
+      "src": "„Zehntausendmal!“ sagte Georg, um den Vater zu verlachen, aber noch in seinem Munde bekam das Wort einen toternsten Klang.",
+      "ja": "「一万倍もね！」とゲオルクは父を笑いものにしようとして言ったが、その言葉は彼の口の中にあるうちから、死のように真剣な響きを帯びた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Zehntausendmal!“ sagte Georg, um den Vater zu verlachen, aber noch in seinem Munde bekam das Wort einen toternsten Klang.",
+          "ja": "「一万倍もね！」とゲオルクは父を笑いものにしようとして言ったが、その言葉は彼の口の中にあるうちから、死のように真剣な響きを帯びた。"
+        }
+      ]
+    },
+    {
+      "id": "p059",
+      "src": "„Seit Jahren passe ich schon auf, daß du mit dieser Frage kämest! Glaubst du, mich kümmert etwas anderes? Glaubst du, ich lese Zeitungen? Da!“ und er warf Georg ein Zeitungsblatt, das irgendwie mit ins Bett getragen worden war, zu. Eine alte Zeitung, mit einem Georg schon ganz unbekannten Namen.",
+      "ja": "「何年も前から私は、おまえがその問いを持ってくるのを待ち構えていたのだ！私がほかのことを気にかけているとでも思うのか？私が新聞を読んでいるとでも思うのか？そらよ！」　そう言って父は、どうしてか寝床にまで持ち込まれていた新聞紙を一枚、ゲオルクに投げつけた。古い新聞で、ゲオルクにはもうまるで覚えのない題字がついていた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Seit Jahren passe ich schon auf, daß du mit dieser Frage kämest!",
+          "ja": "「何年も前から私は、おまえがその問いを持ってくるのを待ち構えていたのだ！"
+        },
+        {
+          "src": "Glaubst du, mich kümmert etwas anderes?",
+          "ja": "私がほかのことを気にかけているとでも思うのか？"
+        },
+        {
+          "src": "Glaubst du, ich lese Zeitungen?",
+          "ja": "私が新聞を読んでいるとでも思うのか？"
+        },
+        {
+          "src": "Da!“ und er warf Georg ein Zeitungsblatt, das irgendwie mit ins Bett getragen worden war, zu.",
+          "ja": "そらよ！」　そう言って父は、どうしてか寝床にまで持ち込まれていた新聞紙を一枚、ゲオルクに投げつけた。"
+        },
+        {
+          "src": "Eine alte Zeitung, mit einem Georg schon ganz unbekannten Namen.",
+          "ja": "古い新聞で、ゲオルクにはもうまるで覚えのない題字がついていた。"
+        }
+      ]
+    },
+    {
+      "id": "p060",
+      "src": "„Wie lange hast du gezögert, ehe du reif geworden bist! Die Mutter mußte sterben, sie konnte den Freudentag nicht erleben, der Freund geht zugrunde in seinem Rußland, schon vor drei Jahren war er gelb zum Wegwerfen, und ich, du siehst ja, wie es mit mir steht. Dafür hast du doch Augen!“",
+      "ja": "「おまえは熟すまでにどれだけぐずぐずしていたことか！母さんは死なねばならなかった、あの喜びの日を見ることができなかった。友人はロシアで身を滅ぼしつつある、三年前にはもう捨ててもいいほど黄色い顔をしていた。そしてこの私は、私がどんなありさまか、おまえにも見えるだろう。そのための目はおまえにもついているはずだ！」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Wie lange hast du gezögert, ehe du reif geworden bist!",
+          "ja": "「おまえは熟すまでにどれだけぐずぐずしていたことか！"
+        },
+        {
+          "src": "Die Mutter mußte sterben, sie konnte den Freudentag nicht erleben, der Freund geht zugrunde in seinem Rußland, schon vor drei Jahren war er gelb zum Wegwerfen, und ich, du siehst ja, wie es mit mir steht.",
+          "ja": "母さんは死なねばならなかった、あの喜びの日を見ることができなかった。友人はロシアで身を滅ぼしつつある、三年前にはもう捨ててもいいほど黄色い顔をしていた。そしてこの私は、私がどんなありさまか、おまえにも見えるだろう。"
+        },
+        {
+          "src": "Dafür hast du doch Augen!“",
+          "ja": "そのための目はおまえにもついているはずだ！」"
+        }
+      ]
+    },
+    {
+      "id": "p061",
+      "src": "„Du hast mir also aufgelauert!“ rief Georg.",
+      "ja": "「じゃあ、僕を待ち伏せしていたんだね！」とゲオルクは叫んだ。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "„Du hast mir also aufgelauert!“ rief Georg.",
+          "ja": "「じゃあ、僕を待ち伏せしていたんだね！」とゲオルクは叫んだ。"
+        }
+      ]
+    },
+    {
+      "id": "p062",
+      "src": "Mitleidig sagte der Vater nebenbei: „Das wolltest du wahrscheinlich früher sagen. Jetzt paßt es ja gar nicht mehr.“",
+      "ja": "父は憐れむように、ついでのように言った。「それはたぶん、もっと早く言いたかったことだろう。いまではもうまるで似つかわしくない」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Mitleidig sagte der Vater nebenbei: „Das wolltest du wahrscheinlich früher sagen.",
+          "ja": "父は憐れむように、ついでのように言った。「それはたぶん、もっと早く言いたかったことだろう。"
+        },
+        {
+          "src": "Jetzt paßt es ja gar nicht mehr.“",
+          "ja": "いまではもうまるで似つかわしくない」"
+        }
+      ]
+    },
+    {
+      "id": "p063",
+      "src": "Und lauter: „Jetzt weißt du also, was es noch außer dir gab, bisher wußtest du nur von dir! Ein unschuldiges Kind warst du ja eigentlich, aber noch eigentlicher warst du ein teuflischer Mensch! — Und darum wisse: Ich verurteile dich jetzt zum Tode des Ertrinkens!“",
+      "ja": "そしてもっと大きな声で。「これでおまえにもわかっただろう、おまえのほかにも何があったのかが。これまでおまえは自分のことしか知らなかったのだ！たしかにおまえは元来は無邪気な子どもだった、だがもっと元来のところ、おまえは悪魔のような人間だった！——だから知るがいい。私はいまおまえに、溺れて死ぬ判決を下す！」",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Und lauter: „Jetzt weißt du also, was es noch außer dir gab, bisher wußtest du nur von dir!",
+          "ja": "そしてもっと大きな声で。「これでおまえにもわかっただろう、おまえのほかにも何があったのかが。これまでおまえは自分のことしか知らなかったのだ！"
+        },
+        {
+          "src": "Ein unschuldiges Kind warst du ja eigentlich, aber noch eigentlicher warst du ein teuflischer Mensch!",
+          "ja": "たしかにおまえは元来は無邪気な子どもだった、だがもっと元来のところ、おまえは悪魔のような人間だった！"
+        },
+        {
+          "src": "— Und darum wisse: Ich verurteile dich jetzt zum Tode des Ertrinkens!“",
+          "ja": "——だから知るがいい。私はいまおまえに、溺れて死ぬ判決を下す！」"
+        }
+      ]
+    },
+    {
+      "id": "p064",
+      "src": "Georg fühlte sich aus dem Zimmer gejagt, den Schlag, mit dem der Vater hinter ihm aufs Bett stürzte, trug er noch in den Ohren davon. Auf der Treppe, über deren Stufen er wie über eine schiefe Fläche eilte, überrumpelte er seine Bedienerin, die im Begriffe war heraufzugehen, um die Wohnung nach der Nacht aufzuräumen. „Jesus!“ rief sie und verdeckte mit der Schürze das Gesicht, aber er war schon davon. Aus dem Tor sprang er, über die Fahrbahn zum Wasser trieb es ihn. Schon hielt er das Geländer fest, wie ein Hungriger die Nahrung. Er schwang sich über, als der ausgezeichnete Turner, der er in seinen Jugendjahren zum Stolz seiner Eltern gewesen war. Noch hielt er sich mit schwächer werdenden Händen fest, erspähte zwischen den Geländerstangen einen Autoomnibus, der mit Leichtigkeit seinen Fall übertönen würde, rief leise: „Liebe Eltern, ich habe euch doch immer geliebt“, und ließ sich hinfallen.",
+      "ja": "ゲオルクは自分が部屋から追い立てられるのを感じた。背後で父が寝床へ倒れ込んだその音を、彼はまだ耳に残したまま逃げ出した。階段を、その段々を斜面のように駆け下りていくとき、彼は、夜の明けた住まいを片づけようと上がってこようとしていた通いの女中に、不意打ちを食らわせた。「まあ、イエスさま！」と彼女は叫んでエプロンで顔を覆ったが、彼はもう走り去っていた。門から飛び出すと、車道を越えて水のほうへ、何かが彼を駆り立てた。彼はもう欄干を、飢えた者が食べ物をつかむようにしっかりとつかんでいた。彼はそれを跳び越えた。少年時代に両親の誇りであった、あのすぐれた体操選手として。弱っていく手でなおもつかまりながら、欄干の柱のあいだから、自分の落ちる音をやすやすとかき消してくれるだろう乗合自動車を見つけ、低い声で「親愛なるお父さん、お母さん、僕はいつだって二人を愛していました」と叫んで、手を離して落ちた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "Georg fühlte sich aus dem Zimmer gejagt, den Schlag, mit dem der Vater hinter ihm aufs Bett stürzte, trug er noch in den Ohren davon.",
+          "ja": "ゲオルクは自分が部屋から追い立てられるのを感じた。背後で父が寝床へ倒れ込んだその音を、彼はまだ耳に残したまま逃げ出した。"
+        },
+        {
+          "src": "Auf der Treppe, über deren Stufen er wie über eine schiefe Fläche eilte, überrumpelte er seine Bedienerin, die im Begriffe war heraufzugehen, um die Wohnung nach der Nacht aufzuräumen. „Jesus!“ rief sie und verdeckte mit der Schürze das Gesicht, aber er war schon davon.",
+          "ja": "階段を、その段々を斜面のように駆け下りていくとき、彼は、夜の明けた住まいを片づけようと上がってこようとしていた通いの女中に、不意打ちを食らわせた。「まあ、イエスさま！」と彼女は叫んでエプロンで顔を覆ったが、彼はもう走り去っていた。"
+        },
+        {
+          "src": "Aus dem Tor sprang er, über die Fahrbahn zum Wasser trieb es ihn.",
+          "ja": "門から飛び出すと、車道を越えて水のほうへ、何かが彼を駆り立てた。"
+        },
+        {
+          "src": "Schon hielt er das Geländer fest, wie ein Hungriger die Nahrung.",
+          "ja": "彼はもう欄干を、飢えた者が食べ物をつかむようにしっかりとつかんでいた。"
+        },
+        {
+          "src": "Er schwang sich über, als der ausgezeichnete Turner, der er in seinen Jugendjahren zum Stolz seiner Eltern gewesen war.",
+          "ja": "彼はそれを跳び越えた。少年時代に両親の誇りであった、あのすぐれた体操選手として。"
+        },
+        {
+          "src": "Noch hielt er sich mit schwächer werdenden Händen fest, erspähte zwischen den Geländerstangen einen Autoomnibus, der mit Leichtigkeit seinen Fall übertönen würde, rief leise: „Liebe Eltern, ich habe euch doch immer geliebt“, und ließ sich hinfallen.",
+          "ja": "弱っていく手でなおもつかまりながら、欄干の柱のあいだから、自分の落ちる音をやすやすとかき消してくれるだろう乗合自動車を見つけ、低い声で「親愛なるお父さん、お母さん、僕はいつだって二人を愛していました」と叫んで、手を離して落ちた。"
+        }
+      ]
+    },
+    {
+      "id": "p065",
+      "src": "In diesem Augenblick ging über die Brücke ein geradezu unendlicher Verkehr.",
+      "ja": "ちょうどこの瞬間、橋の上を、文字どおり果てしのない往来が通っていた。",
+      "status": "draft",
+      "translatedBy": "claude-opus-5",
+      "segments": [
+        {
+          "src": "In diesem Augenblick ging über die Brücke ein geradezu unendlicher Verkehr.",
+          "ja": "ちょうどこの瞬間、橋の上を、文字どおり果てしのない往来が通っていた。"
+        }
+      ]
+    }
+  ]
+}
