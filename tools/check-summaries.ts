@@ -241,7 +241,9 @@ for (const t of targets) {
   for (const m of residue.match(/[ァ-ヴー]{3,}/g) ?? []) {
     if (!t.rangeText.includes(m)) t.warns.push(`範囲の本文にないカタカナ語「${m}」`);
   }
-  for (const m of text.match(/[0-9０-９]+|[一二三四五六七八九十百千万]+[歳年月日時人階]/g) ?? []) {
+  // residue（人物表記を除いたもの）で数える。ナンバーが名前の作品（われら）では
+  // 「Д-503」の 503 が数値として毎回引っかかるため
+  for (const m of residue.match(/[0-9０-９]+|[一二三四五六七八九十百千万]+[歳年月日時人階]/g) ?? []) {
     if (!t.rangeText.includes(m)) t.warns.push(`範囲の本文にない数値「${m}」`);
   }
 
