@@ -7,7 +7,7 @@ import AnnotationCard from '../../components/AnnotationCard.astro';
 import SettingsPanel from '../../components/SettingsPanel.astro';
 import ZoomBar from '../../components/ZoomBar.astro';
 import { getWorkData } from '../../lib/works';
-import type { ChapterOutline, Summary, WorkOverview } from '../../lib/outline';
+import type { ChapterOutline, WorkOverview } from '../../lib/outline';
 
 export async function getStaticPaths() {
   const chapters = await getCollection('chapters');
@@ -51,9 +51,14 @@ const barChapters = workChapters.map((c) => ({
   isPartStart: partStarts.has(c.id),
 }));
 
+// 前後の章。1章しかない作品（短編）では移動リンクそのものを出さない。
+// 片側しか無い章（最初・最後）でも、grid の列指定で残った側が定位置に留まる
+const here = workChapters.findIndex((c) => c.id === entry.id);
+const prevChapter = here > 0 ? workChapters[here - 1] : undefined;
+const nextChapter = here >= 0 ? workChapters[here + 1] : undefined;
+
 // ここまでのあらすじ: 現在の章より前の章要約だけを出す。
 // 各章要約は coversUpTo までの情報しか含まない設計なので、ここに先の展開は混ざらない
-const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine-checked';
 const recap = workChapters
   .filter((c) => c.data.order < entry.data.order)
   .flatMap((c) => {
@@ -126,12 +131,6 @@ const zoomJson = JSON.stringify({
               <span class="disclosure-sub">{recap.length}章分</span>
             </button>
             <div id="recap-body" class="recap-body" hidden>
-              {recap.some((r) => unverified(r.summary)) && (
-                <p class="recap-caution">
-                  <span class="sum-badge">未確認</span>
-                  機械生成の要約で、内容の確認はまだ済んでいません。
-                </p>
-              )}
               {recap.map((r) => (
                 <article class="recap-item">
                   <h3>{r.label}</h3>
@@ -152,6 +151,24 @@ const zoomJson = JSON.stringify({
         sourceLang={work.meta.sourceLang}
         outline={outline}
       />
+      {
+        (prevChapter || nextChapter) && (
+          <nav class="chapter-nav" aria-label="前後の章へ移動">
+            {prevChapter && (
+              <a class="chnav chnav-prev" href={`${base}/read/${prevChapter.id}/`} rel="prev">
+                <span class="chnav-dir">← 前</span>
+                <span class="chnav-label">{prevChapter.data.chapterLabel}</span>
+              </a>
+            )}
+            {nextChapter && (
+              <a class="chnav chnav-next" href={`${base}/read/${nextChapter.id}/`} rel="next">
+                <span class="chnav-dir">次 →</span>
+                <span class="chnav-label">{nextChapter.data.chapterLabel}</span>
+              </a>
+            )}
+          </nav>
+        )
+      }
     </div>
   </div>
 
@@ -325,12 +342,6 @@ const zoomJson = JSON.stringify({
     overflow-y: auto;
   }
 
-  .recap-caution {
-    font-size: 0.75rem;
-    color: var(--ink-muted);
-    margin: 0 0 0.8rem;
-  }
-
   .recap-item h3 {
     font-size: 0.78rem;
     color: var(--ink-muted);
@@ -351,13 +362,46 @@ const zoomJson = JSON.stringify({
     color: var(--person);
   }
 
-  .sum-badge {
-    font-size: 0.68rem;
-    color: var(--note);
-    border: 1px solid var(--note);
-    border-radius: 4px;
-    padding: 0 0.35em;
-    margin-inline-end: 0.4em;
+  /* ---- 前後の章へ（本文の末尾） ---- */
+
+  .chapter-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    margin: 3.5rem 0 0;
+    font-family: var(--font-sans);
+  }
+
+  .chnav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .chnav:hover {
+    background: color-mix(in srgb, var(--ink) 6%, transparent);
+  }
+  /* 次の章は右端に寄せて、進む向きを形でも示す */
+  .chnav-next {
+    text-align: end;
+    grid-column: 2;
+  }
+
+  .chnav-dir {
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+  }
+
+  .chnav-label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
   }
 
