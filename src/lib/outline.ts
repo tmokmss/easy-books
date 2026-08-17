@@ -5,7 +5,7 @@
 
 import { tokenize } from './markup';
 
-/** 要約のステータス。draft / machine-checked は UI で「未確認」と表示する */
+/** 要約のステータス。レビュー工程の管理用で、読者向け画面には出さない */
 export const SUMMARY_STATUSES = ['draft', 'machine-checked', 'human-reviewed', 'verified'] as const;
 export type SummaryStatus = (typeof SUMMARY_STATUSES)[number];
 
@@ -26,7 +26,7 @@ export interface SectionOutline {
   label: string;
   /** [開始段落ID, 終了段落ID]。節は段落を保持せず範囲で指す */
   range: [string, string];
-  /** 節の区切りは編集判断。機械提案は proposed、人が承認したら approved */
+  /** 節の区切りの由来。機械提案は proposed、人が手を入れたら approved（画面には出さない） */
   boundaryStatus: 'proposed' | 'approved';
   summary?: Summary;
 }

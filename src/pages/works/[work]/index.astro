@@ -1,8 +1,8 @@
 ---
 // 構造ビュー（ズームアウト側）: 作品全体を1画面で見る。
 // 部 → 章 → 節と降りていけて、そこから本文の該当位置へ飛べる。
-// 要約は本文の代替ではない: すべての要約に「本文を読む」導線を併置し、
-// 未確認（draft / machine-checked）の要約にはバッジを出す。
+// 要約は本文の代替ではない: すべての要約に「本文を読む」導線を併置する。
+// 要約の status（draft / machine-checked …）は画面には出さない。
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getWorkData, listWorkIds } from '../../../lib/works';
@@ -49,10 +49,6 @@ const parts =
       }))
     : [{ id: 'all', label: null, summary: undefined as Summary | undefined, chapters: workChapters }];
 
-const unverified = (s: Summary) => s.status === 'draft' || s.status === 'machine-checked';
-const anyProposed = [...outlineOf.values()].some((o) =>
-  o.sections.some((s) => s.boundaryStatus === 'proposed'),
-);
 const isFiction = (overview?.genre ?? 'fiction') === 'fiction';
 
 const structureJson = JSON.stringify({
@@ -74,14 +70,6 @@ const structureJson = JSON.stringify({
         地図のように拡大・縮小しながら読むための画面です。部 → 章 → 節と降りて、どこからでも本文に入れます。
         読み進めた範囲は各章のメーターに表示されます。
       </p>
-      {
-        anyProposed && (
-          <p class="head-caution">
-            節の区切りと要約は機械生成の提案段階です（<span class="sum-badge">未確認</span>
-            のものは内容の確認がまだ済んでいません）。
-          </p>
-        )
-      }
     </header>
 
     {
@@ -100,15 +88,11 @@ const structureJson = JSON.stringify({
                   <span class="disclosure-sub">結末までの内容に触れます</span>
                 </button>
                 <div id="work-summary-body" class="summary-block" hidden>
-                  {unverified(overview.summary) && <span class="sum-badge">未確認</span>}
                   {overview.summary.text}
                 </div>
               </>
             ) : (
-              <div class="summary-block">
-                {unverified(overview.summary) && <span class="sum-badge">未確認</span>}
-                {overview.summary.text}
-              </div>
+              <div class="summary-block">{overview.summary.text}</div>
             )
           }
         </section>
@@ -130,10 +114,7 @@ const structureJson = JSON.stringify({
             </div>
           )}
           {part.summary && (
-            <div class="summary-block part-summary">
-              {unverified(part.summary) && <span class="sum-badge">未確認</span>}
-              {part.summary.text}
-            </div>
+            <div class="summary-block part-summary">{part.summary.text}</div>
           )}
           <ol class="chapters">
             {part.chapters.map((c) => {
@@ -153,10 +134,7 @@ const structureJson = JSON.stringify({
                     </span>
                   </div>
                   {outline?.summary && (
-                    <p class="chapter-summary">
-                      {unverified(outline.summary) && <span class="sum-badge">未確認</span>}
-                      {outline.summary.text}
-                    </p>
+                    <p class="chapter-summary">{outline.summary.text}</p>
                   )}
                   {sections.length > 0 && (
                     <>
@@ -178,12 +156,7 @@ const structureJson = JSON.stringify({
                                 本文を読む →
                               </a>
                             </div>
-                            {s.summary && (
-                              <p class="section-summary">
-                                {unverified(s.summary) && <span class="sum-badge">未確認</span>}
-                                {s.summary.text}
-                              </p>
-                            )}
+                            {s.summary && <p class="section-summary">{s.summary.text}</p>}
                           </li>
                         ))}
                       </ol>
@@ -252,12 +225,6 @@ const structureJson = JSON.stringify({
     color: var(--ink-muted);
     line-height: 1.9;
     margin: 0 0 0.6rem;
-  }
-  .head-caution {
-    font-size: 0.78rem;
-    color: var(--ink-muted);
-    line-height: 1.9;
-    margin: 0 0 1rem;
   }
 
   .disclosure-btn {
@@ -432,15 +399,5 @@ const structureJson = JSON.stringify({
     line-height: 1.85;
     color: var(--ink-muted);
     margin: 0.2rem 0 0;
-  }
-
-  .sum-badge {
-    font-size: 0.68rem;
-    color: var(--note);
-    border: 1px solid var(--note);
-    border-radius: 4px;
-    padding: 0 0.35em;
-    margin-inline-end: 0.4em;
-    white-space: nowrap;
   }
 </style>
