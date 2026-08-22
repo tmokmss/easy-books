@@ -107,8 +107,17 @@ interface SkeletonParagraph {
 
 // ライセンス表示・ナビゲーションは本文コンテナの外側にある（ru の PD テンプレート等）。
 // コンテナがある版だけ、その内側に絞る。
-const bodyStart = html.indexOf('<div class="text">');
-const body = bodyStart >= 0 ? html.slice(bodyStart) : html;
+// 校正版（ProofreadPage, zh 等）のコンテナは prp-pages-output で、PD テンプレートは本文の
+// 「後ろ」に来る。前だけ切ると本文に混ざるので、licenseContainer 以降も落とす。
+const BODY_CONTAINERS = ['<div class="text">', '<div class="prp-pages-output"'];
+let bodyStart = -1;
+for (const marker of BODY_CONTAINERS) {
+  const i = html.indexOf(marker);
+  if (i >= 0 && (bodyStart < 0 || i < bodyStart)) bodyStart = i;
+}
+let body = bodyStart >= 0 ? html.slice(bodyStart) : html;
+const licenseAt = body.indexOf('licenseContainer');
+if (licenseAt >= 0) body = body.slice(0, licenseAt);
 
 interface Block {
   text: string;

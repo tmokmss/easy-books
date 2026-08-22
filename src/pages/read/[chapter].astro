@@ -148,7 +148,7 @@ const zoomJson = JSON.stringify({
       <Reader
         paragraphs={entry.data.paragraphs}
         people={work.people}
-        sourceLang={work.meta.sourceLang}
+        sourceLang={work.meta.sourceLangTag ?? work.meta.sourceLang}
         outline={outline}
       />
       {

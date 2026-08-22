@@ -14,6 +14,10 @@ interface Props {
 
 const { paragraphs, people, sourceLang, outline } = Astro.props;
 
+// 分かち書きしない原語（中国語・日本語）は、対訳セグメントの間に空きを入れない。
+// 欧文は文と文の間に空白が要る（seg.src には文末の空白が含まれていない）。
+const segSep = /^(zh|ja)\b/.test(sourceLang) ? '' : ' ';
+
 // 節ごとに段落をグループ化する。節が無ければ1グループのフラット表示。
 // 節は範囲参照なので、ここで初めて段落と結びつく（章データは節を知らない）。
 type Para = Props['paragraphs'][number];
@@ -78,7 +82,7 @@ const paraSummaries = outline?.paragraphSummaries ?? {};
               {p.segments
                 ? p.segments.map((seg, i) => (
                     <span class="seg-src" data-seg={i}>
-                      {seg.src}{' '}
+                      {seg.src}{segSep}
                     </span>
                   ))
                 : p.src}
@@ -182,6 +186,12 @@ const paraSummaries = outline?.paragraphSummaries ?? {};
     padding-inline-start: 1em;
     border-inline-start: 2px solid var(--hairline);
     white-space: pre-line;
+  }
+  /* 繁体字は日本語明朝だと字形の違う字がある（靑・爲・喫）。
+     中国語フォントがあればそちらを優先し、無ければ日本語明朝に落ちる */
+  :root[data-bilingual='on'] .para-src:lang(zh) {
+    font-family: 'Songti TC', 'Noto Serif TC', 'Source Han Serif TC', PMingLiU, 'Songti SC',
+      var(--font-serif), serif;
   }
 
   /* 文単位の対応ハイライト（reader.ts が .hl を付け外し） */

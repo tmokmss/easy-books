@@ -71,7 +71,9 @@ const chapters = defineCollection({
               message: `[${p.id}] segments の ja を連結しても段落の ja と一致しない`,
             });
           }
-          const norm = (s: string) => s.replace(/\s+/g, ' ').trim();
+          // 空白は言語ごとに扱いが違う（欧文は文の区切り、中日は原文に無い）。
+          // 文字の欠落・重複を捕まえるのが目的なので、比較では空白を落とす。
+          const norm = (s: string) => s.replace(/\s+/g, '');
           const joinedSrc = norm(p.segments.map((s) => s.src).join(' '));
           if (joinedSrc !== norm(p.src)) {
             ctx.addIssue({

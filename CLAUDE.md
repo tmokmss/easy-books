@@ -74,15 +74,23 @@ python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<wor
   部を持たない作品なので `overviews/we.json` は置いていない（構造ビューは章のフラット表示）。
   読解支援レイヤーも全40章ぶん完了（人物205・参照139・語注387の計731、glossary 128項目、全 `verified: false`）。
   次工程は人間レビュー: 訳文の draft→checked 昇格と、glossary の裏取り＋ `verified: true` 化
-- 作品の長さの見積もり: 露語1語 ≒ 日本語3.29字（罪と罰の実測 176,000語→580,000字）、文庫1ページ ≒ 500字。
-  文庫20ページ ≒ 日本語1万字 ≒ 露語3,000語。新作品の候補を選ぶときの物差しに使う
+- 魯迅『孔乙己』(`kongyiji`, zh) を追加（2026-08-22）。**初の中国語作品**。PD確認（没1936 → 日本は1987年から。
+  中国は戦時加算の対象国ではないので加算なし。初出1919年なので米国もPD）→ 全14段落・日本語4,583字の
+  草稿＋文対訳（92セグメント）、アウトライン（節3・段落要約11、machine-checked、FAIL 0）、
+  読解支援レイヤー（人物5・語注29の計34、glossary 28項目、全 `verified: false`）まで完了。全段落 `draft`。
+  次工程は glossary の裏取り＋`verified: true` 化（`sources` に「要確認」と書いた8項目＝
+  大錢と小錢の区別／咸亨酒店と魯迅の一族／薦頭の慣行／手本文句の本文（丘乙己 説）／弔着打の私刑／
+  生員の法的特権／服辯の書式／「回字四樣寫法」の具体）と、draft→checked の人間レビュー
+- 作品の長さの見積もり: 露語1語 ≒ 日本語3.29字（罪と罰の実測 176,000語→580,000字）、
+  中国語1字 ≒ 日本語1.76字（孔乙己の実測 2,611字→4,583字）、文庫1ページ ≒ 500字。
+  文庫20ページ ≒ 日本語1万字 ≒ 露語3,000語 ≒ 中国語5,700字。新作品の候補を選ぶときの物差しに使う
 
 ## 落とし穴
 
 - `astro preview` のデーモンが残ると古い設定（旧 base）を配信し続ける → `npx astro preview stop` してから再起動
 - Wikisource API はレート制限が厳しい。リクエスト間 5 秒＋失敗時 60 秒バックオフ
 - check-alignment の既知の誤検知: 複合数詞（семьсот тридцать 等）、日本語の自然な文分割による文数乖離（大半は良性）
-- check-alignment の数詞・否定辞書は `SRC_LANGS`（ru / de）で `sourceLang` ごとに切り替える。新言語はここに1エントリ足す。
+- check-alignment の数詞・否定辞書は `SRC_LANGS`（ru / de / zh）で `sourceLang` ごとに切り替える。新言語はここに1エントリ足す。
   独語で `ein/eine` を数詞に入れると不定冠詞と同形で全段落が誤検知になる（入れないこと）
 - Wikisource の HTML には本文以外が混ざる: ru の PD ライセンス文（`<div class="text">` の外側）、
   de 等の校正版のページ番号 `[59]`（`class="PageNumber"` の span）、朗読音声プレイヤー（`<audio>`）。
@@ -99,3 +107,27 @@ python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<wor
   本文でその形が出てもグロスが出ない。結びつけはタップの人物カード（作中の呼ばれ方の一覧）に任せる
 - `merge-glossary-fragments.py` は必ず `<workId>` で対象を絞る。全フラグメントを無条件に拾うと、
   別の作品の語注が混ざり込む（章IDが `<workId>-…` なのでファイル名の接頭辞が作品の切り分けになる）
+
+### 新しい言語を足すとき（zh 対応で触った箇所の一覧）
+
+`sourceLang` を1つ増やすと、少なくとも次の6ファイルが関わる。ru/de しか無かった前提が各所に埋まっている。
+
+1. `tools/wikisource-to-paragraphs.ts` — 本文コンテナ。zh は校正版（ProofreadPage）なので
+   `<div class="prp-pages-output">`。しかも **PD テンプレートが本文の「後ろ」**（`licenseContainer`）に来るので、
+   前だけ切ると本文に混ざる。両端を切ること
+2. `tools/split-src.ts` — 分かち書きしない言語は空白を手掛かりにできない。zh/ja は句点・感嘆符・疑問符で切り、
+   **括弧の内側では切らない**（会話文が途中で割れる）。閉じ括弧は直前が文末記号なら文に含める
+3. `tools/merge-aligned-translation.ts` + `src/content.config.ts` — `segments[].src` の連結は
+   zh/ja では空白を挟まない。連結不変条件の比較は空白を落として行う（言語ごとに空白の意味が違うため）
+4. `tools/check-alignment.ts` — `SRC_LANGS` に1エントリ。中国語は
+   `noWordBoundary`（「他不来」の不は前後が漢字なので語境界を要求すると否定を1つも拾えない）、
+   `cjkNumerals` + **`numeralUnits`**（量詞で錨を打たないと「一樣」「不十分」「一定」で誤検知だらけになる。
+   単位で絞ると金額・年月だけが残る）、`sentenceEnd` に `；` を入れる（中国語の分号は日本語では文に割れる）
+5. `src/lib/works.ts` の `LANG_LABELS`、`src/lib/types.ts` の `sourceLangTag`（字体まで指定したいとき。
+   繁体字なら `zh-Hant`。原文は繁体字のまま、訳文だけ日本語の新字体にする）
+6. `src/components/Reader.astro` — 対訳セグメントの区切り（zh/ja は空白を入れない）と、
+   `:lang(zh)` の明朝スタック（既定の欧文セリフ先頭のままだと日本語明朝に落ちて字形が変わる）
+
+中国語作品の訳し方は `src/data/works/kongyiji/style-guide.json` が雛形。要点は
+「制度・身分・科挙・器物・食物の名は漢字のまま置いて語注に回す／動作・状態の描写語は日本語に開く／
+固有名詞はカタカナ音写せず漢字のまま日本語音で読ませる／文語調の台詞は漢文訓読調で受ける」

@@ -40,6 +40,7 @@ const LANG_LABELS: Record<string, string> = {
   en: '英語',
   fr: 'フランス語',
   it: 'イタリア語',
+  zh: '中国語',
   es: 'スペイン語',
   ja: '日本語',
 };

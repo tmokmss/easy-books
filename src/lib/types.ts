@@ -6,8 +6,13 @@ export interface WorkMeta {
   author: string;
   /** 原語での著者表記 */
   authorOriginal?: string;
-  /** 原文の言語コード（ru, en, fr, ...） */
+  /** 原文の言語コード（ru, en, fr, ...）。ツール・言語ラベルの切り替えに使う */
   sourceLang: string;
+  /**
+   * 表示用の BCP 47 タグ。字体まで指定したいときだけ書く（中国語の繁体＝zh-Hant 等）。
+   * 省略時は sourceLang をそのまま lang 属性にする
+   */
+  sourceLangTag?: string;
   /** 原語でのタイトル */
   sourceTitle?: string;
   /** 底本の書誌情報。フッターに表示する */
