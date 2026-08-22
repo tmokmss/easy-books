@@ -180,7 +180,9 @@ function srcNegations(text: string): number {
 }
 
 function jaNegations(text: string): number {
-  return [...text.matchAll(/ない|なかった|なく|ぬ(?![きぐ])|ず(?:に|、)|まい|せず|しない/g)].length;
+  // 「〜なければ」「〜ねば」の条件形も否定。これが無いと「要不改（改めなければ）」のような
+  // 条件節の否定が訳文側で0と数えられ、否定の消失として誤検知になる
+  return [...text.matchAll(/ない|なかった|なく|なけれ|ねば|ぬ(?![きぐ])|ず(?:に|、)|まい|せず|しない/g)].length;
 }
 
 function srcSentences(text: string): number {
