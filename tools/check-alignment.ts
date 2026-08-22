@@ -38,6 +38,21 @@ interface SrcLangSpec {
   letters: string;
   numbers: Record<string, number>;
   negations: string[];
+  /**
+   * 分かち書きしない言語（中国語）は語境界の先読みを使わない。
+   * 「他不来」の「不」は前後が漢字なので、語境界を要求すると否定を1つも拾えなくなる。
+   */
+  noWordBoundary?: boolean;
+  /** 漢数字（一二三…百千）を訳文と同じ規則で数える。numbers 辞書の代わりに使う */
+  cjkNumerals?: boolean;
+  /**
+   * 漢数字を数える条件になる量詞・単位。指定すると「数字＋（多／幾）＋単位」だけを拾う。
+   * 中国語は「一樣（同じ）」「不十分（さほど〜ない）」のように数でない漢数字が多く、
+   * 素朴に拾うと段落の大半が誤検知になる。金額・年月だけに絞るためのふるい。
+   */
+  numeralUnits?: string;
+  /** 文末記号（既定は欧文の . ! ? …） */
+  sentenceEnd?: string;
 }
 
 const SRC_LANGS: Record<string, SrcLangSpec> = {
@@ -67,6 +82,19 @@ const SRC_LANGS: Record<string, SrcLangSpec> = {
     negations: ['nicht', 'nichts', 'kein', 'keine', 'keinen', 'keinem', 'keiner', 'keines',
       'nie', 'niemals', 'niemand', 'nirgends'],
   },
+  zh: {
+    // 分かち書きしないので語境界は使えない（noWordBoundary）
+    letters: '',
+    // 漢数字は訳文側と同じ規則で数える（numbers 辞書は使わない）
+    numbers: {},
+    cjkNumerals: true,
+    numeralUnits: '文錢钱碗碟歲岁年月日天個个顆颗件句斤里人',
+    // 非（非常＝とても）・別（別的＝ほかの）は否定でない用法が多すぎるので入れない
+    negations: ['不', '沒', '没', '無', '无', '未', '莫', '毫不', '並非', '并非'],
+    noWordBoundary: true,
+    // 「；」は独立した節を継ぐ。日本語では文に割れるので、原文側でも文の切れ目として数える
+    sentenceEnd: '。！？…；',
+  },
 };
 
 const sourceLang = catalog[chapter.workId]?.sourceLang;
@@ -86,10 +114,17 @@ const JA_DIGITS: Record<string, number> = {
 function srcNumbers(text: string): number[] {
   const nums: number[] = [];
   for (const m of text.matchAll(/\d+/g)) nums.push(Number(m[0]));
+  if (langSpec.cjkNumerals) {
+    nums.push(...cjkNumerals(text, langSpec.numeralUnits));
+    return nums.sort((a, b) => a - b);
+  }
   const lower = text.toLowerCase();
   const { letters } = langSpec;
   for (const [word, value] of Object.entries(langSpec.numbers)) {
-    for (const m of lower.matchAll(new RegExp(`(?<![${letters}])${word}(?![${letters}])`, 'g'))) {
+    const re = langSpec.noWordBoundary
+      ? new RegExp(word, 'g')
+      : new RegExp(`(?<![${letters}])${word}(?![${letters}])`, 'g');
+    for (const m of lower.matchAll(re)) {
       void m;
       nums.push(value);
     }
@@ -97,16 +132,16 @@ function srcNumbers(text: string): number[] {
   return nums.sort((a, b) => a - b);
 }
 
-function jaNumbers(text: string): number[] {
-  // マークアップを除いた表示テキストで数える
-  const plain = text.replace(/\{\{[prn]:[a-z0-9-]+\|([^}]+)\}\}/g, '$1');
+/**
+ * 漢数字の連なりを値に変換（十進の単純な組み合わせのみ）。原文が中国語のときは両側で使う。
+ * units を渡すと「数字＋（多／幾／余）＋単位」の形だけを拾う（原文側の誤検知よけ）。
+ */
+function cjkNumerals(text: string, units?: string): number[] {
+  const re = units
+    ? new RegExp(`[一二三四五六七八九十百千]+(?=[多幾几餘余]?[${units}])`, 'g')
+    : /[一二三四五六七八九十百千]+/g;
   const nums: number[] = [];
-  for (const m of plain.matchAll(/\d+/g)) nums.push(Number(m[0]));
-  for (const m of plain.matchAll(/ひとり|ひとつ|ふたり|ふたつ/g)) {
-    nums.push(m[0].startsWith('ひと') ? 1 : 2);
-  }
-  // 漢数字の連なりを値に変換（十進の単純な組み合わせのみ）
-  for (const m of plain.matchAll(/[一二三四五六七八九十百千]+/g)) {
+  for (const m of text.matchAll(re)) {
     let total = 0;
     let current = 0;
     for (const ch of m[0]) {
@@ -119,14 +154,28 @@ function jaNumbers(text: string): number[] {
     }
     nums.push(total + current);
   }
+  return nums;
+}
+
+function jaNumbers(text: string): number[] {
+  // マークアップを除いた表示テキストで数える
+  const plain = text.replace(/\{\{[prn]:[a-z0-9-]+\|([^}]+)\}\}/g, '$1');
+  const nums: number[] = [];
+  for (const m of plain.matchAll(/\d+/g)) nums.push(Number(m[0]));
+  for (const m of plain.matchAll(/ひとり|ひとつ|ふたり|ふたつ/g)) {
+    nums.push(m[0].startsWith('ひと') ? 1 : 2);
+  }
+  nums.push(...cjkNumerals(plain));
   return nums.sort((a, b) => a - b);
 }
 
 // ---- 否定・文数 ----
 
 function srcNegations(text: string): number {
-  const { letters, negations } = langSpec;
-  const re = new RegExp(`(?<![${letters}])(?:${negations.join('|')})(?![${letters}])`, 'g');
+  const { letters, negations, noWordBoundary } = langSpec;
+  const re = noWordBoundary
+    ? new RegExp(`(?:${negations.join('|')})`, 'g')
+    : new RegExp(`(?<![${letters}])(?:${negations.join('|')})(?![${letters}])`, 'g');
   return [...text.toLowerCase().matchAll(re)].length;
 }
 
@@ -135,7 +184,9 @@ function jaNegations(text: string): number {
 }
 
 function srcSentences(text: string): number {
-  return text.split(/[.!?…]+[\s»")“”』]*/).filter((s) => s.trim().length > 0).length;
+  const ends = langSpec.sentenceEnd ?? '.!?…';
+  const re = new RegExp(`[${ends.replace(/[.\-\]\\^]/g, '\\$&')}]+[\\s»")“”』」）]*`, 'g');
+  return text.split(re).filter((s) => s.trim().length > 0).length;
 }
 
 function jaSentences(text: string): number {

@@ -30,6 +30,15 @@ if (!chapterId || !alignedPath) {
 const skeleton = JSON.parse(
   readFileSync(join('source', 'paragraphs', `${chapterId}.src.json`), 'utf-8'),
 );
+
+// 分かち書きしない言語（中国語・日本語）は、文を空白で継ぐと原文にない空きが入る。
+// segments[].src の連結が原文と一致する不変条件（content.config.ts）にも関わる。
+const CJK_LANGS = new Set(['zh', 'ja']);
+const catalog = JSON.parse(readFileSync(join('src', 'data', 'works.json'), 'utf-8')) as Record<
+  string,
+  { sourceLang: string }
+>;
+const srcJoin = CJK_LANGS.has(catalog[skeleton.workId]?.sourceLang) ? '' : ' ';
 const sentences: Record<string, string[]> = JSON.parse(
   readFileSync(join('source', 'paragraphs', `${chapterId}.sentences.json`), 'utf-8'),
 );
@@ -91,7 +100,7 @@ const paragraphs = skeleton.paragraphs.flatMap((p: any) => {
   if (p.em) out.em = true;
   if (by) out.translatedBy = by;
   out.segments = segs.map((seg) => ({
-    src: seg.s.map((n) => sents[n - 1]).join(' '),
+    src: seg.s.map((n) => sents[n - 1]).join(srcJoin),
     ja: seg.ja,
   }));
   return [out];
