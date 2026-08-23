@@ -126,9 +126,10 @@ interface Block {
   center: boolean;
 }
 
-// 本文は <p> だけとは限らない。題辞・概要・場面区切りを <center> に置く版がある
+// 本文は <p> だけとは限らない。題辞・概要・場面区切りを <center> に置く版があり、
+// 文語の序文など「引用として一段下げた」ブロックは <dl><dd> に入る（狂人日記の序）。
 const blocks: Block[] = [];
-for (const m of body.matchAll(/<(p|center)\b[^>]*>([\s\S]*?)<\/\1>/g)) {
+for (const m of body.matchAll(/<(p|center|dd)\b[^>]*>([\s\S]*?)<\/\1>/g)) {
   let inner = m[2];
   // 朗読音声プレイヤー（de の Gesprochener Text 等）は本文ではない
   if (/<audio\b/.test(inner)) continue;
@@ -152,6 +153,13 @@ for (const m of body.matchAll(/<(p|center)\b[^>]*>([\s\S]*?)<\/\1>/g)) {
   if (text.length < 2) continue;
   blocks.push({ text, em, center: m[1] === 'center' });
 }
+
+// 見出し（<h2> 等）は段落として拾わない。作品内の節番号を見出しに置く版があるので
+// （狂人日記の 一〜十三）、黙って落とさず何を落としたかを報告する。
+// 節構造が要るなら outlines の節 label で表現し、章JSONには見出し段落を作らない。
+const droppedHeadings = [...body.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/g)]
+  .map((m) => stripInvisible(decodeEntities(m[1].replace(/<[^>]+>/g, ''))).trim())
+  .filter((t) => t.length > 0);
 
 // 冒頭の <center> 群は章の見出しブロック。細切れの段落にすると訳しにくいので1段落にまとめ、
 // 章見出しそのもの（chapterLabel と重複する行）は落とす。
@@ -194,6 +202,12 @@ const outPath = join('source', 'paragraphs', `${chapterId}.src.json`);
 mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(outPath, JSON.stringify(out, null, 2) + '\n', 'utf-8');
 console.log(`${outPath}: ${paragraphs.length} paragraphs (em: ${paragraphs.filter((p) => p.em).length})`);
+if (droppedHeadings.length > 0) {
+  console.warn(
+    `  注意: 本文中の見出し ${droppedHeadings.length} 件を段落にしていない: ${droppedHeadings.join(' / ')}`,
+  );
+  console.warn('    節構造が要るなら source/outlines/<chapterId>.json の節 label で表現すること');
+}
 if (unrenderedTex.length > 0) {
   console.warn(`  警告: 平文にできなかった数式 ${unrenderedTex.length} 件（TeX のまま残した）:`);
   for (const tex of [...new Set(unrenderedTex)]) console.warn(`    ${tex}`);
