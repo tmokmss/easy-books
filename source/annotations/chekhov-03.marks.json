@@ -1,0 +1,23 @@
+[
+  { "p": "p001", "seg": 0, "text": "ニコラーエフ鉄道", "kind": "n", "id": "nikolaev-railway" },
+  { "p": "p001", "seg": 0, "text": "ふとっちょ", "kind": "r", "id": "misha" },
+  { "p": "p001", "seg": 0, "text": "やせっぽち", "kind": "r", "id": "porfiriy" },
+  { "p": "p001", "seg": 5, "text": "ギムナジウム", "kind": "n", "id": "gymnasium" },
+  { "p": "p002", "seg": 0, "text": "ポルフィーリー", "kind": "p", "id": "porfiriy" },
+  { "p": "p003", "seg": 1, "text": "ミーシャ", "kind": "p", "id": "misha" },
+  { "p": "p004", "seg": 0, "text": "三度、互いに口づけ", "kind": "n", "id": "three-kisses" },
+  { "p": "p005", "seg": 1, "text": "ルイーザ", "kind": "p", "id": "luiza" },
+  { "p": "p005", "seg": 1, "text": "ヴァンツェンバーフ", "kind": "p", "id": "luiza" },
+  { "p": "p005", "seg": 1, "text": "ルター派", "kind": "n", "id": "lutheran" },
+  { "p": "p005", "seg": 1, "text": "ナファナーイル", "kind": "p", "id": "nafanail" },
+  { "p": "p005", "seg": 1, "text": "ナーファニャ", "kind": "p", "id": "nafanail" },
+  { "p": "p007", "seg": 1, "text": "ゲロストラート", "kind": "n", "id": "herostratus" },
+  { "p": "p007", "seg": 1, "text": "エフィアーリト", "kind": "n", "id": "ephialtes" },
+  { "p": "p010", "seg": 0, "text": "八等官", "kind": "n", "id": "table-of-ranks" },
+  { "p": "p010", "seg": 0, "text": "スタニスラーフ勲章", "kind": "n", "id": "order-st-stanislaus" },
+  { "p": "p010", "seg": 0, "text": "一ルーブル", "kind": "n", "id": "ruble" },
+  { "p": "p011", "seg": 1, "text": "三等官", "kind": "n", "id": "table-of-ranks" },
+  { "p": "p011", "seg": 1, "text": "星章", "kind": "n", "id": "order-star" },
+  { "p": "p013", "seg": 0, "text": "閣下", "kind": "n", "id": "excellency" },
+  { "p": "p017", "seg": 0, "text": "中国人のように", "kind": "n", "id": "chinese-bow" }
+]
