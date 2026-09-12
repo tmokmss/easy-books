@@ -15,6 +15,8 @@
  *   正規表現に一致する行は章見出しそのもの（chapterLabel と重複）とみなして落とす。
  *   本文途中の <center> は通常の段落として扱う。
  *
+ * 題辞（<div class="epigraph">）は本文として拾い、脚注・編集者注の一覧（references）は落とす。
+ *
  * ロシア語FB2用のコンバータは fb2-to-paragraphs.ts。出力形式は同一。
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -116,8 +118,43 @@ for (const marker of BODY_CONTAINERS) {
   if (i >= 0 && (bodyStart < 0 || i < bodyStart)) bodyStart = i;
 }
 let body = bodyStart >= 0 ? html.slice(bodyStart) : html;
-const licenseAt = body.indexOf('licenseContainer');
-if (licenseAt >= 0) body = body.slice(0, licenseAt);
+// 本文の「後ろ」に付く非本文ブロックはここで切る。PD テンプレート（licenseContainer）のほかに、
+// 脚注・編集者注の一覧がある（ru の «Примечания редакторов Викитеки» 等）。注の中身は
+// <div class="poem"><p> を含むことがあり、切らないと注の引用を本文の段落として拾ってしまう。
+const TAIL_MARKERS = ['licenseContainer', 'class="references', 'mw-references-wrap'];
+for (const marker of TAIL_MARKERS) {
+  const at = body.indexOf(marker);
+  if (at >= 0) body = body.slice(0, at);
+}
+
+// 題辞は <p> ではなく <div class="epigraph"> に置かれる版がある（チェーホフ短編の «Кому повем…»）。
+// 入れ子の <div> を含むので開きタグから対応する </div> までを数えて取り出し、<center> と同じ
+// 「本文だが <p> の外」ブロックとして本文の流れに戻す（位置が変わらないので段落順は保たれる）。
+function foldEpigraphs(src: string): string {
+  const open = /<div\b[^>]*class="[^"]*epigraph[^"]*"[^>]*>/gi;
+  let out = '';
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = open.exec(src))) {
+    const start = m.index;
+    const afterOpen = open.lastIndex;
+    const tag = /<(\/?)div\b[^>]*>/gi;
+    tag.lastIndex = afterOpen;
+    let depth = 1;
+    let end = -1;
+    let t: RegExpExecArray | null;
+    while (depth > 0 && (t = tag.exec(src))) {
+      depth += t[1] ? -1 : 1;
+      if (depth === 0) end = tag.lastIndex;
+    }
+    if (end < 0) continue; // 閉じが見つからない壊れた HTML は触らない
+    out += src.slice(last, start) + '<center>' + src.slice(afterOpen, end - '</div>'.length) + '</center>';
+    last = end;
+    open.lastIndex = end;
+  }
+  return out + src.slice(last);
+}
+body = foldEpigraphs(body);
 
 interface Block {
   text: string;
