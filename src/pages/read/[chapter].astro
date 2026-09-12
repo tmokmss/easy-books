@@ -58,13 +58,31 @@ const prevChapter = here > 0 ? workChapters[here - 1] : undefined;
 const nextChapter = here >= 0 ? workChapters[here + 1] : undefined;
 
 // ここまでのあらすじ: 現在の章より前の章要約だけを出す。
-// 各章要約は coversUpTo までの情報しか含まない設計なので、ここに先の展開は混ざらない
-const recap = workChapters
-  .filter((c) => c.data.order < entry.data.order)
-  .flatMap((c) => {
-    const summary = outlineOf.get(c.id)?.summary;
-    return summary ? [{ label: c.data.chapterLabel, summary }] : [];
-  });
+// 各章要約は coversUpTo までの情報しか含まない設計なので、ここに先の展開は混ざらない。
+// 短編集は章が独立した別の作品なので、前の章のあらすじには意味がなく、
+// 他の編の結末をばらすだけになる。出さない。
+const recap = work.meta.anthology
+  ? []
+  : workChapters
+      .filter((c) => c.data.order < entry.data.order)
+      .flatMap((c) => {
+        const summary = outlineOf.get(c.id)?.summary;
+        return summary ? [{ label: c.data.chapterLabel, summary }] : [];
+      });
+
+// 登場人物レールに並べる人物。長編では作品の配役表をそのまま出す（画面に出ている人だけ点灯する）。
+// 短編集では章＝1編なので、その編で言及される人物だけに絞る
+// （マークアップの {{p:}} / {{r:}} が参照している id を本文から拾う）。
+const railPeople = work.meta.anthology
+  ? Object.fromEntries(
+      Object.entries(work.people).filter(([id]) => {
+        const re = new RegExp(`\\{\\{[pr]:${id}\\|`);
+        return entry.data.paragraphs.some((p) => re.test(p.ja));
+      }),
+    )
+  : work.people;
+// 固有名で呼ばれる人物が1人もいない章では帯が出ないので、本文を1カラムに戻す
+const hasRail = Object.keys(railPeople).length > 0;
 
 // 人物・語注データをクライアントへ渡す（</script> 対策で < をエスケープ）
 const islandJson = JSON.stringify({
@@ -115,8 +133,8 @@ const zoomJson = JSON.stringify({
     </style>
   </noscript>
 
-  <div class="reader-shell">
-    <PersonRail people={work.people} />
+  <div class:list={['reader-shell', { 'no-rail': !hasRail }]}>
+    <PersonRail people={railPeople} />
     <div class="reader-col">
       {
         recap.length > 0 && (
@@ -291,6 +309,13 @@ const zoomJson = JSON.stringify({
       grid-template-columns: 13rem minmax(0, 1fr);
       gap: 2.5rem;
       max-width: calc(var(--measure) + 15.5rem);
+    }
+
+    /* 登場人物の帯が無い章（短編集で固有名の人物が出ない編）は1カラムに戻す。
+       そうしないと本文が 13rem の列に入って潰れる */
+    .reader-shell.no-rail {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: var(--measure);
     }
   }
 

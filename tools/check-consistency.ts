@@ -7,7 +7,7 @@
  * 検出するもの:
  *   - カタカナ固有名詞の表記ゆれ（people.json / style-guide.json の names・terms を正とし、
  *     編集距離1〜2の近似トークンを疑いとして報告。台帳外どうしの近似ペアも報告）
- *   - 一人称の分布（おれ/俺/僕/私/わたし/わたくし/あたし/わし の章別表と、
+ *   - 一人称の分布（おれ/俺/ぼく/僕/私/わたし/わたくし/あたし/わし の章別表と、
  *     漢字・かな混在などの作品レベルの警告）
  *   - style-guide.json の people.*.firstPerson 未定義の主要人物
  *
@@ -165,12 +165,15 @@ function countPronouns(text: string): Record<string, number> {
   add('わたし', n);
   add('わたくし', [...text.matchAll(/わたくし/g)].length);
   add('あたし', [...text.matchAll(/あたし/g)].length);
+  // ぼく: 朴訥（ぼくとつ）を除く。子どもの一人称はひらがな指定の作品があるので、
+  // 漢字の「僕」と混在していないかをここで見る
+  add('ぼく', [...text.matchAll(/ぼく(?!とつ)/g)].length);
   add('わし', [...text.matchAll(/(?<=^|[「、。！？…　])わし/gm)].length);
   return c;
 }
 
 console.log(`\n=== 一人称の章別分布 ===`);
-const keys = ['おれ', '俺', '僕', '私', 'わたし', 'わたくし', 'あたし', 'わし'];
+const keys = ['おれ', '俺', 'ぼく', '僕', '私', 'わたし', 'わたくし', 'あたし', 'わし'];
 const workTotal: Record<string, number> = {};
 console.log(`  ${'chapter'.padEnd(14)} ${keys.join('  ')}`);
 for (const ch of chapters) {
@@ -193,6 +196,12 @@ if ((workTotal['俺'] ?? 0) > 0 && (workTotal['おれ'] ?? 0) > 0) {
 }
 if ((workTotal['俺'] ?? 0) > 0 && (workTotal['おれ'] ?? 0) === 0) {
   console.log(`  NOTE 「俺」を使用中 (${workTotal['俺']})。既定の方針はひらがな「おれ」`);
+  pronounWarnings++;
+}
+if ((workTotal['僕'] ?? 0) > 0 && (workTotal['ぼく'] ?? 0) > 0) {
+  console.log(
+    `  WARN 「僕」(${workTotal['僕']}) と「ぼく」(${workTotal['ぼく']}) が混在。表記を統一すること`,
+  );
   pronounWarnings++;
 }
 if ((workTotal['わたし'] ?? 0) > 0 && (workTotal['私'] ?? 0) > 0) {

@@ -6,15 +6,18 @@ interface Props {
 }
 
 const { people } = Astro.props;
+const entries = Object.entries(people);
 ---
 
 <!-- PCでは左に常駐、モバイルでは上部に横スクロールの帯。
-     いま画面に出ている人物だけを点灯させる（reader.ts が .active を付与） -->
+     いま画面に出ている人物だけを点灯させる（reader.ts が .active を付与）。
+     固有名で呼ばれる人物がいない章（短編集の「かき」など）では帯そのものを出さない -->
+{entries.length > 0 && (
 <aside class="person-rail" aria-label="登場人物">
   <h2 class="rail-title">登場人物</h2>
   <ul class="rail-list">
     {
-      Object.entries(people).map(([id, person]) => (
+      entries.map(([id, person]) => (
         <li>
           <button
             type="button"
@@ -31,6 +34,7 @@ const { people } = Astro.props;
     }
   </ul>
 </aside>
+)}
 
 <style>
   .person-rail {

@@ -1,0 +1,346 @@
+{
+  "iona": {
+    "name": "イオーナ・ポターポフ",
+    "short": "イオーナ",
+    "original": "Иона Потапов",
+    "aliases": [
+      "イオーナ",
+      "イオーナ・ポターポフ"
+    ],
+    "role": "ペテルブルグの辻馬車の御者。老人",
+    "hint": "本文ではほとんど「イオーナ」とだけ呼ばれ、姓のポターポフが出るのは最初の一度きり",
+    "firstAppearance": "chekhov-01#p002"
+  },
+  "kuzma": {
+    "name": "クジマー・イオーヌィチ",
+    "short": "クジマー",
+    "original": "Кузьма Ионыч",
+    "aliases": [
+      "クジマー",
+      "クジマー・イオーヌィチ"
+    ],
+    "role": "イオーナの息子",
+    "hint": "父称のイオーヌィチは「イオーナの子」の意。名前が出るのは終盤の一度だけ",
+    "firstAppearance": "chekhov-01#p060"
+  },
+  "chervyakov": {
+    "name": "イヴァーン・ドミートリチ・チェルヴャコーフ",
+    "short": "チェルヴャコーフ",
+    "original": "Иван Дмитрич Червяков",
+    "aliases": [
+      "チェルヴャコーフ",
+      "イヴァーン・ドミートリチ・チェルヴャコーフ"
+    ],
+    "role": "庶務係の役人。妻と劇場の平土間に座っている",
+    "hint": "本文ではほとんど姓の「チェルヴャコーフ」だけで呼ばれ、名と父称がそろうのは最初の一度きり",
+    "firstAppearance": "chekhov-02#p001"
+  },
+  "brizzhalov": {
+    "name": "ブリズジャーロフ",
+    "short": "ブリズジャーロフ",
+    "original": "Бризжалов",
+    "aliases": [
+      "ブリズジャーロフ",
+      "将官"
+    ],
+    "role": "運輸省の将官。劇場ではチェルヴャコーフの前の席に座っている",
+    "firstAppearance": "chekhov-02#p001"
+  },
+  "porfiriy": {
+    "name": "ポルフィーリー",
+    "short": "ポルフィーリー",
+    "original": "Порфирий",
+    "aliases": [
+      "ポルフィーリー",
+      "やせっぽち"
+    ],
+    "role": "やせっぽち。八等官",
+    "hint": "地の文では終始「やせっぽち」と呼ばれ、固有名で呼ばれるのは相手が名を挙げるときだけ",
+    "firstAppearance": "chekhov-03#p002"
+  },
+  "misha": {
+    "name": "ミーシャ",
+    "short": "ミーシャ",
+    "original": "Миша",
+    "aliases": [
+      "ミーシャ",
+      "ふとっちょ"
+    ],
+    "role": "ふとっちょ。三等官",
+    "hint": "「ミーシャ」は幼なじみとしての愛称。地の文では「ふとっちょ」",
+    "firstAppearance": "chekhov-03#p003"
+  },
+  "nafanail": {
+    "name": "ナファナーイル",
+    "short": "ナファナーイル",
+    "original": "Нафанаил",
+    "aliases": [
+      "ナファナーイル",
+      "ナーファニャ"
+    ],
+    "role": "ポルフィーリーの息子。ギムナジウムの生徒",
+    "hint": "「ナーファニャ」は父が使う愛称",
+    "firstAppearance": "chekhov-03#p005"
+  },
+  "luiza": {
+    "name": "ルイーザ",
+    "short": "ルイーザ",
+    "original": "Луиза",
+    "aliases": [
+      "ルイーザ"
+    ],
+    "role": "ポルフィーリーの妻。ルター派",
+    "firstAppearance": "chekhov-03#p005"
+  },
+  "ochumelov": {
+    "name": "オチュメーロフ",
+    "short": "オチュメーロフ",
+    "original": "Очумелов",
+    "aliases": [
+      "オチュメーロフ",
+      "監督官"
+    ],
+    "role": "警察の監督官。市場の広場を見回っている",
+    "firstAppearance": "chekhov-04#p001"
+  },
+  "eldyrin": {
+    "name": "エルディーリン",
+    "short": "エルディーリン",
+    "original": "Елдырин",
+    "aliases": [
+      "エルディーリン"
+    ],
+    "role": "巡査。オチュメーロフに従っている",
+    "firstAppearance": "chekhov-04#p008"
+  },
+  "khryukin": {
+    "name": "フリューキン",
+    "short": "フリューキン",
+    "original": "Хрюкин",
+    "aliases": [
+      "フリューキン"
+    ],
+    "role": "金細工の職人。犬に指を噛まれたと訴える",
+    "firstAppearance": "chekhov-04#p005"
+  },
+  "zhigalov": {
+    "name": "ジガーロフ",
+    "short": "ジガーロフ",
+    "original": "Жигалов",
+    "aliases": [
+      "ジガーロフ",
+      "将軍"
+    ],
+    "role": "将軍。この場には現れない",
+    "firstAppearance": "chekhov-04#p009"
+  },
+  "prokhor": {
+    "name": "プローホル",
+    "short": "プローホル",
+    "original": "Прохор",
+    "aliases": [
+      "プローホル"
+    ],
+    "role": "ジガーロフ家の料理人",
+    "firstAppearance": "chekhov-04#p021"
+  },
+  "denis": {
+    "name": "デニース・グリゴーリエフ",
+    "short": "デニース",
+    "original": "Денис Григорьев",
+    "aliases": [
+      "デニース",
+      "デニース・グリゴーリエフ"
+    ],
+    "role": "百姓。予審判事の前に立たされている",
+    "firstAppearance": "chekhov-06#p002"
+  },
+  "varka": {
+    "name": "ヴァーリカ",
+    "short": "ヴァーリカ",
+    "original": "Варька",
+    "aliases": [
+      "ヴァーリカ"
+    ],
+    "role": "靴屋に奉公している十三歳の子守",
+    "firstAppearance": "chekhov-08#p001"
+  },
+  "pelageya": {
+    "name": "ペラゲーヤ",
+    "short": "ペラゲーヤ",
+    "original": "Пелагея",
+    "aliases": [
+      "ペラゲーヤ"
+    ],
+    "role": "ヴァーリカの母",
+    "firstAppearance": "chekhov-08#p011"
+  },
+  "efim": {
+    "name": "エフィーム・ステパーノフ",
+    "short": "エフィーム",
+    "original": "Ефим Степанов",
+    "aliases": [
+      "エフィーム",
+      "エフィーム・ステパーノフ"
+    ],
+    "role": "ヴァーリカの父",
+    "firstAppearance": "chekhov-08#p009"
+  },
+  "ivan-velikopolsky": {
+    "name": "イヴァーン・ヴェリコポーリスキー",
+    "short": "イヴァーン",
+    "original": "Иван Великопольский",
+    "aliases": [
+      "イヴァーン",
+      "イヴァーン・ヴェリコポーリスキー"
+    ],
+    "role": "神学大学の学生。輔祭の息子",
+    "firstAppearance": "chekhov-09#p002"
+  },
+  "vasilisa": {
+    "name": "ヴァシリーサ",
+    "short": "ヴァシリーサ",
+    "original": "Василиса",
+    "aliases": [
+      "ヴァシリーサ"
+    ],
+    "role": "寡婦の菜園で焚き火をしている年寄り。昔は屋敷で乳母・子守を勤めていた",
+    "firstAppearance": "chekhov-09#p003"
+  },
+  "lukerya": {
+    "name": "ルケーリヤ",
+    "short": "ルケーリヤ",
+    "original": "Лукерья",
+    "aliases": [
+      "ルケーリヤ"
+    ],
+    "role": "ヴァシリーサの娘",
+    "firstAppearance": "chekhov-09#p003"
+  },
+  "vanka": {
+    "name": "ヴァーニカ",
+    "short": "ヴァーニカ",
+    "original": "Ванька",
+    "aliases": [
+      "ヴァーニカ",
+      "ヴァニューシカ",
+      "イヴァーン・ジューコフ"
+    ],
+    "role": "九歳。モスクワの靴屋に奉公に出されている",
+    "hint": "「ヴァニューシカ」は祖父が使う愛称。手紙には正式な「イヴァーン・ジューコフ」と署名する",
+    "firstAppearance": "chekhov-07#p001"
+  },
+  "konstantin-makarych": {
+    "name": "コンスタンチーン・マカールィチ",
+    "short": "コンスタンチーン・マカールィチ",
+    "original": "Константин Макарыч",
+    "aliases": [
+      "コンスタンチーン・マカールィチ",
+      "おじいさん"
+    ],
+    "role": "ヴァーニカの祖父。ジヴァーレフ家の夜番",
+    "firstAppearance": "chekhov-07#p002"
+  },
+  "olga-ignatevna": {
+    "name": "オーリガ・イグナーチエヴナ",
+    "short": "オーリガ・イグナーチエヴナ",
+    "original": "Ольга Игнатьевна",
+    "aliases": [
+      "オーリガ・イグナーチエヴナ"
+    ],
+    "role": "ジヴァーレフ家の令嬢",
+    "firstAppearance": "chekhov-07#p014"
+  },
+  "alyakhin": {
+    "name": "アリャーヒン",
+    "short": "アリャーヒン",
+    "original": "Аляхин",
+    "aliases": [
+      "アリャーヒン"
+    ],
+    "role": "モスクワの靴屋の親方",
+    "firstAppearance": "chekhov-07#p001"
+  },
+  "olenka": {
+    "name": "オーリガ・セミョーノヴナ",
+    "short": "オーレンカ",
+    "original": "Ольга Семёновна",
+    "aliases": [
+      "オーレンカ",
+      "オーリガ・セミョーノヴナ",
+      "いとしい人"
+    ],
+    "role": "退職した八等官プレミャーンニコフの娘",
+    "hint": "「オーレンカ」は愛称、「いとしい人（душечка）」はまわりの者が使う呼びかけ。正式な名と父称がそろうのは数えるほど",
+    "firstAppearance": "chekhov-10#p001"
+  },
+  "premyannikov": {
+    "name": "プレミャーンニコフ",
+    "short": "プレミャーンニコフ",
+    "original": "Племянников",
+    "aliases": [
+      "プレミャーンニコフ"
+    ],
+    "role": "オーレンカの父。退職した八等官",
+    "firstAppearance": "chekhov-10#p001"
+  },
+  "kukin": {
+    "name": "イヴァーン・ペトローヴィチ・クーキン",
+    "short": "クーキン",
+    "original": "Кукин",
+    "aliases": [
+      "クーキン",
+      "ヴァーニチカ",
+      "イヴァーン・ペトローヴィチ"
+    ],
+    "role": "遊園〈ティヴォリ〉の興行師。オーレンカの家の離れを借りている",
+    "hint": "「ヴァーニチカ」は愛称。電報には正式な「イヴァーン・ペトローヴィチ」と出る",
+    "firstAppearance": "chekhov-10#p002"
+  },
+  "pustovalov": {
+    "name": "ヴァシーリイ・アンドレーイチ・プストヴァーロフ",
+    "short": "プストヴァーロフ",
+    "original": "Василий Андреич Пустовалов",
+    "aliases": [
+      "プストヴァーロフ",
+      "ヴァーシチカ"
+    ],
+    "role": "材木商ババカーエフの店の支配人",
+    "hint": "「ヴァーシチカ」は愛称",
+    "firstAppearance": "chekhov-10#p029"
+  },
+  "smirnin": {
+    "name": "ヴラジーミル・プラトーヌィチ・スミルニーン",
+    "short": "スミルニーン",
+    "original": "Смирнин",
+    "aliases": [
+      "スミルニーン",
+      "ヴォロージチカ",
+      "ヴラジーミル・プラトーヌィチ"
+    ],
+    "role": "連隊の獣医。離れを借りる",
+    "hint": "「ヴォロージチカ」は愛称",
+    "firstAppearance": "chekhov-10#p041"
+  },
+  "sasha": {
+    "name": "サーシャ",
+    "short": "サーシャ",
+    "original": "Саша",
+    "aliases": [
+      "サーシャ",
+      "サーシェンカ"
+    ],
+    "role": "スミルニーンの息子。ギムナジウムの生徒",
+    "firstAppearance": "chekhov-10#p067"
+  },
+  "mavra": {
+    "name": "マーヴラ",
+    "short": "マーヴラ",
+    "original": "Мавра",
+    "aliases": [
+      "マーヴラ"
+    ],
+    "role": "オーレンカの家の料理女",
+    "firstAppearance": "chekhov-10#p060"
+  }
+}
