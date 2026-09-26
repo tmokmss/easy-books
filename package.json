@@ -16,7 +16,7 @@
     "tools:extract": "tsx tools/extract-annotations.ts"
   },
   "dependencies": {
-    "astro": "^7.2.0"
+    "astro": "^7.2.8"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.116.0",
