@@ -39,8 +39,10 @@ function personCardHtml(p: Person): { title: string; body: string } {
 
 function noteCardHtml(g: GlossaryEntry): { title: string; body: string } {
   const parts: string[] = [`<p>${esc(g.body)}</p>`];
-  if (g.sources.length > 0) {
-    parts.push(`<p class="card-sources">出典: ${g.sources.map(esc).join(' / ')}</p>`);
+  // 「要確認」は裏取りの TODO なので読者には出さない
+  const sources = g.sources.filter((s) => !s.includes('要確認'));
+  if (sources.length > 0) {
+    parts.push(`<p class="card-sources">出典: ${sources.map(esc).join(' / ')}</p>`);
   }
   return { title: esc(g.term), body: parts.join('') };
 }
