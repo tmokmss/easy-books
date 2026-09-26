@@ -38,13 +38,11 @@ function personCardHtml(p: Person): { title: string; body: string } {
 }
 
 function noteCardHtml(g: GlossaryEntry): { title: string; body: string } {
-  // 裏取りしていない注釈を確定的に見せない
-  const badge = g.verified ? '' : '<span class="card-unverified">未検証</span>';
   const parts: string[] = [`<p>${esc(g.body)}</p>`];
   if (g.sources.length > 0) {
     parts.push(`<p class="card-sources">出典: ${g.sources.map(esc).join(' / ')}</p>`);
   }
-  return { title: esc(g.term) + badge, body: parts.join('') };
+  return { title: esc(g.term), body: parts.join('') };
 }
 
 export function initReader(): void {
