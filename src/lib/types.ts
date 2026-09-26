@@ -59,7 +59,7 @@ export interface GlossaryEntry {
   term: string;
   body: string;
   sources: string[];
-  /** false のものは UI に「未検証」と表示する */
+  /** 裏取り済みかどうか（レビュー工程の管理用。UI には出さない） */
   verified: boolean;
 }
 
