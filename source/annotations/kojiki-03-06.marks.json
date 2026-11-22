@@ -1,0 +1,310 @@
+[
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "シラカノオオヤマトネコの命",
+  "kind": "p",
+  "id": "seinei"
+ },
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "伊波礼の甕栗の宮",
+  "kind": "n",
+  "id": "k0306-iware-mikakuri"
+ },
+ {
+  "p": "p001",
+  "seg": 1,
+  "text": "御名代",
+  "kind": "n",
+  "id": "be"
+ },
+ {
+  "p": "p001",
+  "seg": 1,
+  "text": "白髪部",
+  "kind": "n",
+  "id": "k0306-shiragabe"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "日継ぎ",
+  "kind": "n",
+  "id": "k0306-hitsugi"
+ },
+ {
+  "p": "p001",
+  "seg": 3,
+  "text": "イチノベノオシハワケの王",
+  "kind": "p",
+  "id": "ichinobe"
+ },
+ {
+  "p": "p001",
+  "seg": 3,
+  "text": "忍海の高木の角刺の宮",
+  "kind": "n",
+  "id": "k0306-tsunosashi"
+ },
+ {
+  "p": "p001",
+  "seg": 4,
+  "text": "山部の連",
+  "kind": "n",
+  "id": "k0306-yamabe"
+ },
+ {
+  "p": "p001",
+  "seg": 4,
+  "text": "針間の国",
+  "kind": "n",
+  "id": "harima"
+ },
+ {
+  "p": "p001",
+  "seg": 4,
+  "text": "新築祝いの宴",
+  "kind": "n",
+  "id": "k0306-niimuro"
+ },
+ {
+  "p": "p001",
+  "seg": 11,
+  "text": "八絃の琴",
+  "kind": "n",
+  "id": "k0306-yatsuo-no-koto"
+ },
+ {
+  "p": "p001",
+  "seg": 12,
+  "text": "イザホワケの天皇",
+  "kind": "p",
+  "id": "richu"
+ },
+ {
+  "p": "p001",
+  "seg": 12,
+  "text": "イチノベノオシハの王",
+  "kind": "p",
+  "id": "ichinobe"
+ },
+ {
+  "p": "p001",
+  "seg": 15,
+  "text": "早馬の使い",
+  "kind": "n",
+  "id": "k0306-hayuma"
+ },
+ {
+  "p": "p001",
+  "seg": 17,
+  "text": "平群の臣",
+  "kind": "n",
+  "id": "k0306-heguri"
+ },
+ {
+  "p": "p001",
+  "seg": 17,
+  "text": "シビの臣",
+  "kind": "p",
+  "id": "shibi"
+ },
+ {
+  "p": "p001",
+  "seg": 17,
+  "text": "歌垣",
+  "kind": "n",
+  "id": "k0306-utagaki"
+ },
+ {
+  "p": "p001",
+  "seg": 17,
+  "text": "ヲケの命",
+  "kind": "p",
+  "id": "kenzo"
+ },
+ {
+  "p": "p001",
+  "seg": 18,
+  "text": "菟田の首",
+  "kind": "n",
+  "id": "k0306-uda"
+ },
+ {
+  "p": "p001",
+  "seg": 19,
+  "text": "ヲケの命",
+  "kind": "n",
+  "id": "k0306-oke-woke"
+ },
+ {
+  "p": "p008",
+  "seg": 0,
+  "text": "シビ",
+  "kind": "n",
+  "id": "k0306-shibi-uo"
+ },
+ {
+  "p": "p012",
+  "seg": 0,
+  "text": "おうおよし",
+  "kind": "n",
+  "id": "makurakotoba"
+ },
+ {
+  "p": "p013",
+  "seg": 1,
+  "text": "オオケの命",
+  "kind": "p",
+  "id": "ninken"
+ },
+ {
+  "p": "p013",
+  "seg": 6,
+  "text": "オケの命",
+  "kind": "p",
+  "id": "ninken"
+ },
+ {
+  "p": "p014",
+  "seg": 0,
+  "text": "ヲケノイワスワケの命",
+  "kind": "p",
+  "id": "kenzo"
+ },
+ {
+  "p": "p014",
+  "seg": 0,
+  "text": "近つ飛鳥の宮",
+  "kind": "n",
+  "id": "k0306-chikatsu-asuka"
+ },
+ {
+  "p": "p014",
+  "seg": 2,
+  "text": "イチノベの王",
+  "kind": "p",
+  "id": "ichinobe"
+ },
+ {
+  "p": "p014",
+  "seg": 2,
+  "text": "淡海の国",
+  "kind": "n",
+  "id": "omi-no-kuni"
+ },
+ {
+  "p": "p014",
+  "seg": 6,
+  "text": "蚊屋野",
+  "kind": "n",
+  "id": "k0306-kayano"
+ },
+ {
+  "p": "p014",
+  "seg": 6,
+  "text": "御陵",
+  "kind": "n",
+  "id": "misasagi"
+ },
+ {
+  "p": "p014",
+  "seg": 6,
+  "text": "カラフクロ",
+  "kind": "n",
+  "id": "k0306-karafukuro"
+ },
+ {
+  "p": "p014",
+  "seg": 7,
+  "text": "オキメの老女",
+  "kind": "p",
+  "id": "okime"
+ },
+ {
+  "p": "p014",
+  "seg": 7,
+  "text": "目に置いて知っていた",
+  "kind": "n",
+  "id": "k0306-okime-na"
+ },
+ {
+  "p": "p014",
+  "seg": 10,
+  "text": "鐸を懸け",
+  "kind": "n",
+  "id": "k0306-nuride"
+ },
+ {
+  "p": "p015",
+  "seg": 0,
+  "text": "浅茅",
+  "kind": "n",
+  "id": "k0306-asaji"
+ },
+ {
+  "p": "p015",
+  "seg": 0,
+  "text": "ももづたう",
+  "kind": "n",
+  "id": "k0306-momozutau"
+ },
+ {
+  "p": "p015",
+  "seg": 0,
+  "text": "オキメ",
+  "kind": "p",
+  "id": "okime"
+ },
+ {
+  "p": "p017",
+  "seg": 0,
+  "text": "猪飼いの老人",
+  "kind": "n",
+  "id": "k0306-ikai"
+ },
+ {
+  "p": "p017",
+  "seg": 3,
+  "text": "シメス",
+  "kind": "n",
+  "id": "k0306-shimesu"
+ },
+ {
+  "p": "p017",
+  "seg": 4,
+  "text": "オオハツセの天皇",
+  "kind": "p",
+  "id": "yuryaku"
+ },
+ {
+  "p": "p017",
+  "seg": 21,
+  "text": "片岡の石坏の岡",
+  "kind": "n",
+  "id": "k0306-kataoka"
+ },
+ {
+  "p": "p018",
+  "seg": 0,
+  "text": "石上の広高の宮",
+  "kind": "n",
+  "id": "k0306-isonokami"
+ },
+ {
+  "p": "p018",
+  "seg": 1,
+  "text": "オオハツセワカタケの天皇",
+  "kind": "p",
+  "id": "yuryaku"
+ },
+ {
+  "p": "p018",
+  "seg": 2,
+  "text": "丸邇",
+  "kind": "n",
+  "id": "wani-uji"
+ }
+]

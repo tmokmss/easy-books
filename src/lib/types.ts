@@ -32,6 +32,12 @@ export interface WorkMeta {
    * true のときは、レールをその章で言及される人物だけに絞り、あらすじを出さない。
    */
   anthology?: boolean;
+  /**
+   * 章ごとに顔ぶれが入れ替わる作品（神話と歴代の天皇の条が続く古事記など）なら true。
+   * 登場人物レールを、その章で言及される人物だけに絞る。筋は章をまたいで続くので、
+   * anthology と違って「ここまでのあらすじ」は出す。
+   */
+  chapterCast?: boolean;
 }
 
 /** 人物台帳（people.json）の1エントリ。aliases は手で管理する */

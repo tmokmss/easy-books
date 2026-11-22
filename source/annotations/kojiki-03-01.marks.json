@@ -1,0 +1,436 @@
+[
+  {
+    "p": "p001",
+    "seg": 0,
+    "text": "オオサザキの命",
+    "kind": "p",
+    "id": "nintoku"
+  },
+  {
+    "p": "p001",
+    "seg": 0,
+    "text": "高津の宮",
+    "kind": "n",
+    "id": "k0301-takatsu-no-miya"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "葛城のソツビコ",
+    "kind": "n",
+    "id": "k0301-katsuragi"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "イワノヒメの命",
+    "kind": "p",
+    "id": "iwanohime"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "オオエノイザホワケの命",
+    "kind": "p",
+    "id": "richu"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "スミノエノナカツの王",
+    "kind": "p",
+    "id": "suminoenonakatsu"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "タヂヒノミズハワケの命",
+    "kind": "p",
+    "id": "hanzei"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "オアサヅマワクゴの宿禰の命",
+    "kind": "p",
+    "id": "ingyo"
+  },
+  {
+    "p": "p001",
+    "seg": 2,
+    "text": "カミナガヒメ",
+    "kind": "p",
+    "id": "kaminagahime"
+  },
+  {
+    "p": "p001",
+    "seg": 2,
+    "text": "オオクサカの王",
+    "kind": "p",
+    "id": "okusaka"
+  },
+  {
+    "p": "p001",
+    "seg": 2,
+    "text": "大郎子",
+    "kind": "n",
+    "id": "iratsume"
+  },
+  {
+    "p": "p001",
+    "seg": 3,
+    "text": "ワカクサカベの命",
+    "kind": "p",
+    "id": "wakakusakabe"
+  },
+  {
+    "p": "p001",
+    "seg": 4,
+    "text": "ヤタの若郎女",
+    "kind": "p",
+    "id": "yatanowakiiratsume"
+  },
+  {
+    "p": "p001",
+    "seg": 5,
+    "text": "オオサザキの天皇",
+    "kind": "p",
+    "id": "nintoku"
+  },
+  {
+    "p": "p001",
+    "seg": 6,
+    "text": "イザホワケの命",
+    "kind": "p",
+    "id": "richu"
+  },
+  {
+    "p": "p001",
+    "seg": 7,
+    "text": "御名代",
+    "kind": "n",
+    "id": "be"
+  },
+  {
+    "p": "p001",
+    "seg": 8,
+    "text": "ミズハワケの命",
+    "kind": "p",
+    "id": "hanzei"
+  },
+  {
+    "p": "p001",
+    "seg": 8,
+    "text": "蝮部",
+    "kind": "n",
+    "id": "k0301-tajihi-be"
+  },
+  {
+    "p": "p001",
+    "seg": 9,
+    "text": "ワカクサカベの王",
+    "kind": "p",
+    "id": "wakakusakabe"
+  },
+  {
+    "p": "p001",
+    "seg": 10,
+    "text": "三宅",
+    "kind": "n",
+    "id": "miyake"
+  },
+  {
+    "p": "p003",
+    "seg": 1,
+    "text": "くろざやの",
+    "kind": "n",
+    "id": "k0301-kurozaya"
+  },
+  {
+    "p": "p004",
+    "seg": 1,
+    "text": "淡道島",
+    "kind": "n",
+    "id": "k0301-awaji"
+  },
+  {
+    "p": "p005",
+    "seg": 0,
+    "text": "おしてるや",
+    "kind": "n",
+    "id": "k0301-oshiteruya"
+  },
+  {
+    "p": "p005",
+    "seg": 1,
+    "text": "オノゴロ島",
+    "kind": "n",
+    "id": "k0301-onogoro"
+  },
+  {
+    "p": "p005",
+    "seg": 1,
+    "text": "あじまさ",
+    "kind": "n",
+    "id": "k0301-ajimasa"
+  },
+  {
+    "p": "p009",
+    "seg": 0,
+    "text": "倭",
+    "kind": "n",
+    "id": "yamato"
+  },
+  {
+    "p": "p011",
+    "seg": 1,
+    "text": "こもりずの",
+    "kind": "n",
+    "id": "k0301-komorizu"
+  },
+  {
+    "p": "p012",
+    "seg": 0,
+    "text": "みつながしわ",
+    "kind": "n",
+    "id": "k0301-mitsunagashiwa"
+  },
+  {
+    "p": "p012",
+    "seg": 6,
+    "text": "御津の岬",
+    "kind": "n",
+    "id": "k0301-mitsu"
+  },
+  {
+    "p": "p012",
+    "seg": 7,
+    "text": "山代",
+    "kind": "n",
+    "id": "yamashiro"
+  },
+  {
+    "p": "p013",
+    "seg": 0,
+    "text": "つぎねふや",
+    "kind": "n",
+    "id": "k0301-tsuginefu"
+  },
+  {
+    "p": "p013",
+    "seg": 1,
+    "text": "さしぶを",
+    "kind": "n",
+    "id": "k0301-sashibu"
+  },
+  {
+    "p": "p013",
+    "seg": 2,
+    "text": "大君であることよ",
+    "kind": "r",
+    "id": "nintoku"
+  },
+  {
+    "p": "p014",
+    "seg": 0,
+    "text": "那良山",
+    "kind": "n",
+    "id": "k0301-narayama"
+  },
+  {
+    "p": "p015",
+    "seg": 1,
+    "text": "あをによし",
+    "kind": "n",
+    "id": "k0301-aoniyoshi"
+  },
+  {
+    "p": "p015",
+    "seg": 1,
+    "text": "をだて",
+    "kind": "n",
+    "id": "k0301-odate"
+  },
+  {
+    "p": "p015",
+    "seg": 2,
+    "text": "葛城の高宮",
+    "kind": "n",
+    "id": "k0301-takamiya"
+  },
+  {
+    "p": "p016",
+    "seg": 0,
+    "text": "筒木",
+    "kind": "n",
+    "id": "k0301-tsutsuki"
+  },
+  {
+    "p": "p018",
+    "seg": 0,
+    "text": "丸邇",
+    "kind": "n",
+    "id": "wani-uji"
+  },
+  {
+    "p": "p019",
+    "seg": 1,
+    "text": "きもむかう",
+    "kind": "n",
+    "id": "k0301-kimomukau"
+  },
+  {
+    "p": "p022",
+    "seg": 4,
+    "text": "青摺りの衣",
+    "kind": "n",
+    "id": "k0301-aozuri"
+  },
+  {
+    "p": "p024",
+    "seg": 2,
+    "text": "三色に変わる不思議な虫",
+    "kind": "n",
+    "id": "k0301-kaiko"
+  },
+  {
+    "p": "p026",
+    "seg": 0,
+    "text": "志都歌の歌返し",
+    "kind": "n",
+    "id": "k0301-shizuuta"
+  },
+  {
+    "p": "p030",
+    "seg": 1,
+    "text": "ハヤブサワケの王",
+    "kind": "p",
+    "id": "hayabusawake"
+  },
+  {
+    "p": "p030",
+    "seg": 1,
+    "text": "メドリの王",
+    "kind": "p",
+    "id": "medori"
+  },
+  {
+    "p": "p031",
+    "seg": 0,
+    "text": "メドリ",
+    "kind": "p",
+    "id": "medori"
+  },
+  {
+    "p": "p033",
+    "seg": 0,
+    "text": "ハヤブサワケ",
+    "kind": "p",
+    "id": "hayabusawake"
+  },
+  {
+    "p": "p035",
+    "seg": 1,
+    "text": "さざき",
+    "kind": "n",
+    "id": "k0301-sazaki"
+  },
+  {
+    "p": "p036",
+    "seg": 1,
+    "text": "倉椅山",
+    "kind": "n",
+    "id": "k0301-kurahashi"
+  },
+  {
+    "p": "p037",
+    "seg": 0,
+    "text": "はしだての",
+    "kind": "n",
+    "id": "k0301-hashidate"
+  },
+  {
+    "p": "p040",
+    "seg": 0,
+    "text": "宇陀のソニ",
+    "kind": "n",
+    "id": "k0301-soni"
+  },
+  {
+    "p": "p041",
+    "seg": 0,
+    "text": "雁が卵を産んだ",
+    "kind": "n",
+    "id": "k0301-kari"
+  },
+  {
+    "p": "p041",
+    "seg": 1,
+    "text": "タケウチの宿禰の命",
+    "kind": "p",
+    "id": "takeuchi"
+  },
+  {
+    "p": "p042",
+    "seg": 0,
+    "text": "たまきはる",
+    "kind": "n",
+    "id": "k0301-tamakiharu"
+  },
+  {
+    "p": "p042",
+    "seg": 0,
+    "text": "内の朝臣",
+    "kind": "r",
+    "id": "takeuchi"
+  },
+  {
+    "p": "p042",
+    "seg": 1,
+    "text": "そらみつ",
+    "kind": "n",
+    "id": "k0301-soramitsu"
+  },
+  {
+    "p": "p043",
+    "seg": 0,
+    "text": "タケウチの宿禰",
+    "kind": "p",
+    "id": "takeuchi"
+  },
+  {
+    "p": "p047",
+    "seg": 0,
+    "text": "ほき歌の片歌",
+    "kind": "n",
+    "id": "uta-no-na"
+  },
+  {
+    "p": "p047",
+    "seg": 3,
+    "text": "枯野",
+    "kind": "n",
+    "id": "k0301-karuno"
+  },
+  {
+    "p": "p048",
+    "seg": 1,
+    "text": "由良の海峡",
+    "kind": "n",
+    "id": "k0301-yura"
+  },
+  {
+    "p": "p049",
+    "seg": 1,
+    "text": "御陵",
+    "kind": "n",
+    "id": "misasagi"
+  },
+  {
+    "p": "p049",
+    "seg": 1,
+    "text": "毛受の耳原",
+    "kind": "n",
+    "id": "k0301-mozu"
+  }
+]

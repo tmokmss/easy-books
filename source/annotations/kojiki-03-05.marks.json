@@ -1,0 +1,352 @@
+[
+  {
+    "p": "p001",
+    "seg": 0,
+    "text": "オオハツセワカタケの命",
+    "kind": "p",
+    "id": "yuryaku"
+  },
+  {
+    "p": "p001",
+    "seg": 0,
+    "text": "長谷の朝倉の宮",
+    "kind": "n",
+    "id": "k0305-asakura"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "オオクサカの王",
+    "kind": "p",
+    "id": "okusaka"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "ワカクサカベの王",
+    "kind": "p",
+    "id": "wakakusakabe"
+  },
+  {
+    "p": "p001",
+    "seg": 2,
+    "text": "ツブラオオミ",
+    "kind": "p",
+    "id": "tsubura"
+  },
+  {
+    "p": "p001",
+    "seg": 2,
+    "text": "シラカの命",
+    "kind": "p",
+    "id": "seinei"
+  },
+  {
+    "p": "p001",
+    "seg": 3,
+    "text": "シラカの太子",
+    "kind": "p",
+    "id": "seinei"
+  },
+  {
+    "p": "p001",
+    "seg": 5,
+    "text": "大后",
+    "kind": "n",
+    "id": "okisaki"
+  },
+  {
+    "p": "p001",
+    "seg": 5,
+    "text": "日下に",
+    "kind": "n",
+    "id": "k0305-kusaka"
+  },
+  {
+    "p": "p001",
+    "seg": 6,
+    "text": "堅魚木",
+    "kind": "n",
+    "id": "k0305-katsuogi"
+  },
+  {
+    "p": "p001",
+    "seg": 7,
+    "text": "志幾",
+    "kind": "n",
+    "id": "k0305-shiki"
+  },
+  {
+    "p": "p001",
+    "seg": 7,
+    "text": "大県主",
+    "kind": "n",
+    "id": "agatanushi"
+  },
+  {
+    "p": "p001",
+    "seg": 11,
+    "text": "のみの幣物",
+    "kind": "n",
+    "id": "k0305-nomi-no-mai"
+  },
+  {
+    "p": "p001",
+    "seg": 15,
+    "text": "日を背にして",
+    "kind": "n",
+    "id": "k0305-hi-wo-sobira"
+  },
+  {
+    "p": "p002",
+    "seg": 0,
+    "text": "たたみこも",
+    "kind": "n",
+    "id": "k0305-tatamikomo"
+  },
+  {
+    "p": "p002",
+    "seg": 0,
+    "text": "平群",
+    "kind": "n",
+    "id": "k0305-heguri"
+  },
+  {
+    "p": "p003",
+    "seg": 1,
+    "text": "美和の河",
+    "kind": "n",
+    "id": "k0305-miwa-no-kawa"
+  },
+  {
+    "p": "p003",
+    "seg": 2,
+    "text": "引田部のアカイコ",
+    "kind": "p",
+    "id": "akaiko"
+  },
+  {
+    "p": "p003",
+    "seg": 4,
+    "text": "アカイコ",
+    "kind": "p",
+    "id": "akaiko"
+  },
+  {
+    "p": "p004",
+    "seg": 0,
+    "text": "御諸",
+    "kind": "n",
+    "id": "k0305-mimoro"
+  },
+  {
+    "p": "p006",
+    "seg": 0,
+    "text": "引田",
+    "kind": "n",
+    "id": "k0305-hiketa"
+  },
+  {
+    "p": "p009",
+    "seg": 0,
+    "text": "日下江",
+    "kind": "n",
+    "id": "k0305-kusakae"
+  },
+  {
+    "p": "p010",
+    "seg": 1,
+    "text": "志都歌",
+    "kind": "n",
+    "id": "k0305-shitsuuta"
+  },
+  {
+    "p": "p011",
+    "seg": 0,
+    "text": "吉野の宮",
+    "kind": "n",
+    "id": "k0305-yoshino-no-miya"
+  },
+  {
+    "p": "p011",
+    "seg": 2,
+    "text": "大御呉床",
+    "kind": "n",
+    "id": "k0305-agura"
+  },
+  {
+    "p": "p013",
+    "seg": 1,
+    "text": "あきづ",
+    "kind": "n",
+    "id": "k0305-akizu"
+  },
+  {
+    "p": "p014",
+    "seg": 0,
+    "text": "オムロが岳",
+    "kind": "n",
+    "id": "k0305-omurogatake"
+  },
+  {
+    "p": "p014",
+    "seg": 1,
+    "text": "やすみしし",
+    "kind": "n",
+    "id": "k0305-yasumishishi"
+  },
+  {
+    "p": "p014",
+    "seg": 4,
+    "text": "そらみつ",
+    "kind": "n",
+    "id": "k0305-soramitsu"
+  },
+  {
+    "p": "p014",
+    "seg": 4,
+    "text": "倭の国",
+    "kind": "n",
+    "id": "yamato"
+  },
+  {
+    "p": "p016",
+    "seg": 1,
+    "text": "鳴鏑",
+    "kind": "n",
+    "id": "k0305-kaburaya"
+  },
+  {
+    "p": "p017",
+    "seg": 1,
+    "text": "ありお",
+    "kind": "n",
+    "id": "k0305-ario"
+  },
+  {
+    "p": "p018",
+    "seg": 7,
+    "text": "ヒトコトヌシの大神",
+    "kind": "p",
+    "id": "hitokotonushi"
+  },
+  {
+    "p": "p019",
+    "seg": 0,
+    "text": "春日",
+    "kind": "n",
+    "id": "k0305-kasuga"
+  },
+  {
+    "p": "p020",
+    "seg": 1,
+    "text": "金鉏",
+    "kind": "n",
+    "id": "k0305-kanasuki"
+  },
+  {
+    "p": "p021",
+    "seg": 1,
+    "text": "百枝の槻",
+    "kind": "n",
+    "id": "k0305-tsuki"
+  },
+  {
+    "p": "p021",
+    "seg": 1,
+    "text": "采女",
+    "kind": "n",
+    "id": "k0305-uneme"
+  },
+  {
+    "p": "p022",
+    "seg": 0,
+    "text": "纒向の、日代の宮",
+    "kind": "n",
+    "id": "k0305-hishiro"
+  },
+  {
+    "p": "p022",
+    "seg": 1,
+    "text": "やおによし",
+    "kind": "n",
+    "id": "k0305-yaoniyoshi"
+  },
+  {
+    "p": "p022",
+    "seg": 2,
+    "text": "新嘗の屋",
+    "kind": "n",
+    "id": "k0305-niiname"
+  },
+  {
+    "p": "p022",
+    "seg": 6,
+    "text": "ありきぬ",
+    "kind": "n",
+    "id": "k0305-arikinu"
+  },
+  {
+    "p": "p023",
+    "seg": 1,
+    "text": "大后",
+    "kind": "r",
+    "id": "wakakusakabe"
+  },
+  {
+    "p": "p024",
+    "seg": 0,
+    "text": "高市",
+    "kind": "n",
+    "id": "k0305-takechi"
+  },
+  {
+    "p": "p026",
+    "seg": 0,
+    "text": "ももしき",
+    "kind": "n",
+    "id": "k0305-momoshiki"
+  },
+  {
+    "p": "p026",
+    "seg": 0,
+    "text": "領巾",
+    "kind": "n",
+    "id": "hire"
+  },
+  {
+    "p": "p027",
+    "seg": 0,
+    "text": "天語歌",
+    "kind": "n",
+    "id": "k0305-amagatariuta"
+  },
+  {
+    "p": "p027",
+    "seg": 3,
+    "text": "みなそそく",
+    "kind": "n",
+    "id": "k0305-minasosoku"
+  },
+  {
+    "p": "p027",
+    "seg": 3,
+    "text": "ほだり",
+    "kind": "n",
+    "id": "k0305-hodari"
+  },
+  {
+    "p": "p028",
+    "seg": 0,
+    "text": "宇岐歌",
+    "kind": "n",
+    "id": "k0305-ukiuta"
+  },
+  {
+    "p": "p029",
+    "seg": 1,
+    "text": "あせを",
+    "kind": "n",
+    "id": "k0305-aseo"
+  }
+]

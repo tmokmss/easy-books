@@ -1,0 +1,303 @@
+[
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "妹のイザナミの命",
+  "kind": "n",
+  "id": "k0102-imo"
+ },
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "黄泉の国へ",
+  "kind": "n",
+  "id": "yomi-no-kuni"
+ },
+ {
+  "p": "p001",
+  "seg": 1,
+  "text": "イザナミの命",
+  "kind": "p",
+  "id": "izanami"
+ },
+ {
+  "p": "p001",
+  "seg": 1,
+  "text": "イザナキの命",
+  "kind": "p",
+  "id": "izanaki"
+ },
+ {
+  "p": "p001",
+  "seg": 4,
+  "text": "黄泉の国のかまどで煮たもの",
+  "kind": "n",
+  "id": "k0102-yomotsuhegui"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "左の御みずら",
+  "kind": "n",
+  "id": "mizura"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "神聖な爪櫛",
+  "kind": "n",
+  "id": "k0102-tsumagushi"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "一つ火",
+  "kind": "n",
+  "id": "k0102-hitotsubi"
+ },
+ {
+  "p": "p002",
+  "seg": 1,
+  "text": "ヨモツシコメ",
+  "kind": "n",
+  "id": "k0102-yomotsushikome"
+ },
+ {
+  "p": "p002",
+  "seg": 2,
+  "text": "黒い御かずら",
+  "kind": "n",
+  "id": "k0102-kazura"
+ },
+ {
+  "p": "p002",
+  "seg": 7,
+  "text": "十拳の剣",
+  "kind": "n",
+  "id": "totsuka-no-tsurugi"
+ },
+ {
+  "p": "p002",
+  "seg": 8,
+  "text": "黄泉比良坂",
+  "kind": "n",
+  "id": "k0102-yomotsuhirasaka"
+ },
+ {
+  "p": "p002",
+  "seg": 9,
+  "text": "葦原の中つ国",
+  "kind": "n",
+  "id": "ashihara-no-nakatsukuni"
+ },
+ {
+  "p": "p002",
+  "seg": 9,
+  "text": "青人草",
+  "kind": "n",
+  "id": "k0102-aohitokusa"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "オオカムヅミの命",
+  "kind": "n",
+  "id": "k0102-okamuzumi"
+ },
+ {
+  "p": "p002",
+  "seg": 15,
+  "text": "イザナミの神",
+  "kind": "p",
+  "id": "izanami"
+ },
+ {
+  "p": "p002",
+  "seg": 16,
+  "text": "「しき」",
+  "kind": "n",
+  "id": "k0102-chishiki"
+ },
+ {
+  "p": "p002",
+  "seg": 17,
+  "text": "チガエシの大神",
+  "kind": "n",
+  "id": "k0102-chigaeshi"
+ },
+ {
+  "p": "p002",
+  "seg": 18,
+  "text": "出雲の国",
+  "kind": "n",
+  "id": "izumo"
+ },
+ {
+  "p": "p002",
+  "seg": 18,
+  "text": "伊賦夜坂",
+  "kind": "n",
+  "id": "k0102-ifuyazaka"
+ },
+ {
+  "p": "p002",
+  "seg": 19,
+  "text": "イザナキの大神",
+  "kind": "p",
+  "id": "izanaki"
+ },
+ {
+  "p": "p002",
+  "seg": 19,
+  "text": "禊をしよう",
+  "kind": "n",
+  "id": "k0102-misogi"
+ },
+ {
+  "p": "p002",
+  "seg": 20,
+  "text": "筑紫",
+  "kind": "n",
+  "id": "tsukushi"
+ },
+ {
+  "p": "p002",
+  "seg": 20,
+  "text": "日向",
+  "kind": "n",
+  "id": "himuka"
+ },
+ {
+  "p": "p002",
+  "seg": 20,
+  "text": "橘の小門のアワキ原",
+  "kind": "n",
+  "id": "k0102-awakihara"
+ },
+ {
+  "p": "p003",
+  "seg": 0,
+  "text": "ツキタツフナドの神",
+  "kind": "n",
+  "id": "k0102-funado"
+ },
+ {
+  "p": "p004",
+  "seg": 1,
+  "text": "ヤソマガツヒの神",
+  "kind": "n",
+  "id": "k0102-magatsuhi"
+ },
+ {
+  "p": "p004",
+  "seg": 3,
+  "text": "カムナオビの神",
+  "kind": "n",
+  "id": "k0102-naobi"
+ },
+ {
+  "p": "p004",
+  "seg": 7,
+  "text": "阿曇の連",
+  "kind": "n",
+  "id": "k0102-azumi"
+ },
+ {
+  "p": "p004",
+  "seg": 9,
+  "text": "墨江の三前の大神",
+  "kind": "n",
+  "id": "k0102-suminoe"
+ },
+ {
+  "p": "p004",
+  "seg": 10,
+  "text": "アマテラス大御神",
+  "kind": "p",
+  "id": "amaterasu"
+ },
+ {
+  "p": "p004",
+  "seg": 10,
+  "text": "ツクヨミの命",
+  "kind": "p",
+  "id": "tsukuyomi"
+ },
+ {
+  "p": "p004",
+  "seg": 10,
+  "text": "タケハヤスサノオの命",
+  "kind": "p",
+  "id": "susanoo"
+ },
+ {
+  "p": "p004",
+  "seg": 11,
+  "text": "ハヤスサノオの命",
+  "kind": "p",
+  "id": "susanoo"
+ },
+ {
+  "p": "p005",
+  "seg": 1,
+  "text": "高天原",
+  "kind": "n",
+  "id": "takamanohara"
+ },
+ {
+  "p": "p005",
+  "seg": 3,
+  "text": "ミクラタナの神",
+  "kind": "n",
+  "id": "k0102-mikuratana"
+ },
+ {
+  "p": "p005",
+  "seg": 4,
+  "text": "夜の食す国",
+  "kind": "n",
+  "id": "k0102-osukuni"
+ },
+ {
+  "p": "p005",
+  "seg": 8,
+  "text": "八拳もある",
+  "kind": "n",
+  "id": "ya-kazu"
+ },
+ {
+  "p": "p005",
+  "seg": 10,
+  "text": "五月の蝿",
+  "kind": "n",
+  "id": "k0102-sabae"
+ },
+ {
+  "p": "p005",
+  "seg": 11,
+  "text": "イザナキ大御神",
+  "kind": "p",
+  "id": "izanaki"
+ },
+ {
+  "p": "p005",
+  "seg": 12,
+  "text": "根の堅州国",
+  "kind": "n",
+  "id": "k0102-nenokatasukuni"
+ },
+ {
+  "p": "p005",
+  "seg": 15,
+  "text": "淡海",
+  "kind": "n",
+  "id": "omi-no-kuni"
+ },
+ {
+  "p": "p005",
+  "seg": 15,
+  "text": "多賀",
+  "kind": "n",
+  "id": "k0102-taga"
+ }
+]

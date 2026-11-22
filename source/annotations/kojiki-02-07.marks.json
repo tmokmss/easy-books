@@ -1,0 +1,380 @@
+[
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "ホムダワケの命",
+  "kind": "p",
+  "id": "ojin"
+ },
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "軽島の明の宮",
+  "kind": "n",
+  "id": "k0207-karushima"
+ },
+ {
+  "p": "p001",
+  "seg": 3,
+  "text": "オオヤマモリの命",
+  "kind": "p",
+  "id": "oyamamori"
+ },
+ {
+  "p": "p001",
+  "seg": 5,
+  "text": "郎女",
+  "kind": "n",
+  "id": "iratsume"
+ },
+ {
+  "p": "p001",
+  "seg": 5,
+  "text": "オオサザキの命",
+  "kind": "p",
+  "id": "nintoku"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "ワニノヒフレノオオミ",
+  "kind": "n",
+  "id": "wani-uji"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "ウヂの若郎子",
+  "kind": "p",
+  "id": "ujinowaki"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "ヤタの若郎女",
+  "kind": "p",
+  "id": "yatanowakiiratsume"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "メドリの王",
+  "kind": "p",
+  "id": "medori"
+ },
+ {
+  "p": "p001",
+  "seg": 10,
+  "text": "ハヤブサワケの命",
+  "kind": "p",
+  "id": "hayabusawake"
+ },
+ {
+  "p": "p001",
+  "seg": 13,
+  "text": "王",
+  "kind": "n",
+  "id": "miko-o"
+ },
+ {
+  "p": "p001",
+  "seg": 21,
+  "text": "食国",
+  "kind": "n",
+  "id": "k0207-osukuni"
+ },
+ {
+  "p": "p001",
+  "seg": 21,
+  "text": "天つ日継",
+  "kind": "n",
+  "id": "k0207-amatsuhitsugi"
+ },
+ {
+  "p": "p002",
+  "seg": 0,
+  "text": "近つ淡海",
+  "kind": "n",
+  "id": "omi-no-kuni"
+ },
+ {
+  "p": "p002",
+  "seg": 0,
+  "text": "宇遅野",
+  "kind": "n",
+  "id": "k0207-ujino"
+ },
+ {
+  "p": "p002",
+  "seg": 0,
+  "text": "葛野",
+  "kind": "n",
+  "id": "k0207-kadono"
+ },
+ {
+  "p": "p004",
+  "seg": 0,
+  "text": "木幡",
+  "kind": "n",
+  "id": "k0207-kohata"
+ },
+ {
+  "p": "p004",
+  "seg": 7,
+  "text": "大御酒",
+  "kind": "n",
+  "id": "k0207-omiki"
+ },
+ {
+  "p": "p005",
+  "seg": 0,
+  "text": "ももづたう",
+  "kind": "n",
+  "id": "k0207-momozutau"
+ },
+ {
+  "p": "p005",
+  "seg": 0,
+  "text": "都奴賀",
+  "kind": "n",
+  "id": "k0207-tsunuga"
+ },
+ {
+  "p": "p005",
+  "seg": 3,
+  "text": "ササナミ",
+  "kind": "n",
+  "id": "k0207-sasanami"
+ },
+ {
+  "p": "p005",
+  "seg": 4,
+  "text": "許波多",
+  "kind": "n",
+  "id": "k0207-kohata-uta"
+ },
+ {
+  "p": "p005",
+  "seg": 7,
+  "text": "伊知比韋",
+  "kind": "n",
+  "id": "k0207-ichihii"
+ },
+ {
+  "p": "p005",
+  "seg": 7,
+  "text": "和邇佐",
+  "kind": "n",
+  "id": "k0207-wanisa"
+ },
+ {
+  "p": "p005",
+  "seg": 9,
+  "text": "三つの栗の",
+  "kind": "n",
+  "id": "k0207-mitsuguri"
+ },
+ {
+  "p": "p005",
+  "seg": 10,
+  "text": "かぶつく",
+  "kind": "n",
+  "id": "k0207-kabutsuku"
+ },
+ {
+  "p": "p006",
+  "seg": 1,
+  "text": "諸県",
+  "kind": "n",
+  "id": "k0207-morogata"
+ },
+ {
+  "p": "p006",
+  "seg": 1,
+  "text": "カミナガヒメ",
+  "kind": "p",
+  "id": "kaminagahime"
+ },
+ {
+  "p": "p006",
+  "seg": 2,
+  "text": "難波津",
+  "kind": "n",
+  "id": "naniwa"
+ },
+ {
+  "p": "p006",
+  "seg": 3,
+  "text": "タケウチの宿禰の大臣",
+  "kind": "p",
+  "id": "takeuchi"
+ },
+ {
+  "p": "p006",
+  "seg": 5,
+  "text": "豊明",
+  "kind": "n",
+  "id": "toyonoakari"
+ },
+ {
+  "p": "p007",
+  "seg": 4,
+  "text": "ほつもり",
+  "kind": "n",
+  "id": "k0207-hotsumori"
+ },
+ {
+  "p": "p009",
+  "seg": 0,
+  "text": "余佐美",
+  "kind": "n",
+  "id": "k0207-yosami"
+ },
+ {
+  "p": "p011",
+  "seg": 0,
+  "text": "古波陀",
+  "kind": "n",
+  "id": "k0207-kohada"
+ },
+ {
+  "p": "p014",
+  "seg": 0,
+  "text": "国主",
+  "kind": "n",
+  "id": "k0207-kuzu"
+ },
+ {
+  "p": "p015",
+  "seg": 1,
+  "text": "ふゆ",
+  "kind": "n",
+  "id": "k0207-fuyu"
+ },
+ {
+  "p": "p016",
+  "seg": 1,
+  "text": "口鼓",
+  "kind": "n",
+  "id": "k0207-kuchitsuzumi"
+ },
+ {
+  "p": "p018",
+  "seg": 0,
+  "text": "大贄",
+  "kind": "n",
+  "id": "k0207-onie"
+ },
+ {
+  "p": "p019",
+  "seg": 0,
+  "text": "海部",
+  "kind": "n",
+  "id": "be"
+ },
+ {
+  "p": "p019",
+  "seg": 2,
+  "text": "タケウチの宿禰の命",
+  "kind": "p",
+  "id": "takeuchi"
+ },
+ {
+  "p": "p019",
+  "seg": 3,
+  "text": "阿知吉師",
+  "kind": "n",
+  "id": "k0207-kishi"
+ },
+ {
+  "p": "p019",
+  "seg": 7,
+  "text": "和邇吉師",
+  "kind": "n",
+  "id": "k0207-wanikishi"
+ },
+ {
+  "p": "p022",
+  "seg": 0,
+  "text": "宇遅の渡し場",
+  "kind": "n",
+  "id": "k0207-uji-watari"
+ },
+ {
+  "p": "p023",
+  "seg": 2,
+  "text": "カワラの岬",
+  "kind": "n",
+  "id": "k0207-kawara"
+ },
+ {
+  "p": "p023",
+  "seg": 3,
+  "text": "弟の王",
+  "kind": "r",
+  "id": "ujinowaki"
+ },
+ {
+  "p": "p026",
+  "seg": 0,
+  "text": "アメノヒボコ",
+  "kind": "p",
+  "id": "amenohiboko"
+ },
+ {
+  "p": "p026",
+  "seg": 21,
+  "text": "多遅摩の国",
+  "kind": "n",
+  "id": "k0207-tajima"
+ },
+ {
+  "p": "p026",
+  "seg": 23,
+  "text": "タヂマモリ",
+  "kind": "p",
+  "id": "tajimamori"
+ },
+ {
+  "p": "p026",
+  "seg": 26,
+  "text": "オキナガタラシヒメの命",
+  "kind": "p",
+  "id": "jingu"
+ },
+ {
+  "p": "p026",
+  "seg": 28,
+  "text": "浪を起こすひれ",
+  "kind": "n",
+  "id": "hire"
+ },
+ {
+  "p": "p026",
+  "seg": 30,
+  "text": "伊豆志の八前の大神",
+  "kind": "n",
+  "id": "k0207-izushi"
+ },
+ {
+  "p": "p027",
+  "seg": 6,
+  "text": "うれづく",
+  "kind": "n",
+  "id": "k0207-uretsuku"
+ },
+ {
+  "p": "p027",
+  "seg": 16,
+  "text": "青人草",
+  "kind": "n",
+  "id": "k0207-aohitokusa"
+ },
+ {
+  "p": "p029",
+  "seg": 1,
+  "text": "恵賀の裳伏の岡",
+  "kind": "n",
+  "id": "k0207-mofushi"
+ }
+]

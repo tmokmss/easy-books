@@ -1,0 +1,254 @@
+[
+  {
+    "p": "p001",
+    "seg": 0,
+    "text": "イザホワケの命",
+    "kind": "p",
+    "id": "richu"
+  },
+  {
+    "p": "p001",
+    "seg": 0,
+    "text": "伊波礼の若桜の宮",
+    "kind": "n",
+    "id": "k0302-iware-wakazakura"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "葛城",
+    "kind": "n",
+    "id": "k0302-katsuragi"
+  },
+  {
+    "p": "p001",
+    "seg": 1,
+    "text": "宿禰",
+    "kind": "n",
+    "id": "sukune"
+  },
+  {
+    "p": "p001",
+    "seg": 2,
+    "text": "イチノベノオシハの王",
+    "kind": "p",
+    "id": "ichinobe"
+  },
+  {
+    "p": "p001",
+    "seg": 3,
+    "text": "難波",
+    "kind": "n",
+    "id": "naniwa"
+  },
+  {
+    "p": "p001",
+    "seg": 3,
+    "text": "大嘗",
+    "kind": "n",
+    "id": "k0302-onie"
+  },
+  {
+    "p": "p001",
+    "seg": 3,
+    "text": "豊明",
+    "kind": "n",
+    "id": "toyonoakari"
+  },
+  {
+    "p": "p001",
+    "seg": 4,
+    "text": "スミノエノナカツの王",
+    "kind": "p",
+    "id": "suminoenonakatsu"
+  },
+  {
+    "p": "p001",
+    "seg": 5,
+    "text": "倭の漢の直",
+    "kind": "n",
+    "id": "k0302-yamato-no-aya"
+  },
+  {
+    "p": "p001",
+    "seg": 5,
+    "text": "倭へ向かわせた",
+    "kind": "n",
+    "id": "yamato"
+  },
+  {
+    "p": "p001",
+    "seg": 6,
+    "text": "多遅比の野",
+    "kind": "n",
+    "id": "k0302-tajihi"
+  },
+  {
+    "p": "p001",
+    "seg": 10,
+    "text": "立て薦",
+    "kind": "n",
+    "id": "k0302-tategomo"
+  },
+  {
+    "p": "p002",
+    "seg": 0,
+    "text": "波邇賦の坂",
+    "kind": "n",
+    "id": "k0302-hanifu"
+  },
+  {
+    "p": "p003",
+    "seg": 0,
+    "text": "波邇布の坂",
+    "kind": "n",
+    "id": "k0302-hanifu"
+  },
+  {
+    "p": "p004",
+    "seg": 0,
+    "text": "大坂",
+    "kind": "n",
+    "id": "k0302-osaka"
+  },
+  {
+    "p": "p004",
+    "seg": 1,
+    "text": "当岐麻の道",
+    "kind": "n",
+    "id": "k0302-tagima"
+  },
+  {
+    "p": "p005",
+    "seg": 1,
+    "text": "当芸麻の道",
+    "kind": "n",
+    "id": "k0302-tagima"
+  },
+  {
+    "p": "p006",
+    "seg": 0,
+    "text": "石上の神宮",
+    "kind": "n",
+    "id": "k0302-isonokami"
+  },
+  {
+    "p": "p006",
+    "seg": 1,
+    "text": "ミズハワケの命",
+    "kind": "p",
+    "id": "hanzei"
+  },
+  {
+    "p": "p006",
+    "seg": 5,
+    "text": "隼人",
+    "kind": "n",
+    "id": "hayato"
+  },
+  {
+    "p": "p006",
+    "seg": 5,
+    "text": "ソバカリ",
+    "kind": "p",
+    "id": "sobakari"
+  },
+  {
+    "p": "p006",
+    "seg": 8,
+    "text": "禄",
+    "kind": "n",
+    "id": "k0302-roku"
+  },
+  {
+    "p": "p006",
+    "seg": 20,
+    "text": "王子",
+    "kind": "r",
+    "id": "hanzei"
+  },
+  {
+    "p": "p006",
+    "seg": 22,
+    "text": "近つ飛鳥",
+    "kind": "n",
+    "id": "k0302-chikatsu-asuka"
+  },
+  {
+    "p": "p006",
+    "seg": 23,
+    "text": "祓禊",
+    "kind": "n",
+    "id": "k0302-misogi"
+  },
+  {
+    "p": "p006",
+    "seg": 24,
+    "text": "遠つ飛鳥",
+    "kind": "n",
+    "id": "k0302-totsu-asuka"
+  },
+  {
+    "p": "p006",
+    "seg": 25,
+    "text": "天皇に奏上させた",
+    "kind": "r",
+    "id": "richu"
+  },
+  {
+    "p": "p006",
+    "seg": 27,
+    "text": "蔵の官",
+    "kind": "n",
+    "id": "k0302-kura-no-tsukasa"
+  },
+  {
+    "p": "p006",
+    "seg": 27,
+    "text": "糧地",
+    "kind": "n",
+    "id": "k0302-tadokoro"
+  },
+  {
+    "p": "p006",
+    "seg": 28,
+    "text": "若桜部という名",
+    "kind": "n",
+    "id": "k0302-wakasakurabe"
+  },
+  {
+    "p": "p006",
+    "seg": 29,
+    "text": "伊波礼部",
+    "kind": "n",
+    "id": "be"
+  },
+  {
+    "p": "p006",
+    "seg": 30,
+    "text": "御陵",
+    "kind": "n",
+    "id": "misasagi"
+  },
+  {
+    "p": "p006",
+    "seg": 30,
+    "text": "毛受",
+    "kind": "n",
+    "id": "k0302-mozu"
+  },
+  {
+    "p": "p007",
+    "seg": 1,
+    "text": "九尺二寸半",
+    "kind": "n",
+    "id": "k0302-shaku"
+  },
+  {
+    "p": "p007",
+    "seg": 3,
+    "text": "丸邇",
+    "kind": "n",
+    "id": "wani-uji"
+  }
+]

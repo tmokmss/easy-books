@@ -76,6 +76,8 @@ function escapeHtml(s: string): string {
  *
  * グロスを出す条件: p かつ 表示文字 ≠ short かつ ≠ name のときだけ。
  * つまり「ラスコーリニコフ」には出さず、「ロージャ」「ロジオン・ロマーヌイチ」には出す。
+ * short に尊称を付けただけの表示（「イザナキの神」「イザナキ大御神」）にも出さない。
+ * 同じ神・天皇を尊称違いで呼ぶ古事記では、同じ名を重ねるだけになる。
  * r にグロスを出してはいけない。
  */
 export function renderParagraphHtml(ja: string, people: Record<string, Person>): string {
@@ -93,8 +95,10 @@ export function renderParagraphHtml(ja: string, people: Record<string, Person>):
       continue;
     }
     const person = people[t.id];
+    const honorificOnly =
+      person && t.text.startsWith(person.short) && /^(の|大御神$)/.test(t.text.slice(person.short.length));
     const needsGloss =
-      t.type === 'p' && person && t.text !== person.short && t.text !== person.name;
+      t.type === 'p' && person && t.text !== person.short && t.text !== person.name && !honorificOnly;
     const gloss = needsGloss
       ? `<span class="gloss">〔${escapeHtml(person.short)}〕</span>`
       : '';
