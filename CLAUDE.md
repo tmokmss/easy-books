@@ -34,6 +34,10 @@ python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<wor
 
 - 章: `src/content/chapters/<chapterId>.json`（chapterId 例: `crime-01-02`）。段落 = `{id, src, ja, status, em?, translatedBy?, segments?}`
 - **segments 不変条件**（対訳表示用）: `segments[].ja` を順に連結すると段落の `ja` と完全一致、`src` 連結は正規化後の原文と一致。merge ツールと content.config の両方で検証される
+- **表示上の改段** `segments[].pb: true`: 原文の1段落が数千字ある版（古文）で、段落の1対1を保ったまま
+  読書画面だけ現代の小説のように段落を分ける。断片の境目にしか入らない。位置は `source/breaks/<chapterId>.json`
+  に置き `npx tsx tools/apply-breaks.ts <chapterId> source/breaks/<chapterId>.json` で適用する（訳文の文字列は不変）。
+  翻訳の再マージ・文対応の作り直しは pb を消すので、そのあと再適用する
 - インラインマークアップは3種のみ: `{{p:id|表示}}`（人物・固有名）/ `{{r:id|表示}}`(代名詞参照・語注なし) / `{{n:id|表示}}`（語注）。未知 ID や不正形式はビルドが落ちる。翻訳段階では付けない（レビュー工程の仕事）
 - 作品別データ: `src/data/works.json`（カタログ）＋ `src/data/works/<workId>/{people,glossary,style-guide}.json`。人物の音写は people.json の表記に完全一致させる。訳語は style-guide.json の terms に従う（例: рубль→ルーブル、распивочная→安酒場）
 - 原文・中間生成物は `source/` にコミット（wikisource API 応答、段落スケルトン、文リスト、アラインメント）
