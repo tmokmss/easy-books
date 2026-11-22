@@ -12,7 +12,7 @@
   {"p": "p001", "seg": 2, "text": "葦原の中つ国", "kind": "n", "id": "ashihara-no-nakatsukuni"},
   {"p": "p001", "seg": 3, "text": "国つ神", "kind": "n", "id": "kunitsukami"},
   {"p": "p001", "seg": 5, "text": "オオクニヌシの神", "kind": "p", "id": "okuninushi"},
-  {"p": "p002", "seg": 1, "text": "アメノワカヒコ", "kind": "p", "id": "amenowakahiko"},
+  {"p": "p002", "seg": 1, "text": "アメワカヒコ", "kind": "p", "id": "amenowakahiko"},
   {"p": "p002", "seg": 2, "text": "天のまかこ弓と天のはは矢", "kind": "n", "id": "k0107-ame-no-yumiya"},
   {"p": "p002", "seg": 3, "text": "シタテルヒメ", "kind": "n", "id": "k0107-shitateruhime"},
   {"p": "p002", "seg": 5, "text": "ナキメ", "kind": "n", "id": "k0107-nakime"},
@@ -53,5 +53,5 @@
   {"p": "p008", "seg": 6, "text": "多芸志の小浜", "kind": "n", "id": "k0107-tagishi"},
   {"p": "p008", "seg": 6, "text": "天の御饗", "kind": "n", "id": "k0107-ame-no-miae"},
   {"p": "p008", "seg": 6, "text": "火きり臼", "kind": "n", "id": "k0107-hikiriusu"},
-  {"p": "p008", "seg": 6, "text": "カミムスヒの御祖の命", "kind": "p", "id": "kamimusuhi"}
+  {"p": "p008", "seg": 6, "text": "カムムスヒの御祖の命", "kind": "p", "id": "kamimusuhi"}
 ]

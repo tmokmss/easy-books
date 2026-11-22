@@ -36,7 +36,7 @@
   {"p":"p004","seg":3,"text":"長鳴鳥","kind":"n","id":"k0103-naganakidori"},
   {"p":"p004","seg":3,"text":"アマツマラ","kind":"n","id":"k0103-amatsumara"},
   {"p":"p004","seg":3,"text":"アメノコヤネの命","kind":"p","id":"amenokoyane"},
-  {"p":"p004","seg":3,"text":"フトダマの命","kind":"p","id":"futodama"},
+  {"p":"p004","seg":3,"text":"フトタマの命","kind":"p","id":"futodama"},
   {"p":"p004","seg":4,"text":"天の香山の雄鹿","kind":"n","id":"k0103-kaguyama"},
   {"p":"p004","seg":4,"text":"天のははか","kind":"n","id":"k0103-hahaka"},
   {"p":"p004","seg":5,"text":"占いをさせ","kind":"n","id":"k0103-futomani"},
@@ -49,5 +49,5 @@
   {"p":"p004","seg":10,"text":"しりくめ縄","kind":"n","id":"k0103-shirikumenawa"},
   {"p":"p005","seg":0,"text":"千位の置戸","kind":"n","id":"k0103-chikuranookido"},
   {"p":"p005","seg":1,"text":"オオゲツヒメの神","kind":"n","id":"k0103-ogetsuhime"},
-  {"p":"p005","seg":4,"text":"カミムスヒの御祖の命","kind":"p","id":"kamimusuhi"}
+  {"p":"p005","seg":4,"text":"カムムスヒの御祖の命","kind":"p","id":"kamimusuhi"}
 ]

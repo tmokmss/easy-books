@@ -36,7 +36,7 @@
   { "p": "p006", "seg": 1, "text": "二柱", "kind": "n", "id": "hashira" },
   { "p": "p006", "seg": 3, "text": "オカミの神", "kind": "n", "id": "k0104-okami" },
   { "p": "p006", "seg": 6, "text": "オオクニヌシの神", "kind": "p", "id": "okuninushi" },
-  { "p": "p006", "seg": 6, "text": "オオナムヂの神", "kind": "p", "id": "okuninushi" },
+  { "p": "p006", "seg": 6, "text": "オオアナムヂの神", "kind": "p", "id": "okuninushi" },
   { "p": "p006", "seg": 6, "text": "アシハラシコオの神", "kind": "p", "id": "okuninushi" },
   { "p": "p006", "seg": 6, "text": "ヤチホコの神", "kind": "p", "id": "okuninushi" },
   { "p": "p006", "seg": 6, "text": "ウツシクニタマの神", "kind": "p", "id": "okuninushi" }
