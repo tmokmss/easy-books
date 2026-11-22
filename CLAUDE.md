@@ -243,7 +243,8 @@ python3 tools/merge-glossary-fragments.py <workId>     # source/annotations/<wor
    また本文ブロックは `<p>` / `<center>` だけでなく **`<dd>`** もある（文語の序など一段下げた引用ブロック。
    狂人日記の序がこれで、拾わないと丸ごと落ちる）
 2. `tools/split-src.ts` — 分かち書きしない言語は空白を手掛かりにできない。zh/ja は句点・感嘆符・疑問符で切り、
-   **括弧の内側では切らない**（会話文が途中で割れる）。閉じ括弧は直前が文末記号なら文に含める
+   zh は**括弧の内側では切らない**（会話文が途中で割れる）。閉じ括弧は直前が文末記号なら文に含める。
+   ja（古文）は「」の中に千字近い語りが入るので内側の句点でも切る（「。』」」のように閉じ括弧が続くときは最後まで含める）
 3. `tools/merge-aligned-translation.ts` + `src/content.config.ts` — `segments[].src` の連結は
    zh/ja では空白を挟まない。連結不変条件の比較は空白を落として行う（言語ごとに空白の意味が違うため）
 4. `tools/check-alignment.ts` — `SRC_LANGS` に1エントリ。中国語は

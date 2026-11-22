@@ -50,7 +50,7 @@
  },
  {
   "p": "p012",
-  "seg": 1,
+  "seg": 4,
   "text": "姫",
   "kind": "p",
   "id": "kaguya"
@@ -92,14 +92,14 @@
  },
  {
   "p": "p002",
-  "seg": 45,
+  "seg": 75,
   "text": "大伴大納言",
   "kind": "p",
   "id": "otomo"
  },
  {
   "p": "p002",
-  "seg": 46,
+  "seg": 77,
   "text": "石上中納言",
   "kind": "p",
   "id": "isonokami"
@@ -148,21 +148,21 @@
  },
  {
   "p": "p024",
-  "seg": 4,
+  "seg": 6,
   "text": "大納言",
   "kind": "p",
   "id": "otomo"
  },
  {
   "p": "p025",
-  "seg": 9,
+  "seg": 12,
   "text": "中納言",
   "kind": "p",
   "id": "isonokami"
  },
  {
   "p": "p025",
-  "seg": 15,
+  "seg": 20,
   "text": "くらつ麿",
   "kind": "p",
   "id": "kuratsumaro"
@@ -190,7 +190,7 @@
  },
  {
   "p": "p035",
-  "seg": 41,
+  "seg": 64,
   "text": "高野大国",
   "kind": "p",
   "id": "takano"
@@ -204,14 +204,14 @@
  },
  {
   "p": "p012",
-  "seg": 2,
+  "seg": 5,
   "text": "この皇子",
   "kind": "r",
   "id": "kuramochi"
  },
  {
   "p": "p030",
-  "seg": 14,
+  "seg": 17,
   "text": "この幼い者",
   "kind": "r",
   "id": "kaguya"
@@ -302,84 +302,84 @@
  },
  {
   "p": "p002",
-  "seg": 23,
+  "seg": 25,
   "text": "変化の者",
   "kind": "n",
   "id": "henge"
  },
  {
   "p": "p002",
-  "seg": 37,
+  "seg": 56,
   "text": "唱歌",
   "kind": "n",
   "id": "shoka"
  },
  {
   "p": "p002",
-  "seg": 37,
+  "seg": 57,
   "text": "君達",
   "kind": "n",
   "id": "kindachi"
  },
  {
   "p": "p002",
-  "seg": 40,
+  "seg": 67,
   "text": "天竺",
   "kind": "n",
   "id": "tenjiku"
  },
  {
   "p": "p002",
-  "seg": 40,
+  "seg": 67,
   "text": "仏の御石の鉢",
   "kind": "n",
   "id": "hotoke-no-ishi-no-hachi"
  },
  {
   "p": "p002",
-  "seg": 42,
+  "seg": 70,
   "text": "蓬莱",
   "kind": "n",
   "id": "horai"
  },
  {
   "p": "p002",
-  "seg": 44,
+  "seg": 74,
   "text": "唐土",
   "kind": "n",
   "id": "morokoshi"
  },
  {
   "p": "p002",
-  "seg": 44,
+  "seg": 74,
   "text": "火鼠の皮衣",
   "kind": "n",
   "id": "hinezumi-no-kawaginu"
  },
  {
   "p": "p002",
-  "seg": 45,
+  "seg": 75,
   "text": "龍の首に五色に光る玉",
   "kind": "n",
   "id": "tatsu-no-kubi-no-tama"
  },
  {
   "p": "p002",
-  "seg": 46,
+  "seg": 77,
   "text": "子安貝",
   "kind": "n",
   "id": "koyasugai"
  },
  {
   "p": "p002",
-  "seg": 53,
+  "seg": 86,
   "text": "皇子たち",
   "kind": "n",
   "id": "miko"
  },
  {
   "p": "p002",
-  "seg": 53,
+  "seg": 86,
   "text": "上達部",
   "kind": "n",
   "id": "kandachime"
@@ -477,14 +477,14 @@
  },
  {
   "p": "p012",
-  "seg": 10,
+  "seg": 37,
   "text": "ほうかんるり",
   "kind": "n",
   "id": "houkanruri"
  },
  {
   "p": "p012",
-  "seg": 10,
+  "seg": 41,
   "text": "瑠璃",
   "kind": "n",
   "id": "ruri"
@@ -519,7 +519,7 @@
  },
  {
   "p": "p016",
-  "seg": 8,
+  "seg": 11,
   "text": "官位",
   "kind": "n",
   "id": "kan-i"
@@ -533,14 +533,14 @@
  },
  {
   "p": "p018",
-  "seg": 11,
+  "seg": 12,
   "text": "宮司",
   "kind": "n",
   "id": "miyazukasa"
  },
  {
   "p": "p018",
-  "seg": 13,
+  "seg": 14,
   "text": "たまさかる",
   "kind": "n",
   "id": "tamasakaru"
@@ -554,14 +554,14 @@
  },
  {
   "p": "p019",
-  "seg": 9,
+  "seg": 16,
   "text": "国司",
   "kind": "n",
   "id": "kokushi"
  },
  {
   "p": "p019",
-  "seg": 9,
+  "seg": 17,
   "text": "五十両",
   "kind": "n",
   "id": "ryo"
@@ -582,56 +582,56 @@
  },
  {
   "p": "p023",
-  "seg": 5,
+  "seg": 6,
   "text": "あへなし",
   "kind": "n",
   "id": "ahenashi"
  },
  {
   "p": "p024",
-  "seg": 9,
+  "seg": 16,
   "text": "絹・綿・銭",
   "kind": "n",
   "id": "wata"
  },
  {
   "p": "p024",
-  "seg": 22,
+  "seg": 31,
   "text": "舎人",
   "kind": "n",
   "id": "toneri"
  },
  {
   "p": "p024",
-  "seg": 43,
+  "seg": 67,
   "text": "播磨の明石",
   "kind": "n",
   "id": "harima-akashi"
  },
  {
   "p": "p024",
-  "seg": 60,
+  "seg": 94,
   "text": "あなたへがた",
   "kind": "n",
   "id": "anatahegata"
  },
  {
   "p": "p025",
-  "seg": 7,
+  "seg": 8,
   "text": "大炊寮",
   "kind": "n",
   "id": "ooiryo"
  },
  {
   "p": "p025",
-  "seg": 37,
+  "seg": 48,
   "text": "八島の鼎",
   "kind": "n",
   "id": "yashima-no-kanae"
  },
  {
   "p": "p025",
-  "seg": 46,
+  "seg": 60,
   "text": "かひなし",
   "kind": "n",
   "id": "kahinashi"
@@ -666,21 +666,21 @@
  },
  {
   "p": "p030",
-  "seg": 25,
+  "seg": 33,
   "text": "宮仕え",
   "kind": "n",
   "id": "miyazukae"
  },
  {
   "p": "p030",
-  "seg": 27,
+  "seg": 37,
   "text": "冠",
   "kind": "n",
   "id": "koburi"
  },
  {
   "p": "p030",
-  "seg": 36,
+  "seg": 58,
   "text": "行幸",
   "kind": "n",
   "id": "gyoko"
@@ -715,84 +715,84 @@
  },
  {
   "p": "p035",
-  "seg": 19,
+  "seg": 26,
   "text": "八月十五日",
   "kind": "n",
   "id": "hachigatsu-jugoya"
  },
  {
   "p": "p035",
-  "seg": 23,
+  "seg": 35,
   "text": "前世からの約束",
   "kind": "n",
   "id": "sukuse"
  },
  {
   "p": "p035",
-  "seg": 41,
+  "seg": 64,
   "text": "六衛府",
   "kind": "n",
   "id": "rokuefu"
  },
  {
   "p": "p035",
-  "seg": 41,
+  "seg": 64,
   "text": "少将",
   "kind": "n",
   "id": "shosho"
  },
  {
   "p": "p035",
-  "seg": 41,
+  "seg": 64,
   "text": "勅使",
   "kind": "n",
   "id": "chokushi"
  },
  {
   "p": "p035",
-  "seg": 42,
+  "seg": 65,
   "text": "築地",
   "kind": "n",
   "id": "tsuiji"
  },
  {
   "p": "p035",
-  "seg": 45,
+  "seg": 68,
   "text": "塗籠",
   "kind": "n",
   "id": "nurigome"
  },
  {
   "p": "p035",
-  "seg": 59,
+  "seg": 98,
   "text": "子の時",
   "kind": "n",
   "id": "ne-no-toki"
  },
  {
   "p": "p035",
-  "seg": 61,
+  "seg": 100,
   "text": "五尺",
   "kind": "n",
   "id": "shaku"
  },
  {
   "p": "p035",
-  "seg": 74,
+  "seg": 118,
   "text": "汚れた所",
   "kind": "n",
   "id": "kitanaki-tokoro"
  },
  {
   "p": "p035",
-  "seg": 87,
+  "seg": 137,
   "text": "天の羽衣",
   "kind": "n",
   "id": "ama-no-hagoromo"
  },
  {
   "p": "p035",
-  "seg": 88,
+  "seg": 138,
   "text": "不死の薬",
   "kind": "n",
   "id": "fushi-no-kusuri"
@@ -806,14 +806,14 @@
  },
  {
   "p": "p037",
-  "seg": 9,
+  "seg": 10,
   "text": "管弦のお遊び",
   "kind": "n",
   "id": "kangen"
  },
  {
   "p": "p037",
-  "seg": 11,
+  "seg": 12,
   "text": "駿河の国",
   "kind": "n",
   "id": "suruga"
