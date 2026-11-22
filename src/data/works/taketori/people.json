@@ -81,5 +81,69 @@
     "role": "かぐや姫の噂を聞いて召し出そうとする天皇",
     "rel": "五人の貴公子のあとにかぐや姫を求める",
     "firstAppearance": "taketori-01#p030"
+  },
+  "akita": {
+    "name": "三室戸斎部秋田",
+    "short": "秋田",
+    "original": "三室戸齋部秋田",
+    "aliases": ["三室戸斎部秋田", "秋田"],
+    "role": "翁に呼ばれて、娘に名をつける人",
+    "firstAppearance": "taketori-01#p001"
+  },
+  "uchimaro": {
+    "name": "漢部内麿",
+    "short": "漢部内麿",
+    "original": "漢部内麿",
+    "aliases": ["漢部内麿"],
+    "role": "工匠の頭",
+    "firstAppearance": "taketori-01#p016"
+  },
+  "oukei": {
+    "name": "王卿",
+    "short": "王卿",
+    "original": "王卿",
+    "aliases": ["王卿"],
+    "role": "唐土の商人",
+    "firstAppearance": "taketori-01#p019"
+  },
+  "fusamori": {
+    "name": "小野房守",
+    "short": "小野房守",
+    "original": "小野房守",
+    "aliases": ["小野房守"],
+    "role": "阿倍御主人の家来",
+    "firstAppearance": "taketori-01#p019"
+  },
+  "kuratsumaro": {
+    "name": "くらつ麿",
+    "short": "くらつ麿",
+    "original": "くらつ麿",
+    "aliases": ["くらつ麿"],
+    "role": "大炊寮の役人の老人",
+    "firstAppearance": "taketori-01#p025"
+  },
+  "fusako": {
+    "name": "内侍中臣房子",
+    "short": "房子",
+    "original": "内侍中臣のふさ子",
+    "aliases": ["中臣房子", "房子", "内侍"],
+    "role": "帝に仕える女官",
+    "firstAppearance": "taketori-01#p030"
+  },
+  "takano": {
+    "name": "少将高野大国",
+    "short": "高野大国",
+    "original": "少將高野大國",
+    "aliases": ["高野大国"],
+    "role": "帝の命で翁の家に遣わされる勅使",
+    "firstAppearance": "taketori-01#p035"
+  },
+  "iwakasa": {
+    "name": "調岩笠",
+    "short": "岩笠",
+    "original": "調岩笠",
+    "aliases": ["調岩笠", "岩笠"],
+    "role": "帝の命を受けて駿河の国へ向かう勅使",
+    "firstAppearance": "taketori-01#p039"
   }
 }
