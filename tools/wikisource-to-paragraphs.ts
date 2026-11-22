@@ -4,7 +4,7 @@
  *
  * 使い方:
  *   tsx tools/wikisource-to-paragraphs.ts <api.json> <workId> <chapterId> <chapterLabel> <order>
- *     [--lead-heading <正規表現>]
+ *     [--lead-heading <正規表現>] [--section <見出し> [--section-end <見出し>]] [--paragraphs <from>-<to>[,<from>-<to>…]]
  * 例:
  *   tsx tools/wikisource-to-paragraphs.ts source/wikisource/crime-01-01.api.json \
  *     crime crime-01-01 "第一部 第一章" 1
@@ -14,6 +14,11 @@
  * --lead-heading: 本文冒頭の <center> 群（題辞・概要など、章の見出しブロック）を1段落にまとめる。
  *   正規表現に一致する行は章見出しそのもの（chapterLabel と重複）とみなして落とす。
  *   本文途中の <center> は通常の段落として扱う。
+ *
+ * --section: 1ページに複数の章が入っている版（古事記の中卷＝天皇ごとの見出し）で、その見出しの節だけを取る。
+ *   --section-end を付けると、そこまでの節をまとめて1章にする（途中の見出しは落として警告に出す）。
+ * --paragraphs: 見出しを持たない区切り（古事記の上卷の各神話）を、抽出後の段落の番号（1始まり）で切り出す。
+ *   「1-7,9」のように飛ばして書ける（底本のページに同じ本文が二重に入っている段落を除くため）。
  *
  * 題辞（<div class="epigraph">）は本文として拾い、脚注・編集者注の一覧（references）は落とす。
  *
@@ -34,6 +39,23 @@ if (leadHeadingIdx >= 0 && !flags[leadHeadingIdx + 1]) {
   process.exit(1);
 }
 const leadHeadingDrop = leadHeadingIdx >= 0 ? new RegExp(flags[leadHeadingIdx + 1]) : null;
+
+function flagValue(name: string): string | null {
+  const i = flags.indexOf(name);
+  if (i < 0) return null;
+  if (!flags[i + 1]) {
+    console.error(`${name} には値を渡すこと`);
+    process.exit(1);
+  }
+  return flags[i + 1];
+}
+const section = flagValue('--section');
+const sectionEnd = flagValue('--section-end') ?? section;
+const paragraphSpec = flagValue('--paragraphs');
+if (paragraphSpec && !/^\d+(-\d+)?(,\d+(-\d+)?)*$/.test(paragraphSpec)) {
+  console.error('--paragraphs は <from>-<to>[,<from>-<to>…] の形で渡すこと');
+  process.exit(1);
+}
 
 const api = JSON.parse(readFileSync(apiJsonPath, 'utf-8'));
 const html: string = api.parse.text;
@@ -182,6 +204,19 @@ while ((hm = headingRe.exec(body))) {
 }
 if (cutAt >= 0) body = body.slice(0, cutAt);
 
+if (section) {
+  const heads = [...body.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/g)];
+  const texts = heads.map((m) => stripInvisible(decodeEntities(m[1].replace(/<[^>]+>/g, ''))).trim());
+  const from = texts.indexOf(section);
+  const to = texts.indexOf(sectionEnd!);
+  if (from < 0 || to < from) {
+    console.error(`見出し "${section}"〜"${sectionEnd}" が見つからない。ページの見出し: ${texts.join(' / ')}`);
+    process.exit(1);
+  }
+  // 開始の見出しそのものは chapterLabel と重複するので含めない
+  body = body.slice(heads[from].index! + heads[from][0].length, heads[to + 1]?.index ?? body.length);
+}
+
 // 題辞は <p> ではなく <div class="epigraph"> に置かれる版がある（チェーホフ短編の «Кому повем…»）。
 // 入れ子の <div> を含むので開きタグから対応する </div> までを数えて取り出し、<center> と同じ
 // 「本文だが <p> の外」ブロックとして本文の流れに戻す（位置が変わらないので段落順は保たれる）。
@@ -236,6 +271,8 @@ for (const m of body.matchAll(/<(p|center|dd)\b[^>]*>([\s\S]*?)<\/\1>/g)) {
     // ルビは親文字だけを本文に残す。読みを残すと「裳着（もぎ）」の形で原文に混ざる
     .replace(/<(rt|rp)\b[^>]*>[\s\S]*?<\/\1>/g, '')
     .replace(/<span[^>]*class="[^"]*mw-editsection[^"]*"[\s\S]*?<\/span>/g, '')
+    // 校異（zh の {{另}}）は採った字の後ろに「一作「…」」の吹き出しを持つ。本文は採った字だけ
+    .replace(/<span[^>]*class="[^"]*variant-tooltip[^"]*"[\s\S]*?<\/span>/g, '')
     // 校正版（Proofread Page）の原本ページ番号マーカー [59] を本文に混ぜない
     .replace(/<span[^>]*class="[^"]*(?:PageNumber|pagenum)[^"]*"[\s\S]*?<\/span>/gi, '')
     .replace(/<br\s*\/?>/g, '\n')
@@ -278,6 +315,19 @@ if (leadHeadingDrop) {
   }
 }
 
+if (paragraphSpec) {
+  const picked: Block[] = [];
+  for (const part of paragraphSpec.split(',')) {
+    const [from, to = from] = part.split('-').map(Number);
+    if (from < 1 || to < from || to > blocks.length) {
+      console.error(`--paragraphs ${part} が範囲外（抽出された段落は ${blocks.length} 個）`);
+      process.exit(1);
+    }
+    picked.push(...blocks.slice(from - 1, to));
+  }
+  blocks.splice(0, blocks.length, ...picked);
+}
+
 const paragraphs: SkeletonParagraph[] = blocks.map((b, i) => {
   const p: SkeletonParagraph = {
     id: `p${String(i + 1).padStart(3, '0')}`,
@@ -293,7 +343,8 @@ const out = {
   workId,
   chapterLabel,
   order: Number(orderStr),
-  sourceUrl: `https://${wikiLang}.wikisource.org/?curid=${api.parse.pageid ?? ''}`,
+  // 漢文（lzh）の本文は zh.wikisource に置かれている
+  sourceUrl: `https://${wikiLang === 'lzh' ? 'zh' : wikiLang}.wikisource.org/?curid=${api.parse.pageid ?? ''}`,
   sourceRevId: api.parse.revid,
   paragraphs,
 };
