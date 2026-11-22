@@ -106,6 +106,17 @@ const SRC_LANGS: Record<string, SrcLangSpec> = {
     noWordBoundary: true,
     sentenceEnd: '。！？',
   },
+  // 漢文（古事記の変体漢文）
+  lzh: {
+    letters: '',
+    numbers: {},
+    cjkNumerals: true,
+    // 神・嶋は「八十神」「大八嶋國」のように名の一部になるので単位に入れない
+    numeralUnits: '柱人日夜年歳歲月代世尋拳',
+    negations: ['不', '無', '未', '勿', '莫', '非'],
+    noWordBoundary: true,
+    sentenceEnd: '。！？',
+  },
 };
 
 const sourceLang = catalog[chapter.workId]?.sourceLang;

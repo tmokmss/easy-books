@@ -1,0 +1,310 @@
+[
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "高天原",
+  "kind": "n",
+  "id": "takamanohara"
+ },
+ {
+  "p": "p001",
+  "seg": 1,
+  "text": "タカミムスヒの神",
+  "kind": "p",
+  "id": "takamimusuhi"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "三柱",
+  "kind": "n",
+  "id": "hashira"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "独り神",
+  "kind": "n",
+  "id": "k0101-hitorigami"
+ },
+ {
+  "p": "p001",
+  "seg": 3,
+  "text": "ウマシアシカビヒコヂの神",
+  "kind": "n",
+  "id": "k0101-ashikabi"
+ },
+ {
+  "p": "p001",
+  "seg": 5,
+  "text": "別天つ神",
+  "kind": "n",
+  "id": "k0101-koto-amatsukami"
+ },
+ {
+  "p": "p002",
+  "seg": 2,
+  "text": "妹",
+  "kind": "n",
+  "id": "k0101-imo"
+ },
+ {
+  "p": "p002",
+  "seg": 3,
+  "text": "（二柱）",
+  "kind": "n",
+  "id": "warichu"
+ },
+ {
+  "p": "p002",
+  "seg": 6,
+  "text": "イザナキの神",
+  "kind": "p",
+  "id": "izanaki"
+ },
+ {
+  "p": "p002",
+  "seg": 6,
+  "text": "イザナミの神",
+  "kind": "p",
+  "id": "izanami"
+ },
+ {
+  "p": "p002",
+  "seg": 7,
+  "text": "神世七代",
+  "kind": "n",
+  "id": "k0101-kamiyonanayo"
+ },
+ {
+  "p": "p003",
+  "seg": 0,
+  "text": "天つ神",
+  "kind": "n",
+  "id": "amatsukami"
+ },
+ {
+  "p": "p003",
+  "seg": 0,
+  "text": "イザナキの命",
+  "kind": "p",
+  "id": "izanaki"
+ },
+ {
+  "p": "p003",
+  "seg": 0,
+  "text": "イザナミの命",
+  "kind": "p",
+  "id": "izanami"
+ },
+ {
+  "p": "p003",
+  "seg": 1,
+  "text": "天の沼矛",
+  "kind": "n",
+  "id": "k0101-nuboko"
+ },
+ {
+  "p": "p003",
+  "seg": 2,
+  "text": "天の浮橋",
+  "kind": "n",
+  "id": "k0101-ukihashi"
+ },
+ {
+  "p": "p003",
+  "seg": 2,
+  "text": "こおろこおろ",
+  "kind": "n",
+  "id": "k0101-kooro"
+ },
+ {
+  "p": "p003",
+  "seg": 2,
+  "text": "オノゴロ島",
+  "kind": "n",
+  "id": "k0101-onogoro"
+ },
+ {
+  "p": "p003",
+  "seg": 3,
+  "text": "天の御柱",
+  "kind": "n",
+  "id": "k0101-mihashira"
+ },
+ {
+  "p": "p003",
+  "seg": 3,
+  "text": "八尋殿",
+  "kind": "n",
+  "id": "hiro"
+ },
+ {
+  "p": "p003",
+  "seg": 14,
+  "text": "ヒルコ",
+  "kind": "n",
+  "id": "k0101-hiruko"
+ },
+ {
+  "p": "p003",
+  "seg": 16,
+  "text": "淡島",
+  "kind": "n",
+  "id": "k0101-awashima"
+ },
+ {
+  "p": "p004",
+  "seg": 2,
+  "text": "ふとまに",
+  "kind": "n",
+  "id": "k0101-futomani"
+ },
+ {
+  "p": "p005",
+  "seg": 0,
+  "text": "淡道の穂の狭別島",
+  "kind": "n",
+  "id": "k0101-awaji"
+ },
+ {
+  "p": "p005",
+  "seg": 1,
+  "text": "伊予の二名島",
+  "kind": "n",
+  "id": "k0101-iyo-futana"
+ },
+ {
+  "p": "p005",
+  "seg": 3,
+  "text": "粟の国",
+  "kind": "n",
+  "id": "k0101-shikoku-kuni"
+ },
+ {
+  "p": "p005",
+  "seg": 4,
+  "text": "隠伎の三子島",
+  "kind": "n",
+  "id": "k0101-oki"
+ },
+ {
+  "p": "p005",
+  "seg": 5,
+  "text": "筑紫島",
+  "kind": "n",
+  "id": "k0101-tsukushi-shima"
+ },
+ {
+  "p": "p005",
+  "seg": 7,
+  "text": "熊曽の国",
+  "kind": "n",
+  "id": "k0101-kyushu-kuni"
+ },
+ {
+  "p": "p005",
+  "seg": 8,
+  "text": "伊伎島",
+  "kind": "n",
+  "id": "k0101-iki"
+ },
+ {
+  "p": "p005",
+  "seg": 9,
+  "text": "津島",
+  "kind": "n",
+  "id": "k0101-tsushima"
+ },
+ {
+  "p": "p005",
+  "seg": 10,
+  "text": "佐度島",
+  "kind": "n",
+  "id": "k0101-sado"
+ },
+ {
+  "p": "p005",
+  "seg": 11,
+  "text": "大倭豊秋津島",
+  "kind": "n",
+  "id": "k0101-akitsushima"
+ },
+ {
+  "p": "p005",
+  "seg": 12,
+  "text": "大八島国",
+  "kind": "n",
+  "id": "k0101-oyashimaguni"
+ },
+ {
+  "p": "p005",
+  "seg": 18,
+  "text": "あわせて六つの島",
+  "kind": "n",
+  "id": "k0101-rokutou"
+ },
+ {
+  "p": "p006",
+  "seg": 20,
+  "text": "オオヤマツミの神",
+  "kind": "p",
+  "id": "oyamatsumi"
+ },
+ {
+  "p": "p006",
+  "seg": 38,
+  "text": "トヨウケビメの神",
+  "kind": "n",
+  "id": "k0101-toyoukebime"
+ },
+ {
+  "p": "p007",
+  "seg": 0,
+  "text": "妻の命",
+  "kind": "n",
+  "id": "mikoto"
+ },
+ {
+  "p": "p007",
+  "seg": 2,
+  "text": "香山の畝尾",
+  "kind": "n",
+  "id": "k0101-kaguyama"
+ },
+ {
+  "p": "p007",
+  "seg": 3,
+  "text": "出雲の国",
+  "kind": "n",
+  "id": "izumo"
+ },
+ {
+  "p": "p007",
+  "seg": 3,
+  "text": "比婆の山",
+  "kind": "n",
+  "id": "k0101-hiba"
+ },
+ {
+  "p": "p008",
+  "seg": 0,
+  "text": "十拳の剣",
+  "kind": "n",
+  "id": "totsuka-no-tsurugi"
+ },
+ {
+  "p": "p008",
+  "seg": 2,
+  "text": "タケミカヅチノオの神",
+  "kind": "p",
+  "id": "takemikazuchi"
+ },
+ {
+  "p": "p008",
+  "seg": 6,
+  "text": "アメノオハバリ",
+  "kind": "n",
+  "id": "k0101-ohabari"
+ }
+]

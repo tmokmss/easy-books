@@ -33,7 +33,7 @@ const skeleton = JSON.parse(
 
 // 分かち書きしない言語（中国語・日本語）は、文を空白で継ぐと原文にない空きが入る。
 // segments[].src の連結が原文と一致する不変条件（content.config.ts）にも関わる。
-const CJK_LANGS = new Set(['zh', 'ja']);
+const CJK_LANGS = new Set(['zh', 'ja', 'lzh']);
 const catalog = JSON.parse(readFileSync(join('src', 'data', 'works.json'), 'utf-8')) as Record<
   string,
   { sourceLang: string }

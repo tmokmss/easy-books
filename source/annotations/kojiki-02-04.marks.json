@@ -1,0 +1,380 @@
+[
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "イクメイリビコイサチの命",
+  "kind": "p",
+  "id": "suinin"
+ },
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "師木の玉垣の宮",
+  "kind": "n",
+  "id": "k0204-tamagaki-no-miya"
+ },
+ {
+  "p": "p001",
+  "seg": 1,
+  "text": "サホビコの命",
+  "kind": "p",
+  "id": "sahobiko"
+ },
+ {
+  "p": "p001",
+  "seg": 1,
+  "text": "サワヂヒメの命",
+  "kind": "p",
+  "id": "sahobime"
+ },
+ {
+  "p": "p001",
+  "seg": 1,
+  "text": "ホムツワケの命",
+  "kind": "p",
+  "id": "homuchiwake"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "旦波",
+  "kind": "n",
+  "id": "taniwa"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "王",
+  "kind": "n",
+  "id": "miko-o"
+ },
+ {
+  "p": "p001",
+  "seg": 3,
+  "text": "オオタラシヒコオシロワケの命",
+  "kind": "p",
+  "id": "keiko"
+ },
+ {
+  "p": "p001",
+  "seg": 3,
+  "text": "ヤマトヒメの命",
+  "kind": "p",
+  "id": "yamatohime"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "山代",
+  "kind": "n",
+  "id": "yamashiro"
+ },
+ {
+  "p": "p001",
+  "seg": 12,
+  "text": "石上の神宮",
+  "kind": "n",
+  "id": "k0204-isonokami"
+ },
+ {
+  "p": "p001",
+  "seg": 12,
+  "text": "河上部",
+  "kind": "n",
+  "id": "be"
+ },
+ {
+  "p": "p001",
+  "seg": 13,
+  "text": "飛鳥の君",
+  "kind": "n",
+  "id": "kabane"
+ },
+ {
+  "p": "p001",
+  "seg": 13,
+  "text": "などの祖先である",
+  "kind": "n",
+  "id": "oya-chu"
+ },
+ {
+  "p": "p001",
+  "seg": 19,
+  "text": "子代",
+  "kind": "n",
+  "id": "k0204-koshiro"
+ },
+ {
+  "p": "p001",
+  "seg": 21,
+  "text": "ヤマトタケルの命",
+  "kind": "p",
+  "id": "yamatotakeru"
+ },
+ {
+  "p": "p002",
+  "seg": 0,
+  "text": "サホビメを后",
+  "kind": "p",
+  "id": "sahobime"
+ },
+ {
+  "p": "p002",
+  "seg": 0,
+  "text": "サホビコの王",
+  "kind": "p",
+  "id": "sahobiko"
+ },
+ {
+  "p": "p002",
+  "seg": 0,
+  "text": "同母の妹",
+  "kind": "n",
+  "id": "k0204-iromo"
+ },
+ {
+  "p": "p002",
+  "seg": 3,
+  "text": "八塩折の紐小刀",
+  "kind": "n",
+  "id": "k0204-yashiori"
+ },
+ {
+  "p": "p002",
+  "seg": 7,
+  "text": "沙本",
+  "kind": "n",
+  "id": "k0204-saho"
+ },
+ {
+  "p": "p003",
+  "seg": 1,
+  "text": "稲城",
+  "kind": "n",
+  "id": "k0204-inaki"
+ },
+ {
+  "p": "p003",
+  "seg": 2,
+  "text": "サホビメの命",
+  "kind": "p",
+  "id": "sahobime"
+ },
+ {
+  "p": "p003",
+  "seg": 9,
+  "text": "玉の緒",
+  "kind": "n",
+  "id": "k0204-tama-no-o"
+ },
+ {
+  "p": "p003",
+  "seg": 16,
+  "text": "地を得ない玉作り",
+  "kind": "n",
+  "id": "k0204-tamatsukuri"
+ },
+ {
+  "p": "p003",
+  "seg": 18,
+  "text": "ホムチワケの御子",
+  "kind": "p",
+  "id": "homuchiwake"
+ },
+ {
+  "p": "p003",
+  "seg": 20,
+  "text": "大湯坐と若湯坐",
+  "kind": "n",
+  "id": "k0204-yue"
+ },
+ {
+  "p": "p003",
+  "seg": 22,
+  "text": "瑞の小紐",
+  "kind": "n",
+  "id": "k0204-mizu-no-ohimo"
+ },
+ {
+  "p": "p004",
+  "seg": 2,
+  "text": "八拳の鬚",
+  "kind": "n",
+  "id": "k0204-yatsuka-hige"
+ },
+ {
+  "p": "p004",
+  "seg": 6,
+  "text": "高志の国",
+  "kind": "n",
+  "id": "koshi"
+ },
+ {
+  "p": "p004",
+  "seg": 7,
+  "text": "和那美の水門",
+  "kind": "n",
+  "id": "k0204-wanami"
+ },
+ {
+  "p": "p004",
+  "seg": 8,
+  "text": "和那美の水門という",
+  "kind": "n",
+  "id": "chimei-kigen"
+ },
+ {
+  "p": "p004",
+  "seg": 11,
+  "text": "ふとまに",
+  "kind": "n",
+  "id": "k0204-futomani"
+ },
+ {
+  "p": "p004",
+  "seg": 11,
+  "text": "出雲の大神",
+  "kind": "r",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p004",
+  "seg": 13,
+  "text": "うけい",
+  "kind": "n",
+  "id": "ukei"
+ },
+ {
+  "p": "p004",
+  "seg": 17,
+  "text": "甜白檮の岬",
+  "kind": "n",
+  "id": "k0204-amakashi"
+ },
+ {
+  "p": "p004",
+  "seg": 20,
+  "text": "那良の戸",
+  "kind": "n",
+  "id": "k0204-to"
+ },
+ {
+  "p": "p004",
+  "seg": 21,
+  "text": "品遅部",
+  "kind": "n",
+  "id": "k0204-homuchibe"
+ },
+ {
+  "p": "p004",
+  "seg": 22,
+  "text": "出雲",
+  "kind": "n",
+  "id": "izumo"
+ },
+ {
+  "p": "p004",
+  "seg": 22,
+  "text": "肥の河",
+  "kind": "n",
+  "id": "k0204-hi-no-kawa"
+ },
+ {
+  "p": "p004",
+  "seg": 23,
+  "text": "出雲の国造",
+  "kind": "n",
+  "id": "kuni-no-miyatsuko"
+ },
+ {
+  "p": "p004",
+  "seg": 25,
+  "text": "アシハラシコオの大神",
+  "kind": "p",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p004",
+  "seg": 25,
+  "text": "祝",
+  "kind": "n",
+  "id": "k0204-hafuri"
+ },
+ {
+  "p": "p004",
+  "seg": 26,
+  "text": "檳榔の長穂の宮",
+  "kind": "n",
+  "id": "k0204-ajimasa"
+ },
+ {
+  "p": "p004",
+  "seg": 37,
+  "text": "相楽",
+  "kind": "n",
+  "id": "k0204-sagaraka"
+ },
+ {
+  "p": "p004",
+  "seg": 39,
+  "text": "弟国",
+  "kind": "n",
+  "id": "k0204-otokuni"
+ },
+ {
+  "p": "p005",
+  "seg": 0,
+  "text": "タヂマモリ",
+  "kind": "p",
+  "id": "tajimamori"
+ },
+ {
+  "p": "p005",
+  "seg": 0,
+  "text": "常世の国",
+  "kind": "n",
+  "id": "tokoyo"
+ },
+ {
+  "p": "p005",
+  "seg": 0,
+  "text": "ときじくのかくの木の実",
+  "kind": "n",
+  "id": "k0204-tokijiku"
+ },
+ {
+  "p": "p005",
+  "seg": 2,
+  "text": "縵の形のもの",
+  "kind": "n",
+  "id": "k0204-kage"
+ },
+ {
+  "p": "p005",
+  "seg": 3,
+  "text": "大后",
+  "kind": "n",
+  "id": "okisaki"
+ },
+ {
+  "p": "p005",
+  "seg": 4,
+  "text": "御陵",
+  "kind": "n",
+  "id": "misasagi"
+ },
+ {
+  "p": "p005",
+  "seg": 8,
+  "text": "百五十三歳",
+  "kind": "n",
+  "id": "tenno-no-toshi"
+ },
+ {
+  "p": "p005",
+  "seg": 9,
+  "text": "土師部",
+  "kind": "n",
+  "id": "k0204-hajibe"
+ }
+]

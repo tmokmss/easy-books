@@ -42,7 +42,7 @@ function splitSentences(text: string): string[] {
 }
 
 /** 分かち書きしない言語（中国語・日本語）。空白を手掛かりにできない */
-const CJK_LANGS = new Set(['zh', 'ja']);
+const CJK_LANGS = new Set(['zh', 'ja', 'lzh']);
 
 const CJK_OPEN = '「『（〈《【〔';
 const CJK_CLOSE = '」』）〉》】〕';
@@ -57,8 +57,8 @@ const CJK_TERM_TAIL = '。！？…';
  */
 function splitSentencesCjk(text: string): string[] {
   // 古文は「」の中に数百〜千字の語りが入る（竹取物語の車持皇子の航海談は1文916字になった）。
-  // ja は括弧の内側の句点でも切る。zh は会話文が途中で割れないよう内側では切らない
-  const splitInside = sourceLang === 'ja';
+  // ja・lzh（漢文）は括弧の内側の句点でも切る。zh は会話文が途中で割れないよう内側では切らない
+  const splitInside = sourceLang === 'ja' || sourceLang === 'lzh';
   const out: string[] = [];
   let cur = '';
   let depth = 0;

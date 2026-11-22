@@ -1,0 +1,401 @@
+[
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "オオタラシヒコオシロワケの天皇",
+  "kind": "p",
+  "id": "keiko"
+ },
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "纒向の日代の宮",
+  "kind": "n",
+  "id": "k0205-hishiro-no-miya"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "オオウスの命",
+  "kind": "p",
+  "id": "ousu"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "ヤマトオグナの命",
+  "kind": "p",
+  "id": "yamatotakeru"
+ },
+ {
+  "p": "p001",
+  "seg": 4,
+  "text": "ワカタラシヒコの命",
+  "kind": "p",
+  "id": "seimu"
+ },
+ {
+  "p": "p001",
+  "seg": 9,
+  "text": "ヤマトタケルの命",
+  "kind": "p",
+  "id": "yamatotakeru"
+ },
+ {
+  "p": "p001",
+  "seg": 10,
+  "text": "オオタラシヒコの天皇",
+  "kind": "p",
+  "id": "keiko"
+ },
+ {
+  "p": "p001",
+  "seg": 12,
+  "text": "国造",
+  "kind": "n",
+  "id": "kuni-no-miyatsuko"
+ },
+ {
+  "p": "p001",
+  "seg": 12,
+  "text": "別、および稲置",
+  "kind": "n",
+  "id": "k0205-wake-inaki"
+ },
+ {
+  "p": "p001",
+  "seg": 14,
+  "text": "オウスの命",
+  "kind": "p",
+  "id": "yamatotakeru"
+ },
+ {
+  "p": "p002",
+  "seg": 7,
+  "text": "クマソタケル",
+  "kind": "p",
+  "id": "kumasotakeru"
+ },
+ {
+  "p": "p002",
+  "seg": 8,
+  "text": "髪を額で結っていた",
+  "kind": "n",
+  "id": "k0205-hitai-gami"
+ },
+ {
+  "p": "p002",
+  "seg": 9,
+  "text": "ヤマトヒメの命",
+  "kind": "p",
+  "id": "yamatohime"
+ },
+ {
+  "p": "p002",
+  "seg": 22,
+  "text": "ヤマトオグナの王",
+  "kind": "p",
+  "id": "yamatotakeru"
+ },
+ {
+  "p": "p002",
+  "seg": 29,
+  "text": "御名をたたえて",
+  "kind": "n",
+  "id": "k0205-yamatotakeru-na"
+ },
+ {
+  "p": "p002",
+  "seg": 31,
+  "text": "イズモタケル",
+  "kind": "p",
+  "id": "izumotakeru"
+ },
+ {
+  "p": "p003",
+  "seg": 0,
+  "text": "やつめさす",
+  "kind": "n",
+  "id": "k0205-yatsumesasu"
+ },
+ {
+  "p": "p005",
+  "seg": 0,
+  "text": "十二の道",
+  "kind": "n",
+  "id": "k0205-juni-no-michi"
+ },
+ {
+  "p": "p005",
+  "seg": 2,
+  "text": "伊勢の大御神の宮",
+  "kind": "n",
+  "id": "k0205-ise"
+ },
+ {
+  "p": "p005",
+  "seg": 7,
+  "text": "クサナギの剣",
+  "kind": "n",
+  "id": "k0205-kusanagi"
+ },
+ {
+  "p": "p005",
+  "seg": 9,
+  "text": "ミヤズヒメ",
+  "kind": "p",
+  "id": "miyazuhime"
+ },
+ {
+  "p": "p005",
+  "seg": 12,
+  "text": "相武の国",
+  "kind": "n",
+  "id": "k0205-sagamu"
+ },
+ {
+  "p": "p005",
+  "seg": 19,
+  "text": "焼津",
+  "kind": "n",
+  "id": "k0205-yaizu"
+ },
+ {
+  "p": "p005",
+  "seg": 21,
+  "text": "オトタチバナヒメの命",
+  "kind": "p",
+  "id": "ototachibanahime"
+ },
+ {
+  "p": "p005",
+  "seg": 23,
+  "text": "絁の畳",
+  "kind": "n",
+  "id": "k0205-ashiginu"
+ },
+ {
+  "p": "p006",
+  "seg": 0,
+  "text": "さねさし",
+  "kind": "n",
+  "id": "k0205-sanesashi"
+ },
+ {
+  "p": "p006",
+  "seg": 0,
+  "text": "佐賀牟",
+  "kind": "n",
+  "id": "k0205-sagamu"
+ },
+ {
+  "p": "p007",
+  "seg": 2,
+  "text": "蝦夷",
+  "kind": "n",
+  "id": "k0205-emishi"
+ },
+ {
+  "p": "p007",
+  "seg": 3,
+  "text": "足柄の坂",
+  "kind": "n",
+  "id": "k0205-ashigara"
+ },
+ {
+  "p": "p007",
+  "seg": 4,
+  "text": "蒜",
+  "kind": "n",
+  "id": "k0205-hiru"
+ },
+ {
+  "p": "p007",
+  "seg": 5,
+  "text": "阿豆麻",
+  "kind": "n",
+  "id": "k0205-azuma"
+ },
+ {
+  "p": "p007",
+  "seg": 6,
+  "text": "酒折の宮",
+  "kind": "n",
+  "id": "k0205-sakaori"
+ },
+ {
+  "p": "p008",
+  "seg": 0,
+  "text": "邇比婆理",
+  "kind": "n",
+  "id": "k0205-niibari"
+ },
+ {
+  "p": "p008",
+  "seg": 0,
+  "text": "都久波",
+  "kind": "n",
+  "id": "k0205-tsukuba"
+ },
+ {
+  "p": "p011",
+  "seg": 1,
+  "text": "尾張の国",
+  "kind": "n",
+  "id": "k0205-owari"
+ },
+ {
+  "p": "p011",
+  "seg": 3,
+  "text": "おすい",
+  "kind": "n",
+  "id": "k0205-osuhi"
+ },
+ {
+  "p": "p012",
+  "seg": 0,
+  "text": "ひさかたの",
+  "kind": "n",
+  "id": "k0205-hisakata"
+ },
+ {
+  "p": "p012",
+  "seg": 3,
+  "text": "月が立ってしまった",
+  "kind": "n",
+  "id": "k0205-tsuki-tatsu"
+ },
+ {
+  "p": "p014",
+  "seg": 0,
+  "text": "やすみしし",
+  "kind": "n",
+  "id": "k0205-yasumishishi"
+ },
+ {
+  "p": "p014",
+  "seg": 1,
+  "text": "あらたまの年",
+  "kind": "n",
+  "id": "k0205-aratama"
+ },
+ {
+  "p": "p015",
+  "seg": 0,
+  "text": "伊服岐の山",
+  "kind": "n",
+  "id": "k0205-ibuki"
+ },
+ {
+  "p": "p015",
+  "seg": 3,
+  "text": "言挙げ",
+  "kind": "n",
+  "id": "k0205-kotoage"
+ },
+ {
+  "p": "p015",
+  "seg": 11,
+  "text": "当芸（たぎ）",
+  "kind": "n",
+  "id": "k0205-tagi"
+ },
+ {
+  "p": "p015",
+  "seg": 14,
+  "text": "尾津の岬",
+  "kind": "n",
+  "id": "k0205-otsu"
+ },
+ {
+  "p": "p016",
+  "seg": 0,
+  "text": "袁波理",
+  "kind": "n",
+  "id": "k0205-owari"
+ },
+ {
+  "p": "p016",
+  "seg": 0,
+  "text": "袁都の岬",
+  "kind": "n",
+  "id": "k0205-otsu"
+ },
+ {
+  "p": "p016",
+  "seg": 0,
+  "text": "あせを",
+  "kind": "n",
+  "id": "k0205-ase-wo"
+ },
+ {
+  "p": "p017",
+  "seg": 2,
+  "text": "能煩野",
+  "kind": "n",
+  "id": "k0205-nobono"
+ },
+ {
+  "p": "p019",
+  "seg": 1,
+  "text": "たたみこも",
+  "kind": "n",
+  "id": "k0205-tatamikomo"
+ },
+ {
+  "p": "p019",
+  "seg": 1,
+  "text": "幣具理",
+  "kind": "n",
+  "id": "k0205-heguri"
+ },
+ {
+  "p": "p022",
+  "seg": 0,
+  "text": "片歌",
+  "kind": "n",
+  "id": "k0205-katauta"
+ },
+ {
+  "p": "p024",
+  "seg": 2,
+  "text": "なづきの田",
+  "kind": "n",
+  "id": "k0205-nazuki-no-ta"
+ },
+ {
+  "p": "p025",
+  "seg": 1,
+  "text": "ところづら",
+  "kind": "n",
+  "id": "k0205-tokorozura"
+ },
+ {
+  "p": "p033",
+  "seg": 0,
+  "text": "イクメの天皇",
+  "kind": "p",
+  "id": "suinin"
+ },
+ {
+  "p": "p033",
+  "seg": 0,
+  "text": "タラシナカツヒコの命",
+  "kind": "p",
+  "id": "chuai"
+ },
+ {
+  "p": "p033",
+  "seg": 17,
+  "text": "カゴサカの王",
+  "kind": "p",
+  "id": "kagosaka"
+ },
+ {
+  "p": "p033",
+  "seg": 17,
+  "text": "オシクマの王",
+  "kind": "p",
+  "id": "oshikuma"
+ }
+]

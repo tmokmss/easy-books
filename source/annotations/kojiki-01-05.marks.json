@@ -1,0 +1,331 @@
+[
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "オオクニヌシの神",
+  "kind": "p",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "八十神",
+  "kind": "n",
+  "id": "ya-kazu"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "稲羽へ",
+  "kind": "n",
+  "id": "k0105-inaba"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "ヤガミヒメ",
+  "kind": "n",
+  "id": "k0105-yagamihime"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "オオナムヂの神",
+  "kind": "p",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p001",
+  "seg": 3,
+  "text": "気多の岬",
+  "kind": "n",
+  "id": "k0105-keta"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "淤岐の島",
+  "kind": "n",
+  "id": "k0105-oki"
+ },
+ {
+  "p": "p001",
+  "seg": 7,
+  "text": "ワニ",
+  "kind": "n",
+  "id": "wani"
+ },
+ {
+  "p": "p001",
+  "seg": 17,
+  "text": "稲羽の素兎",
+  "kind": "n",
+  "id": "k0105-shirousagi"
+ },
+ {
+  "p": "p002",
+  "seg": 0,
+  "text": "伯岐の国",
+  "kind": "n",
+  "id": "k0105-hoki"
+ },
+ {
+  "p": "p002",
+  "seg": 5,
+  "text": "カミムスヒの命",
+  "kind": "p",
+  "id": "kamimusuhi"
+ },
+ {
+  "p": "p002",
+  "seg": 5,
+  "text": "キサガイヒメ",
+  "kind": "n",
+  "id": "k0105-kisagai"
+ },
+ {
+  "p": "p002",
+  "seg": 5,
+  "text": "ウムガイヒメ",
+  "kind": "n",
+  "id": "k0105-umugai"
+ },
+ {
+  "p": "p002",
+  "seg": 9,
+  "text": "木の国",
+  "kind": "n",
+  "id": "ki-no-kuni"
+ },
+ {
+  "p": "p002",
+  "seg": 9,
+  "text": "オオヤビコの神",
+  "kind": "n",
+  "id": "k0105-ooyabiko"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "スサノオの命",
+  "kind": "p",
+  "id": "susanoo"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "根の堅州国",
+  "kind": "n",
+  "id": "k0105-ne-no-katasukuni"
+ },
+ {
+  "p": "p003",
+  "seg": 0,
+  "text": "スセリビメ",
+  "kind": "p",
+  "id": "suseribime"
+ },
+ {
+  "p": "p003",
+  "seg": 1,
+  "text": "アシハラシコオの命",
+  "kind": "p",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p003",
+  "seg": 3,
+  "text": "スセリビメの命",
+  "kind": "p",
+  "id": "suseribime"
+ },
+ {
+  "p": "p003",
+  "seg": 3,
+  "text": "蛇のひれ",
+  "kind": "n",
+  "id": "hire"
+ },
+ {
+  "p": "p003",
+  "seg": 7,
+  "text": "鳴り鏑",
+  "kind": "n",
+  "id": "k0105-kaburaya"
+ },
+ {
+  "p": "p003",
+  "seg": 9,
+  "text": "内はほらほら、外はすぶすぶ",
+  "kind": "n",
+  "id": "k0105-horahora"
+ },
+ {
+  "p": "p003",
+  "seg": 15,
+  "text": "八田間の大室",
+  "kind": "n",
+  "id": "k0105-yatama"
+ },
+ {
+  "p": "p003",
+  "seg": 17,
+  "text": "むくの木の実",
+  "kind": "n",
+  "id": "k0105-muku"
+ },
+ {
+  "p": "p003",
+  "seg": 19,
+  "text": "生大刀と生弓矢",
+  "kind": "n",
+  "id": "k0105-ikutachi"
+ },
+ {
+  "p": "p003",
+  "seg": 19,
+  "text": "天の詔琴",
+  "kind": "n",
+  "id": "k0105-norigoto"
+ },
+ {
+  "p": "p003",
+  "seg": 22,
+  "text": "黄泉比良坂",
+  "kind": "n",
+  "id": "k0105-hirasaka"
+ },
+ {
+  "p": "p003",
+  "seg": 22,
+  "text": "ウツシクニヌシの神",
+  "kind": "p",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p003",
+  "seg": 22,
+  "text": "宇迦の山",
+  "kind": "n",
+  "id": "k0105-uka"
+ },
+ {
+  "p": "p003",
+  "seg": 22,
+  "text": "千木",
+  "kind": "n",
+  "id": "k0105-chigi"
+ },
+ {
+  "p": "p003",
+  "seg": 27,
+  "text": "キノマタの神",
+  "kind": "n",
+  "id": "k0105-kinomata"
+ },
+ {
+  "p": "p003",
+  "seg": 28,
+  "text": "ヤチホコの神",
+  "kind": "p",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p003",
+  "seg": 28,
+  "text": "高志の国",
+  "kind": "n",
+  "id": "koshi"
+ },
+ {
+  "p": "p003",
+  "seg": 28,
+  "text": "そのヌナカワヒメ",
+  "kind": "n",
+  "id": "k0105-nunakawahime"
+ },
+ {
+  "p": "p004",
+  "seg": 0,
+  "text": "八島の国",
+  "kind": "n",
+  "id": "k0105-yashima"
+ },
+ {
+  "p": "p004",
+  "seg": 0,
+  "text": "襲",
+  "kind": "n",
+  "id": "k0105-osui"
+ },
+ {
+  "p": "p004",
+  "seg": 0,
+  "text": "ぬえ",
+  "kind": "n",
+  "id": "k0105-nue"
+ },
+ {
+  "p": "p004",
+  "seg": 0,
+  "text": "いしたふや",
+  "kind": "n",
+  "id": "k0105-ishitafuya"
+ },
+ {
+  "p": "p006",
+  "seg": 1,
+  "text": "ぬばたまの",
+  "kind": "n",
+  "id": "makurakotoba"
+ },
+ {
+  "p": "p006",
+  "seg": 1,
+  "text": "楮の綱",
+  "kind": "n",
+  "id": "k0105-takuzuno"
+ },
+ {
+  "p": "p008",
+  "seg": 1,
+  "text": "ヒコヂの神",
+  "kind": "r",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p008",
+  "seg": 1,
+  "text": "倭の国",
+  "kind": "n",
+  "id": "yamato"
+ },
+ {
+  "p": "p009",
+  "seg": 0,
+  "text": "あたたね",
+  "kind": "n",
+  "id": "k0105-atatane"
+ },
+ {
+  "p": "p011",
+  "seg": 0,
+  "text": "オオクニヌシ",
+  "kind": "p",
+  "id": "okuninushi"
+ },
+ {
+  "p": "p011",
+  "seg": 0,
+  "text": "からむしの夜具",
+  "kind": "n",
+  "id": "k0105-mushibusuma"
+ },
+ {
+  "p": "p012",
+  "seg": 1,
+  "text": "神語",
+  "kind": "n",
+  "id": "k0105-kamugatari"
+ }
+]

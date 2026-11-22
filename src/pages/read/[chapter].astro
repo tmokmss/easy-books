@@ -71,9 +71,9 @@ const recap = work.meta.anthology
       });
 
 // 登場人物レールに並べる人物。長編では作品の配役表をそのまま出す（画面に出ている人だけ点灯する）。
-// 短編集では章＝1編なので、その編で言及される人物だけに絞る
+// 短編集（章＝1編）と、章ごとに顔ぶれが入れ替わる作品では、その章で言及される人物だけに絞る
 // （マークアップの {{p:}} / {{r:}} が参照している id を本文から拾う）。
-const railPeople = work.meta.anthology
+const railPeople = work.meta.anthology || work.meta.chapterCast
   ? Object.fromEntries(
       Object.entries(work.people).filter(([id]) => {
         const re = new RegExp(`\\{\\{[pr]:${id}\\|`);

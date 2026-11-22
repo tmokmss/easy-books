@@ -43,6 +43,7 @@ const LANG_LABELS: Record<string, string> = {
   zh: '中国語',
   es: 'スペイン語',
   ja: '日本語',
+  lzh: '漢文',
 };
 
 /** 原語の表示名。未登録の言語コードはそのまま大文字で出す */
