@@ -95,6 +95,17 @@ const SRC_LANGS: Record<string, SrcLangSpec> = {
     // 「；」は独立した節を継ぐ。日本語では文に割れるので、原文側でも文の切れ目として数える
     sentenceEnd: '。！？…；',
   },
+  // 古文（歴史的仮名遣い）。現代語の原文はこのサイトでは訳さないので想定しない
+  ja: {
+    letters: '',
+    numbers: {},
+    cjkNumerals: true,
+    numeralUnits: '人寸尺丈斛石日月年夜度歳両疋本具',
+    // 完了の「ぬ」「ね」は否定の「ぬ」「ね」と同形なので入れない
+    negations: ['ず', 'ざら', 'ざり', 'ざる', 'ざれ', 'まじ', 'なし', 'なき', 'なく', 'なけれ'],
+    noWordBoundary: true,
+    sentenceEnd: '。！？',
+  },
 };
 
 const sourceLang = catalog[chapter.workId]?.sourceLang;

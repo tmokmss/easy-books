@@ -119,10 +119,10 @@ for (const marker of BODY_CONTAINERS) {
 }
 let body = bodyStart >= 0 ? html.slice(bodyStart) : html;
 
-/** class に marker を含む <tag> ブロックを、入れ子を数えて丸ごと落とす */
+/** class か id に marker を含む <tag> ブロックを、入れ子を数えて丸ごと落とす */
 function stripBlocks(src: string, marker: string, tagNames: string[]): string {
   for (const tag of tagNames) {
-    const open = new RegExp(`<${tag}\\b[^>]*class="[^"]*${marker}[^"]*"[^>]*>`, 'gi');
+    const open = new RegExp(`<${tag}\\b[^>]*(?:class|id)="[^"]*${marker}[^"]*"[^>]*>`, 'gi');
     let out = '';
     let last = 0;
     let m: RegExpExecArray | null;
@@ -152,6 +152,9 @@ function stripBlocks(src: string, marker: string, tagNames: string[]): string {
 // ヘッダ・ナビゲーションだけでなく **PD ライセンス文もこの中**にあるので、
 // これを落とさないとライセンス文が第1段落として本文に混ざる（チェーホフ短編の多く）。
 body = stripBlocks(body, 'ws-noexport', ['div', 'table']);
+// ja の header テンプレートは題名を <div id="navigationHeader"> の <p> に置く
+body = stripBlocks(body, 'navigationHeader', ['div']);
+body = stripBlocks(body, 'navigationNotes', ['div']);
 
 // 本文の「後ろ」に付く非本文ブロックはここで切る。PD テンプレート（licenseContainer）のほかに、
 // 脚注・編集者注の一覧がある（ru の «Примечания редакторов Викитеки» 等）。注の中身は
@@ -228,18 +231,26 @@ for (const m of body.matchAll(/<(p|center|dd)\b[^>]*>([\s\S]*?)<\/\1>/g)) {
     // 数式は MathML の断片が本文に散らばる前に平文へ畳む
     .replace(/<math\b[^>]*alttext="([^"]*)"[\s\S]*?<\/math>/g, (_, tex) => texToPlain(tex))
     .replace(/<sup[\s\S]*?<\/sup>/g, '') // 脚注マーカー
+    // テンプレートが段落内に差し込む TemplateStyles（ja のルビ等）
+    .replace(/<style\b[\s\S]*?<\/style>/g, '')
+    // ルビは親文字だけを本文に残す。読みを残すと「裳着（もぎ）」の形で原文に混ざる
+    .replace(/<(rt|rp)\b[^>]*>[\s\S]*?<\/\1>/g, '')
     .replace(/<span[^>]*class="[^"]*mw-editsection[^"]*"[\s\S]*?<\/span>/g, '')
     // 校正版（Proofread Page）の原本ページ番号マーカー [59] を本文に混ぜない
     .replace(/<span[^>]*class="[^"]*(?:PageNumber|pagenum)[^"]*"[\s\S]*?<\/span>/gi, '')
     .replace(/<br\s*\/?>/g, '\n')
     .replace(/<[^>]+>/g, '');
   const text = stripInvisible(decodeEntities(inner))
+    // ja の入力者注記「（＊ママ）」は本文ではない
+    .replace(/（＊[^）]*）/g, '')
     .replace(/ /g, ' ')
     .replace(/[ \t]+/g, ' ')
     .trim();
   if (!text) continue;
   // ナビゲーション・出典表記などの短い断片を除外（本文の段落は最低でも文がある）
   if (text.length < 2) continue;
+  // ja の版の末尾に置かれる「竹取物語　了」は本文ではない
+  if (/^\S+[\s　]+了$/.test(text)) continue;
   blocks.push({ text, em, center: m[1] === 'center' });
 }
 
