@@ -1,0 +1,835 @@
+[
+ {
+  "p": "p001",
+  "seg": 0,
+  "text": "竹取の翁",
+  "kind": "p",
+  "id": "okina"
+ },
+ {
+  "p": "p001",
+  "seg": 2,
+  "text": "讃岐造麿",
+  "kind": "p",
+  "id": "okina"
+ },
+ {
+  "p": "p001",
+  "seg": 6,
+  "text": "翁",
+  "kind": "p",
+  "id": "okina"
+ },
+ {
+  "p": "p001",
+  "seg": 8,
+  "text": "嫗",
+  "kind": "p",
+  "id": "ouna"
+ },
+ {
+  "p": "p001",
+  "seg": 20,
+  "text": "三室戸斎部秋田",
+  "kind": "p",
+  "id": "akita"
+ },
+ {
+  "p": "p001",
+  "seg": 21,
+  "text": "秋田",
+  "kind": "p",
+  "id": "akita"
+ },
+ {
+  "p": "p001",
+  "seg": 21,
+  "text": "かぐや姫",
+  "kind": "p",
+  "id": "kaguya"
+ },
+ {
+  "p": "p012",
+  "seg": 4,
+  "text": "姫",
+  "kind": "p",
+  "id": "kaguya"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "石作皇子",
+  "kind": "p",
+  "id": "ishitsukuri"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "車持皇子",
+  "kind": "p",
+  "id": "kuramochi"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "阿倍御主人",
+  "kind": "p",
+  "id": "abe"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "大伴御行",
+  "kind": "p",
+  "id": "otomo"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "石上麻呂",
+  "kind": "p",
+  "id": "isonokami"
+ },
+ {
+  "p": "p002",
+  "seg": 75,
+  "text": "大伴大納言",
+  "kind": "p",
+  "id": "otomo"
+ },
+ {
+  "p": "p002",
+  "seg": 77,
+  "text": "石上中納言",
+  "kind": "p",
+  "id": "isonokami"
+ },
+ {
+  "p": "p010",
+  "seg": 3,
+  "text": "皇子",
+  "kind": "p",
+  "id": "kuramochi"
+ },
+ {
+  "p": "p016",
+  "seg": 3,
+  "text": "漢部内麿",
+  "kind": "p",
+  "id": "uchimaro"
+ },
+ {
+  "p": "p019",
+  "seg": 1,
+  "text": "王卿",
+  "kind": "p",
+  "id": "oukei"
+ },
+ {
+  "p": "p019",
+  "seg": 2,
+  "text": "小野房守",
+  "kind": "p",
+  "id": "fusamori"
+ },
+ {
+  "p": "p021",
+  "seg": 0,
+  "text": "右大臣",
+  "kind": "p",
+  "id": "abe"
+ },
+ {
+  "p": "p023",
+  "seg": 2,
+  "text": "阿倍大臣",
+  "kind": "p",
+  "id": "abe"
+ },
+ {
+  "p": "p024",
+  "seg": 6,
+  "text": "大納言",
+  "kind": "p",
+  "id": "otomo"
+ },
+ {
+  "p": "p025",
+  "seg": 12,
+  "text": "中納言",
+  "kind": "p",
+  "id": "isonokami"
+ },
+ {
+  "p": "p025",
+  "seg": 20,
+  "text": "くらつ麿",
+  "kind": "p",
+  "id": "kuratsumaro"
+ },
+ {
+  "p": "p030",
+  "seg": 0,
+  "text": "帝",
+  "kind": "p",
+  "id": "mikado"
+ },
+ {
+  "p": "p030",
+  "seg": 0,
+  "text": "内侍中臣房子",
+  "kind": "p",
+  "id": "fusako"
+ },
+ {
+  "p": "p030",
+  "seg": 3,
+  "text": "房子",
+  "kind": "p",
+  "id": "fusako"
+ },
+ {
+  "p": "p035",
+  "seg": 64,
+  "text": "高野大国",
+  "kind": "p",
+  "id": "takano"
+ },
+ {
+  "p": "p039",
+  "seg": 1,
+  "text": "調岩笠",
+  "kind": "p",
+  "id": "iwakasa"
+ },
+ {
+  "p": "p012",
+  "seg": 5,
+  "text": "この皇子",
+  "kind": "r",
+  "id": "kuramochi"
+ },
+ {
+  "p": "p030",
+  "seg": 17,
+  "text": "この幼い者",
+  "kind": "r",
+  "id": "kaguya"
+ },
+ {
+  "p": "p001",
+  "seg": 5,
+  "text": "三寸",
+  "kind": "n",
+  "id": "sun"
+ },
+ {
+  "p": "p001",
+  "seg": 14,
+  "text": "髪上げなど",
+  "kind": "n",
+  "id": "kamiage"
+ },
+ {
+  "p": "p001",
+  "seg": 14,
+  "text": "裳着",
+  "kind": "n",
+  "id": "mogi"
+ },
+ {
+  "p": "p001",
+  "seg": 15,
+  "text": "帳",
+  "kind": "n",
+  "id": "chou"
+ },
+ {
+  "p": "p001",
+  "seg": 21,
+  "text": "なよ竹",
+  "kind": "n",
+  "id": "nayotake"
+ },
+ {
+  "p": "p001",
+  "seg": 23,
+  "text": "遊び",
+  "kind": "n",
+  "id": "asobi"
+ },
+ {
+  "p": "p002",
+  "seg": 3,
+  "text": "よばひ",
+  "kind": "n",
+  "id": "yobai"
+ },
+ {
+  "p": "p002",
+  "seg": 9,
+  "text": "色好み",
+  "kind": "n",
+  "id": "irogonomi"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "右大臣",
+  "kind": "n",
+  "id": "udaijin"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "大納言",
+  "kind": "n",
+  "id": "dainagon"
+ },
+ {
+  "p": "p002",
+  "seg": 10,
+  "text": "中納言",
+  "kind": "n",
+  "id": "chunagon"
+ },
+ {
+  "p": "p002",
+  "seg": 14,
+  "text": "十一月、十二月",
+  "kind": "n",
+  "id": "kyureki"
+ },
+ {
+  "p": "p002",
+  "seg": 25,
+  "text": "変化の者",
+  "kind": "n",
+  "id": "henge"
+ },
+ {
+  "p": "p002",
+  "seg": 56,
+  "text": "唱歌",
+  "kind": "n",
+  "id": "shoka"
+ },
+ {
+  "p": "p002",
+  "seg": 57,
+  "text": "君達",
+  "kind": "n",
+  "id": "kindachi"
+ },
+ {
+  "p": "p002",
+  "seg": 67,
+  "text": "天竺",
+  "kind": "n",
+  "id": "tenjiku"
+ },
+ {
+  "p": "p002",
+  "seg": 67,
+  "text": "仏の御石の鉢",
+  "kind": "n",
+  "id": "hotoke-no-ishi-no-hachi"
+ },
+ {
+  "p": "p002",
+  "seg": 70,
+  "text": "蓬莱",
+  "kind": "n",
+  "id": "horai"
+ },
+ {
+  "p": "p002",
+  "seg": 74,
+  "text": "唐土",
+  "kind": "n",
+  "id": "morokoshi"
+ },
+ {
+  "p": "p002",
+  "seg": 74,
+  "text": "火鼠の皮衣",
+  "kind": "n",
+  "id": "hinezumi-no-kawaginu"
+ },
+ {
+  "p": "p002",
+  "seg": 75,
+  "text": "龍の首に五色に光る玉",
+  "kind": "n",
+  "id": "tatsu-no-kubi-no-tama"
+ },
+ {
+  "p": "p002",
+  "seg": 77,
+  "text": "子安貝",
+  "kind": "n",
+  "id": "koyasugai"
+ },
+ {
+  "p": "p002",
+  "seg": 86,
+  "text": "皇子たち",
+  "kind": "n",
+  "id": "miko"
+ },
+ {
+  "p": "p002",
+  "seg": 86,
+  "text": "上達部",
+  "kind": "n",
+  "id": "kandachime"
+ },
+ {
+  "p": "p003",
+  "seg": 3,
+  "text": "大和国十市郡",
+  "kind": "n",
+  "id": "yamato-tochi"
+ },
+ {
+  "p": "p003",
+  "seg": 3,
+  "text": "賓頭盧",
+  "kind": "n",
+  "id": "binzuru"
+ },
+ {
+  "p": "p003",
+  "seg": 3,
+  "text": "造花の枝に結びつけて",
+  "kind": "n",
+  "id": "eda-ni-tsukeru"
+ },
+ {
+  "p": "p004",
+  "seg": 0,
+  "text": "御石の鉢",
+  "kind": "n",
+  "id": "naishi-no-hachi"
+ },
+ {
+  "p": "p006",
+  "seg": 0,
+  "text": "小倉山",
+  "kind": "n",
+  "id": "ogurayama"
+ },
+ {
+  "p": "p008",
+  "seg": 0,
+  "text": "白山",
+  "kind": "n",
+  "id": "hakusan"
+ },
+ {
+  "p": "p009",
+  "seg": 3,
+  "text": "はぢをすつ",
+  "kind": "n",
+  "id": "haji-wo-sutsu"
+ },
+ {
+  "p": "p010",
+  "seg": 0,
+  "text": "筑紫の国",
+  "kind": "n",
+  "id": "tsukushi"
+ },
+ {
+  "p": "p010",
+  "seg": 1,
+  "text": "玉の枝",
+  "kind": "n",
+  "id": "tama-no-eda"
+ },
+ {
+  "p": "p010",
+  "seg": 2,
+  "text": "難波",
+  "kind": "n",
+  "id": "naniwa"
+ },
+ {
+  "p": "p010",
+  "seg": 8,
+  "text": "内匠",
+  "kind": "n",
+  "id": "takumi"
+ },
+ {
+  "p": "p010",
+  "seg": 8,
+  "text": "十六か所の領地",
+  "kind": "n",
+  "id": "juroku-tokoro"
+ },
+ {
+  "p": "p010",
+  "seg": 15,
+  "text": "優曇華の花",
+  "kind": "n",
+  "id": "udonge"
+ },
+ {
+  "p": "p012",
+  "seg": 37,
+  "text": "ほうかんるり",
+  "kind": "n",
+  "id": "houkanruri"
+ },
+ {
+  "p": "p012",
+  "seg": 41,
+  "text": "瑠璃",
+  "kind": "n",
+  "id": "ruri"
+ },
+ {
+  "p": "p013",
+  "seg": 0,
+  "text": "節目",
+  "kind": "n",
+  "id": "fushi-yo"
+ },
+ {
+  "p": "p015",
+  "seg": 0,
+  "text": "袂",
+  "kind": "n",
+  "id": "tamoto"
+ },
+ {
+  "p": "p016",
+  "seg": 2,
+  "text": "文挟み",
+  "kind": "n",
+  "id": "fumibasami"
+ },
+ {
+  "p": "p016",
+  "seg": 3,
+  "text": "作物所",
+  "kind": "n",
+  "id": "tsukumodokoro"
+ },
+ {
+  "p": "p016",
+  "seg": 11,
+  "text": "官位",
+  "kind": "n",
+  "id": "kan-i"
+ },
+ {
+  "p": "p017",
+  "seg": 0,
+  "text": "言葉を飾り立てた",
+  "kind": "n",
+  "id": "kotonoha"
+ },
+ {
+  "p": "p018",
+  "seg": 12,
+  "text": "宮司",
+  "kind": "n",
+  "id": "miyazukasa"
+ },
+ {
+  "p": "p018",
+  "seg": 14,
+  "text": "たまさかる",
+  "kind": "n",
+  "id": "tamasakaru"
+ },
+ {
+  "p": "p019",
+  "seg": 1,
+  "text": "唐土船",
+  "kind": "n",
+  "id": "morokoshibune"
+ },
+ {
+  "p": "p019",
+  "seg": 16,
+  "text": "国司",
+  "kind": "n",
+  "id": "kokushi"
+ },
+ {
+  "p": "p019",
+  "seg": 17,
+  "text": "五十両",
+  "kind": "n",
+  "id": "ryo"
+ },
+ {
+  "p": "p020",
+  "seg": 0,
+  "text": "思いの火",
+  "kind": "n",
+  "id": "omohi-hi"
+ },
+ {
+  "p": "p022",
+  "seg": 0,
+  "text": "火の外に置いて",
+  "kind": "n",
+  "id": "omohi-no-hoka"
+ },
+ {
+  "p": "p023",
+  "seg": 6,
+  "text": "あへなし",
+  "kind": "n",
+  "id": "ahenashi"
+ },
+ {
+  "p": "p024",
+  "seg": 16,
+  "text": "絹・綿・銭",
+  "kind": "n",
+  "id": "wata"
+ },
+ {
+  "p": "p024",
+  "seg": 31,
+  "text": "舎人",
+  "kind": "n",
+  "id": "toneri"
+ },
+ {
+  "p": "p024",
+  "seg": 67,
+  "text": "播磨の明石",
+  "kind": "n",
+  "id": "harima-akashi"
+ },
+ {
+  "p": "p024",
+  "seg": 94,
+  "text": "あなたへがた",
+  "kind": "n",
+  "id": "anatahegata"
+ },
+ {
+  "p": "p025",
+  "seg": 8,
+  "text": "大炊寮",
+  "kind": "n",
+  "id": "ooiryo"
+ },
+ {
+  "p": "p025",
+  "seg": 48,
+  "text": "八島の鼎",
+  "kind": "n",
+  "id": "yashima-no-kanae"
+ },
+ {
+  "p": "p025",
+  "seg": 60,
+  "text": "かひなし",
+  "kind": "n",
+  "id": "kahinashi"
+ },
+ {
+  "p": "p026",
+  "seg": 0,
+  "text": "住の江の松",
+  "kind": "n",
+  "id": "suminoe-no-matsu"
+ },
+ {
+  "p": "p028",
+  "seg": 0,
+  "text": "すくい上げて",
+  "kind": "n",
+  "id": "sukuhi"
+ },
+ {
+  "p": "p029",
+  "seg": 2,
+  "text": "かひあり",
+  "kind": "n",
+  "id": "kahiari"
+ },
+ {
+  "p": "p030",
+  "seg": 5,
+  "text": "内侍",
+  "kind": "n",
+  "id": "naishi"
+ },
+ {
+  "p": "p030",
+  "seg": 33,
+  "text": "宮仕え",
+  "kind": "n",
+  "id": "miyazukae"
+ },
+ {
+  "p": "p030",
+  "seg": 37,
+  "text": "冠",
+  "kind": "n",
+  "id": "koburi"
+ },
+ {
+  "p": "p030",
+  "seg": 58,
+  "text": "行幸",
+  "kind": "n",
+  "id": "gyoko"
+ },
+ {
+  "p": "p033",
+  "seg": 0,
+  "text": "葎",
+  "kind": "n",
+  "id": "mugura"
+ },
+ {
+  "p": "p033",
+  "seg": 0,
+  "text": "玉の台",
+  "kind": "n",
+  "id": "tama-no-utena"
+ },
+ {
+  "p": "p034",
+  "seg": 6,
+  "text": "お妃がた",
+  "kind": "n",
+  "id": "kisaki"
+ },
+ {
+  "p": "p035",
+  "seg": 1,
+  "text": "月の顔を見るのは忌むべきこと",
+  "kind": "n",
+  "id": "tsuki-wo-imu"
+ },
+ {
+  "p": "p035",
+  "seg": 26,
+  "text": "八月十五日",
+  "kind": "n",
+  "id": "hachigatsu-jugoya"
+ },
+ {
+  "p": "p035",
+  "seg": 35,
+  "text": "前世からの約束",
+  "kind": "n",
+  "id": "sukuse"
+ },
+ {
+  "p": "p035",
+  "seg": 64,
+  "text": "六衛府",
+  "kind": "n",
+  "id": "rokuefu"
+ },
+ {
+  "p": "p035",
+  "seg": 64,
+  "text": "少将",
+  "kind": "n",
+  "id": "shosho"
+ },
+ {
+  "p": "p035",
+  "seg": 64,
+  "text": "勅使",
+  "kind": "n",
+  "id": "chokushi"
+ },
+ {
+  "p": "p035",
+  "seg": 65,
+  "text": "築地",
+  "kind": "n",
+  "id": "tsuiji"
+ },
+ {
+  "p": "p035",
+  "seg": 68,
+  "text": "塗籠",
+  "kind": "n",
+  "id": "nurigome"
+ },
+ {
+  "p": "p035",
+  "seg": 98,
+  "text": "子の時",
+  "kind": "n",
+  "id": "ne-no-toki"
+ },
+ {
+  "p": "p035",
+  "seg": 100,
+  "text": "五尺",
+  "kind": "n",
+  "id": "shaku"
+ },
+ {
+  "p": "p035",
+  "seg": 118,
+  "text": "汚れた所",
+  "kind": "n",
+  "id": "kitanaki-tokoro"
+ },
+ {
+  "p": "p035",
+  "seg": 137,
+  "text": "天の羽衣",
+  "kind": "n",
+  "id": "ama-no-hagoromo"
+ },
+ {
+  "p": "p035",
+  "seg": 138,
+  "text": "不死の薬",
+  "kind": "n",
+  "id": "fushi-no-kusuri"
+ },
+ {
+  "p": "p037",
+  "seg": 0,
+  "text": "頭中将",
+  "kind": "n",
+  "id": "to-no-chujo"
+ },
+ {
+  "p": "p037",
+  "seg": 10,
+  "text": "管弦のお遊び",
+  "kind": "n",
+  "id": "kangen"
+ },
+ {
+  "p": "p037",
+  "seg": 12,
+  "text": "駿河の国",
+  "kind": "n",
+  "id": "suruga"
+ },
+ {
+  "p": "p038",
+  "seg": 0,
+  "text": "流す涙に浮かんでいる",
+  "kind": "n",
+  "id": "nami-namida"
+ },
+ {
+  "p": "p039",
+  "seg": 4,
+  "text": "「ふしの山」",
+  "kind": "n",
+  "id": "fushi-no-yama"
+ }
+]

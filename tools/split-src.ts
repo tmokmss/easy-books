@@ -56,6 +56,9 @@ const CJK_TERM_TAIL = '。！？…';
  * 閉じ括弧は直前が文末記号なら文に含めて切る（『…だ。』｜次の文）。
  */
 function splitSentencesCjk(text: string): string[] {
+  // 古文は「」の中に数百〜千字の語りが入る（竹取物語の車持皇子の航海談は1文916字になった）。
+  // ja は括弧の内側の句点でも切る。zh は会話文が途中で割れないよう内側では切らない
+  const splitInside = sourceLang === 'ja';
   const out: string[] = [];
   let cur = '';
   let depth = 0;
@@ -66,11 +69,20 @@ function splitSentencesCjk(text: string): string[] {
       depth += 1;
     } else if (CJK_CLOSE.includes(ch)) {
       if (depth > 0) depth -= 1;
-      if (depth === 0 && CJK_TERM_TAIL.includes(text[i - 1] ?? '')) {
+      let end = false;
+      if (splitInside) {
+        // 「。』」」のように閉じ括弧が続くときは、最後の閉じ括弧まで含めて切る
+        let j = i - 1;
+        while (j >= 0 && CJK_CLOSE.includes(text[j])) j--;
+        end = !CJK_CLOSE.includes(text[i + 1] ?? '') && CJK_TERM_TAIL.includes(text[j] ?? '');
+      } else {
+        end = depth === 0 && CJK_TERM_TAIL.includes(text[i - 1] ?? '');
+      }
+      if (end) {
         out.push(cur);
         cur = '';
       }
-    } else if (CJK_TERM.includes(ch) && depth === 0) {
+    } else if (CJK_TERM.includes(ch) && (depth === 0 || splitInside)) {
       // 連続する文末記号（？！ や 。…… ）はひとまとまりにする
       while (i + 1 < text.length && CJK_TERM_TAIL.includes(text[i + 1])) cur += text[++i];
       // 直後が閉じ括弧なら、その括弧まで含めて切る（次のループの CJK_CLOSE 側で処理）

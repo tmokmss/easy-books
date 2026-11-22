@@ -51,7 +51,30 @@ const paraSummaries = outline?.paragraphSummaries ?? {};
   <div class="reader-flow" id="reader-flow">
     {
       groups.map(({ section, paragraphs: groupParas }) => {
-        const inner = groupParas.map((p) => (
+        const inner = groupParas.map((p) => {
+          const sumBtn = paraSummaries[p.id] && (
+            <button
+              type="button"
+              class="para-sum-btn"
+              aria-expanded="false"
+              aria-controls={`psum-${p.id}`}
+              title="この段落の要約（長押しでも開く）"
+            >
+              要約
+            </button>
+          );
+          const segs = (p.segments ?? []).map((seg, i) => ({ seg, i }));
+          // pb の付いた断片で段落の中を表示上のかたまりに分ける。かたまりごとに字下げされる
+          const blocks: (typeof segs)[] = [];
+          for (const s of segs) {
+            if (blocks.length === 0 || s.seg.pb) blocks.push([]);
+            blocks[blocks.length - 1].push(s);
+          }
+          const segSpans = (b: typeof segs) =>
+            b.map(({ seg, i }) => (
+              <span class="seg" data-seg={i} set:html={renderParagraphHtml(seg.ja, people)} />
+            ));
+          return (
           <div class="para-group">
             <p
               class="para"
@@ -59,23 +82,18 @@ const paraSummaries = outline?.paragraphSummaries ?? {};
               data-status={p.status}
               data-persons={collectPersonIds(tokenize(p.ja)).join(' ')}
             >
-              {p.segments ? (
-                p.segments.map((seg, i) => (
-                  <span class="seg" data-seg={i} set:html={renderParagraphHtml(seg.ja, people)} />
+              {blocks.length > 1 ? (
+                blocks.map((b, bi) => (
+                  <span class="pblock">
+                    {segSpans(b)}
+                    {bi === blocks.length - 1 && sumBtn}
+                  </span>
                 ))
               ) : (
-                <Fragment set:html={renderParagraphHtml(p.ja, people)} />
-              )}
-              {paraSummaries[p.id] && (
-                <button
-                  type="button"
-                  class="para-sum-btn"
-                  aria-expanded="false"
-                  aria-controls={`psum-${p.id}`}
-                  title="この段落の要約（長押しでも開く）"
-                >
-                  要約
-                </button>
+                <>
+                  {p.segments ? segSpans(segs) : <Fragment set:html={renderParagraphHtml(p.ja, people)} />}
+                  {sumBtn}
+                </>
               )}
             </p>
             <p class="para-src" lang={sourceLang}>
@@ -93,7 +111,8 @@ const paraSummaries = outline?.paragraphSummaries ?? {};
               </div>
             )}
           </div>
-        ));
+          );
+        });
         if (!section) return inner;
         // ズームイン既定: 要約を持つ節はまず要約カードだけを見せ、押して初めて本文が展開される。
         // 要約が無い節は最初からひらいておく（要約が空でも壊れない）。
@@ -169,6 +188,10 @@ const paraSummaries = outline?.paragraphSummaries ?? {};
   .para {
     margin: 0;
     text-indent: 1em;
+  }
+  /* 表示上の改段。text-indent は継承されるので、かたまりごとに1行目が字下げされる */
+  .pblock {
+    display: block;
   }
 
   /* 対訳（原文）。設定 data-bilingual=on のときだけ表示 */

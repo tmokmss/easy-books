@@ -36,8 +36,16 @@ const chapters = defineCollection({
             /** draft を生成したモデル等のラベル（モデル比較の記録用） */
             translatedBy: z.string().optional(),
             /** 文単位の対訳対応（tools/align-segments.ts が生成）。連結不変条件は下で検証 */
+            // pb: この断片から表示上の新しい段落にする（tools/apply-breaks.ts が付ける）。
+            // 段落の原文1対1は保ったまま、1段落が数千字ある版を読める長さに区切るための表示指定
             segments: z
-              .array(z.object({ src: z.string().min(1), ja: z.string().min(1) }))
+              .array(
+                z.object({
+                  src: z.string().min(1),
+                  ja: z.string().min(1),
+                  pb: z.literal(true).optional(),
+                }),
+              )
               .min(1)
               .optional(),
           }),
