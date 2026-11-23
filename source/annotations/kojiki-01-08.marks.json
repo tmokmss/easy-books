@@ -4,7 +4,7 @@
   { "p": "p001", "seg": 0, "text": "太子", "kind": "n", "id": "hitsugi-no-miko" },
   { "p": "p001", "seg": 0, "text": "マサカツアカツカチハヤヒアメノオシホミミの命", "kind": "p", "id": "amenooshihomimi" },
   { "p": "p001", "seg": 0, "text": "葦原の中つ国", "kind": "n", "id": "ashihara-no-nakatsukuni" },
-  { "p": "p001", "seg": 1, "text": "アメニキシクニニキシアマツヒコヒコホノニニギの命", "kind": "p", "id": "ninigi" },
+  { "p": "p001", "seg": 1, "text": "アメニキシクニニキシアマツヒタカヒコホノニニギの命", "kind": "p", "id": "ninigi" },
   { "p": "p001", "seg": 2, "text": "ヒコホノニニギの命", "kind": "p", "id": "ninigi" },
   { "p": "p001", "seg": 3, "text": "豊葦原の水穂の国", "kind": "n", "id": "k0108-toyoashihara" },
   { "p": "p001", "seg": 4, "text": "天の八衢", "kind": "n", "id": "k0108-yachimata" },
@@ -12,7 +12,7 @@
   { "p": "p001", "seg": 6, "text": "国つ神", "kind": "n", "id": "kunitsukami" },
   { "p": "p001", "seg": 6, "text": "サルタビコの神", "kind": "p", "id": "sarutabiko" },
   { "p": "p001", "seg": 7, "text": "アメノコヤネの命", "kind": "p", "id": "amenokoyane" },
-  { "p": "p001", "seg": 7, "text": "フトダマの命", "kind": "p", "id": "futodama" },
+  { "p": "p001", "seg": 7, "text": "フトタマの命", "kind": "p", "id": "futodama" },
   { "p": "p001", "seg": 7, "text": "アメノウズメの命", "kind": "p", "id": "amenouzume" },
   { "p": "p001", "seg": 7, "text": "五つの伴の緒", "kind": "n", "id": "k0108-itsutomonoo" },
   { "p": "p002", "seg": 0, "text": "八尺の勾玉", "kind": "n", "id": "k0108-yasaka-magatama" },
@@ -48,7 +48,7 @@
   { "p": "p004", "seg": 3, "text": "ソコドクミタマ", "kind": "n", "id": "k0108-mitama-names" },
   { "p": "p004", "seg": 5, "text": "紐小刀", "kind": "n", "id": "k0108-himokogatana" },
   { "p": "p004", "seg": 7, "text": "島の速贄", "kind": "n", "id": "k0108-hayanie" },
-  { "p": "p005", "seg": 0, "text": "アマツヒコヒコホノニニギの命", "kind": "p", "id": "ninigi" },
+  { "p": "p005", "seg": 0, "text": "アマツヒタカヒコホノニニギの命", "kind": "p", "id": "ninigi" },
   { "p": "p005", "seg": 2, "text": "オオヤマツミの神", "kind": "p", "id": "oyamatsumi" },
   { "p": "p005", "seg": 2, "text": "カムアタツヒメ", "kind": "p", "id": "konohanasakuyabime" },
   { "p": "p005", "seg": 2, "text": "コノハナノサクヤビメ", "kind": "p", "id": "konohanasakuyabime" },
@@ -60,5 +60,5 @@
   { "p": "p005", "seg": 15, "text": "ホデリの命", "kind": "p", "id": "hoderi" },
   { "p": "p005", "seg": 15, "text": "隼人", "kind": "n", "id": "hayato" },
   { "p": "p005", "seg": 17, "text": "ホオリの命", "kind": "p", "id": "hoori" },
-  { "p": "p005", "seg": 17, "text": "アマツヒコヒコホホデミの命", "kind": "p", "id": "hoori" }
+  { "p": "p005", "seg": 17, "text": "アマツヒタカヒコホホデミの命", "kind": "p", "id": "hoori" }
 ]

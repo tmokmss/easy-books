@@ -23,14 +23,14 @@
  {
   "p": "p001",
   "seg": 2,
-  "text": "ヤガミヒメ",
+  "text": "ヤカミヒメ",
   "kind": "n",
   "id": "k0105-yagamihime"
  },
  {
   "p": "p001",
   "seg": 2,
-  "text": "オオナムヂの神",
+  "text": "オオアナムヂの神",
   "kind": "p",
   "id": "okuninushi"
  },
@@ -72,21 +72,21 @@
  {
   "p": "p002",
   "seg": 5,
-  "text": "カミムスヒの命",
+  "text": "カムムスヒの命",
   "kind": "p",
   "id": "kamimusuhi"
  },
  {
   "p": "p002",
   "seg": 5,
-  "text": "キサガイヒメ",
+  "text": "キサカイヒメ",
   "kind": "n",
   "id": "k0105-kisagai"
  },
  {
   "p": "p002",
   "seg": 5,
-  "text": "ウムガイヒメ",
+  "text": "ウムカイヒメ",
   "kind": "n",
   "id": "k0105-umugai"
  },
@@ -219,7 +219,7 @@
  {
   "p": "p003",
   "seg": 27,
-  "text": "キノマタの神",
+  "text": "キマタの神",
   "kind": "n",
   "id": "k0105-kinomata"
  },
